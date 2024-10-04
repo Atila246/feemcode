@@ -1,2 +1,2 @@
 # feemcode
-Esse é um projeto para promover o incentivo de mulheres na tecnologia
+Esse é um projeto para promover a inclusão feminina na tecnologia
