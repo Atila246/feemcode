@@ -1,0 +1,121 @@
+/* Definições básicas para toda a página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #7d66f1 0%, #ab47bc 100%); /* Gradiente de fundo em tons de roxo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Coluna para o layout */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh;
+}
+
+/* Estilo do título principal */
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff; /* Texto branco para contraste */
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Container para os cards */
+.card-container {
+    display: flex;
+    justify-content: center; /* Alinha os cards horizontalmente */
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte em telas menores */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Estilo do card */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s; /* Efeito de transformação suave ao passar o mouse */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+}
+
+/* Estilo para os labels dos campos */
+label {
+    font-weight: bold;
+    color: #4a148c; /* Tom de roxo escuro */
+    display: block;
+    margin-bottom: 10px;
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 100%; /* Garante que o label ocupe toda a largura */
+}
+
+/* Estilo para os campos de entrada */
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e1bee7; /* Cor clara para o campo */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #821994; /* Cor de foco para campos */
+    outline: none;
+}
+
+/* Estilo para o botão de envio */
+button {
+    background-color:  #7d66f1; /* Botão em tom de roxo */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Adicionando transições */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao botão */
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #7b1fa2; /* Tom mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+/* Estilo para centralizar o texto */
+.text-center {
+    text-align: center;
+}
+
+/* Mensagens de erro ou sucesso */
+.message {
+    font-size: 14px;
+    color: #d32f2f; /* Cor vermelha para erros */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .card {
+        padding: 20px;
+    }
+    .title {
+        font-size: 28px;
+    }
+}

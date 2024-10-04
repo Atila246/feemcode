@@ -1,0 +1,522 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family:'Poppins', sans-serif !important;
+}
+
+.container-content{
+    /* background-color: #f1f3ea; */
+    background-color: #fff6ff;
+    /* #f1eaf3 */
+}
+
+/*estilização da partezinha de cima*/
+.header__nav{
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to left,#f36ec0, #af5fe4); 
+    /* background: linear-gradient(to right, #7d66f1, #f371c1); */
+    /* background-color: #884a93;  */
+    display: flex;
+}
+
+.header__perfil a{
+    text-decoration: none;
+}
+
+.header__perfil a span{
+    font-size: 35px;
+}
+
+.container-content{
+    width: 100%;
+}
+
+/*logo*/
+.header__logo{
+    width: 80px;
+    height: 50px;
+}
+
+.header__logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+/*pesquisa*/
+.pesquisa-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header__pesquisa{
+    display: flex;
+    border-radius: 40px;
+    padding: 5px 12px;
+    background-color: #ffffff51;
+    width: 60%;
+    gap: 10px;
+}
+
+.header__pesquisa input{
+    border: none;
+    background: transparent;
+    outline: none;
+    caret-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    color: white;
+}
+
+.header__pesquisa input::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+
+.header__pesquisa span{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/*Elementos do menu*/
+.menu__list{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0;
+    padding-left: 0;
+}
+
+.menu__list li a{
+    font-weight: 500;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header__perfil span{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/*embarque nesse cabaré*/
+.header__carrossa{ 
+    width: 100%;
+    position: relative;
+}
+
+.carrossa__container-scroll{
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.carrossa__content{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.carrossa-item{
+    width: 45%;
+    height: 350px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    filter: blur(3px);
+}
+
+.carrossa-item video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrossa-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*itens do carroças*/
+.current-item{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    opacity: 1;
+    border: 6px solid #f371c1;
+    filter: blur(0);
+}
+
+/*setas dos butoes*/
+.arrow-left, .arrow-right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    border: none;
+    padding: 0 50px;
+    font-size: 4rem;
+    color: #7b3687;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.arrow-right{
+    right: 0;
+    left: auto;   
+}
+
+
+
+/*estilo imagens comunidade (conteúdo)*/
+.comunidades-item figure{
+    width: 100%;
+    height: 150px;
+    
+}
+
+.comunidades-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comunidades__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comunidades-exem{
+    padding: 15px;
+    background-color: #f7e9f7 !important;
+}
+
+.comunidades-descricao h2{
+    font-size: 1.2rem;
+}
+
+.comunidades-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.comunidades-item figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.comunidades__header-titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comunidades__header-titulo h2{
+    margin-bottom: 10px;
+    font-weight: 700 !important;
+}
+
+.comunidades__header{
+    margin-bottom: 30px;
+}
+
+.comunidades__header-titulo button{
+    border-radius: 20px;
+    border: none;
+    background-color: #FF66C4;
+    color: white;
+    padding: 5px 30px;
+    font-weight: 600;
+}
+
+.comunidades__header p{
+    font-size: 1.2rem;
+}
+
+
+.comunidades-item h4{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/*estilizar a linha né pae*/
+hr{
+    background-color: #727272;
+    height: 2px;
+    margin: 3rem 0 !important;
+}
+
+
+/*estilo evento*/
+.eventos__header-titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventos__header-titulo h2{
+    margin-bottom: 10px;
+    font-weight: 700 !important;
+}
+
+.eventos__header{
+    margin-bottom: 30px;
+}
+
+.eventos__header-titulo button{
+    border-radius: 20px;
+    border: none;
+    background-color: #FF66C4;
+    color: white;
+    height: 30px;
+    padding: 0 30px;
+    font-weight: 600;
+}
+
+.eventos__header p{
+    font-size: 1.2rem;
+}
+
+.eventos-dados{
+    display: flex;
+    gap: 30px;
+}
+
+.eventos-dados figure{
+    width: 40%;
+    height: 240px;
+}
+
+.eventos-dados figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.eventos-desc p{
+    font-size: 1.2rem;
+    margin-top: 40px;
+}
+
+.eventos-desc{
+    width: 60%;
+}
+
+.eventos-local{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.eventos-local i{
+    font-size: 1.6rem;
+}
+
+
+/*parte de anais*/
+.canais__header-titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.canais__header-titulo h2{
+    margin-bottom: 10px;
+    font-weight: 700 !important;
+}
+
+.canais__header{
+    margin-bottom: 30px;
+}
+
+.canais__header-titulo button{
+    border-radius: 20px;
+    border: none;
+    background-color: #FF66C4;
+    color: white;
+    height: 30px;
+    padding: 0 30px;
+    font-weight: 600;
+}
+
+.canais__header p{
+    font-size: 1.4rem;
+}
+
+.canais-item figure{
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.canais-item figure img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.canais-item{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f7e9f7;
+    border-radius: 5px;
+}
+
+.perfil-anal{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+/*usando o primeiro filho do anal*/
+.perfil-anal span:nth-child(1){
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.perfil-anal span:nth-child(2){
+    font-size: 0.9rem;
+}
+
+.canais__content{
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.canal-butao button{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #FF66C4;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+footer {
+    width: 100%;
+    padding: 40px;
+    background-image: url(../img/rodape.png);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px); /* Desfoque no fundo */
+    position: relative;
+    z-index: 1;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Mais desfoque sobre o rodapé */
+    z-index: -1;
+}
+
+.gtco-heading h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.gtco-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Força todos os blocos a ficarem em uma linha */
+    gap: 5px; /* Diminui o espaçamento entre os blocos */
+    text-align: center;
+}
+
+.gtco-staff {
+    flex: 1; /* Distribui o espaço igualmente */
+    max-width: 150px; /* Reduz o tamanho máximo das colunas */
+    margin: 0 5px; /* Diminui a margem entre os blocos */
+    transition: transform 0.3s ease;
+}
+
+.gtco-staff img {
+    width: 80px; /* Reduz o tamanho da imagem */
+    height: 80px; /* Reduz o tamanho da imagem */
+    margin-bottom: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FF66C4; /* Reduz a borda da imagem */
+    transition: transform 0.3s ease;
+}
+
+.gtco-staff:hover img {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.gtco-staff h3, .gtco-staff p, .gtco-staff .role {
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.gtco-staff:hover h3, .gtco-staff:hover p, .gtco-staff:hover .role {
+    transform: scale(1.1); /* Aumenta levemente o texto ao passar o mouse */
+}
+
+.gtco-staff h3 {
+    font-size: 16px; /* Reduz o tamanho da fonte do título */
+    margin-bottom: 5px;
+}
+
+.gtco-staff .role {
+    color: #FF66C4;
+    font-weight: normal;
+    margin-bottom: 10px; /* Reduz o espaçamento inferior */
+}
+
+.gtco-staff p {
+    margin-bottom: 10px; /* Reduz o espaçamento inferior */
+    color: #fff;
+    padding: 0 5px; /* Reduz o padding do texto */
+}
+
+.row {
+
+    justify-content: center; /* Alinha as divs no centro da página */
+    gap: 8px; /* Diminui o espaço entre os blocos */
+    flex-wrap: nowrap; /* Garante que as divs fiquem todas em uma linha */
+}
+
+@media only screen and (max-width:1440px){
+    :root{
+        font-size: 16px; 
+    }
+}
+
+@media only screen and (max-width:940px){
+    :root{
+        font-size: 10px; 
+    }
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FemmCode - Empoderando a tecnologia com codificaçao feminina</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sobrenos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/index.js" defer></script>
+</head>
+<body>
+    <div class="container-content"> <!-- container principal q contém tudo -->
+        <header class="container__header"> <!-- header que contém o menu navegador e o carrossel -->
+            <section class="header__nav"> <!-- section do menu navegador -->
+                <div class="header__logo"> <!-- div da logo -->
+                    <a href="index.html"><img src="img/femmcodelogo.png" alt="Logo"></a>
+                </div>
+                <div class="pesquisa-menu"> <!-- div da pesquisa -->
+                    <div class="header__pesquisa">
+                        <span>
+                            <i class="fi fi-rs-search" style="display:flex;"></i>
+                        </span>
+                        <input type="search" id="search" placeholder=" O que está procurando?">
+                    </div>
+                    <nav class="header__menu"> <!-- nav com os itens de navegação -->
+                        <ul class="menu__list">
+                            <li><a href="index.html" style="font-weight: 700; border-bottom: 3px solid white">Início</a></li>
+                            <li><a href="sobrenos.html">História</a></li>
+                            <li><a href="comunidades.html">Comunidades</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                            <li><a href="canais.html">Canais</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__perfil"> <!-- div perfil -->
+                    <a href="perfil.html">
+                        <span>
+                            <i class="fi fi-tr-circle-user" style="display:flex;"></i>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="header__carrossa"> <!-- div do carrossel -->
+
+                <!-- botões pra passar pro lado -->
+                <button class="arrow-left control"><img src="img/arrow-left.png"></button>
+                <button class="arrow-right control"><img src="img/arrow-right.png"></button>
+
+                <div class="carrossa__container-scroll"> <!-- container onde os itens vão scrollar -->
+                    <div class="carrossa__content">
+
+                        <!-- itens do carrossel -->
+                        <div class="carrossa-item">
+                            <img src="img/evolucao.png" alt="Tech Woman">
+                        </div>
+                        <div class="carrossa-item">
+                            <video controls poster="img/super-dicas-thumb.png">
+                                <source src="img/super-dicas.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carrossa-item">
+                            <video controls poster="img/mulheres-tecnologia-thumb.png">
+                                <source src="img/mulheres-tecnologia.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carrossa-item">
+                            <video controls poster="img/minha-historia-thumb.png">
+                                <source src="img/minha-historia.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carrossa-item">
+                            <img src="img/estudos.jpg" alt="Tech Woman">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main class="container__main"> <!-- local onde fica o conteúdo principal -->
+            <div class="container">
+
+                <hr>
+
+                <section class="comunidades" id="comunidades"> <!-- section comunidades -->
+                    <div class="comunidades__header"> <!-- título e descrição -->
+                        <div class="comunidades__header-titulo">
+                            <h2>Comunidades</h2>
+                            <a href="comunidades.html"><button>Ver mais</button></a>
+                        </div>
+                        <p>
+                            Você pode navegar pela aba Comunidades e se divertir com a postagem da sua comunidade predileta, descobrir novas comunidades e até mesmo criar e publicar na sua própria!
+                        </p>
+                    </div>
+                    <div class="comunidades__content"> <!-- conteúdo da comunidade -->
+                        <div class="comunidades-item"> <!-- exibição de uma única comunidade -->
+                            <h4>Meninas Digitais</h4>
+                            <div class="comunidades-list"> <!-- conteúdo da comunidade -->
+                                <div class="comunidades-exem card">
+                                    <figure>
+                                        <img src="img/meninasdigitaisreuniao.jpeg" alt="Tech Woman">
+                                    </figure>
+                                    <div class="comunidades-descricao">
+                                        <h2>Reunião meninas digitais</h2>
+                                        <span>26/06 ás 18:30h</span>
+                                        <p>Reunião para trocar ideias e...</p>
+                                    </div>
+                                </div>
+                                <div class="comunidades-exem card">
+                                    <figure>
+                                        <img src="img/meninas digitais congresso.jpeg" alt="Tech Woman">
+                                    </figure>
+                                    <div class="comunidades-descricao">
+                                        <h2>Congresso da Sociedade Brasileira de Computação</h2>
+                                        <span>24/07 ás 16:00h</span>
+                                        <p>Evento que tem como objetivo fomentar...</p>
+                                    </div>
+                                </div>
+                                <div class="comunidades-exem card">
+                                    <figure>
+                                        <img src="img/meninas-digitais.jpeg" alt="Tech Woman">
+                                    </figure>
+                                    <div class="comunidades-descricao">
+                                        <h2>Palestra Mulheres na Tecnologia</h2>
+                                        <span>16/07 17:30h</span>
+                                        <p>Encontro dinâmico que reúne mulheres para...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comunidades-item"> <!-- conteúdo da comunidade -->
+                            <h4>WoMakers Code</h4>
+                            <div class="comunidades-list">
+                                <div class="comunidades-exem card">
+                                    <figure>
+                                        <img src="img/womakers1.jpeg" alt="Tech Woman">
+                                    </figure>
+                                    <div class="comunidades-descricao">
+                                        <h2>Palestra Mulheres na Tecnologia</h2>
+                                        <span>16/07 17:30h</span>
+                                        <p>Encontro dinâmico que reúne mulheres para...</p>
+                                    </div>
+                                </div>
+                                <div class="comunidades-exem card">
+                                    <figure>
+                                        <img src="img/mulherwomakers.jpeg" alt="Tech Woman">
+                                    </figure>
+                                    <div class="comunidades-descricao">
+                                        <h2>Palestra Mulheres na Tecnologia</h2>
+                                        <span>16/07 17:30h</span>
+                                        <p>Encontro dinâmico que reúne mulheres para...</p>
+                                    </div>
+                                </div>
+                                <div class="comunidades-exem card">
+                                    <figure>
+                                        <img src="img/bootcampwoomakers.jpeg" alt="Tech Woman">
+                                    </figure>
+                                    <div class="comunidades-descricao">
+                                        <h2>Palestra Mulheres na Tecnologia</h2>
+                                        <span>16/07 17:30h</span>
+                                        <p>Encontro dinâmico que reúne mulheres para...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr>
+                
+                <section class="eventos" id="eventos">
+                    <div class="eventos__header">
+                        <div class="eventos__header-titulo">
+                            <h2>Eventos</h2>
+                            <a href="eventos.html"><button>Ver mais</button></a>
+                        </div>
+                        <p>
+                            Descubra eventos perto de você, participe, assista ao vivo e divulge o seu! Faça parte desta jornada de espalhar conhecimento por todo o mundo.
+                        </p>
+                    </div>
+                    <div class="eventos__content">
+                        <div class="eventos-item">
+                            <div class="eventos-local">
+                                <i class="fi fi-rs-marker"></i>
+                                <h4>São Paulo</h4>
+                            </div>
+                            <div class="eventos-dados">
+                                <figure>
+                                    <img src="img/meninas-digitais.jpeg" alt="Tech Woman">
+                                </figure>
+                                <div class="eventos-desc">
+                                    <h4> Congresso da Sociedade Brasileira de Computação (CSBC)</h4>
+                                    <p> CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social.
+                                        O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="eventos-item">
+                            <div class="eventos-local">
+                                <i class="fi fi-rs-marker"></i>
+                                <h4>São Paulo</h4>
+                            </div>
+                            <div class="eventos-dados">
+                                <figure>
+                                    <img src="img/molieresnati.jpeg" alt="Tech Woman">
+                                </figure>
+                                <div class="eventos-desc">
+                                    <h4>Palestra Mulheres na Tecnologia</h4>
+                                    <p>Mulheres na Tecnologia é um encontro dinâmico e inclusivo que reúne mulheres apaixonadas pela tecnologia para explorar novas tecnologias, aprimorar suas habilidades técnicas e fazer networking e é transmitido em live no YouTube. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr>
+
+                <section class="canais" id="canais">
+                    <div class="canais__header">
+                        <div class="canais__header-titulo">
+                            <h2>Canais</h2>
+                            <a href="canais.html"><button>Ver mais</button></a>
+                        </div>
+                        <p>
+                            Acompanhe os canais para adquirir cada vez mais conhecimento sobre programação com mentorias, netowrking, troca de experiências e diversos outros aprendizados nesse âmbito!
+                        </p>
+                    </div>
+                    <div class="canais__content">
+                        <div class="canais-item">
+                            <figure>
+                                <img src="img/lucianasantos.png" alt="">
+                            </figure>
+                            <div class="perfil-anal">
+                                <span>@LucianaSantos</span>
+                                <span>60 mil Seguidores</span>
+                                <div class="canal-butao">
+                                    <button>Inscrever-se</button>
+                                </div>
+                            </div>
+                            <!-- <div class="canal-butao">
+                                <button>Inscrever-se</button>
+                            </div> -->
+                        </div>
+                        <div class="canais-item">
+                            <figure>
+                                <img src="img/gloria guimaraes.jfif" alt="">
+                            </figure>
+                            <div class="perfil-anal">
+                                <span>@GlóriaGuimarães</span>
+                                <span>8 mil Seguidores</span>
+                                <div class="canal-butao">
+                                    <button>Inscrever-se</button>
+                                </div>
+                            </div>
+                            <!-- <div class="canal-butao">
+                                <button>Inscrever-se</button>
+                            </div> -->
+                        </div>
+                        <div class="canais-item">
+                            <figure>
+                                <img src="img/caioni.jpeg" alt="">
+                            </figure>
+                            <div class="perfil-anal">
+                                <span>@KauaneMartins</span>
+                                <span>6 mil Seguidores</span>
+                                <div class="canal-butao">
+                                    <button>Inscrever-se</button>
+                                </div>
+                            </div>
+                            <!-- <div class="canal-butao">
+                                <button>Inscrever-se</button>
+                            </div> -->
+                        </div>
+                        <div class="canais-item">
+                            <figure>
+                                <img src="img/talitao.jpeg" alt="">
+                            </figure>
+                            <div class="perfil-anal">
+                                <span>@Talitaa</span>
+                                <span>8 mil Seguidores</span>
+                                <div class="canal-butao">
+                                    <button>Inscrever-se</button>
+                                </div>
+                            </div>
+                            <!-- <div class="canal-butao">
+                                <button>Inscrever-se</button>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+                
+                <hr>
+                
+                <section class="sobrenos">
+                    <div class="sobrenos__header">
+                        <div class="sobrenos__text">
+                            <div class="sobrenos__content">
+                                <h2>História das mulheres na TI</h2>
+                                <p>Você conhece ou já ouviu falar sobre alguma mulher importante na T.I? As mulheres têm papéis importantes no âmbito da tecnologia á muitos anos, mas não ganham o devido destaque por suas ações. É importante que as pessoas saibam da trajetória e do papel importante que muitas mulheres têm na história da tecnologia.  </p>
+                                <a href="sobrenos.html">
+                                    <button>Saber mais</button>
+                                </a>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="img/muleresfortes.png">
+                        </figure>
+                    </div>
+                </section>
+
+                
+            </div>
+        </main>
+        <footer>
+            <div id="gtco-team" class="gtco-section">
+                <div id="gtco-features-2">
+                    <div class="gtco-container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+                                <h2>Sobre Nós!</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+                                <div class="gtco-staff">
+                                    <img src="img/Foto_Ana.jpeg" alt="Imagem1">
+                                    <h3>Ana Clara</h3>
+                                    <strong class="role">Programadora</strong>
+                                    <p>UM POUCO SOBRE NÓS.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+                                <div class="gtco-staff">
+                                    <img src="img/Foto_kauane.jpg" alt="Imagem2">
+                                    <h3>Kauane Martins</h3>
+                                    <strong class="role">Banco de Dados</strong>
+                                    <p>UM POUCO SOBRE NÓS.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+                                <div class="gtco-staff">
+                                    <img src="img/Foto_lelet.jpg" alt="Imagem3">
+                                    <h3>Lethicia Ribeiro</h3>
+                                    <strong class="role">Análise</strong>
+                                    <p>UM POUCO SOBRE NÓS.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 animate-box fadeIn animated-fast" data-animate-effect="fadeIn">
+                                <div class="gtco-staff">
+                                    <img src="img/Foto_Talita.jpg" alt="Imagem4">
+                                    <h3>Talita Vitoria</h3>
+                                    <strong class="role">Programadora</strong>
+                                    <p>UM POUCO SOBRE NÓS.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
