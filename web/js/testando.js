@@ -4,6 +4,7 @@ const resposta = document.getElementById('resposta')
 console.log(resposta)
 
 get.addEventListener('click', () => {
+    
     fetch('http://localhost:3000/usuarios')
         .then(res => res.json())
         .then((data) => {

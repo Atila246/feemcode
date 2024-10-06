@@ -21,3 +21,10 @@ model Usuario {
   idade Int
 }
 
+model Postagem{
+  id Int @id @default(autoincrement())
+  titulo String
+  bio String?
+}
+
+

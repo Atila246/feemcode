@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 
 app.post('/usuario', async (req, res) => {
-    const usuario = await prisma.usuario.create({
+    await prisma.usuario.create({
         data: {
             nome: req.body.nome,
             email: req.body.email,
@@ -21,6 +21,16 @@ app.post('/usuario', async (req, res) => {
 app.get('/usuarios', async (req, res) => {
     const usuarios = await prisma.usuario.findMany();
     res.status(200).json(usuarios)
+})
+
+app.post('/postagem', async (req,res) =>{
+    await prisma.postagem.create({
+        data: {
+            titulo: req.body.titulo,
+            bio: req.body.bio
+        }
+    })
+    res.send('Postado com sucesso!!!!!!!!!!!!')
 })
 
 app.listen(3000)
