@@ -62,8 +62,17 @@
             <section class="comunidades__perfis">
                 <div class="perfis__header">
                     <span>Comunidades</span>
-                    <button>Criar comunidade +</button>
-                </div>
+                    <button id="criarComunidadeBtn" class="create-btn">Criar comunidade +</button>
+                  </div>
+                  
+                  <!-- Modal para aviso de login -->
+                  <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Você precisa estar logado para criar uma comunidade.</p>
+                      <button id="loginButton" class="login-btn" >  Login</button>
+                    </div>
+                  </div>
 
                 <div class="perfil-item">
                     <div class="perfil-dados">
