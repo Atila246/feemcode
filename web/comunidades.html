@@ -63,17 +63,40 @@
                 <div class="perfis__header">
                     <span>Comunidades</span>
                     <button id="criarComunidadeBtn" class="create-btn">Criar comunidade +</button>
-                  </div>
-                  
-                  <!-- Modal para aviso de login -->
-                  <div id="loginModal" class="modal">
+                </div>
+    
+                <!-- Modal para aviso de login -->
+                <div id="loginModal" class="modal" style="display: none;">
                     <div class="modal-content">
-                      <span class="close">&times;</span>
-                      <p>Você precisa estar logado para criar uma comunidade.</p>
-                      <button id="loginButton" class="login-btn" >  Login</button>
+                        <span class="close">&times;</span>
+                        <p>Você precisa estar logado para criar uma comunidade.</p>
+                        <button id="loginButton" class="login-btn">Login</button>
                     </div>
-                  </div>
-
+                </div>
+    
+                <!-- Formulário de criação de comunidade -->
+                <div id="Criarcomunidade" class="create-community-form" style="display: none;">
+                    <div class="create-community-content">
+                        <span class="close">&times;</span>
+                        <h2>Criar Comunidade</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="communityName" class="form-label">Nome da Comunidade</label>
+                                <input type="text" class="form-control" id="communityName" placeholder="Nome da comunidade">
+                            </div>
+                            <div class="mb-3">
+                                <label for="communityDesc" class="form-label">Descrição</label>
+                                <textarea class="form-control" id="communityDesc" rows="3" placeholder="Descrição da comunidade"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="communityImage" class="form-label">Foto de Perfil</label>
+                                <input type="file" class="form-control" id="communityImage" accept="image/*">
+                            </div>
+                            <button type="submit" class="btn-success">Criar Comunidade</button>
+                        </form>
+                    </div>
+                </div>
+                
                 <div class="perfil-item">
                     <div class="perfil-dados">
                         <figure class="perfil-image">
