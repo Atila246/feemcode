@@ -22,7 +22,7 @@ app.get('/usuarios', async (req, res) => {
     const usuarios = await prisma.usuario.findMany();
     res.set(
         'Access-Control-Allow-Origin',
-        'http://pagina.com'
+        'https://atila246.github.io/feemcode/'
     );
     res.status(200).json(usuarios)
 })
