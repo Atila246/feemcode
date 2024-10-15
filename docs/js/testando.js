@@ -11,6 +11,6 @@ get.addEventListener('click', () => {
             resposta.innerHTML = data;
         })
         .catch((err) => {
-            console.log("Erro")
+            console.log("Erro"+err)
         })
 })       

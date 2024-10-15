@@ -20,6 +20,10 @@ app.post('/usuario', async (req, res) => {
 
 app.get('/usuarios', async (req, res) => {
     const usuarios = await prisma.usuario.findMany();
+    res.set(
+        'Access-Control-Allow-Origin',
+        'http://pagina.com'
+    );
     res.status(200).json(usuarios)
 })
 
