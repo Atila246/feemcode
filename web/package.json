@@ -1,0 +1,29 @@
+{
+  "name": "feemcode",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "projeto para inclsuão feminina na tecnologia",
+  "main": "webserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atila246/feemcode.git"
+  },
+  "keywords": [
+    "feminino",
+    "tecnologia",
+    "inclusão",
+    "mulheres"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atila246/feemcode/issues"
+  },
+  "homepage": "https://github.com/Atila246/feemcode#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

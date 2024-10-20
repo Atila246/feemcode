@@ -20,11 +20,18 @@ app.post('/usuario', async (req, res) => {
 
 app.get('/usuarios', async (req, res) => {
     const usuarios = await prisma.usuario.findMany();
-    res.set(
-        'Access-Control-Allow-Origin',
-        'https://atila246.github.io/feemcode/'
-    );
-    res.status(200).json(usuarios)
+
+    const allowedOrigins = [
+        'http://192.168.100.19:8080',
+        'http://192.168.100.19:8080/testando.html'
+    ];
+
+    const origin = req.get('origin');
+    if(origin && allowedOrigins.includes(origin)){
+        res.set('Access-Control-Allow-Origin', origin);
+    }
+
+    res.status(200).json(usuarios);
 })
 
 app.post('/postagem', async (req,res) =>{
@@ -34,7 +41,7 @@ app.post('/postagem', async (req,res) =>{
             bio: req.body.bio
         }
     })
-    res.send('Postado com sucesso!!!!!!!!!!!!')
+    res.send('Postado com sucesso!!')
 })
 
 app.listen(3000)
