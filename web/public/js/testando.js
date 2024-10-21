@@ -6,8 +6,10 @@ get.addEventListener('click', () => {
     fetch('http://localhost:3000/usuarios')
         .then(res => res.json())
         .then((data) => {
-            // console.log(data)
-            resposta.innerHTML = data.nome;
+            data.forEach(item => {
+              console.log(item)
+              resposta.innerHTML = item.nome  
+            })
         })
         .catch((err) => {
             console.log("Erro"+err)

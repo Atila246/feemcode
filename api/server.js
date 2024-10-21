@@ -18,20 +18,15 @@ app.post('/usuario', async (req, res) => {
     res.send('Cadastro realizado com sucesso')
 })
 
-app.get('/usuarios', async (req, res) => {
-    const usuarios = await prisma.usuario.findMany();
+app.get('/usuarios', async (_, res) => {
+    const usuarios = await prisma.usuario.findMany()
 
-    const allowedOrigins = [
-        'http://192.168.100.19:8080',
-        'http://192.168.100.19:8080/testando.html'
-    ];
+    res.set(
+        'Access-Control-Allow-Origin',
+        'http://localhost:8080'
+    )
 
-    const origin = req.get('origin');
-    if(origin && allowedOrigins.includes(origin)){
-        res.set('Access-Control-Allow-Origin', origin);
-    }
-
-    res.status(200).json(usuarios);
+    res.status(200).json(usuarios)
 })
 
 app.post('/postagem', async (req,res) =>{

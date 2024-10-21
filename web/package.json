@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Atila246/feemcode#readme",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "feemcode": "file:"
   }
 }
