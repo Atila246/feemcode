@@ -1,207 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-thin-rounded/css/uicons-thin-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/index.js" defer></script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="js/index.js" defer></script>
 
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/perfil.css">
-</head>
-<body>
-    <div class="container-content"> <!-- container principal q contém tudo -->
-        <header class="container__header"> <!-- header que contém o menu navegador e o carrossel -->
-            <section class="header__nav"> <!-- section do menu navegador -->
-                <div class="header__logo"> <!-- div da logo -->
-                    <a href="index.html"><img src="img/femmcodelogo.png" alt="Logo"></a>
-                </div>
-                <div class="pesquisa-menu"> <!-- div da pesquisa -->
-                    <div class="header__pesquisa">
-                        <span>
-                            <i class="fi fi-rs-search" style="display:flex;"></i>
-                        </span>
-                        <input type="search" id="search" placeholder=" O que está procurando?">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/perfil.css">
+    </head>
+    <body>
+        <div class="container-content"> <!-- container principal q contém tudo -->
+            <header class="container__header"> <!-- header que contém o menu navegador e o carrossel -->
+                <section class="header__nav"> <!-- section do menu navegador -->
+                    <div class="header__logo"> <!-- div da logo -->
+                        <a href="index.html"><img src="img/femmcodelogo.png" alt="Logo"></a>
                     </div>
-                    <nav class="header__menu"> <!-- nav com os itens de navegação -->
-                        <ul class="menu__list">
-                            <li><a href="index.html">Início</a></li>
-                            <li><a href="sobrenos.html">História</a></li>
-                            <li><a href="comunidades.html">Comunidades</a></li>
-                            <li><a href="eventos.html">Eventos</a></li>
-                            <li><a href="canais.html">Canais</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header__perfil"> <!-- div perfil -->
-                    <a href="perfil.html">
-                        <span>
-                            <i class="fi fi-tr-circle-user" style="display:flex;"></i>
-                        </span>
-                    </a>
-                </div>
-            </section>
-        </header>
+                    <div class="pesquisa-menu"> <!-- div da pesquisa -->
+                        <div class="header__pesquisa">
+                            <span>
+                                <i class="fi fi-rs-search" style="display:flex;"></i>
+                            </span>
+                            <input type="search" id="search" placeholder=" O que está procurando?">
+                        </div>
+                        <nav class="header__menu"> <!-- nav com os itens de navegação -->
+                            <ul class="menu__list">
+                                <li><a href="index.html">Início</a></li>
+                                <li><a href="sobrenos.html">História</a></li>
+                                <li><a href="comunidades.html">Comunidades</a></li>
+                                <li><a href="eventos.html">Eventos</a></li>
+                                <li><a href="canais.html">Canais</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__perfil"> <!-- div perfil -->
+                        <a href="perfil.html">
+                            <span>
+                                <i class="fi fi-tr-circle-user" style="display:flex;"></i>
+                            </span>
+                        </a>
+                    </div>
+                </section>
+            </header>
 
-        <div class="container mt-5">
-            
-            <!-- Seção de Informações do Perfil (Foto e Nome sobre o Banner) -->
-            <div class="profile-info d-flex flex-column align-items-center">
-                <div class="profile-banner">
-                    <img src="img/perfilimg.png" alt="Foto de Perfil" class="profile-pic">
+            <div class="container mt-5">
+                
+                <!-- Seção de Informações do Perfil (Foto e Nome sobre o Banner) -->
+                <div class="profile-info d-flex flex-column align-items-center">
+                    <div class="profile-banner">
+                        <img src="img/perfilimg.png" alt="Foto de Perfil" class="profile-pic">
+                    </div>
+                    <h3 id="profile-name" class="mt-3">Nome do Usuário</h3>
+                    <p id="profile-description">Aqui vai uma breve descrição do perfil do usuário. Pode incluir informações como interesses, profissão ou algo sobre sua personalidade.</p>
+                    <button class="botao-perfil" id="edit-profile-btn">Editar Perfil</button>
                 </div>
-                <h3 id="profile-name" class="mt-3">Nome do Usuário</h3>
-                <p id="profile-description">Aqui vai uma breve descrição do perfil do usuário. Pode incluir informações como interesses, profissão ou algo sobre sua personalidade.</p>
-                <button class="botao-perfil" id="edit-profile-btn">Editar Perfil</button>
+
+                    <!-- Modal do Editar Perfil -->
+                <div class="modal" id="editProfileModal">
+                    <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2>Editar Perfil</h2>
+                    <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="username">Nome:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descrição:</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="profilePicture">Foto de Perfil:</label>
+                    <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="bannerPicture">Banner do Perfil:</label>
+                    <input type="file" id="bannerPicture" name="bannerPicture" accept="image/*">
+                </div>
+                <button type="submit">Salvar</button>
+                </form>
+                </div>
             </div>
-    
-            <!-- Aba de Navegação -->
-            <ul class="nav nav-tabs mt-4" id="profileTabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="saved-tab" data-bs-toggle="tab" href="#saved" role="tab">Vídeos e Postes Salvos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="communities-tab" data-bs-toggle="tab" href="#communities" role="tab">Comunidades</a>
-                </li>
-            </ul>
-    
-            <!-- Conteúdo das Abas -->
-            <div class="tab-content mt-3" id="profileTabsContent">
-                <!-- Vídeos e Postes Salvos -->
-                <div class="tab-pane fade show active" id="saved" role="tabpanel" aria-labelledby="saved-tab">
-                    <h5 class="video-salvos">Vídeos Salvos</h5>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <video class="card-img-top" controls>
-                                    <source src="saved-video1.mp4" type="video/mp4">
-                                </video>
-                                <div class="card-body">
-                                    <h5 class="card-title">Vídeo Salvo 1</h5>
-                                    <p class="card-text">Descrição do vídeo salvo.</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-md-4">
-                            <div class="card">
-                                <video class="card-img-top" controls>
-                                    <source src="saved-video1.mp4" type="video/mp4">
-                                </video>
-                                <div class="card-body">
-                                    <h5 class="card-title">Vídeo Salvo 1</h5>
-                                    <p class="card-text">Descrição do vídeo salvo.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Adicione mais vídeos salvos aqui -->
-                    </div>
-                    
-                    <div>
-                        <h5 class="post-salvos mt-4">Posts Salvos</h5>
-                        <div class="comunidades__post card">
-                            <div class="post__perfil">
-                                <div class="perfil-post">
-                                    <img src="img/caioni.jpeg" alt="">
-                                    <span>Caioni</span>
-                                </div>
-                            </div>
+                <!-- Aba de Navegação -->
+                <ul class="nav nav-tabs mt-4" id="profileTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="saved-tab" data-bs-toggle="tab" href="#saved" role="tab">Vídeos e Postes Salvos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="communities-tab" data-bs-toggle="tab" href="#communities" role="tab">Comunidades</a>
+                    </li>
+                </ul>
         
-                            <h2>Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
-                            <p>CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
-                            <div class="post__butaos">
-                                <button class="post__like">
-                                    <i class="fi fi-rs-heart"></i>
-                                </button>
+                <!-- Conteúdo das Abas -->
+                <div class="tab-content mt-3" id="profileTabsContent">
+                    <!-- Vídeos e Postes Salvos -->
+                    <div class="tab-pane fade show active" id="saved" role="tabpanel" aria-labelledby="saved-tab">
+                        <h5 class="video-salvos">Vídeos Salvos</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <video class="card-img-top" controls>
+                                        <source src="saved-video1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vídeo Salvo 1</h5>
+                                        <p class="card-text">Descrição do vídeo salvo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <video class="card-img-top" controls>
+                                        <source src="saved-video1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vídeo Salvo 1</h5>
+                                        <p class="card-text">Descrição do vídeo salvo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Adicione mais vídeos salvos aqui -->
+                        </div>
+                        
+                        <div>
+                            <h5 class="post-salvos mt-4">Posts Salvos</h5>
+                            <div class="comunidades__post card">
+                                <div class="post__perfil">
+                                    <div class="perfil-post">
+                                        <img src="img/caioni.jpeg" alt="">
+                                        <span>Caioni</span>
+                                    </div>
+                                </div>
+            
+                                <h2>Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
+                                <p>CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
+                                <div class="post__butaos">
+                                    <button class="post__like">
+                                        <i class="fi fi-rs-heart"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-           
-                <!-- Comunidades -->
-                <div class="tab-pane fade" id="communities" role="tabpanel" aria-labelledby="communities-tab">
-                    <div class="comunidades-perfil">
-                        
-                        <div class="comunidades-criadas">
-                            <h5>Minhas comunidades</h5>
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/lucianasantos.png" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Meninas Digitais</span>
-                                        <span>@menines</span>
+            
+                    <!-- Comunidades -->
+                    <div class="tab-pane fade" id="communities" role="tabpanel" aria-labelledby="communities-tab">
+                        <div class="comunidades-perfil">
+                            
+                            <div class="comunidades-criadas">
+                                <h5>Minhas comunidades</h5>
+                                <div class="perfil-item">
+                                    <div class="perfil-dados">
+                                        <figure class="perfil-image">
+                                            <img src="img/lucianasantos.png" alt="">
+                                        </figure>
+                                        <div class="perfil-nome">
+                                            <span>Meninas Digitais</span>
+                                            <span>@menines</span>
+                                        </div>
                                     </div>
+                                    <button>Editar</button>
                                 </div>
-                                <button>Editar</button>
+
+                                <div class="perfil-item">
+                                    <div class="perfil-dados">
+                                        <figure class="perfil-image">
+                                            <img src="img/caioni.jpeg" alt="">
+                                        </figure>
+                                        <div class="perfil-nome">
+                                            <span>Wo Makers</span>
+                                            <span>@who_m</span>
+                                        </div>
+                                    </div>
+                                    <button>Entrar</button>
+                                </div>
                             </div>
 
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/caioni.jpeg" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Wo Makers</span>
-                                        <span>@who_m</span>
+                            <div class="comunidades-criadas">
+                                <h5>Comunidades que Participo</h5>
+                                <div class="perfil-item">
+                                    <div class="perfil-dados">
+                                        <figure class="perfil-image">
+                                            <img src="img/lucianasantos.png" alt="">
+                                        </figure>
+                                        <div class="perfil-nome">
+                                            <span>Meninas Digitais</span>
+                                            <span>@menines</span>
+                                        </div>
                                     </div>
+                                    <button>Sair</button>
                                 </div>
-                                <button>Entrar</button>
-                            </div>
-                        </div>
 
-                        <div class="comunidades-criadas">
-                            <h5>Comunidades que Participo</h5>
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/lucianasantos.png" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Meninas Digitais</span>
-                                        <span>@menines</span>
+                                <div class="perfil-item">
+                                    <div class="perfil-dados">
+                                        <figure class="perfil-image">
+                                            <img src="img/caioni.jpeg" alt="">
+                                        </figure>
+                                        <div class="perfil-nome">
+                                            <span>Wo Makers</span>
+                                            <span>@who_m</span>
+                                        </div>
                                     </div>
+                                    <button>Sair</button>
                                 </div>
-                                <button>Sair</button>
-                            </div>
-
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/caioni.jpeg" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Wo Makers</span>
-                                        <span>@who_m</span>
-                                    </div>
-                                </div>
-                                <button>Sair</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- bootstrap  -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Java Script -->
+            <script src="perfil.js"></script>
         </div>
-        <!-- bootstrap  -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Java Script -->
-        <script src="perfil.js"></script>
-    </div>
-</body>    
-</html>
+    </body>    
+    </html>
