@@ -1,12 +1,13 @@
-
-.profile-banner{
-    background-image: url('../img/fundoperfil.png');
+/* Estilo do banner de perfil */
+.profile-banner {
+    background-image: url('../img/fundoperfil.png'); /* Imagem de fundo do banner */
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 50px;
 }
 
-.profile-banner img{
+.profile-banner img {
     width: 100px;
     height: 100px;
     box-shadow: 1px 1px 10px 1px #939090;
@@ -14,83 +15,79 @@
     cursor: pointer;
 }
 
-.profile-banner{
-    padding: 50px;
-
-}
-
-.botao-perfil{
+/* Botão de edição do perfil */
+.botao-perfil {
     background-color: #f993d286;
     color: #c11880;
     border: none;
     border-radius: 10px;
     padding: 10px;
+    cursor: pointer;
 }
 
-.nav-item a{
+.botao-perfil:hover {
+    background-color: #f993d2;
+}
+
+/* Estilos dos links no menu de navegação */
+.nav-item a {
     color: #e141a4;
     font-weight: 600;
+    text-decoration: none;
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
     color: #9f2570;
 }
 
+/* Informações do perfil */
+.perfil-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
 
-.perfil-item .perfil-nome span:nth-child(1){
+.perfil-nome {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-item .perfil-nome span:nth-child(1) {
     font-weight: 600;
     font-size: 1rem;
     color: #383838;
 }
 
-.perfil-item .perfil-nome span:nth-child(2){
+.perfil-item .perfil-nome span:nth-child(2) {
     font-size: 0.8rem;
     color: #676767df;
 }
 
-.perfil-nome{
-    display: flex;
-    flex-direction: column;
+/* Foto do perfil */
+.perfil-dados figure {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0;
 }
 
-.perfil-dados figure img{
+.perfil-dados figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-.perfil-item{
-    display: flex;
-    justify-content: space-between;
-}
-
-.perfil-dados{
+.perfil-dados {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.perfil-item button{
-    border: none;
-    background: transparent;
-    color: #e141a4;
-    font-weight: 600;
-}
-
-
-.perfil-item figure{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 !important;
-}
-
-.perfil-item figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.comunidades-criadas{
+/* Comunidades criadas */
+.comunidades-criadas {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -98,12 +95,13 @@
     width: 40%;
 }
 
-.comunidades-perfil{
+.comunidades-perfil {
     display: flex;
     gap: 100px;
 }
 
-.comunidades__post{
+/* Postagens */
+.comunidades__post {
     padding: 30px;
     width: 60%;
     display: flex;
@@ -111,31 +109,46 @@
     gap: 25px;
 }
 
-.comunidades__post p{
+.comunidades__post p {
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0 !important;
+    margin: 0;
 }
 
-.comunidades__post h2{
+.comunidades__post h2 {
     font-size: 1.7rem;
-    margin: 0 !important;
+    margin: 0;
 }
 
-.post__perfil img{
+/* Perfil do autor da postagem */
+.post__perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__perfil img {
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.post__perfil{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.post__perfil span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #383838;
 }
 
-.post__perfil button{
+.perfil-post {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Botão de ações na postagem */
+.post__perfil button {
     border: none;
     background-color: #FF66C4;
     color: #ffffff;
@@ -143,45 +156,51 @@
     font-weight: 600;
     border-radius: 20px;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
-.post__perfil span{
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #383838;
-}
-
-.perfil-post{
+.post__butaos {
     display: flex;
     gap: 10px;
-    align-items: center;
 }
 
-.perfil-post{
-    cursor: pointer;
-}
-
-.perfil-item span{
-    cursor: pointer;
-}
-
-
-
-.post__like{
+.post__like {
     background: none;
     border: none;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.post__butaos{
-    display: flex;
-    gap: 10px;
-}
-
-.post-salvos{
+/* Estilos adicionais para posts e salvos */
+.post-salvos, .video-salvos {
     font-weight: 540;
+    color: #e141a4;
+    cursor: pointer;
 }
 
-.video-salvos{
-    font-weight: 540;
+.post-salvos:hover, .video-salvos:hover {
+    color: #9f2570;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .comunidades-perfil {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .comunidades-criadas, .comunidades__post {
+        width: 100%;
+    }
+}
+
+
+/* Esconder a seção de edição de perfil inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Estilização adicional opcional */
+.edit-profile-section {
+    margin-top: 20px;
 }
