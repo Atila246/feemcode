@@ -1,0 +1,57 @@
+/*sobrenos ai dento*/
+.historia__header {
+    display: flex;
+    justify-content: end;
+    gap: 10%;
+}
+
+body{
+    background-color: #fff6ff;
+}
+
+.historia{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.historia__text{
+    display: flex;
+    align-items: center;
+}
+
+.historia__text h2{
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.historia__content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.historia__content p{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.historia__content a{
+    width: 100%;
+}
+
+.historia__content a button{
+    border: none;
+    background-color: #FF66C4;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: inherit;
+    padding: 8px 0;
+    border-radius: 20px;
+}
+
+#historia{
+    font-weight: 700;
+    border-bottom: 3px solid white;
+}
