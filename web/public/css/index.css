@@ -7,6 +7,22 @@ body{
     font-family:'Poppins', sans-serif !important;
 }
 
+/*barrinha de rolagem gay*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 13px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #ff69b4;
+    border-radius: 10px;
+    border: 3px solid #f0f0f0; /* borda com a cor de fundo pro efeito de espessura */
+}
+
 .container-content{
     /* background-color: #f1f3ea; */
     background-color: #fff6ff;
@@ -439,75 +455,50 @@ footer::before {
     z-index: -1;
 }
 
-.gtco-heading h2 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 36px;
-    margin-bottom: 30px;
+ 
+/* Estilo feedback baitola*/
+.feedback-section {
+display: flex;
+align-items: center;
+padding: 20px;
+}
+  
+  /* Estilo da caixa de texto */
+.feedback-section textarea {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    background-color: transparent;
 }
 
-.gtco-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap; /* Força todos os blocos a ficarem em uma linha */
-    gap: 5px; /* Diminui o espaçamento entre os blocos */
-    text-align: center;
+.feedback-section textarea::placeholder{
+    color:white;
 }
-
-.gtco-staff {
-    flex: 1; /* Distribui o espaço igualmente */
-    max-width: 150px; /* Reduz o tamanho máximo das colunas */
-    margin: 0 5px; /* Diminui a margem entre os blocos */
-    transition: transform 0.3s ease;
+  
+/* Estilo do botão */
+.feedback-section button {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    color: #7b3687;
+    border:none;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
-
-.gtco-staff img {
-    width: 80px; /* Reduz o tamanho da imagem */
-    height: 80px; /* Reduz o tamanho da imagem */
-    margin-bottom: 5px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #FF66C4; /* Reduz a borda da imagem */
-    transition: transform 0.3s ease;
-}
-
-.gtco-staff:hover img {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
-}
-
-.gtco-staff h3, .gtco-staff p, .gtco-staff .role {
-    color: #ffffff;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.gtco-staff:hover h3, .gtco-staff:hover p, .gtco-staff:hover .role {
-    transform: scale(1.1); /* Aumenta levemente o texto ao passar o mouse */
-}
-
-.gtco-staff h3 {
-    font-size: 16px; /* Reduz o tamanho da fonte do título */
-    margin-bottom: 5px;
-}
-
-.gtco-staff .role {
-    color: #FF66C4;
-    font-weight: normal;
-    margin-bottom: 10px; /* Reduz o espaçamento inferior */
-}
-
-.gtco-staff p {
-    margin-bottom: 10px; /* Reduz o espaçamento inferior */
-    color: #fff;
-    padding: 0 5px; /* Reduz o padding do texto */
-}
-
-.row {
-
-    justify-content: center; /* Alinha as divs no centro da página */
-    gap: 8px; /* Diminui o espaço entre os blocos */
-    flex-wrap: nowrap; /* Garante que as divs fiquem todas em uma linha */
-}
+  
+  /* Botão com efeito hover */
+  /* .feedback-section button:hover {
+    background-color: #e056a0;
+  } */
+  
+  
 
 @media only screen and (max-width:1440px){
     :root{
