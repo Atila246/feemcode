@@ -6,9 +6,9 @@ fetch('http://localhost:3000/usuarios')
         data.forEach((item) => {
             nome_perfil.innerHTML = item.nome
         })
-        .catch((err) => {
-            console.log("Erro"+err)
-        })
+    })
+    .catch((err) => {
+        console.log("Erro"+err)
     })
     
 // Obter o modal

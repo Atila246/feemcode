@@ -35,7 +35,6 @@ body {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 
-
     left: 0;
 }
 .title {
@@ -149,6 +148,7 @@ body {
     width: 100%;
     border: none;
     background-color: #ecf0f1;
+    outline: none;
 }
 input:-webkit-autofill 
 {    

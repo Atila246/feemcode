@@ -18,13 +18,66 @@ model Usuario {
   nome String 
   email String @unique
   senha String // adicione ? para não obrigatórios
-  idade Int
+
+  conteudo Conteudo[]
+
+  comunidade Comunidade[]
+
+  moderador Moderador?
 }
 
-model Postagem{
+model Conteudo{
   id Int @id @default(autoincrement())
   titulo String
-  bio String?
+  descricao String
+  qtdLikes Int
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int @unique
+
+  evento Evento?
+
+  comunidade Comunidade @relation(fields: [comunidadeId], references: [id])
+  comunidadeId Int @unique
+
+  canal Canal @relation(fields: [canalId], references: [id])
+  canalId Int @unique
 }
 
+model Evento{
+  id Int @id @default(autoincrement())
+  nomeEvento String
+  data DateTime
+  hora DateTime
+  local String
 
+  conteudo Conteudo @relation(fields: [conteudoId], references: [id])
+  conteudoId Int @unique
+}
+
+model Comunidade{
+  id Int @id @default(autoincrement())
+  foto String
+  nomeComunidade String
+  bio String?
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int @unique
+
+  conteudos Conteudo[]
+}
+
+model Canal{
+  id Int @id @default(autoincrement())
+  nomeCanal String
+  qtdInscritos Int
+
+  conteudos Conteudo[]
+}
+
+model Moderador{
+  id Int @id @default(autoincrement())
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int @unique
+}

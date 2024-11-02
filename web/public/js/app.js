@@ -1,31 +1,42 @@
 
-// Seleciona os botões e o elemento body
-const btnSignin = document.querySelector("#signin");
-const btnSignup = document.querySelector("#signup");
+const btnSignin = document.getElementById("signin");
+const btnSignup = document.getElementById("signup");
 const body = document.querySelector("body");
 
-// Adiciona o evento de clique para o botão de Sign In
 btnSignin.addEventListener("click", () => {
     body.classList.remove("sign-up-js"); // Remove a classe sign-up-js se estiver presente
     body.classList.add("sign-in-js");    // Adiciona a classe sign-in-js
 });
 
-// Adiciona o evento de clique para o botão de Sign Up
 btnSignup.addEventListener("click", () => {
     body.classList.remove("sign-in-js"); // Remove a classe sign-in-js se estiver presente
     body.classList.add("sign-up-js");    // Adiciona a classe sign-up-js
 });
 
-const entrarButton = document.getElementById('entrar');
-const passwordInput = document.getElementById('password');
+const email = document.getElementById("email")
+const senha = document.getElementById("senha")
+const btn_login = document.getElementById("btn-login")
 
-entrarButton.addEventListener('click', (e) => {
-  const password = passwordInput.value;
-  if (password.length < 8) {
-    alert('A senha deve ter pelo menos 8 caracteres!');
-    e.preventDefault();
-  }
-});
+
+btn_login.addEventListener('click', () => {
+
+    fetch('http://localhost:3000/login', {
+      method: "POST",
+      body: JSON.stringify({email: email.value, senha: senha.value}),
+      headers: {
+          "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(res => res.json())
+    .then((data) => {
+      console.log(data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+
+})
+
 
 
 
