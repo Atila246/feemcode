@@ -19,7 +19,7 @@ model Usuario {
   email String @unique
   senha String // adicione ? para não obrigatórios
 
-  conteudo Conteudo[]
+  postagem Postagem[]
 
   comunidade Comunidade[]
 
@@ -30,29 +30,51 @@ model Conteudo{
   id Int @id @default(autoincrement())
   titulo String
   descricao String
-  qtdLikes Int
-
-  usuario Usuario @relation(fields: [usuarioId], references: [id])
-  usuarioId Int @unique
+  qtdLikes Int @map("qtd_likes")
 
   evento Evento?
+  video Video?
+  postagem Postagem?
+}
+
+model Postagem{
+  id Int @id @default(autoincrement())
+
+  conteudo Conteudo @relation(fields: [conteudoId], references: [id])
+  conteudoId Int @unique @map("conteudo_id")
 
   comunidade Comunidade @relation(fields: [comunidadeId], references: [id])
-  comunidadeId Int @unique
+  comunidadeId Int @map("comunidade_id")
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int @map("usuario_id")
+}
+
+model Video{
+  id Int @id @default(autoincrement())
+  urlVideo String @map("url_video")
+
+  conteudo Conteudo @relation(fields: [conteudoId], references: [id])
+  conteudoId Int @unique @map("conteudo_id")
 
   canal Canal @relation(fields: [canalId], references: [id])
-  canalId Int @unique
+  canalId Int @map("canal_id")
 }
 
 model Evento{
   id Int @id @default(autoincrement())
-  nomeEvento String
   data DateTime
   hora DateTime
   local String
 
   conteudo Conteudo @relation(fields: [conteudoId], references: [id])
-  conteudoId Int @unique
+  conteudoId Int @unique @map("conteudo_id")
+
+  comunidade Comunidade @relation(fields: [comunidadeId], references: [id])
+  comunidadeId Int @map("comunidade_id")
+
+  moderador Moderador @relation(fields: [moderadorId], references: [id])
+  moderadorId Int @map("moderador_id")
 }
 
 model Comunidade{
@@ -62,22 +84,30 @@ model Comunidade{
   bio String?
 
   usuario Usuario @relation(fields: [usuarioId], references: [id])
-  usuarioId Int @unique
+  usuarioId Int @map("usuario_id")
 
-  conteudos Conteudo[]
+  postagens Postagem[]
+  eventos Evento[]
 }
 
 model Canal{
   id Int @id @default(autoincrement())
   nomeCanal String
-  qtdInscritos Int
+  qtdInscritos Int @map("qtd_inscritos")
 
-  conteudos Conteudo[]
+  videos Video[]
+
+  moderador Moderador @relation(fields: [moderadorId], references: [id])
+  moderadorId Int @map("moderador_id")
 }
 
 model Moderador{
   id Int @id @default(autoincrement())
 
   usuario Usuario @relation(fields: [usuarioId], references: [id])
-  usuarioId Int @unique
+  usuarioId Int @unique @map("usuario_id")
+
+  eventos Evento[]
+  canais Canal[]
 }
+
