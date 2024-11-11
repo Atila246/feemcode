@@ -1,6 +1,23 @@
+body{
+    background-color: #fff6ff;
+}
+
+.femmcode__header-titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.femmcode__header-titulo h2{
+    margin-bottom: 10px;
+    font-weight: 700 !important;
+}
+
+.femmcode{
+    margin-top: 30px;
+}
+
 .sobrenos{
-    margin-bottom: 15px;
-    
+    margin-bottom: 15px;   
 }
 
 .sobrenos__content{
