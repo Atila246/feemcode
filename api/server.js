@@ -16,15 +16,15 @@ app.use(cors({
 
 //método para cadastrar usuários
 app.post('/usuario', async (req, res) => {
-    await prisma.usuario.create({
+    const usuario = await prisma.usuario.create({
         data: {
             nome: req.body.nome,
             email: req.body.email,
             senha: req.body.senha
         }
     })
-
-    res.send('Cadastro realizado com sucesso')
+    
+    res.status(201).json(usuario)
 })
 
 //método para buscar vários usuários
@@ -208,6 +208,60 @@ app.post('/comunidade', async (req,res) =>{
 
     }catch(error){
         res.status(500).json({ error: "Erro ao criar comunidade" })
+    }
+})
+
+app.post('/moderador', async (req,res) => {
+    try{
+        const usuario = await prisma.usuario.create({
+            data: {
+                nome: req.body.nome,
+                email: req.body.email,
+                senha: req.body.senha
+            }
+        })
+
+        const moderador = await prisma.moderador.create({
+            data: {
+                usuario: {
+                    connect: { id: usuario.id }
+                }
+            }
+        })
+
+        res.status(201).json(moderador)
+
+    }catch(error){
+        res.status(500).json({ error: "Erro ao criar moderador" })
+    }
+})
+
+app.post('/canal', async (req,res) => {
+    try{
+        const moderador = await prisma.findUnique({
+            where: {
+                id: req.body.moderadorId
+            }
+        })
+
+        if(moderador==null){
+            return res.send({ err: "Moderador não encontrado" })
+        }
+
+        const canal = await prisma.canal.create({
+            data: {
+                nomeCanal: req.body.nomeCanal,
+                qtdInscritos: 0,
+                moderador: {
+                    connect: { id: req.body.moderadorId }
+                }
+            }
+        })
+
+        res.status(201).json(canal)
+
+    }catch(error){
+        res.status(500).json({ error: "Erro ao criar canal" })
     }
 })
 
