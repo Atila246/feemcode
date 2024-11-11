@@ -29,17 +29,6 @@
     background-color: #f993d2;
 }
 
-/* Estilos dos links no menu de navegação */
-.nav-item a {
-    color: #e141a4;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.nav-item a:hover {
-    color: #9f2570;
-}
-
 /* Informações do perfil */
 .perfil-item {
     display: flex;
@@ -96,7 +85,7 @@
 }
 
 .comunidades-perfil {
-    display: flex;
+    display: none;
     gap: 100px;
 }
 
@@ -172,15 +161,75 @@
 }
 
 /* Estilos adicionais para posts e salvos */
-.post-salvos, .video-salvos {
-    font-weight: 540;
-    color: #e141a4;
-    cursor: pointer;
+.navegacao-abas{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 25px !important;
 }
 
-.post-salvos:hover, .video-salvos:hover {
-    color: #9f2570;
+.navegacao-abas .aba-item{
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+
+.navegacao-abas .ativo{
+    font-weight: 600;
+}
+
+.aba-item .aba-link{
+    text-decoration: none;
+    color: #212529;
+}
+
+.videos-salvos h5, .posts-salvos h5{
+    font-size: 1.1rem;
+    color: #212529;
+    margin-bottom: 15px;
+}
+
+.posts-salvos h5{
+    margin-top: 15px;
+}
+
+.underline{
+    height: 3px;
+    width: 100%;
+    background-color: #212529;
+    transition: width 0.3s ease;
+}
+
+
+.underline.animatein{
+    animation: slidein 0.3s ease forwards;
+}
+
+.underline.animateout{
+    animation: slideout 0.3s ease forwards;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(218.23px);
+    }
+}
+
+@keyframes slideout {
+    from {
+        transform: translateX(218.23px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {

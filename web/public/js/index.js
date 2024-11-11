@@ -5,7 +5,6 @@ const maxItems = items.length;
 // passando pro item do meio
 let currentItem = parseInt(maxItems/2);
 
-
 // animação de rolagem dos itens do carroça
 items[currentItem].scrollIntoView({
     inline:"center",
@@ -54,5 +53,20 @@ controls.forEach((control) => {
         console.log(control);
     });
 });
+
+
+let obj = sessionStorage.getItem("Usuario")
+
+window.onload = function(){
+    if(obj!=null){
+        let perfil = document.getElementById("cadastrado")
+        perfil.style.cssText='display: block;'
+        let botao = document.getElementById("cadastre-se")
+        botao.style.cssText='display: none;'
+
+        let link = document.getElementById("link-cadastro")
+        link.href="perfil.html"
+    }
+}
 
 

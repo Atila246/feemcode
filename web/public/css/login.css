@@ -31,7 +31,10 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    box-shadow: 0px 0px 20px 5px #c1cdff5b;
+    border-radius: 10px;
 }
+
 .content::before {
     content: "";
     position: absolute;
@@ -39,7 +42,10 @@ body {
     width: 340px;
     height: 100%;
     left: 0;
+    border-radius: 10px 0 0 10px;
 }
+
+
 .title {
     font-size: 28px;
     font-weight: bold;
@@ -194,7 +200,7 @@ input:-webkit-autofill
     align-items: center;
     gap: 10px;
     padding: 0 10px;
-    margin: 8px;
+    margin: 10px;
     border-radius: 15px;
 }
 .label-input input::placeholder{
@@ -222,7 +228,7 @@ input:-webkit-autofill
 .password {
     color: #34495e;
     font-size: 14px;
-    margin: 15px 0;
+    margin: 10px 0;
     text-align: center;
 }
 .password::first-letter {

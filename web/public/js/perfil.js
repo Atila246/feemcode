@@ -1,4 +1,11 @@
 const nome_perfil = document.getElementById('profile-name')
+const underline = document.querySelector('.underline')
+const aba1 = document.getElementById("aba1")
+const aba2 = document.getElementById("aba2")
+
+const conteudos_perfil = document.querySelector(".conteudos-perfil")
+const comunidades_perfil = document.querySelector(".comunidades-perfil")
+
 
 fetch('http://localhost:3000/usuarios')
     .then(res => res.json())
@@ -10,6 +17,34 @@ fetch('http://localhost:3000/usuarios')
     .catch((err) => {
         console.log("Erro"+err)
     })
+
+
+aba1.addEventListener('click', () => {
+    aba1.classList.add('ativo')
+    aba2.classList.remove('ativo')
+    
+    underline.classList.remove('animatein')
+    underline.classList.remove('animateout')
+    underline.style.width = `${aba1.offsetWidth}px`
+    underline.classList.add('animateout')
+
+    conteudos_perfil.style.cssText = "display: block;"
+    comunidades_perfil.style.cssText = "display: none;"
+
+})
+
+aba2.addEventListener('click', () => {
+    aba2.classList.add('ativo')
+    aba1.classList.remove('ativo')
+    
+    underline.classList.remove('animateout')
+    underline.classList.remove('animatein')
+    underline.style.width = `${aba2.offsetWidth}px`
+    underline.classList.add('animatein')
+
+    conteudos_perfil.style.cssText = "display: none;"
+    comunidades_perfil.style.cssText = "display: flex;"
+})
     
 // Obter o modal
 var modal = document.getElementById("editProfileModal");

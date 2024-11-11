@@ -46,17 +46,11 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="header__perfil"> <!-- div perfil -->
-                    <a href="perfil.html">
-                        <span>
-                            <i class="fi fi-tr-circle-user" style="display:flex;"></i>
-                        </span>
-                    </a>
-                </div>
+                
             </section>
         </header>
 
-        <div class="container mt-5">
+        <div class="container">
             
 
             <!-- Seção de Informações do Perfil (Foto e Nome sobre o Banner) -->
@@ -83,53 +77,54 @@
 
 
             <!-- Aba de Navegação -->
-            <ul class="nav nav-tabs mt-4" id="profileTabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="saved-tab" data-bs-toggle="tab" href="#saved" role="tab">Vídeos e Postes Salvos</a>
+            <ul class="navegacao-abas">
+                <li class="aba-item ativo" id="aba1"> 
+                    <a class="aba-link">Conteúdo postado</a>
+                    <div class="underline"></div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="communities-tab" data-bs-toggle="tab" href="#communities" role="tab">Comunidades</a>
+                <li class="aba-item" id="aba2">
+                    <a class="aba-link">Comunidades</a>
                 </li>
             </ul>
     
             <!-- Conteúdo das Abas -->
-            <div class="tab-content mt-3" id="profileTabsContent">
-                <!-- Vídeos e Postes Salvos -->
-                <div class="tab-pane fade show active" id="saved" role="tabpanel" aria-labelledby="saved-tab">
-                    <h5 class="video-salvos">Vídeos Salvos</h5>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <video class="card-img-top" controls>
-                                    <source src="saved-video1.mp4" type="video/mp4">
-                                </video>
-                                <div class="card-body">
-                                    <h5 class="card-title">Vídeo Salvo 1</h5>
-                                    <p class="card-text">Descrição do vídeo salvo.</p>
+            <div class="aba-content">
+                <div class="conteudos-perfil">
+                    <div class="videos-salvos">
+                        <h5>Vídeos salvos</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <video class="card-img-top" controls>
+                                        <source src="saved-video1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vídeo Salvo 1</h5>
+                                        <p class="card-text">Descrição do vídeo salvo.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card">
-                                <video class="card-img-top" controls>
-                                    <source src="saved-video1.mp4" type="video/mp4">
-                                </video>
-                                <div class="card-body">
-                                    <h5 class="card-title">Vídeo Salvo 1</h5>
-                                    <p class="card-text">Descrição do vídeo salvo.</p>
+    
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <video class="card-img-top" controls>
+                                        <source src="saved-video1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vídeo Salvo 1</h5>
+                                        <p class="card-text">Descrição do vídeo salvo.</p>
+                                    </div>
                                 </div>
                             </div>
+                            
+                            <!-- Adicione mais vídeos salvos aqui -->
                         </div>
-                        
-                        <!-- Adicione mais vídeos salvos aqui -->
                     </div>
-                </div>
-
-
-
-                    <div>
-                        <h5 class="post-salvos mt-4">Posts Salvos</h5>
+    
+    
+    
+                    <div class="posts-salvos">
+                        <h5>Posts salvos</h5>
                         <div class="comunidades__post card">
                             <div class="post__perfil">
                                 <div class="perfil-post">
@@ -140,86 +135,86 @@
         
                             <h2>Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
                             <p>CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
+                            
                             <div class="post__butaos">
                                 <button class="post__like">
                                     <i class="fi fi-rs-heart"></i>
                                 </button>
                             </div>
-                        </div>
+                        </div>       
                     </div>
                 </div>
-
-           
-
-               
                     
                     
     
                 <!-- Comunidades -->
-                <div class="tab-pane fade" id="communities" role="tabpanel" aria-labelledby="communities-tab">
-                    <div class="comunidades-perfil">
+                <div class="comunidades-perfil">
                         
-                        <div class="comunidades-criadas">
-                            <h5>Minhas comunidades</h5>
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/lucianasantos.png" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Meninas Digitais</span>
-                                        <span>@menines</span>
-                                    </div>
-                                </div>
-                                <button>Editar</button>
-                            </div>
+                    <div class="comunidades-criadas">
 
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/caioni.jpeg" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Wo Makers</span>
-                                        <span>@who_m</span>
-                                    </div>
+                        <h5>Minhas comunidades</h5>
+                        <div class="perfil-item">
+                            <div class="perfil-dados">
+                                <figure class="perfil-image">
+                                    <img src="img/lucianasantos.png" alt="">
+                                </figure>
+                                <div class="perfil-nome">
+                                    <span>Meninas Digitais</span>
+                                    <span>@menines</span>
                                 </div>
-                                <button>Entrar</button>
                             </div>
+                            <button>Editar</button>
                         </div>
 
-                        <div class="comunidades-criadas">
-                            <h5>Comunidades que Participo</h5>
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/lucianasantos.png" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Meninas Digitais</span>
-                                        <span>@menines</span>
-                                    </div>
+                        <div class="perfil-item">
+                            <div class="perfil-dados">
+                                <figure class="perfil-image">
+                                    <img src="img/caioni.jpeg" alt="">
+                                </figure>
+                                <div class="perfil-nome">
+                                    <span>Wo Makers</span>
+                                    <span>@who_m</span>
                                 </div>
-                                <button>Sair</button>
                             </div>
-
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/caioni.jpeg" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Wo Makers</span>
-                                        <span>@who_m</span>
-                                    </div>
-                                </div>
-                                <button>Sair</button>
-                            </div>
+                            <button>Entrar</button>
                         </div>
                     </div>
+
+                    <div class="comunidades-criadas">
+
+                        <h5>Comunidades que Participo</h5>
+                        <div class="perfil-item">
+                            <div class="perfil-dados">
+                                <figure class="perfil-image">
+                                    <img src="img/lucianasantos.png" alt="">
+                                </figure>
+                                <div class="perfil-nome">
+                                    <span>Meninas Digitais</span>
+                                    <span>@menines</span>
+                                </div>
+                            </div>
+                            <button>Sair</button>
+                        </div>
+
+                        <div class="perfil-item">
+                            <div class="perfil-dados">
+                                <figure class="perfil-image">
+                                    <img src="img/caioni.jpeg" alt="">
+                                </figure>
+                                <div class="perfil-nome">
+                                    <span>Wo Makers</span>
+                                    <span>@who_m</span>
+                                </div>
+                            </div>
+                            <button>Sair</button>
+                        </div>
+                    </div>
+                    
                 </div>
+                
             </div>
         </div>
+
         <!-- bootstrap  -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Java Script -->

@@ -47,6 +47,21 @@ body{
     font-size: 35px;
 }
 
+.header__perfil button{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.header__perfil button:hover{
+    background-color: white;
+    color: #f36ec0;
+    transition: all 500ms;
+}
 .container-content{
     width: 100%;
 }
@@ -75,7 +90,7 @@ body{
 .header__pesquisa{
     display: flex;
     border-radius: 40px;
-    padding: 5px 12px;
+    padding: 10px 15px;
     background-color: #ffffff51;
     width: 60%;
     gap: 10px;
@@ -127,6 +142,9 @@ body{
     text-decoration: none;
 }
 
+#cadastrado{
+    display: none;
+}
 
 /*embarque nesse cabaré*/
 .header__carrossa{ 
