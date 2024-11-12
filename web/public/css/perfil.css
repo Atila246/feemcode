@@ -17,8 +17,8 @@
 
 /* Botão de edição do perfil */
 .botao-perfil {
-    background-color: #f993d286;
-    color: #c11880;
+    background-color: #FF66C4;
+    color: white;
     border: none;
     border-radius: 10px;
     padding: 10px;
@@ -26,7 +26,9 @@
 }
 
 .botao-perfil:hover {
-    background-color: #f993d2;
+    background-color: transparent;
+    border: 2px solid #FF66C4;
+    color: #FF66C4;
 }
 
 /* Informações do perfil */
@@ -51,6 +53,13 @@
 .perfil-item .perfil-nome span:nth-child(2) {
     font-size: 0.8rem;
     color: #676767df;
+}
+
+.perfil-item button{
+    border: none;
+    background: transparent;
+    color: #e141a4;
+    font-weight: 600;
 }
 
 /* Foto do perfil */
