@@ -25,13 +25,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
+    <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/comunidades.js" defer></script>
 </head>
 <body>
     <div class="container-noscroll">
-        <!-- section do menu navegador -->
-        <section class="header__nav">
-            <div class="header__logo">
+        <section class="header__nav"> <!-- section do menu navegador -->
+            <div class="header__logo"> 
                 <a href="index.html"><img src="img/femmcodelogo.png" alt="Logo"></a>
             </div>
             <div class="pesquisa-menu">
@@ -46,7 +46,7 @@
                         <li><a href="index.html">Início</a></li>
                         <li><a href="sobrenos.html">Sobre nós</a></li>
                         <li><a href="historia.html">História</a></li>
-                        <li><a href="comunidades.html" id="comunidades">Comunidades</a></li>
+                        <li><a href="comunidades.html" style="font-weight: 700; border-bottom: 3px solid white">Comunidades</a></li>
                         <li><a href="eventos.html">Eventos</a></li>
                         <li><a href="#canais">Canais</a></li>
                         <li><a href="minimentes.html">Mini Mentes</a></li>
@@ -58,26 +58,43 @@
             </div>
         </section>
         
-        <!-- section da rolagem de postagens de mentirinha -->
-       <div class="container-comunidade">
-
-            <section class="comunidades__perfis">
-                <div class="perfis__header">
+       <div class="container-comunidade"> <!-- div da rolagem de postagens de mentirinha -->
+            <section class="comunidade__usuarios">
+                <div class="usuarios__header">
                     <span>Comunidades</span>
-                    <button id="criarComunidadeBtn" class="create-btn">Criar comunidade +</button>
+                    <button id="comunidade-btn">+ Criar comunidade</button>
                 </div>
     
-                <!-- Modal para aviso de login -->
-                <div id="loginModal" class="modal" style="display: none;">
+                <div class="modal" id="login-modal"> <!-- Modal para aviso de login -->
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <p>Você precisa estar logado para criar uma comunidade.</p>
-                        <button id="loginButton" class="login-btn">Login</button>
+                        <p>Você precisa de uma conta para que possa criar comunidades</p>
+                        <button type="button" class="login-btn">Criar uma conta</button>
+                    </div>
+                </div>
+
+                <div class="modal" id="comunidade-modal" style="display:none;">
+                    <div class="form-container modal-content">
+                        <h2>Criar comunidade</h2>
+                        <form class="comunidade__form">
+                            <p>Preencha os campos para criar sua comunidade</p>
+                            <figure>
+                                <img src="img/adicionar_perfil.webp" alt="">
+                            </figure>
+                            <div class="comunidade__form-item">
+                                <i class="fa-solid fa-users icon-modify"></i>
+                                <input type="text" placeholder="Digite o nome da comunidade">
+                            </div>
+                            <div class="comunidade__form-item">
+                                <i class="fa-solid fa-quote-left icon-modify"></i>
+                                <input type="text" placeholder="Digite a descrição da comunidade">
+                            </div>
+                            <button>Criar</button>
+                        </form>
                     </div>
                 </div>
     
-                <!-- Formulário de criação de comunidade -->
-                <div id="Criarcomunidade" class="create-community-form" style="display: none;">
+                <!-- <div class="create-community-form" id="form-comunidade" style="display: none;"> 
                     <div class="create-community-content">
                         <span class="close">&times;</span>
                         <h2>Criar Comunidade</h2>
@@ -97,26 +114,27 @@
                             <button type="submit" class="btn-success">Criar Comunidade</button>
                         </form>
                     </div>
-                </div>
+                </div> -->
                 
-                <div class="perfil-item">
-                    <div class="perfil-dados">
-                        <figure class="perfil-image">
+                <div class="perfil-comunidade"> 
+                    <div class="perfil-comunidade__dados">
+                        <figure class="perfil-comunidade__image">
                             <img src="img/meninas-digitais.jpeg" alt="">
                         </figure>
-                        <div class="perfil-nome">
+                        <div class="perfil-comunidade__nome">
                             <span>Meninas Digitais</span>
                             <span>@meninasdigitais</span>
                         </div>
                     </div>
                     <button>Entrar</button>
                 </div>
-                <div class="perfil-item">
-                    <div class="perfil-dados">
-                        <figure class="perfil-image">
+
+                <div class="perfil-comunidade">
+                    <div class="perfil-comunidade__dados">
+                        <figure class="perfil-comunidade__image">
                             <img src="img/womakers1.jpeg" alt="">
                         </figure>
-                        <div class="perfil-nome">
+                        <div class="perfil-comunidade__nome">
                             <span>Wo Makers</span>
                             <span>@who_m</span>
                         </div>
@@ -124,12 +142,12 @@
                     <button>Entrar</button>
                 </div>
 
-                <div class="perfil-item">
-                    <div class="perfil-dados">
-                        <figure class="perfil-image">
+                <div class="perfil-comunidade">
+                    <div class="perfil-comunidade__dados">
+                        <figure class="perfil-comunidade__image">
                             <img src="img/gloria guimaraes.jfif" alt="">
                         </figure>
-                        <div class="perfil-nome">
+                        <div class="perfil-comunidade__nome">
                             <span>Luciana Santos</span>
                             <span>@luci_santos</span>
                         </div>
@@ -138,12 +156,9 @@
                 </div>
             </section>
 
-            <section class="comunidades__postagens">
-            <!-- divs de um só post -->
-                <div class="comunidades__post card">
-                    
-
-                    <div class="post__perfil">
+            <section class="comunidade__postagens"> <!-- todas as postagens -->
+                <div class="comunidade__post card">
+                    <div class="post__header">
                         <div class="perfil-post">
                             <a href="perfilcomunidade.html">
                                 <img src="img/meninas-digitais.jpeg" alt="">
@@ -165,18 +180,20 @@
                         </div>
                     </div>
                     
+                    <div class="post__corpo">
+                        <h2 id="perfil-titulo">Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
+                        <p id="perfil-descricao">CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
+                    </div>
 
-                    <h2 id="titulo">Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
-                    <p id="descricao">CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
-                    <div class="post__butaos">
-                        <button class="post__like">
+                    <div class="post__opcoes">
+                        <button class="post-like">
                             <i class="fi fi-rs-heart"></i>
                         </button>
                     </div>
                 </div>
 
-                <div class="comunidades__post card">
-                    <div class="post__perfil">
+                <div class="comunidade__post card">
+                    <div class="post__header">
                         <div class="perfil-post">
                             <img src="img/womakers1.jpeg" alt="">
                             <span id="comunidade">Wo Makers</span>
@@ -197,24 +214,24 @@
                         </div>
                     </div>
 
-                    <h2 id="titulo">Palestra Mulheres na Tecnologia</h2>
-                    <p id="descricao">Mulheres na Tecnologia é um encontro dinâmico e inclusivo que reúne mulheres apaixonadas pela tecnologia para explorar novas tecnologias, aprimorar suas habilidades técnicas e fazer networking e é transmitido em live no YouTube.</p>
-                    <div class="post__butaos">
-                        <button class="post__like">
+                    <div class="post__corpo">
+                        <h2 id="perfil-titulo">Palestra Mulheres na Tecnologia</h2>
+                        <p id="perfil-descricao">Mulheres na Tecnologia é um encontro dinâmico e inclusivo que reúne mulheres apaixonadas pela tecnologia para explorar novas tecnologias, aprimorar suas habilidades técnicas e fazer networking e é transmitido em live no YouTube.</p>
+                    </div>
+
+                    <div class="post__opcoes">
+                        <button class="post-like">
                             <i class="fi fi-rs-heart"></i>
                         </button>
                     </div>
                 </div>
 
-                <div class="comunidades__post card">
-
-                    <div class="post__perfil">
-
+                <div class="comunidade__post card">
+                    <div class="post__header">
                         <div class="perfil-post">
                             <img src="img/caioni.jpeg" alt="">
                             <span id="comunidade">Kauane Martins</span>
                         </div>
-                        
                         <div class="perfil-config">
                             <button>Entrar</button>
                             <div class="pontinhos__post"  id="config-post3">
@@ -227,14 +244,15 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
-                    <h2 id="titulo">Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
-                    <p id="descricao">CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
-                    
-                    <div class="post__butaos">
-                        <button class="post__like">
+                    <div class="post__corpo">
+                        <h2 id="perfil-titulo">Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
+                        <p id="perfil-descricao">CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
+                    </div>
+
+                    <div class="post__opcoes">
+                        <button class="post-like">
                             <i class="fi fi-rs-heart"></i>
                         </button>
                     </div>

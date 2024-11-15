@@ -90,6 +90,7 @@ body {
     align-self: center;
     border: none;
     margin-top: 1rem;
+    font-family: 'Poppins', sans-serif !important;
 }
 .btn-primary {
     background-color: transparent;
@@ -194,7 +195,7 @@ input:-webkit-autofill
     -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
     -webkit-text-fill-color: #000 !important;
 }
-.label-input {
+.form-label {
     background-color: #ecf0f1;
     display: flex;
     align-items: center;
@@ -203,7 +204,7 @@ input:-webkit-autofill
     margin: 10px;
     border-radius: 15px;
 }
-.label-input input::placeholder{
+.form input::placeholder{
     font-family: 'Poppins', sans-serif !important;
 }
 .icon-modify {

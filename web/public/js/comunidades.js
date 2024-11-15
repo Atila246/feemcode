@@ -42,39 +42,39 @@ config_post3.addEventListener("click", () => {
 
 console.log("Ola");
 
-var isLoggedIn = false; // Mudar para 'false' para simular usuário não logado
+var isLoggedIn = true; // Mudar para 'false' para simular usuário não logado
 
 // Elementos de referência
-var criarComunidadeBtn = document.getElementById('criarComunidadeBtn');
-var loginModal = document.getElementById('loginModal');
-var criarComunidade = document.getElementById('Criarcomunidade'); // Corrigido nome da variável
-var closeButtons = document.getElementsByClassName('close');
+var comunidade_btn = document.getElementById('comunidade-btn');
+var login_modal = document.getElementById('login-modal');
+var comunidade_modal = document.getElementById('comunidade-modal'); // Corrigido nome da variável
+var close_btn = document.getElementsByClassName('close');
 
 // Abrir POPUP ou formulário com base no login
-criarComunidadeBtn.onclick = function () {
+comunidade_btn.onclick = function () {
     if (isLoggedIn) {
         // Se estiver logado, exibe o formulário de criação
-        criarComunidade.style.display = "block";
+        comunidade_modal.style.display = "flex";
     } else {
         // Se não estiver logado, exibe o aviso de login
-        loginModal.style.display = "block";
+        login_modal.style.display = "flex";
     }
 };
 
 // Fechar POPUP e formulário ao clicar no 'X'
-for (let i = 0; i < closeButtons.length; i++) {
-    closeButtons[i].onclick = function () {
-        loginModal.style.display = "none";
-        criarComunidade.style.display = "none";
+for (let i = 0; i < close_btn.length; i++) {
+    close_btn[i].onclick = function () {
+        login_modal.style.display = "none";
+        comunidade_modal.style.display = "none";
     };
 }
 
 // Fechar POPUP ao clicar fora dele
 window.onclick = function (event) {
-    if (event.target == loginModal) {
-        loginModal.style.display = "none";
-    } else if (event.target == criarComunidade) {
-        criarComunidade.style.display = "none";
+    if (event.target == login_modal) {
+        login_modal.style.display = "none";
+    } else if (event.target == comunidade_modal) {
+        comunidade_modal.style.display = "none";
     }
 };
 

@@ -1,4 +1,4 @@
-const nome_perfil = document.getElementById('profile-name')
+const perfil_nome = document.getElementById("perfil-nome")
 const underline = document.querySelector('.underline')
 const aba1 = document.getElementById("aba1")
 const aba2 = document.getElementById("aba2")
@@ -11,7 +11,7 @@ fetch('http://localhost:3000/usuarios')
     .then(res => res.json())
     .then((data) => {
         data.forEach((item) => {
-            nome_perfil.innerHTML = item.nome
+            perfil_nome.innerHTML = item.nome
         })
     })
     .catch((err) => {

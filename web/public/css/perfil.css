@@ -1,18 +1,5 @@
-/* Estilo do banner de perfil */
-.profile-banner {
-    background-image: url('../img/fundoperfil.png'); /* Imagem de fundo do banner */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
-
-.profile-banner img {
-    width: 100px;
-    height: 100px;
-    box-shadow: 1px 1px 10px 1px #939090;
-    border-radius: 50%;
-    cursor: pointer;
+body{
+    color: #212529;
 }
 
 /* Botão de edição do perfil */
@@ -31,7 +18,61 @@
     color: #FF66C4;
 }
 
-/* Informações do perfil */
+.container__perfil-info{
+    padding: 80px 0 0;
+    background-color: rgb(237, 237, 237);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.perfil__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.perfil__nome-desc{
+    display: flex;
+    gap: 40px;
+    width: 50%;
+}
+
+.perfil__nome-desc h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.perfil__nome-desc p{
+    font-size: 1rem;
+    color: #383838c5;
+    margin: 0;
+}
+
+.perfil__nome-desc span i{
+    font-size: 100px;
+}
+
+.videos-salvos .row{
+    width: 100%;
+}
+
+/* comunidades criadas */
+.comunidades-criadas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    width: 40%;
+}
+
+.comunidades-perfil {
+    display: none;
+    gap: 100px;
+}
+
 .perfil-item {
     display: flex;
     justify-content: space-between;
@@ -62,7 +103,6 @@
     font-weight: 600;
 }
 
-/* Foto do perfil */
 .perfil-dados figure {
     width: 40px;
     height: 40px;
@@ -84,19 +124,6 @@
     gap: 20px;
 }
 
-/* Comunidades criadas */
-.comunidades-criadas {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-    width: 40%;
-}
-
-.comunidades-perfil {
-    display: none;
-    gap: 100px;
-}
 
 /* Postagens */
 .comunidades__post {
@@ -118,7 +145,6 @@
     margin: 0;
 }
 
-/* Perfil do autor da postagem */
 .post__perfil {
     display: flex;
     justify-content: space-between;
@@ -145,7 +171,6 @@
     cursor: pointer;
 }
 
-/* Botão de ações na postagem */
 .post__perfil button {
     border: none;
     background-color: #FF66C4;
@@ -169,13 +194,14 @@
     cursor: pointer;
 }
 
-/* Estilos adicionais para posts e salvos */
+/*abas de navegação*/
 .navegacao-abas{
     display: flex;
     list-style-type: none;
     gap: 20px;
     padding: 0;
-    margin-bottom: 25px !important;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .navegacao-abas .aba-item{
@@ -184,6 +210,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+   
 }
 
 .navegacao-abas .ativo{
@@ -192,7 +219,8 @@
 
 .aba-item .aba-link{
     text-decoration: none;
-    color: #212529;
+    color: white;
+    text-shadow: 1px 1px 5px #3c4a6c;
 }
 
 .videos-salvos h5, .posts-salvos h5{
@@ -208,7 +236,7 @@
 .underline{
     height: 3px;
     width: 100%;
-    background-color: #212529;
+    background-color: white;
     transition: width 0.3s ease;
 }
 
