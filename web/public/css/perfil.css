@@ -4,23 +4,25 @@ body{
 
 /* Botão de edição do perfil */
 .botao-perfil {
-    background-color: #FF66C4;
-    color: white;
+    background-color: #ffffff;
+    color: #af5fe4;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
     cursor: pointer;
+    padding: 10px 40px;
+    font-weight: 600;
 }
 
 .botao-perfil:hover {
     background-color: transparent;
-    border: 2px solid #FF66C4;
-    color: #FF66C4;
+    border: 2px solid white;
+    color: white;
 }
 
 .container__perfil-info{
-    padding: 80px 0 0;
-    background-color: rgb(237, 237, 237);
+    padding: 0 0 0;
+    background-color: #af5fe4;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -36,36 +38,70 @@ body{
 
 .perfil__nome-desc{
     display: flex;
+    align-items: center;
     gap: 40px;
-    width: 50%;
+    width: 70%;
 }
 
 .perfil__nome-desc h3{
     font-size: 1.5rem;
+    color: white;
     font-weight: 600;
 }
 
 .perfil__nome-desc p{
     font-size: 1rem;
-    color: #383838c5;
+    color: rgb(228, 228, 228);
     margin: 0;
 }
 
-.perfil__nome-desc span i{
-    font-size: 100px;
+.perfil__nome-desc img{
+    width: 100px;
+    height: 100px;
 }
 
 .videos-salvos .row{
     width: 100%;
 }
 
+.menu{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu__nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__nav ul li a{
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.menu__logo a img{
+    width: 100px;
+}
+
 /* comunidades criadas */
-.comunidades-criadas {
+.comunidade-criada {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 30px;
     width: 40%;
+}
+
+.comunidade-criada h5{
+    font-size: 1.3rem;
+    color: #212529;
+    font-weight: 600;
 }
 
 .comunidades-perfil {
@@ -73,44 +109,43 @@ body{
     gap: 100px;
 }
 
-.perfil-item {
+.comunidade-criada__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
 }
 
-.perfil-nome {
+.comunidade-criada__nome {
     display: flex;
     flex-direction: column;
 }
 
-.perfil-item .perfil-nome span:nth-child(1) {
+.comunidade-criada__nome span:nth-child(1) {
     font-weight: 600;
     font-size: 1rem;
     color: #383838;
 }
 
-.perfil-item .perfil-nome span:nth-child(2) {
+.comunidade-criada__nome span:nth-child(2) {
     font-size: 0.8rem;
     color: #676767df;
 }
 
-.perfil-item button{
+.comunidade-criada__item button{
     border: none;
     background: transparent;
-    color: #e141a4;
+    color: #af5fe4;
     font-weight: 600;
 }
 
-.perfil-dados figure {
+.comunidade-criada__dados figure {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin: 0;
 }
 
-.perfil-dados figure img {
+.comunidade-criada__dados figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -118,7 +153,7 @@ body{
     cursor: pointer;
 }
 
-.perfil-dados {
+.comunidade-criada__dados {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -220,17 +255,18 @@ body{
 .aba-item .aba-link{
     text-decoration: none;
     color: white;
-    text-shadow: 1px 1px 5px #3c4a6c;
+}
+
+.perfil__aba-content{
+    width: 80%;
+    margin: 30px auto;
 }
 
 .videos-salvos h5, .posts-salvos h5{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #212529;
     margin-bottom: 15px;
-}
-
-.posts-salvos h5{
-    margin-top: 15px;
+    font-weight: 600;
 }
 
 .underline{
@@ -239,7 +275,6 @@ body{
     background-color: white;
     transition: width 0.3s ease;
 }
-
 
 .underline.animatein{
     animation: slidein 0.3s ease forwards;

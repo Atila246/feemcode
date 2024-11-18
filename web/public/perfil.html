@@ -25,20 +25,21 @@
     <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container-content"> <!-- container principal q contém tudo -->
-        <header class="container__header"> <!-- header que contém o menu navegador e o carrossel -->
-            <section class="header__nav"> <!-- section do menu navegador -->
-                <div class="header__logo"> <!-- div da logo -->
+    <!-- 
+    <div class="container-content"> 
+        <header class="container__header">
+            <section class="header__nav"> 
+                <div class="header__logo">
                     <a href="index.html"><img src="img/femmcodelogo.png" alt="Logo"></a>
                 </div>
-                <div class="pesquisa-menu"> <!-- div da pesquisa -->
+                <div class="pesquisa-menu">
                     <div class="header__pesquisa">
                         <span>
                             <i class="fi fi-rs-search" style="display:flex;"></i>
                         </span>
                         <input type="search" id="search" placeholder=" O que está procurando?">
                     </div>
-                    <nav class="header__menu"> <!-- nav com os itens de navegação -->
+                    <nav class="header__menu">
                         <ul class="menu__list">
                             <li><a href="index.html">Início</a></li>
                             <li><a href="sobrenos.html">Sobre nós</a></li>
@@ -51,13 +52,31 @@
                     </nav>
                 </div>
             </section>
-        </header>
+        </header> -->
 
         <div class="perfil">
             <div class="container__perfil-info">
+                <div class="menu">
+                    <div class="menu__logo">
+                        <a href="index.html">
+                            <img src="img/femmcodelogo.png" alt="Logo">
+                        </a>
+                    </div>
+                    <nav class="menu__nav">
+                        <ul>
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="sobrenos.html">Sobre nós</a></li>
+                            <li><a href="historia.html">História</a></li>
+                            <li><a href="comunidades.html">Comunidades</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                            <li><a href="canais.html">Canais</a></li>
+                            <li><a href="minimentes.html">Mini Mentes</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="perfil__info">
                     <div class="perfil__nome-desc">
-                        <span><i class="fa-regular fa-user"></i></span>
+                        <img src="img/usuario.png" alt="Usuário">
                         <div>
                             <h3 id="perfil-nome">Nome do Usuário</h3>
                             <p id="perfil-descricao">Aqui vai uma breve descrição do perfil do usuário. Pode incluir informações como interesses, profissão ou algo sobre sua personalidade.</p>
@@ -65,136 +84,138 @@
                     </div>
                     <button class="botao-perfil" id="botao-perfil">Editar Perfil</button>
                 </div>
-                <ul class="navegacao-abas">
-                    <li class="aba-item ativo" id="aba1"> 
-                        <a class="aba-link">Conteúdo postado</a>
-                        <div class="underline"></div>
-                    </li>
-                    <li class="aba-item" id="aba2">
-                        <a class="aba-link">Comunidades</a>
-                    </li>
-                </ul>
+
+                <div class="perfil__abas">
+                    <ul class="navegacao-abas">
+                        <li class="aba-item ativo" id="aba1"> 
+                            <a class="aba-link">Conteúdo postado</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="aba-item" id="aba2">
+                            <a class="aba-link">Comunidades</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             
-            <div class="perfil__abas">
-                
-        
-                <div class="aba-content">
-                    <div class="conteudos-perfil">
-                        <div class="videos-salvos">
-                            <h5>Vídeos salvos</h5>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <video class="card-img-top" controls>
-                                            <source src="saved-video1.mp4" type="video/mp4">
-                                        </video>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vídeo Salvo 1</h5>
-                                            <p class="card-text">Descrição do vídeo salvo.</p>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <video class="card-img-top" controls>
-                                            <source src="saved-video1.mp4" type="video/mp4">
-                                        </video>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Vídeo Salvo 1</h5>
-                                            <p class="card-text">Descrição do vídeo salvo.</p>
-                                        </div>
+            <div class="perfil__aba-content">
+                <div class="conteudos-perfil">
+                    <div class="videos-salvos">
+                        <h5>Vídeos salvos</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <video class="card-img-top" controls>
+                                        <source src="saved-video1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vídeo Salvo 1</h5>
+                                        <p class="card-text">Descrição do vídeo salvo.</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-        
-                        <div class="posts-salvos">
-                            <h5>Posts salvos</h5>
-                            <div class="comunidades__post card">
-                                <div class="post__perfil">
-                                    <div class="perfil-post">
-                                        <img src="img/caioni.jpeg" alt="">
-                                        <span>Caioni</span>
+    
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <video class="card-img-top" controls>
+                                        <source src="saved-video1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Vídeo Salvo 1</h5>
+                                        <p class="card-text">Descrição do vídeo salvo.</p>
                                     </div>
                                 </div>
-            
-                                <h2>Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
-                                <p>CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
-                                
-                                <div class="post__butaos">
-                                    <button class="post__like">
-                                        <i class="fi fi-rs-heart"></i>
-                                    </button>
-                                </div>
-                            </div>       
+                            </div>
                         </div>
                     </div>
+
+                    <hr>
+    
+                    <div class="posts-salvos">
+                        <h5>Posts salvos</h5>
+                        <div class="comunidades__post card">
+                            <div class="post__perfil">
+                                <div class="perfil-post">
+                                    <img src="img/caioni.jpeg" alt="">
+                                    <span>Caioni</span>
+                                </div>
+                            </div>
         
-                    <!-- Comunidades -->
-                    <div class="comunidades-perfil">
-                        <div class="comunidades-criadas">
-                            <h5>Minhas comunidades</h5>
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/lucianasantos.png" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Meninas Digitais</span>
-                                        <span>@menines</span>
-                                    </div>
-                                </div>
-                                <button>Editar</button>
+                            <h2>Congresso da Sociedade Brasileira de Computação (CSBC)</h2>
+                            <p>CSBC 2024, evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática, promover a inclusão digital, incentivar a pesquisa e o ensino em computação no Brasil e contribuir para a formação do profissional da computação com responsabilidade social. O 44º CSBC tem como tema este ano "Deserto Digital: O Mundo Desconectado e Não Visto” e segue até esta quinta-feira, aqui em Brasília.</p>
+                            
+                            <div class="post__butaos">
+                                <button class="post__like">
+                                    <i class="fi fi-rs-heart"></i>
+                                </button>
                             </div>
+                        </div>       
+                    </div>
+                </div>
     
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/caioni.jpeg" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Wo Makers</span>
-                                        <span>@who_m</span>
-                                    </div>
+                <!-- Comunidades -->
+                <div class="comunidades-perfil">
+                    <div class="comunidade-criada">
+                        <h5>Minhas comunidades</h5>
+
+                        <div class="comunidade-criada__item">
+                            <div class="comunidade-criada__dados">
+                                <figure class="perfil-image">
+                                    <img src="img/lucianasantos.png" alt="">
+                                </figure>
+                                <div class="comunidade-criada__nome">
+                                    <span>Meninas Digitais</span>
+                                    <span>@menines</span>
                                 </div>
-                                <button>Editar</button>
                             </div>
+                            <button>Editar</button>
                         </div>
-    
-                        <div class="comunidades-criadas">
-                            <h5>Comunidades que Participo</h5>
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/lucianasantos.png" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Meninas Digitais</span>
-                                        <span>@menines</span>
-                                    </div>
+
+                        <div class="comunidade-criada__item">
+                            <div class="comunidade-criada__dados">
+                                <figure class="comunidade-criada__image">
+                                    <img src="img/caioni.jpeg" alt="">
+                                </figure>
+                                <div class="comunidade-criada__nome">
+                                    <span>Wo Makers</span>
+                                    <span>@who_m</span>
                                 </div>
-                                <button>Sair</button>
                             </div>
-    
-                            <div class="perfil-item">
-                                <div class="perfil-dados">
-                                    <figure class="perfil-image">
-                                        <img src="img/caioni.jpeg" alt="">
-                                    </figure>
-                                    <div class="perfil-nome">
-                                        <span>Wo Makers</span>
-                                        <span>@who_m</span>
-                                    </div>
-                                </div>
-                                <button>Sair</button>
-                            </div>
+                            <button>Editar</button>
                         </div>
-                        
+                    </div>
+
+                    <div class="comunidade-criada">
+                        <h5>Comunidades que participo</h5>
+                        <div class="comunidade-criada__item">
+                            <div class="comunidade-criada__dados">
+                                <figure class="comunidade-criada__image">
+                                    <img src="img/lucianasantos.png" alt="">
+                                </figure>
+                                <div class="comunidade-criada__nome">
+                                    <span>Meninas Digitais</span>
+                                    <span>@menines</span>
+                                </div>
+                            </div>
+                            <button>Sair</button>
+                        </div>
+
+                        <div class="comunidade-criada__item">
+                            <div class="comunidade-criada__dados">
+                                <figure class="comunidade-criada__image">
+                                    <img src="img/caioni.jpeg" alt="">
+                                </figure>
+                                <div class="comunidade-criada__nome">
+                                    <span>Wo Makers</span>
+                                    <span>@who_m</span>
+                                </div>
+                            </div>
+                            <button>Sair</button>
+                        </div>
                     </div>
                     
                 </div>
+                
             </div>
     
         </div>
