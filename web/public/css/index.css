@@ -239,7 +239,7 @@ body{
 
 .comunidades-exem{
     padding: 15px;
-    background-color: #f7e9f7 !important;
+    background: transparent !important;
 }
 
 .comunidades-descricao h2{
@@ -257,6 +257,11 @@ body{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.comunidades-exem{
+    border-radius: 10px;
+    border: 1px solid #a3a3a39a;
 }
 
 .comunidades__header-titulo{
@@ -329,42 +334,79 @@ hr{
     font-size: 1.2rem;
 }
 
-.eventos-dados{
+.eventos__content{
     display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
-.eventos-dados figure{
-    width: 40%;
-    height: 240px;
-}
-
-.eventos-dados figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.evento-dados{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    border: 1px solid #a3a3a39a;
     border-radius: 10px;
 }
 
-.eventos-desc p{
-    font-size: 1.2rem;
-    margin-top: 40px;
+.evento-dados figure{
+    width: 40%;
+    height: 200px;
+    margin: 0;
 }
 
-.eventos-desc{
+.evento-dados figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.evento-desc p{
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+   
+    width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+
+.evento-desc h4{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.evento-desc{
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
 }
 
-.eventos-local{
+.evento-local{
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
 }
 
-.eventos-local i{
-    font-size: 1.6rem;
+.evento-local span{
+    font-size: 1rem;
+    color: #f36ec0;
 }
 
+.evento-local span i{
+    display: flex;
+    width: 16px;
+    height: 16px;
+}
 
 /*parte de anais*/
 .canais__header-titulo{
