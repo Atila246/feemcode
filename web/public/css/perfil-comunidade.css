@@ -1,0 +1,313 @@
+body{
+    color: #212529;
+}
+
+/* Botão de edição do perfil */
+.botao-perfil {
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    padding: 10px 40px;
+    font-weight: 600;
+}
+
+.container__perfil-info{
+    padding: 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    background-color: #FF66C4;
+}
+
+.perfil__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.perfil__nome-desc{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 70%;
+}
+
+.perfil__nome-desc h3{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.perfil__nome-desc p{
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+}
+
+.perfil__nome-desc img{
+    width: 100px;
+    height: 100px;
+}
+
+.videos-salvos .row{
+    width: 100%;
+}
+
+.menu{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu__nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__nav ul li a{
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.menu__logo a img{
+    width: 100px;
+}
+
+
+/*posts da comunidade*/
+.comunidades__post {
+    padding: 30px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.comunidades__post p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.comunidades__post h2 {
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.post__perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__perfil img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post__perfil span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #383838;
+}
+
+.perfil-post {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.post__perfil button {
+    border: none;
+    background-color: #FF66C4;
+    color: #ffffff;
+    padding: 5px 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.post__butaos {
+    display: flex;
+    gap: 10px;
+}
+
+.post__like {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/*gerenciar comunidade*/
+.gerenciar-comunidade{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editar-perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.editar-perfil__form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-label{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.form-label input{
+    margin: 0;
+}
+
+.editar-perfil__banner figure{
+    margin: 0;
+}
+
+.editar-perfil__banner h6{
+    display: block;
+    margin: 0;
+}
+
+.editar-perfil__banner span{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.editar-perfil__banner.card{
+    padding: 20px;
+    background-color: transparent;
+}
+
+.form-label input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+.navegacao-abas{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.navegacao-abas .aba-item{
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+}
+
+.navegacao-abas .ativo{
+    font-weight: 600;
+}
+
+.aba-item .aba-link{
+    text-decoration: none;
+    color: white;
+}
+
+.perfil__aba-content{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.videos-salvos h5, .posts-salvos h5{
+    font-size: 1.3rem;
+    color: #212529;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.underline{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.underline.animatein{
+    animation: slidein 0.3s ease forwards;
+}
+
+.underline.animateout{
+    animation: slideout 0.3s ease forwards;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(218.23px);
+    }
+}
+
+@keyframes slideout {
+    from {
+        transform: translateX(218.23px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .comunidades-perfil {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .comunidades-criadas, .comunidades__post {
+        width: 100%;
+    }
+}
+
+/* Esconder a seção de edição de perfil inicialmente */
+.hidden {
+    display: none;
+}
+
+/* Estilização adicional opcional */
+.edit-profile-section {
+    margin-top: 20px;
+}
