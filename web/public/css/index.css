@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-body{
-    font-family:'Poppins', sans-serif !important;
-}
-
 /*barrinha de rolagem gay*/
 ::-webkit-scrollbar {
     width: 15px;
@@ -23,130 +19,6 @@ body{
     border: 3px solid #f0f0f0; /* borda com a cor de fundo pro efeito de espessura */
 }
 
-.container-content{
-    /* background-color: #f1f3ea; */
-    background-color: #fff6ff;
-    /* #f1eaf3 */
-}
-
-/*estilização da partezinha de cima*/
-.header__nav{
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(to left,#f36ec0, #af5fe4); 
-    /* background: linear-gradient(to right, #7d66f1, #f371c1); */
-    /* background-color: #884a93;  */
-    display: flex;
-}
-
-.header__perfil a{
-    text-decoration: none;
-}
-
-.header__perfil a span{
-    font-size: 35px;
-}
-
-.header__perfil button{
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    font-size: 1rem;
-    padding: 8px 10px;
-    border-radius: 5px;
-    font-weight: 500;
-}
-
-.header__perfil button:hover{
-    background-color: white;
-    color: #f36ec0;
-    transition: all 500ms;
-}
-.container-content{
-    width: 100%;
-}
-
-/*logo*/
-.header__logo{
-    width: 80px;
-    height: 50px;
-}
-
-.header__logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
- 
-/*pesquisa*/
-.pesquisa-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    margin: 0 auto;
-    width: 80%;
-}
-
-.header__pesquisa{
-    display: flex;
-    border-radius: 40px;
-    padding: 10px 15px;
-    background-color: #ffffff51;
-    width: 60%;
-    gap: 10px;
-}
-
-.header__pesquisa input{
-    border: none;
-    background: transparent;
-    outline: none;
-    caret-color: rgba(255, 255, 255, 0.5);
-    width: 100%;
-    color: white;
-}
-
-.header__pesquisa input::placeholder{
-    color: white;
-    opacity: 0.8;
-}
-
-.header__pesquisa span{
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-/*Elementos do menu*/
-.menu__list{
-    display: flex;
-    list-style: none;
-    gap: 60px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin: 0;
-    padding-left: 0;
-}
-
-.menu__list li a{
-    font-weight: 500;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    text-decoration: none;
-    padding-bottom: 6px;
-}
-
-.header__perfil span{
-    color: white;
-    font-size: 25px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#cadastrado{
-    display: none;
-}
 
 /*embarque nesse cabaré*/
 .header__carrossa{ 
@@ -171,8 +43,8 @@ body{
     width: 45%;
     height: 350px;
     flex-shrink: 0;
-    opacity: 0.5;
-    filter: blur(3px);
+    /* opacity: 0.5; */
+    filter: blur(4px);
 }
 
 .carrossa-item video{
@@ -192,7 +64,7 @@ body{
     transform: scale(1.1);
     transition: all 0.5s;
     opacity: 1;
-    border: 6px solid #f371c1;
+    border: 4px solid #ff69b4;
     filter: blur(0);
 }
 
@@ -206,7 +78,6 @@ body{
     border: none;
     padding: 0 50px;
     font-size: 4rem;
-    color: #7b3687;
     z-index: 2;
     background-color: transparent;
 }
@@ -216,13 +87,10 @@ body{
     left: auto;   
 }
 
-
-
 /*estilo imagens comunidade (conteúdo)*/
 .comunidades-item figure{
     width: 100%;
     height: 150px;
-    
 }
 
 .comunidades-item{

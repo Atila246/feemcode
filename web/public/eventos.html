@@ -4,58 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FemmCode - Eventos</title>
-    <link rel="stylesheet" href="css/eventos.css">
-    <link rel="stylesheet" href="css/index.css">
+    
+    <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <!--estilos e scripts-->
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/eventos.css">
+    <script type="text/javascript" src="js/index.js" defer></script>
+
+    <!--flaticon-->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/index.js" defer></script>
+
+    <!--google fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 <body>
-    <div class="container-content"> <!-- container principal q contém tudo -->
-        <header class="container__header"> <!-- header que contém o menu navegador e o carrossel -->
-            <section class="header__nav"> <!-- section do menu navegador -->
-                <div class="header__logo"> <!-- div da logo -->
+    <!-- container principal q contém tudo-->
+    <div class="container-content"> 
+        <header class="container-header"> 
+            <section class="header"> 
+                <!--logo-->
+                <div class="header__logo"> 
                     <a href="index.html"><img src="img/femmcodelogo.png" alt="Logo"></a>
                 </div>
-                <div class="pesquisa-menu"> <!-- div da pesquisa -->
+
+                <!--pesquisa e menu-->
+                <div class="search-and-menu"> 
                     <div class="header__pesquisa">
                         <span>
                             <i class="fi fi-rs-search" style="display:flex;"></i>
                         </span>
                         <input type="search" id="search" placeholder=" O que está procurando?">
                     </div>
-                    <nav class="header__menu"> <!-- nav com os itens de navegação -->
-                        <ul class="menu__list">
-                            <li><a href="index.html" id="inicio">Início</a></li>
+
+                    <nav class="header__menu"> 
+                        <ul class="menu-list">
+                            <li><a href="index.html">Início</a></li>
                             <li><a href="sobrenos.html">Sobre nós</a></li>
                             <li><a href="historia.html">História</a></li>
-                            <li><a href="comunidades.html" id="comunidades">Comunidades</a></li>
-                            <li><a href="eventos.html" id="eventos">Eventos</a></li>
+                            <li><a href="comunidades.html">Comunidades</a></li>
+                            <li><a href="eventos.html" style="font-weight: 700; border-bottom: 3px solid rgb(255, 255, 255);">Eventos</a></li>
                             <li><a href="canais.html">Canais</a></li>
                             <li><a href="minimentes.html">Mini Mentes</a></li>
                         </ul>
                     </nav>
                 </div>
+
+                <!--perfil-->
                 <div class="header__perfil"> <!-- div perfil -->
-                    <a href="perfil.html">
-                        <span>
+                    <a id="link-cadastro" href="login.html">
+                        <span id="cadastrado">
                             <i class="fi fi-tr-circle-user" style="display:flex;"></i>
                         </span>
+                        <button id="cadastre-se">Cadastre-se</button>
                     </a>
                 </div>
             </section>
         </header>
-
-        
 
         <section class="eventos">
             <div class="categorias-eventos">
