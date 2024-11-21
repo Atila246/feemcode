@@ -87,6 +87,18 @@
     left: auto;   
 }
 
+/*estilizar a linha né pae*/
+hr{
+    background-color: #f36ec0;
+    color: #f36ec0;
+    height: 2px;
+    opacity: 0.4 !important;
+    margin: 30px 0 20px !important;
+}
+hr.first-line{
+    margin: 20px 0 !important;
+}
+
 /*estilo imagens comunidade (conteúdo)*/
 .comunidades-item figure{
     width: 100%;
@@ -150,7 +162,7 @@
 .comunidades__header-titulo button{
     border-radius: 20px;
     border: none;
-    background-color: #FF66C4;
+    background-color: #ff66c4;
     color: white;
     padding: 5px 30px;
     font-weight: 600;
@@ -164,13 +176,6 @@
 .comunidades-item h4{
     font-size: 1.4rem;
     font-weight: 600;
-}
-
-/*estilizar a linha né pae*/
-hr{
-    background-color: #727272;
-    height: 2px;
-    margin: 3rem 0 !important;
 }
 
 
