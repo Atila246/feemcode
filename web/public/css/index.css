@@ -3,10 +3,6 @@
     margin: 0;
 }
 
-body{
-    font-family:'Poppins', sans-serif !important;
-}
-
 /*barrinha de rolagem gay*/
 ::-webkit-scrollbar {
     width: 15px;
@@ -23,6 +19,7 @@ body{
     border: 3px solid #f0f0f0; /* borda com a cor de fundo pro efeito de espessura */
 }
 
+<<<<<<< HEAD
 .container-content{
     /* background-color: #f1f3ea; */
     background-color: #fff6ff;
@@ -146,6 +143,8 @@ body{
 /* #cadastrado{
     display: none;
 } */
+=======
+>>>>>>> 21ed47b7dabe7ea1bc390218540ee1dc41287c3d
 
 /*embarque nesse cabaré*/
 .header__carrossa{ 
@@ -170,8 +169,8 @@ body{
     width: 45%;
     height: 350px;
     flex-shrink: 0;
-    opacity: 0.5;
-    filter: blur(3px);
+    /* opacity: 0.5; */
+    filter: blur(4px);
 }
 
 .carrossa-item video{
@@ -191,7 +190,7 @@ body{
     transform: scale(1.1);
     transition: all 0.5s;
     opacity: 1;
-    border: 6px solid #f371c1;
+    border: 4px solid #ff69b4;
     filter: blur(0);
 }
 
@@ -205,7 +204,6 @@ body{
     border: none;
     padding: 0 50px;
     font-size: 4rem;
-    color: #7b3687;
     z-index: 2;
     background-color: transparent;
 }
@@ -215,13 +213,22 @@ body{
     left: auto;   
 }
 
-
+/*estilizar a linha né pae*/
+hr{
+    background-color: #f36ec0;
+    color: #f36ec0;
+    height: 2px;
+    opacity: 0.4 !important;
+    margin: 30px 0 20px !important;
+}
+hr.first-line{
+    margin: 20px 0 !important;
+}
 
 /*estilo imagens comunidade (conteúdo)*/
 .comunidades-item figure{
     width: 100%;
     height: 150px;
-    
 }
 
 .comunidades-item{
@@ -281,7 +288,7 @@ body{
 .comunidades__header-titulo button{
     border-radius: 20px;
     border: none;
-    background-color: #FF66C4;
+    background-color: #ff66c4;
     color: white;
     padding: 5px 30px;
     font-weight: 600;
@@ -295,13 +302,6 @@ body{
 .comunidades-item h4{
     font-size: 1.4rem;
     font-weight: 600;
-}
-
-/*estilizar a linha né pae*/
-hr{
-    background-color: #727272;
-    height: 2px;
-    margin: 3rem 0 !important;
 }
 
 

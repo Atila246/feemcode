@@ -68,18 +68,16 @@
     font-size: 0.8rem;
 }
 
-.perfil-post{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    cursor: pointer;
-}
-
 .perfil-post a{
     text-decoration: none;
     font-size: 1rem;
     color: #212529;
     font-weight: 600;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
 }
 
 .post-like{

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FemmCode - Perfil</title>
-   
+    <title>FemmCode - Perfil da Comunidade</title>
+    <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,50 +16,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <script type="text/javascript" src="js/index.js" defer></script> -->
-    <script type="text/javascript" src="js/perfil.js" defer></script>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/perfil.css">
+    <script type="text/javascript" src="js/index.js" defer></script>
 
+    <link rel="stylesheet" href="css/perfil-comunidade.css">
+    <script type="text/javascript" src="js/perfil.js" defer></script>
     <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- 
-    <div class="container-content"> 
-        <header class="container__header">
-            <section class="header__nav"> 
-                <div class="header__logo">
-                    <a href="index.html"><img src="img/femmcodelogo.png" alt="Logo"></a>
-                </div>
-                <div class="pesquisa-menu">
-                    <div class="header__pesquisa">
-                        <span>
-                            <i class="fi fi-rs-search" style="display:flex;"></i>
-                        </span>
-                        <input type="search" id="search" placeholder=" O que está procurando?">
-                    </div>
-                    <nav class="header__menu">
-                        <ul class="menu__list">
-                            <li><a href="index.html">Início</a></li>
-                            <li><a href="sobrenos.html">Sobre nós</a></li>
-                            <li><a href="historia.html">História</a></li>
-                            <li><a href="comunidades.html">Comunidades</a></li>
-                            <li><a href="eventos.html">Eventos</a></li>
-                            <li><a href="canais.html">Canais</a></li>
-                            <li><a href="minimentes.html">Mini Mentes</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </section>
-        </header> -->
+    <div class="container-content"> <!-- container principal q contém tudo -->
 
         <div class="perfil">
             <div class="container__perfil-info">
                 <div class="menu">
                     <div class="menu__logo">
                         <a href="index.html">
-                            <img src="img/femmcodelogo.png" alt="Logo">
+                            <img src="img/LogoFM.png" alt="Logo">
                         </a>
                     </div>
                     <nav class="menu__nav">
@@ -88,11 +59,11 @@
                 <div class="perfil__abas">
                     <ul class="navegacao-abas">
                         <li class="aba-item ativo" id="aba1"> 
-                            <a class="aba-link">Conteúdo postado</a>
+                            <a class="aba-link">Conteúdo</a>
                             <div class="underline"></div>
                         </li>
                         <li class="aba-item" id="aba2">
-                            <a class="aba-link">Comunidades</a>
+                            <a class="aba-link">Gerenciar comunidade</a>
                         </li>
                     </ul>
                 </div>
@@ -154,73 +125,64 @@
                 </div>
     
                 <!-- Comunidades -->
-                <div class="comunidades-perfil">
-                    <div class="comunidade-criada">
-                        <h5>Minhas comunidades</h5>
-
-                        <div class="comunidade-criada__item">
-                            <div class="comunidade-criada__dados">
-                                <figure class="perfil-image">
-                                    <img src="img/lucianasantos.png" alt="">
-                                </figure>
-                                <div class="comunidade-criada__nome">
-                                    <span>Meninas Digitais</span>
-                                    <span>@menines</span>
-                                </div>
-                            </div>
-                            <button>Editar</button>
+               <div class="gerenciar-comunidade">
+                    <div class="editar-perfil">
+                        <div class="editar-perfil__descricao">
+                            <h5>Editar informações</h5>
+                            <span>Edite as informações da sua comundidade. Elas ficarão vísiveis ao público</span>
                         </div>
-
-                        <div class="comunidade-criada__item">
-                            <div class="comunidade-criada__dados">
-                                <figure class="comunidade-criada__image">
-                                    <img src="img/caioni.jpeg" alt="">
+                        <form class="editar-perfil__form">
+                            <div class="editar-perfil__banner card">
+                                <h5>Imagem do banner</h5>
+                                <span>Adicione um banner a sua comunidade</span>
+                                <figure class="editar-perfil__banner">
+                                    <img src="img/banner-comunidade.png" alt="">
                                 </figure>
-                                <div class="comunidade-criada__nome">
-                                    <span>Wo Makers</span>
-                                    <span>@who_m</span>
-                                </div>
                             </div>
-                            <button>Editar</button>
+                            <div class="editar-perfil__banner card">
+                                <h5>Foto de perfil</h5>
+                                <span>Adicione uma imagem ao seu perfil da comunidade</span>
+                                <figure class="editar-perfil__banner">
+                                    <img src="img/banner-comunidade.png" alt="">
+                                </figure>
+                            </div>
+                            <label class="form-label">
+                                <i class="fa-solid fa-users icon-modify"></i>
+                                <input type="text" placeholder="Digite o nome da comunidade">
+                            </label>
+                            <div class="form-label">
+                                <i class="fa-solid fa-user icon-modify"></i>
+                                <input type="text" placeholder="Digite o nome de usuário">
+                            </div>
+                            <div class="form-label">
+                                <i class="fa-solid fa-quote-left icon-modify"></i>
+                                <input type="text" placeholder="Digite a descrição">
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="gerenciar-conteudo">
+                        <div class="gerenciar-conteudo__descricao">
+                            <h5>Editar comunidade</h5>
+                            <span>Você pode editar o layout da sua comunidade, adicionando ou removendo seções</span>
+                        </div>
+                        <div class="gerenciar-conteudo__secoes">
+                            <div>
+                                Principais publicações
+                            </div>
+                            <div>
+                                Vídeos
+                            </div>
+                            <div>
+                                Postagens
+                            </div>
                         </div>
                     </div>
-
-                    <div class="comunidade-criada">
-                        <h5>Comunidades que participo</h5>
-                        <div class="comunidade-criada__item">
-                            <div class="comunidade-criada__dados">
-                                <figure class="comunidade-criada__image">
-                                    <img src="img/lucianasantos.png" alt="">
-                                </figure>
-                                <div class="comunidade-criada__nome">
-                                    <span>Meninas Digitais</span>
-                                    <span>@menines</span>
-                                </div>
-                            </div>
-                            <button>Sair</button>
-                        </div>
-
-                        <div class="comunidade-criada__item">
-                            <div class="comunidade-criada__dados">
-                                <figure class="comunidade-criada__image">
-                                    <img src="img/caioni.jpeg" alt="">
-                                </figure>
-                                <div class="comunidade-criada__nome">
-                                    <span>Wo Makers</span>
-                                    <span>@who_m</span>
-                                </div>
-                            </div>
-                            <button>Sair</button>
-                        </div>
-                    </div>
-                    
-                </div>
-                
+               </div>
             </div>
     
         </div>
 
-        
     </div>
-</body>    
+</body>
 </html>

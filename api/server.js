@@ -23,7 +23,6 @@ app.post('/usuario', async (req, res) => {
             senha: req.body.senha
         }
     })
-    
     res.status(201).json(usuario)
 })
 

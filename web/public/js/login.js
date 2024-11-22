@@ -31,7 +31,6 @@ btnSignup.addEventListener("click", () => {
 
 
 btn_login.addEventListener('click', () => {
-
     fetch('http://localhost:3000/login', {
       method: "POST",
       body: JSON.stringify({email: email_login.value, senha: senha_login.value}),
@@ -42,7 +41,8 @@ btn_login.addEventListener('click', () => {
     .then(res => res.json())
     .then((data) => {
       if(data!=null){
-        sessionStorage.setItem("Usuario", data)
+        sessionStorage.setItem("Usuario", JSON.stringify(data))
+        console.log(JSON.stringify(data))
         window.location.href='index.html'
       }else{
         mensagem.style = "display:block;"
@@ -66,13 +66,13 @@ btn_cadastro.addEventListener('click', () => {
     })
     .then(res => res.json())
     .then((data) => {
-      localStorage.setItem("Usuario", JSON.stringify(data))
+      sessionStorage.setItem("Usuario", JSON.stringify(data))
+      console.log(JSON.stringify(data))
       window.location.href='index.html'
     })
     .catch(err => {
       console.log(err)
     })
-    console.log("jjdjd")
 })
 
 
