@@ -71,3 +71,60 @@
     font-size: 1rem;
     margin: 0 !important;
 }
+
+/*Media Queries*/
+@media only screen and (max-width: 1440px) {
+    .eventos {
+        width: 80%;
+    }
+
+    .carrossel__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .evento-descricao h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .eventos {
+        width: 90%;
+    }
+
+    .categorias-eventos {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .carrossel__list {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-descricao h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #eventos {
+        font-size: 1.2rem;
+    }
+
+    .categorias-eventos span {
+        font-size: 0.9rem;
+        padding: 3px 8px;
+    }
+
+    .eventos-item figure {
+        height: 150px;
+    }
+
+    .evento-descricao h2 {
+        font-size: 1.1rem;
+    }
+
+    .evento-descricao p {
+        font-size: 0.9rem;
+    }
+}

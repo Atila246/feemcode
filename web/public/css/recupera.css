@@ -110,12 +110,41 @@ button:hover {
     text-align: center;
 }
 
-/* Estilos responsivos */
+
+/*  Media query  */
+@media (max-width: 768px) {
+    .title {
+        font-size: 30px; /* Tamanho do título ajustado */
+    }
+
+    .card {
+        width: 90%; /* Ajusta os cards para caberem em telas menores */
+        padding: 30px; /* Reduz o padding */
+    }
+
+    .card-container {
+        flex-direction: column; /* Empilha os cards em dispositivos menores */
+        align-items: center; /* Centraliza os cards */
+    }
+}
+
 @media (max-width: 480px) {
+    .title {
+        font-size: 26px; /* Tamanho do título ajustado para telas muito pequenas */
+    }
+
     .card {
         padding: 20px;
+        margin: 10px; /* Menos espaço entre os cards */
     }
-    .title {
-        font-size: 28px;
+
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+        font-size: 14px; /* Diminui o tamanho da fonte nos campos de entrada */
+    }
+
+    button {
+        font-size: 14px; /* Diminui o tamanho da fonte no botão */
     }
 }

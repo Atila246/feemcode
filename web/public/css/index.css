@@ -19,6 +19,132 @@
     border: 3px solid #f0f0f0; /* borda com a cor de fundo pro efeito de espessura */
 }
 
+<<<<<<< HEAD
+.container-content{
+    /* background-color: #f1f3ea; */
+    background-color: #fff6ff;
+    /* #f1eaf3 */
+}
+
+/*estilização da partezinha de cima*/
+.header__nav{
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to left,#f36ec0, #af5fe4); 
+    /* background: linear-gradient(to right, #7d66f1, #f371c1); */
+    /* background-color: #884a93;  */
+    display: flex;
+}
+
+.header__perfil a{
+    text-decoration: none;
+}
+
+.header__perfil a span{
+    font-size: 35px;
+}
+
+.header__perfil button{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.header__perfil button:hover{
+    background-color: white;
+    color: #f36ec0;
+    transition: all 500ms;
+}
+.container-content{
+    width: 100%;
+}
+
+/*logo*/
+.header__logo{
+    width: 80px;
+    height: 50px;
+}
+
+.header__logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+/*pesquisa*/
+.pesquisa-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header__pesquisa{
+    display: flex;
+    border-radius: 40px;
+    padding: 10px 15px;
+    background-color: #ffffff51;
+    width: 60%;
+    gap: 10px;
+}
+
+.header__pesquisa input{
+    border: none;
+    background: transparent;
+    outline: none;
+    caret-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    color: white;
+}
+
+.header__pesquisa input::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+
+.header__pesquisa span{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/*Elementos do menu*/
+.menu__list{
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0;
+    padding-left: 0;
+}
+
+.menu__list li a{
+    font-weight: 500;
+    color: white;
+    font-size: 1.2rem;  
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header__perfil span{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* #cadastrado{
+    display: none;
+} */
+=======
+>>>>>>> 21ed47b7dabe7ea1bc390218540ee1dc41287c3d
 
 /*embarque nesse cabaré*/
 .header__carrossa{ 
@@ -444,5 +570,128 @@ padding: 20px;
 @media only screen and (max-width:940px){
     :root{
         font-size: 10px; 
+    }
+}
+
+/* Responsavidade com MEDIA QUERY*/
+
+/* Ajustes gerais */
+@media (max-width: 1024px) {
+    .header__nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .header__pesquisa {
+        width: 80%;
+    }
+
+    .menu__list {
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carrossa-item {
+        width: 90%;
+        height: 250px;
+    }
+
+    .eventos__content, .comunidades__content {
+        flex-direction: column;
+    }
+
+    .evento-dados figure, .evento-desc {
+        width: 100%;
+        height: auto;
+    }
+
+    .evento-dados {
+        flex-direction: column;
+    }
+
+    .comunidades-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Ajustes para telas menores, como tablets */
+@media (max-width: 768px) {
+    .header__nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__pesquisa {
+        width: 90%;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .comunidades-list {
+        grid-template-columns: 1fr;
+    }
+
+    .carrossa-item {
+        height: 200px;
+    }
+
+    .feedback-section textarea {
+        width: 100%;
+    }
+
+    .feedback-section button {
+        width: 100%;
+    }
+}
+
+/* Ajustes para telas muito pequenas, como smartphones */
+@media (max-width: 480px) {
+    .header__pesquisa {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .menu__list {
+        gap: 10px;
+    }
+
+    .carrossa__container-scroll {
+        padding: 20px 0;
+    }
+
+    .carrossa-item {
+        height: 150px;
+    }
+
+    .evento-dados {
+        padding: 20px;
+    }
+
+    .evento-desc h4 {
+        font-size: 1.2rem;
+    }
+
+    .evento-desc p {
+        font-size: 0.9rem;
+    }
+
+    .feedback-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .feedback-section button {
+        align-self: stretch;
+    }
+
+    footer {
+        padding: 20px;
     }
 }
