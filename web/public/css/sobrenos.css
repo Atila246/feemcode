@@ -61,4 +61,74 @@ body{
 }
 
 
+/* Telas pequenas (até 375px) */
+@media screen and (max-width: 375px) {
+    .femmcode__header-titulo {
+        flex-direction: column; /* Ajusta o layout para colunas */
+        align-items: center; /* Centraliza os elementos */
+    }
 
+    .sobrenos__content {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        gap: 15px; /* Reduz o espaçamento */
+    }
+
+    .sobrenos figure {
+        width: 60px; /* Diminui o tamanho das imagens */
+        height: 60px;
+    }
+
+    .sobrenos-item {
+        padding: 30px; /* Reduz o padding */
+    }
+
+    .sobrenos-item h3 {
+        font-size: 1.2rem; /* Ajusta o tamanho do texto */
+    }
+
+    .sobrenos-item span {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets (até 768px) */
+@media screen and (max-width: 768px) {
+    .femmcode__header-titulo h2 {
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+    }
+
+    .sobrenos__content {
+        flex-wrap: wrap; /* Permite que os itens se reorganizem */
+        gap: 25px;
+    }
+
+    .sobrenos figure {
+        width: 70px;
+        height: 70px;
+    }
+
+    .sobrenos-item {
+        padding: 50px;
+    }
+}
+
+/* Telas muito grandes (a partir de 1600px) */
+@media screen and (min-width: 1600px) {
+    .sobrenos__content {
+        width: 60%; /* Limita a largura do conteúdo */
+        gap: 30px;
+    }
+
+    .sobrenos-item {
+        padding: 100px; /* Aumenta o espaçamento */
+    }
+
+    .sobrenos-item h3 {
+        font-size: 2rem; /* Títulos maiores */
+    }
+
+    .sobrenos figure {
+        width: 100px; /* Imagens maiores */
+        height: 100px;
+    }
+}

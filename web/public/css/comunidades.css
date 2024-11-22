@@ -307,3 +307,56 @@
     color: #7f8c8d;
     padding: 0 5px;
 }
+
+/*Media Queries*/
+@media only screen and (max-width: 1440px) {
+    .container-comunidade {
+        gap: 40px;
+    }
+
+    .comunidade__post {
+        width: 90%;
+    }
+
+    .comunidade__form button {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .container-comunidade {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .comunidade__post {
+        width: 100%;
+    }
+
+    .usuarios__header span {
+        font-size: 1.2rem;
+    }
+
+    .modal-content {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .usuarios__header span {
+        font-size: 1rem;
+    }
+
+    .comunidade__form-item input {
+        height: 40px;
+    }
+
+    .comunidade__form button {
+        font-size: 0.9rem;
+    }
+}
+

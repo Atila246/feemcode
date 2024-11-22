@@ -121,3 +121,70 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+ 
+/* Media Queries*/
+@media only screen and (max-width: 1440px) {
+    .barraCanais-container {
+        width: 30%;
+    }
+
+    .more-videos {
+        width: 65%;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Ajusta para telas menores */
+    }
+
+    .video-item p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .content-canais {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .barraCanais-container {
+        width: 100%;
+    }
+
+    .more-videos {
+        width: 100%;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Mais compacto */
+    }
+
+    .video-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Para telas muito pequenas */
+    }
+
+    .video-item p {
+        font-size: 0.8rem;
+    }
+
+    .sidebar h3,
+    .more-videos h3 {
+        font-size: 1.2rem;
+    }
+
+    .canal-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}

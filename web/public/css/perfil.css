@@ -284,6 +284,7 @@ body{
     animation: slideout 0.3s ease forwards;
 }
 
+
 @keyframes slidein {
     from {
         transform: translateX(0px);
@@ -302,21 +303,76 @@ body{
     }
 }
 
-
 /* Responsividade */
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu__nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 @media (max-width: 768px) {
-    .comunidades-perfil {
+    .comunidades-criada,
+    .comunidades__post {
+        width: 100%;
+    }
+
+    .container__perfil-info {
+        gap: 40px;
+    }
+
+    .perfil__info {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .perfil__nome-desc {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .perfil__nome-desc img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu {
         flex-direction: column;
         gap: 20px;
     }
 
-    .comunidades-criadas, .comunidades__post {
+    .navegacao-abas {
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
     }
 }
 
+@media (max-width: 480px) {
+    .perfil__nome-desc h3 {
+        font-size: 1.2rem;
+    }
 
-/* Esconder a seção de edição de perfil inicialmente */
+    .perfil__nome-desc p {
+        font-size: 0.9rem;
+    }
+
+    .post__perfil span {
+        font-size: 1rem;
+    }
+
+    .comunidades__post p,
+    .comunidades__post h2 {
+        font-size: 1rem;
+    }
+}
+
 .hidden {
     display: none;
 }

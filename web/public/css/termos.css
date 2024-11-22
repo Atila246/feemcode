@@ -42,3 +42,76 @@ button {
 button:hover {
     background-color:  #7d66f1;
 }
+
+/* Media Query para telas pequenas  */
+@media screen and (max-width: 375px) {
+    .form {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+    }
+
+    .terms-container label {
+        font-size: 12px;
+    }
+
+    .logo-login {
+        width: 120px;
+    }
+}
+
+/* Media Query para tablets  */
+@media screen and (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+
+    .first-content, .second-content {
+        flex-direction: column;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .link-social-media .item-social-media {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+    }
+}
+
+/* Media Query para telas muito grandes  */
+@media screen and (min-width: 1600px) {
+    .content {
+        width: 60%;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .logo-login {
+        width: 200px;
+    }
+}
