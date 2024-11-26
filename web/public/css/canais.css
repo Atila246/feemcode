@@ -3,23 +3,23 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+}
+
+.canais{
+    display: flex;
 }
 
 /* Canais Inscritos */
-.barraCanais-container {
-    width: 25%;
-    margin-right: 20px;
-}
 
-.sidebar {
+.canais__sidebar {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 40px 0 0 40px;
+    padding: 20px 30px;
+    width: 28%;
 }
 
-.sidebar h3 {
+.canais__sidebar h3 {
     margin-bottom: 20px;
     justify-items: center;
     font-size: 1.4rem;
@@ -33,18 +33,8 @@ body {
     cursor: pointer;
 }
 
-.more-videos h3{
+.canais__videos h3{
     font-weight: 600;
-}
-
-.content-canais{
-    display: flex;
-}
-
-.canal-avatar{
-    width: 50px;
-    height: 50px;
-    margin: 0 !important;
 }
 
 .list-canais{
@@ -52,74 +42,129 @@ body {
     flex-direction: column;
     gap: 20px;
 }
-.canal-avatar img{
+
+.perfil-canal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil-canal figure{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 !important;
+}
+
+.perfil-canal figure img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.canal-info .canal-nome {
+.perfil-canal button{
+    border: none;
+    background: transparent;
+    color: #e141a4;
+    font-weight: 600;
+}
+
+.perfil-canal__nome span:nth-child(1){
     font-weight: 600;
     font-size: 1rem;
     color: #383838;
 }
 
-/* Mais Vídeos */
-.more-videos {
-    width: 70%;
-    background-color: #fff6ff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    justify-content: center;    
+.perfil-canal__nome span:nth-child(2){
+    font-size: 0.8rem;
+    color: #676767df;
 }
 
-.more-videos h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.perfil-canal__nome{
+    display: flex;
+    flex-direction: column;
+}
 
+.perfil-canal__dados figure img{
+    cursor: pointer;
+}
+
+.perfil-canal__dados{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Mais Vídeos */
+.canais__videos {
+    width: 72%;
+    padding: 0 30px;
+    margin: 20px 0;
+    border-left: 1px solid #a0a0a09c;
+}
+
+.canais__videos h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
 }
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aumenta a largura mínima das colunas */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Aumenta a largura mínima das colunas */
     gap: 20px;
-    justify-content: center;    
-
 }
 
 .video-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     cursor: pointer;
 }
-.video-item figure{
-    width: 100%;
-    height: 150px;
+
+.video-item__desc{
+    display: flex;
+    gap: 10px;
 }
 
-.video-item figure img {
+.titulo-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.titulo-desc h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.titulo-desc span{
+    color: #5a5a5a;
+    font-size: 1rem;
+}
+
+.video-item__desc img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.video-item__source{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.video-item__source video{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    /* border-radius: 10px; */
 }
 
-.video-item p {
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte dos nomes dos vídeos */
-    font-weight: 600;
-
+.card{
+    background: transparent !important;
 }
 
-/* Estilo geral para layout lado a lado */
-.content-section {
-    display: flex;
-    justify-content: space-between;
-}
 
  
 /* Media Queries*/
@@ -128,7 +173,7 @@ body {
         width: 30%;
     }
 
-    .more-videos {
+    .canais__videos {
         width: 65%;
     }
 
@@ -142,7 +187,7 @@ body {
 }
 
 @media only screen and (max-width: 940px) {
-    .content-canais {
+    .canais {
         flex-direction: column;
         gap: 20px;
     }
@@ -151,11 +196,11 @@ body {
         width: 100%;
     }
 
-    .more-videos {
+    .canais__videos {
         width: 100%;
     }
 
-    .sidebar {
+    .canais__sidebar {
         padding: 20px;
     }
 
@@ -177,8 +222,8 @@ body {
         font-size: 0.8rem;
     }
 
-    .sidebar h3,
-    .more-videos h3 {
+    .canais__sidebar h3,
+    .canais__videos h3 {
         font-size: 1.2rem;
     }
 

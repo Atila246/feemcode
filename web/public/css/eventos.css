@@ -15,15 +15,16 @@
     padding: 5px 10px;
     font-size: 1rem;
 
-    background-color: #f993d286;
-    color: #c11880;
+    border: 2px solid #e141a4;
+    color: #e141a4;
     border-radius: 10px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .eventos__carrossel h2{
     font-weight: 600;
+    font-size: 1.4rem;
     margin-bottom: 20px;
 }
 

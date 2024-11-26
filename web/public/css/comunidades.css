@@ -1,3 +1,6 @@
+body{
+    margin: 0 !important;
+}
 /*estrutura da pagina*/
 .container-comunidade{
     display: grid;
@@ -18,6 +21,28 @@
 .container-noscroll{
     height: 100vh;
     overflow: hidden;
+}
+
+.postagens__categorias{
+    display: flex;
+    gap: 20px;
+}
+
+.comunidade__postagens h2:nth-child(1){
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.postagens__categorias span{
+    padding: 5px 10px;
+    font-size: 1rem;
+
+    border: 2px solid #e141a4;
+    color: #e141a4;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 .comunidade__post{
@@ -41,7 +66,8 @@
 }
 
 .post__corpo h2{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    color: #212529;
     margin: 0 !important;
 }
 
@@ -68,22 +94,50 @@
     font-size: 0.8rem;
 }
 
-.perfil-post a{
-    text-decoration: none;
+.perfil-post__nome{
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-post__nome .temp{
+    font-size: 0.8rem;
+    color: #212529;
+    font-weight: 600;
+}
+
+.perfil-post__nome div span i{
+    color: #212529;
+    font-size: 0.5rem;
+}
+
+.perfil-post__nome #comunidade{
     font-size: 1rem;
     color: #212529;
     font-weight: 600;
+}
 
+.perfil-post__nome .user{
+    font-size: 0.8rem;
+    color: #676767df;
+}
+
+.perfil-post a{
+    text-decoration: none;
     display: flex;
     gap: 15px;
     align-items: center;
     cursor: pointer;
 }
 
-.post-like{
+.post-like, .post-save{
     background: none;
     border: none;
     font-size: 1.5rem;
+    color: #e141a4;
+}
+
+.post-save{
+    font-size: 1.4rem;
 }
 
 .post__opcoes{
@@ -101,6 +155,7 @@
 .pontinhos__post{
     position: relative;
     cursor: pointer;
+    color: #e141a4;
 }
 
 .pontinhos-list ul{
@@ -142,6 +197,7 @@
     padding: 10px;
     background-color: #FF66C4;
     color: white;
+    font-weight: 600;
 }
 
 .usuarios__header{
@@ -179,7 +235,7 @@
 .perfil-comunidade__nome span:nth-child(1){
     font-weight: 600;
     font-size: 1rem;
-    color: #383838;
+    color: #212529;
 }
 
 .perfil-comunidade__nome span:nth-child(2){

@@ -1,0 +1,70 @@
+.footer__content{
+    color: white;
+}
+
+.footer hr{
+    background-color: white;
+}
+
+footer {
+    width: 100%;
+    padding: 40px;
+    background-image: url(../img/rodape.png);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px); /* Desfoque no fundo */
+    position: relative;
+    z-index: 1;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Mais desfoque sobre o rodapé */
+    z-index: -1;
+}
+
+.footer__feedback {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    }
+      
+      /* Estilo da caixa de texto */
+    .footer__feedback textarea {
+        width: 300px;
+        height: 50px;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        font-size: 16px;
+        resize: none;
+        background-color: transparent;
+        outline: none;
+        caret-color: white;
+        color: white;
+    }
+    
+    .footer__feedback textarea::placeholder{
+        color:white;
+    }
+      
+    /* Estilo do botão */
+    .footer__feedback button {
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+        background-color: white;
+        color: #7b3687;
+        border:none;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
