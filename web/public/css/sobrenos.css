@@ -2,62 +2,86 @@ body{
     background-color: #fff6ff;
 }
 
+.femmcode{
+    width: 80%;
+    margin: 30px auto;
+}
+
 .femmcode__header-titulo{
     display: flex;
-    justify-content: space-between;
 }
 
 .femmcode__header-titulo h2{
     margin-bottom: 10px;
     font-weight: 700 !important;
+    font-size: 2rem;
 }
 
-/* .femmcode{
-    /* margin-top: 30px;
-    margin-top: 30px auto;
-} */
+.container-femmcode{
+    width: 100%;
+}
 
 .sobrenos{
-    margin-bottom: 15px;   
+    padding: 100px 0;
+    background-image: url('../img/rodape.png');
+    box-shadow: inset 0 0 20px 5px #592979;
 }
 
-.sobrenos__content{
+.sobrenos-item{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff6ff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 20px 2px #592979cb;
+    width: 25%;
+    text-align: center;
+}
+
+.sobrenos__content, .equipe__content{
     display: flex;
     margin: 0 auto;
-    gap: 20px;
+    justify-content: space-around;
 }
 
-.sobrenos figure{
+.sobrenos-equipe{
+    margin-bottom: 15px;  
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.sobrenos-equipe figure{
     width: 80px;
     height: 80px;
     margin: 0;
 }
 
-.sobrenos figure img{
+.sobrenos-equipe figure img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.sobrenos__content-titulo h2{
+.equipe__content-titulo h2{
     margin-bottom: 30px;
     font-weight: 700 !important;
 }
 
-.sobrenos-item{
-    padding: 70px;
+.equipe-item{
+    padding: 40px;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     background-color: #fff6ff !important;
+    border-radius: 15px !important;
+    text-align: center;
+    border: 1px solid #8c8c8ca3 !important;
 }
 
-.sobrenos-item h3{
-    margin-bottom: 40px;
-}
-
-.sobrenos-item span{
-    font-weight: 700;
+.equipe-item h3, .sobrenos-item h3{
+    margin: 0;
 }
 
 
