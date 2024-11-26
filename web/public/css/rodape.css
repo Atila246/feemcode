@@ -1,9 +1,41 @@
-.footer__content{
+.footer__links{
+    display: flex;
+    gap: 100px;
     color: white;
 }
 
-.footer hr{
+.footer-item h4{
+    font-size: 1.4rem;
+}
+
+.footer-item a span{
+    font-size: 1rem;
+}
+
+.footer-item a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__content{
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer__content hr{
     background-color: white;
+    color: white;
+    height: 2px;
+    margin: 0;
+    opacity: 0.5;
 }
 
 footer {
@@ -31,7 +63,6 @@ footer::before {
 .footer__feedback {
     display: flex;
     align-items: center;
-    padding: 20px;
     }
       
       /* Estilo da caixa de texto */
@@ -41,7 +72,7 @@ footer::before {
         padding: 10px;
         margin-right: 10px;
         border-radius: 10px;
-        border: 2px solid #ccc;
+        border: 2px solid white;
         font-size: 16px;
         resize: none;
         background-color: transparent;
@@ -67,4 +98,3 @@ footer::before {
         cursor: pointer;
         font-size: 16px;
     }
-    

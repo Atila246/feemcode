@@ -19,6 +19,11 @@
     border: 3px solid #f0f0f0; /* borda com a cor de fundo pro efeito de espessura */
 }
 
+.container-main{
+    width: 75%;
+    margin: 0 auto;
+}
+
 
 /*embarque nesse cabaré*/
 .header__carrossa{ 
@@ -88,14 +93,15 @@
 }
 
 /*estilizar a linha né pae*/
-hr{
+.container-main hr{
     background-color: #f36ec0;
     color: #f36ec0;
     height: 2px;
     opacity: 0.4 !important;
     margin: 30px 0 20px !important;
 }
-hr.first-line{
+
+.container-main hr.first-line{
     margin: 20px 0 !important;
 }
 
@@ -512,35 +518,4 @@ hr.first-line{
     footer {
         padding: 20px;
     }
-}
-
-
-
-/* Modo claro e escuro  */
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
-    font-size: 1.5em;
-    color: var(--text-color);
-}
-
-/* Tema claro */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-}
-
-/* Tema escuro */
-body.dark-mode {
-    --background-color: #000000;
-    --text-color: #ffffff;
-}
-
-/* Aplicar as cores do tema */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
 }

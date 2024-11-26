@@ -1,17 +1,38 @@
-let obj = sessionStorage.getItem("Usuario")
-console.log(obj)
+// fetch('http://localhost:3000/usuarios')
+//     .then(res => res.json())
+//     .then((data) => {
+//         data.forEach((item) => {
+//             perfil_nome.innerHTML = item.nome
+//         })
+//     })
+//     .catch((err) => {
+//         console.log("Erro"+err)
+//     })
 
-window.onload = function(){
-    if(obj!=null){
-        let perfil = document.getElementById("cadastrado")
-        perfil.style.cssText='display: block;'
-        let botao = document.getElementById("cadastre-se")
-        botao.style.cssText='display: none;'
+// modal
+// var publicar_btn = document.getElementById('publicar-btn')
+// var publicacao_modal = document.getElementById('publicacao-modal'); 
+// var close_btn = document.getElementsByClassName('close');
 
-        let link = document.getElementById("link-cadastro")
-        link.href="perfil.html"
-    }
-}
+// publicar_btn.onclick = function () {
+//     publicacao_modal.style.display = "flex"
+//     console.log(publicacao_modal)
+// }
+
+// // Fechar POPUP e formulário ao clicar no 'X'
+// for (let i = 0; i < close_btn.length; i++) {
+//     close_btn[i].onclick = function () {
+//         publicacao_modal.style.display = "none"
+//     }
+// }
+
+// window.onclick = function (event) {
+//     if(event.target == publicacao_modal){
+//         publicacao_modal.style.display = "none"
+//     }      
+// }
+
+
 
 const perfil_nome = document.getElementById("perfil-nome")
 const underline = document.querySelector('.underline')
@@ -22,25 +43,19 @@ const conteudos_perfil = document.querySelector(".conteudos-perfil")
 const comunidades_perfil = document.querySelector(".comunidades-perfil")
 
 
-fetch('http://localhost:3000/usuarios')
-    .then(res => res.json())
-    .then((data) => {
-        data.forEach((item) => {
-            perfil_nome.innerHTML = item.nome
-        })
-    })
-    .catch((err) => {
-        console.log("Erro"+err)
-    })
-
-
 aba1.addEventListener('click', () => {
     aba1.classList.add('ativo')
     aba2.classList.remove('ativo')
     
     underline.classList.remove('animatein')
     underline.classList.remove('animateout')
-    underline.style.width = `${aba1.offsetWidth}px`
+
+    let tamanhoAba2 = underline.style.width = `${aba2.offsetWidth}px`
+    let tamanhoAba1 = underline.style.width = `${aba1.offsetWidth}px`
+    underline.style.width = tamanhoAba1
+    console.log(tamanhoAba1)
+    document.documentElement.style.setProperty('--tamanho-aba-2',tamanhoAba2)
+    
     underline.classList.add('animateout')
 
     conteudos_perfil.style.cssText = "display: block;"
@@ -54,119 +69,59 @@ aba2.addEventListener('click', () => {
     
     underline.classList.remove('animateout')
     underline.classList.remove('animatein')
-    underline.style.width = `${aba2.offsetWidth}px`
+    
+    let tamanhoAba1 = underline.style.width = `${aba1.offsetWidth}px`
+    let tamanhoAba2 = underline.style.width = `${aba2.offsetWidth}px`
+    underline.style.width = tamanhoAba2
+    // console.log(tamanhoAba1)
+    document.documentElement.style.setProperty('--tamanho-aba-1',tamanhoAba1)
+
     underline.classList.add('animatein')
 
     conteudos_perfil.style.cssText = "display: none;"
     comunidades_perfil.style.cssText = "display: flex;"
 })
-    
-// Obter o modal
-var modal = document.getElementById("editProfileModal");
 
-// Obter o botão que abre o modal
-var btn = document.getElementById("edit-profile-btn");
 
-// Obter o elemento <span> que fecha o modal
-var span = document.getElementById("closeModal");
-
-// Quando o usuário clica no botão, abre o modal
-
-btn.addEventListener('click', () => {
-    modal.style.display = "block";
-}) 
-
-// Quando o usuário clica no <span> (x), fecha o modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// Quando o usuário clica fora do modal, fecha-o
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "nome";
+// function toggleEditProfile() {
+//     const editSection = document.getElementById('editProfileSection');
+//     if (editSection.classList.contains('hidden')) {
+//         editSection.classList.remove('hidden'); 
+//     } else {
+//         editSection.classList.add('hidden'); 
 //     }
 // }
 
-// Quando o formulário é enviado
-// document.getElementById("editProfileForm").onsubmit = function(event) {
-//     event.preventDefault(); // Impede o envio padrão
+// function salvarPerfil() {
+//     const novoNome = document.getElementById('novoUsuario').value;
+//     const novaDescricao = document.getElementById('descricao').value;
 
-//     // Captura os valores dos campos
-//     var username = document.getElementById("username").value;
-//     var description = document.getElementById("description").value;
-//     var profilePicture = document.getElementById("profilePicture").files[0];
-//     var bannerPicture = document.getElementById("bannerPicture").files[0];
+//     document.getElementById('profile-name').innerText = novoNome;
+//     document.getElementById('profile-description').innerText = novaDescricao;
 
-//     // Atualiza o nome e a descrição do perfil
-//     document.getElementById("profile-name").innerText = username;
-//     document.getElementById("profile-description").innerText = description;
+//     document.getElementById('editProfileSection').classList.add('hidden');
+// }
 
-//     // Atualiza a foto de perfil se uma nova imagem for carregada
-//     if (profilePicture) {
-//         var reader = new FileReader();
-//         reader.onload = function(e) {
-//             document.querySelector(".profile-pic").src = e.target.result;
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const toggleButton = document.getElementById("toggle-theme");
+//     const body = document.body;
+
+//     if (localStorage.getItem("theme") === "dark") {
+//         body.classList.add("dark-mode");
+//     }
+
+//     toggleButton.addEventListener("click", () => {
+//         body.classList.toggle("dark-mode");
+
+//         if (body.classList.contains("dark-mode")) {
+//             localStorage.setItem("theme", "dark");
+//             toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
+//         } else {
+//             localStorage.setItem("theme", "light");
+//             toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
 //         }
-//         reader.readAsDataURL(profilePicture);
-//     }
+//     });
+// });
 
-//     // Atualiza o banner se uma nova imagem for carregada
-//     if (bannerPicture) {
-//         var bannerReader = new FileReader();
-//         bannerReader.onload = function(e) {
-//             document.querySelector(".profile-banner-img").src = e.target.result;
-//         }
-//         bannerReader.readAsDataURL(bannerPicture);
-//     }
-
-//     // Fecha o modal
-//     modal.style.display = "none";
-// }
-
-// Função para alternar a visibilidade da área de edição de perfil
-function toggleEditProfile() {
-    const editSection = document.getElementById('editProfileSection');
-    if (editSection.classList.contains('hidden')) {
-        editSection.classList.remove('hidden'); // Mostra a seção de edição
-    } else {
-        editSection.classList.add('hidden'); // Esconde a seção de edição
-    }
-}
-
-function salvarPerfil() {
-    const novoNome = document.getElementById('novoUsuario').value;
-    const novaDescricao = document.getElementById('descricao').value;
-
-    // Atualizar o conteúdo do perfil
-    document.getElementById('profile-name').innerText = novoNome;
-    document.getElementById('profile-description').innerText = novaDescricao;
-
-    // Esconder a área de edição após salvar
-    document.getElementById('editProfileSection').classList.add('hidden');
-}
-
-//modo claro e escuro
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("toggle-theme");
-    const body = document.body;
-
-    // Verificar o tema salvo
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-    }
-
-    toggleButton.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-
-        // Salvar a preferência no localStorage
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
-        } else {
-            localStorage.setItem("theme", "light");
-            toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
-        }
-    });
-});
 

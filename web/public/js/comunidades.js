@@ -59,7 +59,7 @@ console.log("Ola");
 
 var isLoggedIn = true; // Mudar para 'false' para simular usuário não logado
 
-// Elementos de referência
+// modal
 var comunidade_btn = document.getElementById('comunidade-btn');
 var login_modal = document.getElementById('login-modal');
 var comunidade_modal = document.getElementById('comunidade-modal'); // Corrigido nome da variável
@@ -93,12 +93,6 @@ window.onclick = function (event) {
     }
 };
 
-// Simulação de login ao clicar no botão "Fazer Login"
-//document.getElementById('loginButton').onclick = function() {
-//  loginModal.style.display = "none";
-//alert('Você será redirecionado para a página de login.');
-//window.location.href = 'login.html';
-//};
 
 fetch("http://localhost:3000/postagens")
     .then(res => res.json())

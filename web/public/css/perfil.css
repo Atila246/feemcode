@@ -233,13 +233,13 @@ body{
         transform: translateX(0px);
     }
     to {
-        transform: translateX(191.99px);
+        transform: translateX(calc(var(--tamanho-aba-1) + 20px));
     }
 }
 
 @keyframes slideout {
     from {
-        transform: translateX(218.23px);
+        transform: translateX(var(--tamanho-aba-2));
     }
     to {
         transform: translateX(0px);
