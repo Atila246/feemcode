@@ -1,3 +1,18 @@
+let obj = sessionStorage.getItem("Usuario")
+console.log(obj)
+
+window.onload = function(){
+    if(obj!=null){
+        let perfil = document.getElementById("cadastrado")
+        perfil.style.cssText='display: block;'
+        let botao = document.getElementById("cadastre-se")
+        botao.style.cssText='display: none;'
+
+        let link = document.getElementById("link-cadastro")
+        link.href="perfil.html"
+    }
+}
+
 const config_post1 = document.getElementById('config-post1');
 const config_post2 = document.getElementById('config-post2');
 const config_post3 = document.getElementById('config-post3');

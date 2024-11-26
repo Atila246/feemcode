@@ -12,6 +12,7 @@
     <!--estilos e scripts-->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/canais.css">
+    <script src="js/canais.js"></script>
 
     <!--flaticon-->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
@@ -62,7 +63,7 @@
                 </div>
 
                 <!--perfil-->
-                <div class="header__perfil"> <!-- div perfil -->
+                <div class="header__perfil"> 
                     <a id="link-cadastro" href="login.html">
                         <span id="cadastrado">
                             <i class="fi fi-tr-circle-user" style="display:flex;"></i>
@@ -76,80 +77,118 @@
             </section>
         </header>
 
-        <div class="content-canais">
+        <section class="canais">
             <!-- Canais Inscritos -->
-            <div class="barraCanais-container">
-                <div class="sidebar">
-                    <h3>Canais Inscritos</h3>
-                    <ul class="list-canais">
-                        <li class="canal-item">
-                            <figure class="canal-avatar">
-                                <img src="img/Adalovelace.png" alt="">
+            <div class="canais__sidebar">
+                <h3>Canais Inscritos</h3>
+                <div class="list-canais">
+                    <div class="perfil-canal">
+                        <div class="perfil-canal__dados">
+                            <figure class="perfil-canal__image">
+                                <img src="img/Adalovelace.png" alt="Adalovelace">
                             </figure>
-                            <div class="canal-info">
-                                <span class="canal-nome">TechDivas</span>
+                            <div class="perfil-canal__nome">
+                                <span>TechDivas</span>
+                                <span>@tech_d1vas</span>
                             </div>
-                        </li>
-                        <li class="canal-item">
-                            <figure class="canal-avatar">
-                                <img src="img/codequeens.png" alt="">
+                        </div>
+                        <button>Inscrever-se</button>
+                    </div>
+                    <div class="perfil-canal">
+                        <div class="perfil-canal__dados">
+                            <figure class="perfil-canal__image">
+                                <img src="img/codequeens.png" alt="Code Queens">
                             </figure>
-                            <div class="canal-info">
-                                <span class="canal-nome">CodeQueens</span>
+                            <div class="perfil-canal__nome">
+                                <span>Code Queens</span>
+                                <span>@c0dequeens</span>
                             </div>
-                        </li>
-                        <li class="canal-item">
-                            <figure class="canal-avatar">
-                                <img src="img/womantech.png" alt="">
+                        </div>
+                        <button>Inscrever-se</button>
+                    </div>
+                    <div class="perfil-canal">
+                        <div class="perfil-canal__dados">
+                            <figure class="perfil-canal__image">
+                                <img src="img/womantech.png" alt="Woman Tech">
                             </figure>
-                            <div class="canal-info">
-                                <span class="canal-nome">WomenInTechWorld</span>
+                            <div class="perfil-canal__nome">
+                                <span>WomenInTechWorld</span>
+                                <span>@woman_tech3</span>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <button>Inscrever-se</button>
+                    </div>
+                    
                 </div>
             </div>
 
           <!-- Vídeos -->
-            <div class="more-videos">
-                <h3> Vídeos</h3>
+            <div class="canais__videos">
+                <h3>Vídeos</h3>
                 <div class="video-grid">
-                    <div class="video-item">
-                        <figure>
-                            <img src="img/minha-historia-thumb.png" alt="Thumbnail Video 1">
-                        </figure>
-                        <source src="img/minha-historia.mp4" type="video/mp4">
-                        <p>Minha historia na TI</p>
+                    <div class="video-item card">
+                        <div class="video-item__source">
+                            <video poster="img/minha-historia-thumb.png" class="card-img-top">
+                                <source src="img/minha-historia.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-item__desc card-body">
+                            <img src="img/Adalovelace.png" alt="Adalovelace">
+                            <div class="titulo-desc">
+                                <h3>Minha história na TI</h3>
+                                <span>Adalovelace</span>
+                                <span>9 mil visualizações</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-item">
-                        <figure>
-                            <img src="img/super-dicas-thumb.png" alt="Thumbnail Video 3">
-                        </figure>
-                        <source src="img/super-dicas.mp4" type="video/mp4">
-                        <p>10 dicas para quem ta começando </p>
+                    <div class="video-item card">
+                        <div class="video-item__source">
+                            <video poster="img/mulheres-tecnologia-thumb.png" class="card-img-top">
+                                <source src="img/mulheres-tecnologia.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-item__desc card-body">
+                            <img src="img/Adalovelace.png" alt="Adalovelace">
+                            <div class="titulo-desc">
+                                <h3>Evolução das mulheres na TI</h3>
+                                <span>Adalovelace</span>
+                                <span>6 mil visualizações</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-item">
-                        <figure>
-                            <img src="img/evolucao.png" alt="Thumbnail Video 4">
-                        </figure>
-                        <p>Evolução da TI </p>
+                    <div class="video-item card">
+                        <div class="video-item__source">
+                            <video poster="img/super-dicas-thumb.png" class="card-img-top">
+                                <source src="img/super-dicas.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-item__desc card-body">
+                            <img src="img/codequeens.png" alt="Code Queens">
+                            <div class="titulo-desc">
+                                <h3>10 dicas para quem está começando</h3>
+                                <span>Code Queens</span>
+                                <span>5 mil visualizações</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-item">
-                        <figure>
-                            <img src="img/mulheres-tecnologia-thumb.png" alt="Thumbnail Video 5">
-                        </figure>
-                        <source src="img/mulheres-tecnologia.mp4" type="video/mp4">
-                        <p>Minha historia Parte 2</p>
-                    </div>
-                    <div class="video-item">
-                        <figure>
-                            <img src="img/estudos.jpg" alt="Thumbnail Video 2">
-                        </figure>
-                        <p>Guis de estudas para iniciates </p>
+                    <div class="video-item card">
+                        <div class="video-item__source">
+                            <video poster="img/minha-historia-thumb.png" class="card-img-top">
+                                <source src="img/minha-historia.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-item__desc card-body">
+                            <img src="img/womantech.png" alt="Woman Tech">
+                            <div class="titulo-desc">
+                                <h3>Minha historia Parte 2</h3>
+                                <span>Woman Tech</span>
+                                <span>10 mil visualizações</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </body>
 </html>

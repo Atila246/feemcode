@@ -159,76 +159,6 @@ body{
     gap: 20px;
 }
 
-
-/* Postagens */
-.comunidades__post {
-    padding: 30px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.comunidades__post p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-.comunidades__post h2 {
-    font-size: 1.7rem;
-    margin: 0;
-}
-
-.post__perfil {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.post__perfil img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.post__perfil span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #383838;
-}
-
-.perfil-post {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    cursor: pointer;
-}
-
-.post__perfil button {
-    border: none;
-    background-color: #FF66C4;
-    color: #ffffff;
-    padding: 5px 20px;
-    font-weight: 600;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    cursor: pointer;
-}
-
-.post__butaos {
-    display: flex;
-    gap: 10px;
-}
-
-.post__like {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
 /*abas de navegação*/
 .navegacao-abas{
     display: flex;
@@ -269,6 +199,19 @@ body{
     font-weight: 600;
 }
 
+/*reescrita da postagem*/
+.post-like, .post-save{
+    color: #af5fe4;
+}
+
+.post__header button{
+    background-color: #af5fe4;
+}
+
+.pontinhos__post{
+    color: #af5fe4;
+}
+
 .underline{
     height: 3px;
     width: 100%;
@@ -290,7 +233,7 @@ body{
         transform: translateX(0px);
     }
     to {
-        transform: translateX(218.23px);
+        transform: translateX(191.99px);
     }
 }
 
