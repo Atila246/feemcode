@@ -60,10 +60,15 @@
 
                 <!--perfil-->
                 <div class="header__perfil"> <!-- div perfil -->
-                    <a id="link-cadastro" href="login.html">
+                    <a id="link-cadastro" href="perfil.html">
                         <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:flex;"></i>
+                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
                         </span>
+                    </a>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i id="theme-icon" class="fi fi-rs-sun"></i>
+                    </button>
+                    <a href="login.html">
                         <button id="cadastre-se">Cadastre-se</button>
                     </a>
                 </div>
@@ -159,12 +164,52 @@
             </div>
         </section>
 
-        <footer>
-            <div class="feedback-section">
-                <textarea class="form-control" id="feedback" rows="4" placeholder="Escreva aqui seu feedback..."></textarea>
-                <button type="submit">Enviar</button>
-              </div>              
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__titulo">
+                    <img src="img/LogoFMBranco.png" alt="FemmCode">
+                </div>
+                <hr>
+                <div class="footer__links">
+                    <div class="footer-item">
+                        <h4>Sobre nós</h4>
+                        <a href="sobrenos.html">
+                            <span>Quem somos</span>
+                        </a>
+                        <a href="historia.html">
+                            <span>História</span>
+                        </a>
+                        <span>Fale conosco</span>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Conteúdo da comunidade</h4>
+                        <a href="eventos.html">
+                            <span>Eventos</span>
+                        </a>
+                        <a href="canais.html">
+                            <span>Canais</span>
+                        </a>
+                        <a href="comunidades.html">
+                            <span>Comunidades</span>
+                        </a>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Suporte</h4>
+                        <a href="manualusuario.html">
+                            <span>Manual do usuário</span>
+                        </a>
+                        <a href="termos.html">
+                            <span>Termos de uso</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__feedback">
+                    <textarea id="feedback" rows="4" placeholder="Escreva aqui seu feedback..."></textarea>
+                    <button type="submit">Enviar</button>
+                </div>   
+            </div>           
         </footer>
+
     </div>
 </body>
 </html>

@@ -33,7 +33,6 @@
 <body>
     <!--container principal-->
     <div class="container-content"> 
-
         <!--header-->
         <header class="container-header"> 
             <section class="header"> 
@@ -68,9 +67,14 @@
                 <div class="header__perfil"> <!-- div perfil -->
                     <a id="link-cadastro" href="perfil.html">
                         <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:flex;"></i>
+                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
                         </span>
-                        <!-- <button id="cadastre-se">Cadastre-se</button> -->
+                    </a>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i id="theme-icon" class="fi fi-rs-sun"></i>
+                    </button>
+                    <a href="login.html">
+                        <button id="cadastre-se">Cadastre-se</button>
                     </a>
                 </div>
             </section>
@@ -110,9 +114,8 @@
             </section>
         </header>
 
-        <main class="container__main"> <!-- local onde fica o conteúdo principal -->
-            <div class="container">
-                <hr class="first-line">
+        <main class="container-main"> <!-- local onde fica o conteúdo principal -->
+            <hr class="first-line">
                 <section class="comunidades" id="comunidades"> <!-- section comunidades -->
                     <div class="comunidades__header"> <!-- título e descrição -->
                         <div class="comunidades__header-titulo">
@@ -376,31 +379,51 @@
                         </div>
                     </div>
                 </section>
-            </div>
         </main>
         <footer class="footer">
-            <div class="footer__titulo">
-                <img src="img/LogoFMBranco.png" alt="FemmCode">
-            </div>
-            <hr>
             <div class="footer__content">
-                <div class="footer-sobrenos">
-                    <h4>Sobre nós</h4>
-                    <span>Quem somos</span>
-                    <span>História</span>
-                    <span>Fale conosco</span>
+                <div class="footer__titulo">
+                    <img src="img/LogoFMBranco.png" alt="FemmCode">
                 </div>
-                <div class="footer-sobrenos">
-                    <h4>Conteúdo da comunidade</h4>
-                    <span>Eventos</span>
-                    <span>Canais</span>
-                    <span>Comunidades</span>
+                <hr>
+                <div class="footer__links">
+                    <div class="footer-item">
+                        <h4>Sobre nós</h4>
+                        <a href="sobrenos.html">
+                            <span>Quem somos</span>
+                        </a>
+                        <a href="historia.html">
+                            <span>História</span>
+                        </a>
+                        <span>Fale conosco</span>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Conteúdo da comunidade</h4>
+                        <a href="eventos.html">
+                            <span>Eventos</span>
+                        </a>
+                        <a href="canais.html">
+                            <span>Canais</span>
+                        </a>
+                        <a href="comunidades.html">
+                            <span>Comunidades</span>
+                        </a>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Suporte</h4>
+                        <a href="manualusuario.html">
+                            <span>Manual do usuário</span>
+                        </a>
+                        <a href="termos.html">
+                            <span>Termos de uso</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer__feedback">
-                <textarea class="form-control" id="feedback" rows="4" placeholder="Escreva aqui seu feedback..."></textarea>
-                <button type="submit">Enviar</button>
-              </div>              
+                <div class="footer__feedback">
+                    <textarea id="feedback" rows="4" placeholder="Escreva aqui seu feedback..."></textarea>
+                    <button type="submit">Enviar</button>
+                </div>   
+            </div>           
         </footer>
     </div>
 

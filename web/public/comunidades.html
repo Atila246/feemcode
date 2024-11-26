@@ -69,10 +69,15 @@
 
                 <!--perfil-->
                 <div class="header__perfil"> <!-- div perfil -->
-                    <a id="link-cadastro" href="login.html">
+                    <a id="link-cadastro" href="perfil.html">
                         <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:flex;"></i>
+                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
                         </span>
+                    </a>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i id="theme-icon" class="fi fi-rs-sun"></i>
+                    </button>
+                    <a href="login.html">
                         <button id="cadastre-se">Cadastre-se</button>
                     </a>
                 </div>
@@ -94,7 +99,7 @@
                     </div>
                 </div>
 
-                <div class="modal" id="comunidade-modal" style="display:none;">
+                <div class="modal" id="comunidade-modal">
                     <div class="form-container modal-content">
                         <h2>Criar comunidade</h2>
                         <form class="comunidade__form">

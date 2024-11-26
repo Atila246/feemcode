@@ -19,6 +19,12 @@
     border: 3px solid #f0f0f0; /* borda com a cor de fundo pro efeito de espessura */
 }
 
+.container-main{
+    width: 75%;
+    margin: 0 auto;
+}
+
+
 /*embarque nesse cabaré*/
 .header__carrossa{ 
     width: 100%;
@@ -87,14 +93,15 @@
 }
 
 /*estilizar a linha né pae*/
-hr{
+.container-main hr{
     background-color: #f36ec0;
     color: #f36ec0;
     height: 2px;
     opacity: 0.4 !important;
     margin: 30px 0 20px !important;
 }
-hr.first-line{
+
+.container-main hr.first-line{
     margin: 20px 0 !important;
 }
 
