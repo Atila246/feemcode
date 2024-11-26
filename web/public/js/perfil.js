@@ -130,3 +130,28 @@ function salvarPerfil() {
     // Esconder a área de edição após salvar
     document.getElementById('editProfileSection').classList.add('hidden');
 }
+
+//modo claro e escuro
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    // Verificar o tema salvo
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+    }
+
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        // Salvar a preferência no localStorage
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
+        }
+    });
+});
+

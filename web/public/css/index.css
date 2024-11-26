@@ -695,3 +695,34 @@ padding: 20px;
         padding: 20px;
     }
 }
+
+
+
+/* Modo claro e escuro  */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+
+/* Tema claro */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+/* Tema escuro */
+body.dark-mode {
+    --background-color: #000000;
+    --text-color: #ffffff;
+}
+
+/* Aplicar as cores do tema */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}

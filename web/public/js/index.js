@@ -69,5 +69,24 @@ controls.forEach((control) => {
         console.log(control);
     });
 });
+// Modo calro e escuro 
+// Referências aos elementos
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const body = document.body;
+
+// Recuperar tema salvo no localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.add(savedTheme);
+    themeIcon.className = savedTheme === 'dark-mode' ? 'fi fi-rs-moon' : 'fi fi-rs-sun';
+}
+
+// Alternar tema ao clicar no botão
+themeToggle.addEventListener('click', () => {
+    const isDark = body.classList.toggle('dark-mode');
+    themeIcon.className = isDark ? 'fi fi-rs-moon' : 'fi fi-rs-sun';
+    localStorage.setItem('theme', isDark ? 'dark-mode' : '');
+});
 
 
