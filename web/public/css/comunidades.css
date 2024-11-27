@@ -47,7 +47,6 @@ body{
 }
 
 .postagens__categorias span:nth-child(1){
-    border: none;
     background-color: #e141a4;
     color: white;
 }
