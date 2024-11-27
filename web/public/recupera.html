@@ -5,52 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FemmCode - Recuperação de Senha</title>
     <link rel="stylesheet" href="css/recupera.css">
-    <style>
-        /* Adicione o CSS que você já tem aqui */
-        /* Estilos para ocultar as seções por padrão */
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <div class="title">Sistema de Recuperação de Senha</div>
+
     <div class="card-container">
-        <div class="card" id="step1">
+        <!-- Etapa 1 - Enviar Código -->
+        <div class="card active" id="step1">
             <h2>Recuperar Senha</h2>
             <form id="requestForm">
                 <label for="email">Digite seu e-mail cadastrado:</label>
                 <input type="email" id="email" name="email" required>
-                <button type="button" onclick="showStep(2)">Enviar código</button>
+                <button type="button" onclick="sendRecoveryEmail()">Enviar código</button>
             </form>
         </div>
 
+        <!-- Etapa 2 - Verificar Código -->
         <div class="card hidden" id="step2">
             <h2>Verificar Código</h2>
             <form id="verifyForm">
                 <label for="emailVerify">Digite seu e-mail:</label>
                 <input type="email" id="emailVerify" name="emailVerify" required>
-
                 <label for="codigo">Digite o código enviado por e-mail:</label>
                 <input type="text" id="codigo" name="codigo" required>
-
-                <button type="button" onclick="showStep(3)">Verificar código</button>
-
+                <button type="button" onclick="verifyCode()">Verificar código</button>
             </form>
+            <div id="error-message" style="color: red; display: none;">Código inválido. Tente novamente.</div>
         </div>
 
+        <!-- Etapa 3 - Redefinir Senha -->
         <div class="card hidden" id="step3">
             <h2>Redefinir Senha</h2>
             <form id="resetForm" onsubmit="return validateResetForm()">
                 <label for="emailReset">Digite seu e-mail:</label>
                 <input type="email" id="emailReset" name="emailReset" required>
-
                 <label for="nova_senha">Digite a nova senha:</label>
                 <input type="password" id="nova_senha" name="nova_senha" required>
-
                 <label for="confirma_senha">Confirme a nova senha:</label>
                 <input type="password" id="confirma_senha" name="confirma_senha" required>
-
                 <button type="submit">Redefinir senha</button>
             </form>
             <div class="message" id="resetMessage"></div>
@@ -58,15 +49,58 @@
     </div>
 
     <script>
+        let verificationCode = ''; // Variável global para armazenar o código enviado
+
+        // Função para exibir as etapas do processo
         function showStep(step) {
             // Oculta todas as etapas
             document.querySelectorAll('.card').forEach(card => {
                 card.classList.add('hidden');
             });
-            // Exibe a etapa desejada
+            // Exibe a etapa atual
             document.getElementById('step' + step).classList.remove('hidden');
         }
 
+        // Função para enviar o código de recuperação para o email
+        function sendRecoveryEmail() {
+            const email = document.getElementById('email').value;
+            fetch('http://localhost:3000/request-recovery', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    verificationCode = data.codigo; // Armazena o código de recuperação enviado
+                    showStep(2); // Avança para a Etapa 2 (verificar código)
+                    alert('Código enviado para o seu e-mail!');
+                } else {
+                    alert(data.message || 'Erro ao enviar o código.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao enviar o código:', error);
+                alert('Erro ao conectar com o servidor.');
+            });
+        }
+
+        // Função para verificar o código inserido pelo usuário
+        function verifyCode() {
+            const email = document.getElementById('emailVerify').value;
+            const codigo = document.getElementById('codigo').value;
+
+            // Verifica se o código inserido é o mesmo que foi enviado
+            if (codigo === verificationCode) {
+                showStep(3); // Avança para a Etapa 3 (redefinir senha)
+                alert('Código verificado com sucesso!');
+                document.getElementById('error-message').style.display = 'none'; // Oculta a mensagem de erro
+            } else {
+                document.getElementById('error-message').style.display = 'block'; // Exibe a mensagem de erro
+            }
+        }
+
+        // Função para validar e redefinir a senha
         function validateResetForm() {
             const novaSenha = document.getElementById('nova_senha').value;
             const confirmaSenha = document.getElementById('confirma_senha').value;
@@ -87,11 +121,10 @@
                 return false; // Impede o envio do formulário
             }
 
-            resetMessage.textContent = ''; // Limpa mensagens de erro
-            alert('Senha redefinida com sucesso!'); // Exemplo de mensagem de sucesso
+            resetMessage.textContent = ''; // Limpa as mensagens de erro
+            alert('Senha redefinida com sucesso!');
             return true; // Permite o envio do formulário
         }
     </script>
-    <link rel="stylesheet" href="script.js">
 </body>
 </html>
