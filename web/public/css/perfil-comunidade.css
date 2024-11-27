@@ -41,7 +41,7 @@ body{
 
 /*perfil do usuário da comunidade*/
 .container__perfil-info{
-    padding: 0 0 0;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -90,6 +90,60 @@ body{
     font-weight: 700;
 }
 
+/*videos e posts postados na comunidade*/
+.perfil__aba-content{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.postagens__categorias{
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.postagens__categorias span{
+    padding: 5px 10px;
+    font-size: 1rem;
+
+    border: 2px solid #e141a4;
+    color: #e141a4;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.postagens__categorias span:nth-child(1){
+    border: none;
+    background-color: #e141a4;
+    color: white;
+}
+
+.posts-comunidade h5,
+.perfil__aba-content h5{
+    font-size: 1.3rem;
+    color: #212529;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.posts-comunidade__tudo{
+    display: flex;
+    gap: 40px;
+}
+
+.post__corpo p{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+} 
+
+
 /*modal publicar*/
 .modal {
     
@@ -101,12 +155,13 @@ body{
 
 .modal-content {
     background-color: #fff;
-    padding: 25px 60px;
+    padding: 25px 40px;
     border-radius: 8px;
     width: 50%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
+    gap: 10px;
 }
 
 .close {
@@ -114,6 +169,9 @@ body{
     font-size: 24px;
     cursor: pointer;
     color:#000000;
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
 
 .close:hover {
@@ -121,10 +179,10 @@ body{
 }
 
 .form-container h2{
-    margin-bottom: 20px;
     font-size: 1.5rem;
     color: #212529;
     font-weight: 600;
+    margin: 0;
 }
 
 .publicacao__form figure{
@@ -165,12 +223,17 @@ body{
     margin-top: 25px;
 }
 
-.publicacao__form-item input{
+.publicacao__form-item input, .publicacao__form-item textarea{
     height: 45px;
     width: 100%;
     border: none;
     background-color: #ecf0f1;
     outline: none;
+}
+
+.publicacao__form-item textarea{
+    height: 150px;
+    padding: 10px;
 }
 
 .icon-modify {
@@ -179,7 +242,7 @@ body{
 }
 
 /*abas de navegacao*/
-.navegacao-abas{
+/* .navegacao-abas{
     display: flex;
     list-style-type: none;
     gap: 20px;
@@ -195,7 +258,6 @@ body{
     
     flex-direction: column;
     gap: 10px;
-   
 }
 
 .navegacao-abas .ativo{
@@ -205,11 +267,6 @@ body{
 .aba-item .aba-link{
     text-decoration: none;
     color: white;
-}
-
-.perfil__aba-content{
-    width: 80%;
-    margin: 30px auto;
 }
 
 .underline{
@@ -244,10 +301,10 @@ body{
     to {
         transform: translateX(0px);
     }
-}
+} */
 
 /*gerenciar comunidade*/
-.gerenciar-perfil{
+/* .gerenciar-perfil{
     display: none;
     flex-direction: column;
     gap: 20px;
@@ -311,31 +368,7 @@ body{
     border: none;
     background-color: transparent;
     width: 100%;
-}
-
-/*videos e posts postados na comunidade*/
-.posts-comunidade h5{
-    font-size: 1.3rem;
-    color: #212529;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.posts-comunidade__tudo{
-    display: flex;
-    gap: 40px;
-}
-
-.post__corpo p{
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-    white-space: wrap;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-}
+}*/
 
 /* Responsividade */
 @media (max-width: 768px) {

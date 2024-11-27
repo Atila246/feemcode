@@ -67,10 +67,27 @@
                     <button class="botao-perfil" id="botao-perfil">Editar Perfil</button>
                 </div>
 
+                <div class="modal" id="editar-usuario-modal">
+                    <div class="form-container modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Postagem</h2>
+                        <form class="editar__form">
+                            <p>Escreva o que está pensando</p>
+                            <div class="editar__form-item">
+                                <input type="text" placeholder="Digite o título da postagem">
+                            </div>
+                            <div class="editar__form-item">
+                                <textarea type="text" placeholder="Digite o corpo do postagem"></textarea>
+                            </div>
+                            <button type="button">Publicar</button>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="perfil__abas">
                     <ul class="navegacao-abas">
                         <li class="aba-item ativo" id="aba1"> 
-                            <a class="aba-link">Conteúdo postado</a>
+                            <a class="aba-link">Conteúdo salvo</a>
                             <div class="underline"></div>
                         </li>
                         <li class="aba-item" id="aba2">
@@ -145,7 +162,7 @@
                                     </a>
                                 </div>
                                 <div class="perfil-config">
-                                    <button>Entrar</button>
+                                    <!-- <button>Entrar</button> -->
                                     <div class="pontinhos__post"  id="config-post2">
                                         <i class="fi fi-br-menu-dots-vertical"></i>
                                         <div class="pontinhos-list">
@@ -192,7 +209,7 @@
                                     <span>@menines</span>
                                 </div>
                             </div>
-                            <button>Editar</button>
+                            <button>Sair</button>
                         </div>
 
                         <div class="comunidade-criada__item">
@@ -205,7 +222,7 @@
                                     <span>@who_m</span>
                                 </div>
                             </div>
-                            <button>Editar</button>
+                            <button>Sair</button>
                         </div>
                     </div>
 
