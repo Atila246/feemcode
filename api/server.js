@@ -282,85 +282,22 @@ app.listen(3000)
 
 
 /*Recuperação de senha*/
-document.getElementById('verifyForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const email = document.getElementById('emailVerify').value;
-    const codigo = document.getElementById('codigo').value;
-
-    try {
-        const response = await fetch('http://localhost:3000/verify-code', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, codigo })
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            alert('Código verificado com sucesso!');
-            showStep(3); // Avança para a Etapa 3
-        } else {
-            alert(data.message || 'Código inválido.');
-        }
-    } catch (error) {
-        alert('Erro ao verificar o código.');
-    }
-});
-document.getElementById('resetForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const email = document.getElementById('emailReset').value;
-    const novaSenha = document.getElementById('nova_senha').value;
-
-    try {
-        const response = await fetch('http://localhost:3000/reset-password', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, novaSenha })
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            alert('Senha redefinida com sucesso!');
-        } else {
-            alert(data.message || 'Erro ao redefinir a senha.');
-        }
-    } catch (error) {
-        alert('Erro ao conectar com o servidor.');
-    }
-});
-import express from 'express'
-const nodemailer = require('nodemailer');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-// const app = express();
-const port = 3000;
-
-app.use(express.json());
-
-// Exemplo de banco de dados
-let users = [
-  { id: 1, email: 'usuario@dominio.com', password: 'hashedpassword' }
-];
+import nodemailer from 'nodemailer';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcryptjs';
 
 // Função para enviar e-mail
 const sendRecoveryEmail = async (email, token) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'seuemail@gmail.com',
-      pass: 'suasenha'
+      user: 'femmcode4@gmail.com',
+      pass: 'tkmp fjcn rnkg ujcc'
     }
   });
 
   const mailOptions = {
-    from: 'seuemail@gmail.com',
+    from: 'femmcode4@gmail.com',
     to: email,
     subject: 'Código de Recuperação de Senha',
     text: `Use o código a seguir para redefinir sua senha: ${token}`
@@ -369,10 +306,12 @@ const sendRecoveryEmail = async (email, token) => {
   await transporter.sendMail(mailOptions);
 };
 
-// Rota para solicitar recuperação
-app.post('/request-recovery', (req, res) => {
+// Rota para solicitar recuperação de senha
+app.post('/request-recovery', async (req, res) => {
   const { email } = req.body;
-  const user = users.find(u => u.email === email);
+  const user = await prisma.usuario.findUnique({
+    where: { email }
+  });
 
   if (!user) {
     return res.status(404).json({ message: 'Usuário não encontrado.' });
@@ -380,40 +319,70 @@ app.post('/request-recovery', (req, res) => {
 
   const token = jwt.sign({ email }, 'secreta', { expiresIn: '10m' });
 
-  sendRecoveryEmail(email, token)
-    .then(() => res.status(200).json({ message: 'Código enviado!' }))
-    .catch(err => res.status(500).json({ message: 'Erro ao enviar o código.' }));
+  try {
+    await sendRecoveryEmail(email, token);
+    return res.status(200).json({ message: 'Código enviado!' });
+  } catch (err) {
+    return res.status(500).json({ message: 'Erro ao enviar o código.'+err });
+  }
 });
 
-// Rota para verificar o código
-app.post('/verify-code', (req, res) => {
+// Rota para verificar o código de recuperação
+app.post('/verify-code', async (req, res) => {
   const { email, codigo } = req.body;
 
   try {
     const decoded = jwt.verify(codigo, 'secreta');
     if (decoded.email === email) {
-      res.status(200).json({ message: 'Código verificado com sucesso!' });
+      return res.status(200).json({ message: 'Código verificado com sucesso!' });
     } else {
-      res.status(400).json({ message: 'Código inválido.' });
+      return res.status(400).json({ message: 'Código inválido.' });
     }
   } catch (err) {
-    res.status(400).json({ message: 'Código expirado ou inválido.' });
+    return res.status(400).json({ message: 'Código expirado ou inválido.' });
   }
 });
 
 // Rota para redefinir a senha
-app.post('/reset-password', (req, res) => {
+app.post('/reset-password', async (req, res) => {
   const { email, novaSenha } = req.body;
-  const user = users.find(u => u.email === email);
+
+  const user = await prisma.usuario.findUnique({
+    where: { email }
+  });
 
   if (!user) {
     return res.status(404).json({ message: 'Usuário não encontrado.' });
   }
 
-  user.password = bcrypt.hashSync(novaSenha, 10);
-  res.status(200).json({ message: 'Senha redefinida com sucesso!' });
+  const hashedPassword = bcrypt.hashSync(novaSenha, 10);
+
+  await prisma.usuario.update({
+    where: { email },
+    data: { senha: hashedPassword }
+  });
+
+  return res.status(200).json({ message: 'Senha redefinida com sucesso!' });
 });
 
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+// Rota de login (para garantir que o login funciona)
+app.post('/login', async (req, res) => {
+  const { email, senha } = req.body;
+
+  const user = await prisma.usuario.findUnique({
+    where: { email }
+  });
+
+  if (!user || !bcrypt.compareSync(senha, user.senha)) {
+    return res.status(401).json({ message: 'Credenciais inválidas.' });
+  }
+
+  res.status(200).json({ message: 'Login realizado com sucesso!', user });
 });
+
+// Rota para listar usuários
+app.get('/usuarios', async (_, res) => {
+  const usuarios = await prisma.usuario.findMany();
+  res.status(200).json(usuarios);
+});
+
