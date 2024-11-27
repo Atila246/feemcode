@@ -69,24 +69,46 @@ controls.forEach((control) => {
         console.log(control);
     });
 });
+
 // Modo calro e escuro 
-// Referências aos elementos
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const body = document.body;
+//document.addEventListener('DOMContentLoaded', function () {
+   // const themeToggleButton = document.getElementById('theme-toggle');
+   // const body = document.body;
+  //  const header = document.querySelector('header');
 
-// Recuperar tema salvo no localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    body.classList.add(savedTheme);
-    themeIcon.className = savedTheme === 'dark-mode' ? 'fi fi-rs-moon' : 'fi fi-rs-sun';
-}
+    // Verifica se o modo escuro está armazenado no localStorage
+   // if (localStorage.getItem('theme') === 'dark') {
+   //     body.classList.add('dark-mode');
+    //    header.classList.add('dark-mode');
+    //}
 
-// Alternar tema ao clicar no botão
-themeToggle.addEventListener('click', () => {
-    const isDark = body.classList.toggle('dark-mode');
-    themeIcon.className = isDark ? 'fi fi-rs-moon' : 'fi fi-rs-sun';
-    localStorage.setItem('theme', isDark ? 'dark-mode' : '');
-});
+    // Função para alternar o tema
+    //themeToggleButton.addEventListener('click', function () {
+       // body.classList.toggle('dark-mode');
+      //  header.classList.toggle('dark-mode');
 
+        // Salva a preferência no localStorage
+      //  if (body.classList.contains('dark-mode')) {
+//localStorage.setItem('theme', 'dark');
+     //   } else {
+      //      localStorage.setItem('theme', 'light');
+     //   }
+//});
+//});
 
+//const themeIcon = document.getElementById('theme-icon');
+
+//themeToggleButton.addEventListener('click', function () {
+   // body.classList.toggle('dark-mode');
+   // header.classList.toggle('dark-mode');
+
+    //if (body.classList.contains('dark-mode')) {
+//themeIcon.classList.remove('fi-rs-sun');
+    //    themeIcon.classList.add('fi-rs-moon');
+  //      localStorage.setItem('theme', 'dark');
+  //  } else {
+   //     themeIcon.classList.remove('fi-rs-moon');
+   //     themeIcon.classList.add('fi-rs-sun');
+   //     localStorage.setItem('theme', 'light');
+  //  }
+//});

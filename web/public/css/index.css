@@ -91,7 +91,7 @@
     right: 0;
     left: auto;   
 }
-
+ 
 /*estilizar a linha né pae*/
 .container-main hr{
     background-color: #f36ec0;
@@ -375,7 +375,8 @@
 }
 
 
- 
+
+
 /* Estilo feedback baitola*/
   
   /* Botão com efeito hover */
@@ -400,7 +401,7 @@
 /* Responsavidade com MEDIA QUERY*/
 
 /* Ajustes gerais */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .header__nav {
         flex-wrap: wrap;
         padding: 10px;
@@ -439,83 +440,56 @@
     }
 }
 
-/* Ajustes para telas menores, como tablets */
-@media (max-width: 768px) {
-    .header__nav {
-        flex-direction: column;
-        align-items: center;
+
+/* Ajustes gerais */
+@media only screen and (max-width: 1440px) {
+    :root {
+        font-size: 16px;
     }
 
-    .header__pesquisa {
-        width: 90%;
+    .carrossa__content {
+        gap: 30px;
     }
 
-    .menu__list {
+    .carrossa-item {
+        width: 50%;
+        height: 300px;
+    }
+
+    .comunidades-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .evento-dados figure {
+        width: 50%;
+    }
+
+    .canais-item {
         flex-direction: column;
         gap: 20px;
-        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .carrossa-item {
+        width: 100%;
+        height: 250px;
     }
 
     .comunidades-list {
         grid-template-columns: 1fr;
     }
 
-    .carrossa-item {
-        height: 200px;
-    }
-
-    .feedback-section textarea {
+    .evento-dados figure {
         width: 100%;
     }
 
-    .feedback-section button {
-        width: 100%;
+    .canais__content {
+        flex-direction: column;
     }
 }
 
-/* Ajustes para telas muito pequenas, como smartphones */
-@media (max-width: 480px) {
-    .header__pesquisa {
-        flex-direction: column;
-        gap: 5px;
-        padding: 10px;
-    }
-
-    .menu__list {
-        gap: 10px;
-    }
-
-    .carrossa__container-scroll {
-        padding: 20px 0;
-    }
-
-    .carrossa-item {
-        height: 150px;
-    }
-
-    .evento-dados {
-        padding: 20px;
-    }
-
-    .evento-desc h4 {
-        font-size: 1.2rem;
-    }
-
-    .evento-desc p {
-        font-size: 0.9rem;
-    }
-
-    .feedback-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .feedback-section button {
-        align-self: stretch;
-    }
-
-    footer {
-        padding: 20px;
-    }
-}
