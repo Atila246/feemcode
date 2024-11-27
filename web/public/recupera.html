@@ -4,7 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FemmCode - Recuperação de Senha</title>
-    <link rel="stylesheet" href="css/recupera.css">
+    <style>
+        /* Adicione seu CSS aqui */
+        /*.card-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            display: none;
+        }
+        .card.active {
+            display: block;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }*/
+    </style>
 </head>
 <body>
 
@@ -64,7 +94,7 @@
         // Função para enviar o código de recuperação para o email
         function sendRecoveryEmail() {
             const email = document.getElementById('email').value;
-            fetch('http://localhost:3000/request-recovery', {
+            fetch('/request-recovery', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email })
@@ -90,14 +120,26 @@
             const email = document.getElementById('emailVerify').value;
             const codigo = document.getElementById('codigo').value;
 
-            // Verifica se o código inserido é o mesmo que foi enviado
-            if (codigo === verificationCode) {
-                showStep(3); // Avança para a Etapa 3 (redefinir senha)
-                alert('Código verificado com sucesso!');
-                document.getElementById('error-message').style.display = 'none'; // Oculta a mensagem de erro
-            } else {
-                document.getElementById('error-message').style.display = 'block'; // Exibe a mensagem de erro
-            }
+            fetch('/verify-code', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, codigo })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showStep(3); // Avança para a Etapa 3 (redefinir senha)
+                    alert('Código verificado com sucesso!');
+                    document.getElementById('error-message').style.display = 'none'; // Oculta a mensagem de erro
+                } else {
+                    document.getElementById('error-message').style.display = 'block'; // Exibe a mensagem de erro
+                    document.getElementById('error-message').textContent = data.message || 'Código inválido ou expirado';
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao verificar o código:', error);
+                alert('Erro ao conectar com o servidor.');
+            });
         }
 
         // Função para validar e redefinir a senha
@@ -126,5 +168,92 @@
             return true; // Permite o envio do formulário
         }
     </script>
+
+    <!-- Server-side Backend (Node.js + Express) -->
+    <script>
+        const express = require('express');
+        const app = express();
+        const mysql = require('mysql');
+        const bodyParser = require('body-parser');
+        const nodemailer = require('nodemailer');
+        app.use(bodyParser.json());
+
+        // Configuração do banco de dados (substitua com suas credenciais)
+        const db = mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: 'sua-senha',
+            database: 'seu-banco'
+        });
+
+        db.connect((err) => {
+            if (err) {
+                console.error('Erro ao conectar ao banco de dados:', err);
+                return;
+            }
+            console.log('Conectado ao banco de dados');
+        });
+
+        // Endpoint para verificar o código
+        app.post('/verify-code', (req, res) => {
+            const { email, codigo } = req.body;
+
+            // Query para verificar o código do usuário
+            const query = 'SELECT * FROM recovery_codes WHERE email = ?';
+            
+            db.query(query, [email], (err, results) => {
+                if (err) {
+                    console.error('Erro ao consultar o banco de dados:', err);
+                    return res.status(500).json({ success: false, message: 'Erro interno' });
+                }
+
+                // Se o código não foi encontrado
+                if (results.length === 0) {
+                    return res.status(404).json({ success: false, message: 'E-mail não encontrado' });
+                }
+
+                const recoveryData = results[0];
+                const storedCode = recoveryData.recovery_code;
+                const expiryTime = new Date(recoveryData.expiry_time);
+
+                // Verifica se o código enviado é válido e se não expirou
+                if (codigo === storedCode && new Date() <= expiryTime) {
+                    return res.json({ success: true });
+                } else {
+                    return res.status(400).json({ success: false, message: 'Código inválido ou expirado' });
+                }
+            });
+        });
+
+        // Endpoint para enviar o código (método exemplo)
+        app.post('/request-recovery', (req, res) => {
+            const { email } = req.body;
+            // Gerar código aleatório
+            const codigo = Math.floor(100000 + Math.random() * 900000); // Código de 6 dígitos
+
+            // Enviar o código para o e-mail do usuário
+            // Aqui você teria que integrar com um serviço de envio de e-mails (ex: Nodemailer)
+
+            // Armazenar o código temporariamente (por exemplo, 10 minutos)
+            const expiryTime = new Date(Date.now() + 10 * 60 * 1000); // Expira em 10 minutos
+
+            const query = 'REPLACE INTO recovery_codes (email, recovery_code, expiry_time) VALUES (?, ?, ?)';
+            db.query(query, [email, codigo, expiryTime], (err) => {
+                if (err) {
+                    console.error('Erro ao armazenar código no banco:', err);
+                    return res.status(500).json({ success: false, message: 'Erro ao armazenar código' });
+                }
+
+                // Enviar resposta de sucesso
+                res.json({ success: true, codigo });
+            });
+        });
+
+        // Inicia o servidor
+        app.listen(3000, () => {
+            console.log('Servidor rodando na porta 3000');
+        });
+    </script>
+
 </body>
 </html>
