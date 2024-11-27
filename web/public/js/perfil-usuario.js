@@ -1,36 +1,13 @@
-// fetch('http://localhost:3000/usuarios')
-//     .then(res => res.json())
-//     .then((data) => {
-//         data.forEach((item) => {
-//             perfil_nome.innerHTML = item.nome
-//         })
-//     })
-//     .catch((err) => {
-//         console.log("Erro"+err)
-//     })
-
-// modal
-// var publicar_btn = document.getElementById('publicar-btn')
-// var publicacao_modal = document.getElementById('publicacao-modal'); 
-// var close_btn = document.getElementsByClassName('close');
-
-// publicar_btn.onclick = function () {
-//     publicacao_modal.style.display = "flex"
-//     console.log(publicacao_modal)
-// }
-
-// // Fechar POPUP e formulário ao clicar no 'X'
-// for (let i = 0; i < close_btn.length; i++) {
-//     close_btn[i].onclick = function () {
-//         publicacao_modal.style.display = "none"
-//     }
-// }
-
-// window.onclick = function (event) {
-//     if(event.target == publicacao_modal){
-//         publicacao_modal.style.display = "none"
-//     }      
-// }
+fetch('http://localhost:3000/usuarios')
+    .then(res => res.json())
+    .then((data) => {
+        data.forEach((item) => {
+            perfil_nome.innerHTML = item.nome
+        })
+    })
+    .catch((err) => {
+        console.log("Erro"+err)
+    })
 
 const perfil_nome = document.getElementById("perfil-nome")
 const underline = document.querySelector('.underline')
@@ -81,46 +58,71 @@ aba2.addEventListener('click', () => {
     
 })
 
+/*modal*/
+var perfil_btn = document.getElementById('botao-perfil')
+var editar_modal = document.getElementById('editar-usuario-modal'); 
+var close_btn = document.getElementsByClassName('close');
 
-// function toggleEditProfile() {
-//     const editSection = document.getElementById('editProfileSection');
-//     if (editSection.classList.contains('hidden')) {
-//         editSection.classList.remove('hidden'); 
-//     } else {
-//         editSection.classList.add('hidden'); 
-//     }
-// }
+perfil_btn.onclick = function () {
+    editar_modal.style.display = "flex"
+    console.log(editar_modal)
+}
 
-// function salvarPerfil() {
-//     const novoNome = document.getElementById('novoUsuario').value;
-//     const novaDescricao = document.getElementById('descricao').value;
+// Fechar POPUP e formulário ao clicar no 'X'
+for (let i = 0; i < close_btn.length; i++) {
+    close_btn[i].onclick = function () {
+        editar_modal.style.display = "none"
+    }
+}
 
-//     document.getElementById('profile-name').innerText = novoNome;
-//     document.getElementById('profile-description').innerText = novaDescricao;
+window.onclick = function (event) {
+    if(event.target == editar_modal){
+        editar_modal.style.display = "none"
+    }      
+}
 
-//     document.getElementById('editProfileSection').classList.add('hidden');
-// }
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const toggleButton = document.getElementById("toggle-theme");
-//     const body = document.body;
+//Editar perfil
+function toggleEditProfile() {
+    const editSection = document.getElementById('editProfileSection');
+    if (editSection.classList.contains('hidden')) {
+        editSection.classList.remove('hidden'); 
+    } else {
+        editSection.classList.add('hidden'); 
+    }
+}
 
-//     if (localStorage.getItem("theme") === "dark") {
-//         body.classList.add("dark-mode");
-//     }
+function salvarPerfil() {
+    const novoNome = document.getElementById('novoUsuario').value;
+    const novaDescricao = document.getElementById('descricao').value;
 
-//     toggleButton.addEventListener("click", () => {
-//         body.classList.toggle("dark-mode");
+    document.getElementById('profile-name').innerText = novoNome;
+    document.getElementById('profile-description').innerText = novaDescricao;
 
-//         if (body.classList.contains("dark-mode")) {
-//             localStorage.setItem("theme", "dark");
-//             toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
-//         } else {
-//             localStorage.setItem("theme", "light");
-//             toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
-//         }
-//     });
-// });
+    document.getElementById('editProfileSection').classList.add('hidden');
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+    }
+
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
+        } else {
+            localStorage.setItem("theme", "light");
+            toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
+        }
+    });
+});
 
 

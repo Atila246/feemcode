@@ -46,6 +46,12 @@ body{
     font-weight: 500;
 }
 
+.postagens__categorias span:nth-child(1){
+    border: none;
+    background-color: #e141a4;
+    color: white;
+}
+
 .comunidade__post{
     padding: 30px;
     width: 80%;
@@ -419,14 +425,14 @@ body{
 }
 
 /* Estilo escuro */
-body.dark-mode {
+/* body.dark-mode {
     --background-color: #121212;
     --text-color: #ffffff;
     --primary-color: #bb86fc;
-}
+} */
 
 /* Aplicação das variáveis */
-body {
+/* body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -434,4 +440,4 @@ body {
 button {
     background-color: var(--primary-color);
     color: var(--text-color);
-}
+} */
