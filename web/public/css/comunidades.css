@@ -1,5 +1,6 @@
 body{
     margin: 0 !important;
+    color: #212529;
 }
 /*estrutura da pagina*/
 .container-comunidade{
@@ -67,7 +68,6 @@ body{
 
 .post__corpo h2{
     font-size: 1.6rem;
-    color: #212529;
     margin: 0 !important;
 }
 
@@ -101,18 +101,15 @@ body{
 
 .perfil-post__nome .temp{
     font-size: 0.8rem;
-    color: #212529;
     font-weight: 600;
 }
 
 .perfil-post__nome div span i{
-    color: #212529;
     font-size: 0.5rem;
 }
 
 .perfil-post__nome #comunidade{
     font-size: 1rem;
-    color: #212529;
     font-weight: 600;
 }
 
@@ -127,6 +124,7 @@ body{
     gap: 15px;
     align-items: center;
     cursor: pointer;
+    color: #212529;
 }
 
 .post-like, .post-save{
@@ -235,7 +233,6 @@ body{
 .perfil-comunidade__nome span:nth-child(1){
     font-weight: 600;
     font-size: 1rem;
-    color: #212529;
 }
 
 .perfil-comunidade__nome span:nth-child(2){
@@ -307,7 +304,6 @@ body{
 .form-container h2{
     margin-bottom: 20px;
     font-size: 1.5rem;
-    color: #212529;
     font-weight: 600;
 }
 
