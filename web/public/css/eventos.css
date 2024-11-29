@@ -22,6 +22,11 @@
     font-weight: 500;
 }
 
+.categorias-eventos span:nth-child(1){
+    background-color: #e141a4;
+    color: white;
+}
+
 .eventos__carrossel h2{
     font-weight: 600;
     font-size: 1.4rem;
@@ -34,18 +39,18 @@
     gap: 20px;
 }
 
-.eventos-item{
+.evento-item{
     padding: 20px;
     cursor: pointer;
     background: transparent;
 }
 
-.eventos-item figure{
+.evento-item figure{
     width: 100%;
     height: 180px;
 }
 
-.eventos-item figure img{
+.evento-item figure img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -59,7 +64,7 @@
 
 .evento-descricao h2{
     font-size: 1.4rem;
-    margin: 0 !important;
+    margin: 0;
 }
 
 .evento-descricao span{
@@ -70,7 +75,7 @@
 
 .evento-descricao p{
     font-size: 1rem;
-    margin: 0 !important;
+    margin: 0;
 }
 
 /*Media Queries*/
@@ -117,7 +122,7 @@
         padding: 3px 8px;
     }
 
-    .eventos-item figure {
+    .evento-item figure {
         height: 150px;
     }
 

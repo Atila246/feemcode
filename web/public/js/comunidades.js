@@ -163,3 +163,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+const posts = document.querySelectorAll(".comunidade__post")
+posts.forEach(post => {
+    post.addEventListener('click', () => {
+        window.location.href = "post.html"
+    })
+})

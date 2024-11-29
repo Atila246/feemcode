@@ -110,7 +110,7 @@ body {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Aumenta a largura mínima das colunas */
+    grid-template-columns: repeat(2, 1fr); /* Aumenta a largura mínima das colunas */
     gap: 20px;
 }
 

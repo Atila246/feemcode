@@ -51,12 +51,14 @@ body{
     color: white;
 }
 
+/*post*/
 .comunidade__post{
     padding: 30px;
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 25px;
+    cursor: pointer;
 }
 
 .post__corpo{
@@ -96,7 +98,7 @@ body{
     padding: 5px 20px;
     font-weight: 600;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .perfil-post__nome{

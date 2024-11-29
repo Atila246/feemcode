@@ -1,0 +1,49 @@
+.evento{
+    width: 60%;
+    margin: 30px auto;
+}
+
+.evento-item{
+    padding: 20px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.evento-item figure{
+    width: 100%;
+    height: 400px;
+}
+
+.evento-item figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.evento-descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.evento-descricao h2{
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.evento-descricao span{
+    font-size: 1.4rem;
+    color:#FF66C4;
+    font-weight: 600;
+}
+
+.evento-descricao span:nth-child(2){
+    font-size: 1rem;
+}
+
+.evento-descricao p{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
