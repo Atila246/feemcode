@@ -322,46 +322,9 @@
 }
 
 /*historia*/
-.historia__content {
-    display: flex;
-    justify-content: end;
-    gap: 10%;
-    align-items: center;
-}
-
-.historia-text{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-}
-
-.historia-text h2{
-    font-size: 4rem;
-    font-weight: 600;
-    text-align: center;
+.historia{
     margin: 0;
-}
-
-.historia-text p{
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0;
-}
-
-.historia-text a{
     width: 100%;
-}
-
-.historia-text a button{
-    border: none;
-    background-color: #FF66C4;
-    color: white;
-    font-weight: 600;
-    font-size: 1.2rem;
-    width: inherit;
-    padding: 8px 0;
-    border-radius: 20px;
 }
 
 /*sobre nós*/

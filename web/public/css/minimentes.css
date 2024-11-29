@@ -1,3 +1,14 @@
+.minimentes{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 60px;
+}
+
+.canal__sidebar{
+    width: 100%;
+    padding: 40px;
+}
+
 /*minimentes postagens*/
 .minimentes__postagens{
     margin: 40px 0;
@@ -7,7 +18,7 @@
     flex-direction: column;
     gap: 20px;
     overflow-y: auto;
-    height: 70vh;
+    height: 69vh;
 }
 
 .minimentes__header h3{

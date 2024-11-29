@@ -1,4 +1,4 @@
-.eventos{
+.evento{
     width: 70%;
     margin: 30px auto;
     display: flex;
@@ -6,12 +6,12 @@
     gap: 30px;
 }
 
-.categorias-eventos{
+.evento__categorias{
     display: flex;
     gap: 20px;
 }
 
-.categorias-eventos span{
+.evento__categorias span{
     padding: 5px 10px;
     font-size: 1rem;
 
@@ -22,12 +22,12 @@
     font-weight: 500;
 }
 
-.categorias-eventos span:nth-child(1){
+.evento__categorias span:nth-child(1){
     background-color: #e141a4;
     color: white;
 }
 
-.eventos__carrossel h2{
+.evento__carrossel h2{
     font-weight: 600;
     font-size: 1.4rem;
     margin-bottom: 20px;
@@ -98,7 +98,7 @@
         width: 90%;
     }
 
-    .categorias-eventos {
+    .evento__categorias {
         flex-wrap: wrap;
         gap: 10px;
     }
@@ -117,7 +117,7 @@
         font-size: 1.2rem;
     }
 
-    .categorias-eventos span {
+    .evento__categorias span {
         font-size: 0.9rem;
         padding: 3px 8px;
     }
