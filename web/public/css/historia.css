@@ -57,82 +57,80 @@ body{
 }
 
 
-@media only screen and (max-width: 1440px) {
-    .historia {
-        width: 95%;
-    }
-
-    .historia__text h2 {
-        font-size: 2.8rem;
-    }
-
-    .historia__content p {
-        font-size: 1.1rem;
-    }
-}
-
-@media only screen and (max-width: 940px) {
+@media (max-width: 48rem) { /* 768px */
     .historia__header {
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
+        display: flex;
+        justify-content: center; /* Centraliza no mobile */
+        gap: 0;
+    }
+
+    .historia__text {
+        flex-direction: column; /* Empilha os itens no mobile */
+        align-items: center;
     }
 
     .historia__text h2 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Ajusta o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
     }
 
     .historia__content p {
-        font-size: 1rem;
+        font-size: 1rem; /* Ajusta o tamanho da fonte para mobile */
+        text-align: left; /* Alinha o texto à esquerda */
+        font-weight: 400;
     }
 
     .historia__content a button {
-        font-size: 1rem;
-        padding: 6px 0;
+        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 0; /* Ajusta o padding do botão */
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .historia {
-        width: 100%;
+/* Para telas entre 768px e 1024px (Tablet) */
+@media (min-width: 48rem) and (max-width: 64rem) { /* 768px a 1024px */
+    .historia__header {
+        justify-content: space-between; /* Mais espaçamento para tablet */
     }
 
     .historia__text h2 {
-        font-size: 2rem;
-        text-align: center;
+        font-size: 2.5rem; /* Ajuste intermediário */
     }
 
     .historia__content p {
-        font-size: 0.9rem;
+        font-size: 1.1rem; /* Ajuste intermediário */
     }
 
     .historia__content a button {
-        font-size: 0.9rem;
-        padding: 5px 0;
+        font-size: 1.1rem; /* Ajuste intermediário */
     }
 }
+
+
+
+
+
 /*Modo claro e escuro */
 /* Estilo padrão (claro) */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007bff;
-}
+/* :root { */
+    /* --background-color: #ffffff; */
+    /* --text-color: #000000; */
+    /* --primary-color: #007bff; */
+/* } */
 
 /* Estilo escuro */
-body.dark-mode {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --primary-color: #bb86fc;
-}
+/* body.dark-mode { */
+    /* --background-color: #121212; */
+    /* --text-color: #ffffff; */
+    /* --primary-color: #bb86fc; */
+/* } */
 
 /* Aplicação das variáveis */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
+/* body { */
+    /* background-color: var(--background-color); */
+    /* color: var(--text-color); */
+/* } */
 
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
+/* button { */
+    /* background-color: var(--primary-color); */
+    /* color: var(--text-color); */
+/* } */

@@ -71,8 +71,8 @@ button:hover {
     }
 }
 
-/* Media Query para tablets  */
-@media screen and (max-width: 768px) {
+/* Media Query para tablets */
+@media screen and (max-width: 48rem) { /* 768px = 48rem */
     .content {
         width: 90%;
     }
@@ -88,30 +88,30 @@ button:hover {
     .social-media {
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 0.625rem; /* 10px = 0.625rem */
     }
 
     .link-social-media .item-social-media {
-        width: 30px;
-        height: 30px;
+        width: 1.875rem; /* 30px = 1.875rem */
+        height: 1.875rem; /* 30px = 1.875rem */
     }
 
     .btn-primary {
-        font-size: 1rem;
+        font-size: 1rem; /* Mantém o mesmo tamanho */
     }
 }
 
-/* Media Query para telas muito grandes  */
-@media screen and (min-width: 1600px) {
+/* Media Query para telas muito grandes */
+@media screen and (min-width: 100rem) { /* 1600px = 100rem */
     .content {
         width: 60%;
     }
 
     .title {
-        font-size: 36px;
+        font-size: 2.25rem; /* 36px = 2.25rem */
     }
 
     .logo-login {
-        width: 200px;
+        width: 12.5rem; /* 200px = 12.5rem */
     }
 }
