@@ -27,31 +27,30 @@ btnSignup.addEventListener("click", () => {
     body.classList.add("sign-up-js");    // Adiciona a classe sign-up-js
 
     sheet.insertRule(`.content::before { border-radius: 10px 0px 0px 10px; }`, sheet.cssRules.length)
-});
-
+})
 
 btn_login.addEventListener('click', () => {
-    fetch('http://localhost:3000/login', {
-      method: "POST",
-      body: JSON.stringify({email: email_login.value, senha: senha_login.value}),
-      headers: {
-          "Content-Type": "application/json; charset=UTF-8"
-        }
-    })
-    .then(res => res.json())
-    .then((data) => {
-      if(data!=null){
-        sessionStorage.setItem("Usuario", JSON.stringify(data))
-        console.log(JSON.stringify(data))
-        window.location.href='index.html'
-      }else{
-        mensagem.style = "display:block;"
-        mensagem.innerHTML = "E-mail ou senha incorreto(s)"
+  fetch('http://localhost:3000/login', {
+    method: "POST",
+    body: JSON.stringify({email: email_login.value, senha: senha_login.value}),
+    headers: {
+        "Content-Type": "application/json; charset=UTF-8"
       }
-    })
-    .catch(err => {
-      console.log(err)
-    })
+  })
+  .then(res => res.json())
+  .then((data) => {
+    if(data!=null){
+      sessionStorage.setItem("Usuario", JSON.stringify(data))
+      console.log(JSON.stringify(data))
+      window.location.href='index.html'
+    }else{
+      mensagem.style = "display:block;"
+      mensagem.innerHTML = "E-mail ou senha incorreto(s)"
+    }
+  })
+  .catch(err => {
+    console.log(err)
+  })
 
 })
 

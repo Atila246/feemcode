@@ -1,5 +1,6 @@
 body{
     color: #212529;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*menu do perfil*/
@@ -146,7 +147,6 @@ body{
 
 /*modal publicar*/
 .modal {
-    
     background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
     overflow: hidden;
@@ -239,6 +239,35 @@ body{
 .icon-modify {
     color: #7f8c8d;
     padding: 0 5px;
+}
+
+/* .form-item-anexo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+
+.form-item-anexo span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #212529;
+} */
+
+.form-item-anexo{
+    border: 1px dotted #212529b4;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-item-anexo span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #212529;
 }
 
 /*abas de navegacao*/

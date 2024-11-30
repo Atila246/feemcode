@@ -25,6 +25,8 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
 
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+
     <!--google fonts-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -45,7 +47,7 @@
                 <div class="search-and-menu"> 
                     <div class="header__pesquisa">
                         <span>
-                            <i class="fi fi-rs-search" style="display:flex;"></i>
+                            <i class="fi fi-rs-search"></i>
                         </span>
                         <input type="search" id="search" placeholder=" O que está procurando?">
                     </div>
@@ -65,16 +67,17 @@
 
                 <!--perfil-->
                 <div class="header__perfil"> <!-- div perfil -->
-                    <a id="link-cadastro" href="perfil.html">
-                        <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
-                        </span>
-                    </a>
-                    <button id="toggle-theme">
-                        <i class="fi fi-rs-moon"></i> <!-- Ícone de lua para o modo escuro -->
-                    </button>
+                    <!-- <button id="toggle-theme">
+                        <i class="fi fi-rs-moon"></i> 
+                    </button> -->
                     <a href="login.html">
                         <button id="cadastre-se">Cadastre-se</button>
+                    </a>
+
+                    <a id="link-cadastro" href="perfil-usuario.html">
+                        <span id="cadastrado" style="display:none;">
+                            <i class="fi fi-tr-circle-user"></i>
+                        </span>
                     </a>
                 </div>
             </section>

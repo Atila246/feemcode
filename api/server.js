@@ -19,6 +19,7 @@ app.post('/usuario', async (req, res) => {
     const usuario = await prisma.usuario.create({
         data: {
             nome: req.body.nome,
+            nomeUsuario: req.body.nomeUsuario,
             email: req.body.email,
             senha: req.body.senha
         }
@@ -34,34 +35,42 @@ app.get('/usuarios', async (_, res) => {
 
 //método para fazer uma postagem
 app.post('/postagem', async (req,res) =>{
-
-    const conteudo = await prisma.conteudo.create({
-        data: {
-            titulo: req.body.titulo,
-            descricao: req.body.descricao,
-            qtdLikes: 0
-        }
-    })
-
     try{
+        const conteudo = await prisma.conteudo.create({
+            data: {
+                titulo: req.body.titulo,
+                descricao: req.body.descricao,
+                qtdLikes: 0
+            }
+        })
+    
         const comunidade = await prisma.comunidade.findUnique({
             where: {
-                id: req.body.comunidadeId
+                nomeComunidade: req.body.nomeComunidade
             }
         })
-
-        if(comunidade==null){
-            return res.status(404).json({ error: "Comunidade não encontrada" })
-        }
-
+    
         const usuario = await prisma.usuario.findUnique({
             where: {
-                id: req.body.usuarioId
+                nomeUsuario: req.body.nomeUsuario
+            }
+        })
+    
+        if(!usuario || !comunidade){
+            return res.status(404).json({ error: "Comunidade ou Usuário não encontrado" })
+        }
+
+        const usuarioInComunidade = await prisma.usuario.findUnique({
+            where: { id: usuario.id },
+            include: {
+                comunidades: {
+                    where: { id: comunidade.id }
+                }
             }
         })
 
-        if(usuario==null){
-            return res.status(404).json({ error: "Usuário não encontrado" })
+        if(!usuarioInComunidade){
+            return res.status(404).json({ message: 'Usuário não encontrado' })
         }
 
         const postagem = await prisma.postagem.create({
@@ -70,10 +79,10 @@ app.post('/postagem', async (req,res) =>{
                     connect: { id: conteudo.id }
                 },
                 comunidade: {
-                    connect: { id: req.body.comunidadeId }
+                    connect: { id: comunidade.id }
                 },
                 usuario: {
-                    connect: { id: req.body.usuarioId }
+                    connect: { id: usuario.id }
                 }
             }
         })
@@ -81,7 +90,8 @@ app.post('/postagem', async (req,res) =>{
         res.status(201).json(postagem)
 
     }catch(error){
-        res.status(500).json({ error: "Erro ao postar na comunidade" })
+        res.status(500).json({ message: 'Erro ao tentar postar na comunidade', error })
+
         await prisma.conteudo.delete({
             where: {
                 id: conteudo.id
@@ -121,6 +131,7 @@ app.get('/postagens', async (req,res) => {
             usuario: {
                 select: {
                     nome: true,
+                    nomeUsuario: true
                 }
             }
         }
@@ -182,32 +193,65 @@ app.get('/postagens_pesquisa', async (req,res) => {
 
 app.post('/comunidade', async (req,res) =>{
     try{
-        const usuario = await prisma.usuario.findUnique({
-            where: {
-                id: req.body.usuarioId
-            }
-        })
-
-        if(usuario==null){
-            return res.status(404).json({ error: "Usuário não encotrando" })
-        }
-
         const comunidade = await prisma.comunidade.create({
             data:{
                 foto: req.body.foto,
                 nomeComunidade: req.body.nomeComunidade,
-                bio: req.body.bio,
-                usuario: {
-                    connect: { id: req.body.usuarioId }
-                }
+                bio: req.body.bio
             }
         })
-    
         res.status(201).json(comunidade)
 
     }catch(error){
         res.status(500).json({ error: "Erro ao criar comunidade" })
     }
+})
+
+app.post('/entrar-comunidade', async (req,res) => {
+    const usuario = await prisma.usuario.findUnique({
+        where: {
+            nomeUsuario: req.body.nomeUsuario
+        }
+    })
+
+    const comunidade = await prisma.comunidade.findUnique({
+        where: {
+            nomeComunidade: req.body.nomeComunidade
+        }
+    })
+
+    if(!usuario || !comunidade){
+        return res.status(404).json({ error: "Usuário ou Comunidade não encotrado" })
+    }
+
+    try{
+        const update = await prisma.usuario.update({
+            where: { id: usuario.id },
+            data: {
+                comunidades: {
+                    connect: { id: comunidade.id }
+                }
+            }
+        })
+        res.status(201).json(update)
+
+    }catch(error){
+        res.status(500).json({ error: "Erro ao criar comunidade" })
+    }
+})
+
+app.get('/comunidades', async (req,res) => {
+    const comunidades = await prisma.comunidade.findMany()
+    res.json(comunidades)
+})
+
+app.post('/uma-comunidade', async (req,res) => {
+    const obj = await prisma.comunidade.findUnique({
+        where: {
+            nomeComunidade: req.body.nomeComunidade
+        }
+    })
+    res.json(obj)
 })
 
 app.post('/moderador', async (req,res) => {
