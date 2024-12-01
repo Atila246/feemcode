@@ -9,9 +9,8 @@ body {
     display: flex;
 }
 
-/* Canais Inscritos */
-
-.canais__sidebar {
+/*menu lateral com todos os canais*/
+.canal__sidebar {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -19,11 +18,18 @@ body {
     width: 28%;
 }
 
-.canais__sidebar h3 {
+.canal__sidebar h3 {
     margin-bottom: 20px;
     justify-items: center;
     font-size: 1.4rem;
     font-weight: 600;
+    color: #212529;
+}
+
+.canal-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
     
 .canal-item {
@@ -31,16 +37,6 @@ body {
     align-items: center;
     gap: 20px;
     cursor: pointer;
-}
-
-.canais__videos h3{
-    font-weight: 600;
-}
-
-.list-canais{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 .perfil-canal{
@@ -52,7 +48,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin: 0 !important;
+    margin: 0;
 }
 
 .perfil-canal figure img{
@@ -69,15 +65,14 @@ body {
     font-weight: 600;
 }
 
-.perfil-canal__nome span:nth-child(1){
-    font-weight: 600;
-    font-size: 1rem;
-    color: #383838;
+.perfil-canal__dados{
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.perfil-canal__nome span:nth-child(2){
-    font-size: 0.8rem;
-    color: #676767df;
+.perfil-canal__dados figure img{
+    cursor: pointer;
 }
 
 .perfil-canal__nome{
@@ -85,32 +80,35 @@ body {
     flex-direction: column;
 }
 
-.perfil-canal__dados figure img{
-    cursor: pointer;
+.perfil-canal__nome span:nth-child(1){
+    font-weight: 600;
+    font-size: 1rem;
+    color: #212529;
 }
 
-.perfil-canal__dados{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.perfil-canal__nome span:nth-child(2){
+    font-size: 0.8rem;
+    color: #676767df;
 }
 
-/* Mais Vídeos */
-.canais__videos {
+/*videos*/
+.canal__videos {
     width: 72%;
     padding: 0 30px;
     margin: 20px 0;
     border-left: 1px solid #a0a0a09c;
 }
 
-.canais__videos h3 {
+.canal__videos h3 {
     font-size: 1.4rem;
     margin-bottom: 20px;
+    font-weight: 600;
+    color: #212529;
 }
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Aumenta a largura mínima das colunas */
+    grid-template-columns: repeat(2, 1fr); /* Aumenta a largura mínima das colunas */
     gap: 20px;
 }
 
@@ -118,6 +116,22 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+}
+
+.card{
+    background: transparent;
+}
+
+.video-item__source{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.video-item__source video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-item__desc{
@@ -148,25 +162,71 @@ body {
     border-radius: 50%;
 }
 
-.video-item__source{
-    width: 100%;
-    height: 200px;
-    margin-bottom: 15px;
+/* Media Queries*/
+@media only screen and (max-width: 1440px) {
+    .barraCanais-container {
+        width: 30%;
+    }
+
+    .canal__videos {
+        width: 65%;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Ajusta para telas menores */
+    }
+
+    .video-item p {
+        font-size: 1rem;
+    }
 }
 
-.video-item__source video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* border-radius: 10px; */
+@media only screen and (max-width: 940px) {
+    .canais {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .barraCanais-container {
+        width: 100%;
+    }
+
+    .canal__videos {
+        width: 100%;
+    }
+
+    .canal__sidebar {
+        padding: 20px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Mais compacto */
+    }
+
+    .video-item p {
+        font-size: 0.9rem;
+    }
 }
 
-.card{
-    background: transparent !important;
+@media only screen and (max-width: 600px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Para telas muito pequenas */
+    }
+
+    .video-item p {
+        font-size: 0.8rem;
+    }
+
+    .canal__sidebar h3,
+    .canal__videos h3 {
+        font-size: 1.2rem;
+    }
+
+    .canal-avatar {
+        width: 40px;
+        height: 40px;
+    }
 }
-
-
-
 /*Modo claro e escuro */
 /* Estilo padrão (claro) */
 :root {

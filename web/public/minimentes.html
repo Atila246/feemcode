@@ -10,7 +10,7 @@
 
     <!--estilos e scripts-->
     <link rel="stylesheet" href="css/menu.css"> 
-    <link rel="stylesheet" href="css/comunidades.css">
+    <link rel="stylesheet" href="css/canais.css">
     <link rel="stylesheet" href="css/minimentes.css">
     <script type="text/javascript" src="js/index.js" defer></script>
     
@@ -73,61 +73,80 @@
             </section>
         </header>
 
-        <div class="container-comunidade"> <!-- div da rolagem de postagens de mentirinha -->
-            <section class="comunidade__usuarios">
-                <div class="usuarios__header">
-                    <span>Canais infantis</span>
-                </div>
-    
-                <div class="perfil-comunidade"> 
-                    <div class="perfil-comunidade__dados">
-                        <figure class="perfil-comunidade__image">
-                            <img src="img/meninas-digitais.jpeg" alt="">
-                        </figure>
-                        <div class="perfil-comunidade__nome">
-                            <span>Meninas Digitais</span>
-                            <span>@meninasdigitais</span>
+        <div class="minimentes"> <!-- div da rolagem de postagens de mentirinha -->
+            <section class="canal__sidebar">
+                <h3>Minhas inscrições</h3>
+                <div class="canal-list">
+                    <div class="perfil-canal">
+                        <div class="perfil-canal__dados">
+                            <figure class="perfil-canal__image">
+                                <img src="img/Adalovelace.png" alt="Adalovelace">
+                            </figure>
+                            <div class="perfil-canal__nome">
+                                <span>TechDivas</span>
+                                <span>@tech_d1vas</span>
+                            </div>
                         </div>
                     </div>
-                    <button>Entrar</button>
-                </div>
-
-                <div class="perfil-comunidade">
-                    <div class="perfil-comunidade__dados">
-                        <figure class="perfil-comunidade__image">
-                            <img src="img/womakers1.jpeg" alt="">
-                        </figure>
-                        <div class="perfil-comunidade__nome">
-                            <span>Wo Makers</span>
-                            <span>@who_m</span>
+                    <div class="perfil-canal">
+                        <div class="perfil-canal__dados">
+                            <figure class="perfil-canal__image">
+                                <img src="img/codequeens.png" alt="Code Queens">
+                            </figure>
+                            <div class="perfil-canal__nome">
+                                <span>Code Queens</span>
+                                <span>@c0dequeens</span>
+                            </div>
                         </div>
                     </div>
-                    <button>Entrar</button>
-                </div>
-
-                <div class="perfil-comunidade">
-                    <div class="perfil-comunidade__dados">
-                        <figure class="perfil-comunidade__image">
-                            <img src="img/gloria guimaraes.jfif" alt="">
-                        </figure>
-                        <div class="perfil-comunidade__nome">
-                            <span>Luciana Santos</span>
-                            <span>@luci_santos</span>
+                    <div class="perfil-canal">
+                        <div class="perfil-canal__dados">
+                            <figure class="perfil-canal__image">
+                                <img src="img/womantech.png" alt="Woman Tech">
+                            </figure>
+                            <div class="perfil-canal__nome">
+                                <span>WomenInTechWorld</span>
+                                <span>@woman_tech3</span>
+                            </div>
                         </div>
                     </div>
-                    <button>Entrar</button>
                 </div>
             </section>
 
-            <section class="minimentes__postagens"> <!-- todas as postagens -->
-                <div class="card">
-                    <video class="card-img-top" controls>
-                        <source src="https://youtu.be/RdBPdJ8pPUk?si=GHoKodxv6eiNv7fM" type="video/mp4">
-                    </video>
-                    <div class="card-body">
-                        <h5 class="card-title">Vídeo Salvo 1</h5>
-                        <p class="card-text">Descrição do vídeo salvo.</p>
+            <section class="minimentes__postagens">
+                <div class="minimentes__header">
+                    <h3>Conteúdo</h3> 
+                    <div class="postagens__categorias">
+                        <span>Lógica</span>
+                        <span>Java</span>
+                        <span>Design</span>
                     </div>
+                </div>
+
+                <div class="minimentes-video">
+                    <div class="video-item card">
+                        <div class="video-item__source">
+                            <video poster="img/videominimentes.jpg" class="card-img-top">
+                                <source src="img/aulapratica.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-item__desc card-body">
+                            <img src="img/womantech.png" alt="Woman Tech">
+                            <div class="titulo-desc">
+                                <h3>Minha historia Parte 2</h3>
+                                <span>Woman Tech</span>
+                                <span>10 mil visualizações</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="minimentes-quiz">
+                    <h3>Agora, um quiz sobre o vídeo</h3>
+                    <h4>O que é Lógica de Programação?</h4>
+                    <span>Uma forma de pensar logicamente para resolver um problema usando programação</span>
+                    <span>Uma linguagem de programação chamada Java</span>
+                    <span>Um conceito chamado Programação Orientada a Objetos</span>
                 </div>
            </section>    
        </div>

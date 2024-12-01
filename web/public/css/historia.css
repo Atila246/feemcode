@@ -1,46 +1,41 @@
-/*sobrenos ai dento*/
-.historia__header {
+/*historia*/
+.historia{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.historia__content {
     display: flex;
     justify-content: end;
     gap: 10%;
-}
-
-body{
-    background-color: #fff6ff;
-}
-
-.historia{
-    width: 90%;
-    margin: 0 auto;
-}
-
-.historia__text{
-    display: flex;
     align-items: center;
 }
 
-.historia__text h2{
-    font-size: 3.2rem;
-    font-weight: 600;
-}
-
-.historia__content{
+.historia-text{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
 }
 
-.historia__content p{
+.historia-text h2{
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+.historia-text p{
     font-size: 1.2rem;
     text-align: center;
-    font-weight: 500;
+    margin: 0;
 }
 
-.historia__content a{
+.historia-text a{
     width: 100%;
 }
 
-.historia__content a button{
+.historia-text a button{
     border: none;
     background-color: #FF66C4;
     color: white;
@@ -57,80 +52,82 @@ body{
 }
 
 
-@media (max-width: 48rem) { /* 768px */
-    .historia__header {
-        display: flex;
-        justify-content: center; /* Centraliza no mobile */
-        gap: 0;
-    }
-
-    .historia__text {
-        flex-direction: column; /* Empilha os itens no mobile */
-        align-items: center;
+@media only screen and (max-width: 1440px) {
+    .historia {
+        width: 95%;
     }
 
     .historia__text h2 {
-        font-size: 2rem; /* Ajusta o tamanho da fonte */
-        text-align: center; /* Centraliza o texto */
+        font-size: 2.8rem;
     }
 
     .historia__content p {
-        font-size: 1rem; /* Ajusta o tamanho da fonte para mobile */
-        text-align: left; /* Alinha o texto à esquerda */
-        font-weight: 400;
-    }
-
-    .historia__content a button {
-        font-size: 1rem; /* Ajusta o tamanho da fonte do botão */
-        padding: 10px 0; /* Ajusta o padding do botão */
+        font-size: 1.1rem;
     }
 }
 
-/* Para telas entre 768px e 1024px (Tablet) */
-@media (min-width: 48rem) and (max-width: 64rem) { /* 768px a 1024px */
+@media only screen and (max-width: 940px) {
     .historia__header {
-        justify-content: space-between; /* Mais espaçamento para tablet */
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
     }
 
     .historia__text h2 {
-        font-size: 2.5rem; /* Ajuste intermediário */
+        font-size: 2.5rem;
     }
 
     .historia__content p {
-        font-size: 1.1rem; /* Ajuste intermediário */
+        font-size: 1rem;
     }
 
     .historia__content a button {
-        font-size: 1.1rem; /* Ajuste intermediário */
+        font-size: 1rem;
+        padding: 6px 0;
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .historia {
+        width: 100%;
+    }
 
+    .historia__text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
 
+    .historia__content p {
+        font-size: 0.9rem;
+    }
 
-
+    .historia__content a button {
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+}
 /*Modo claro e escuro */
 /* Estilo padrão (claro) */
-/* :root { */
-    /* --background-color: #ffffff; */
-    /* --text-color: #000000; */
-    /* --primary-color: #007bff; */
-/* } */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+}
 
 /* Estilo escuro */
-/* body.dark-mode { */
-    /* --background-color: #121212; */
-    /* --text-color: #ffffff; */
-    /* --primary-color: #bb86fc; */
-/* } */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+}
 
 /* Aplicação das variáveis */
-/* body { */
-    /* background-color: var(--background-color); */
-    /* color: var(--text-color); */
-/* } */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
 
-/* button { */
-    /* background-color: var(--primary-color); */
-    /* color: var(--text-color); */
-/* } */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}

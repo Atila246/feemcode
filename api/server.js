@@ -291,13 +291,13 @@ const sendRecoveryEmail = async (email, token) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'femmcode4@gmail.com',
+      user: 'femmcode44@gmail.com',
       pass: 'tkmp fjcn rnkg ujcc'
     }
   });
 
   const mailOptions = {
-    from: 'femmcode4@gmail.com',
+    from: 'femmcode2024@gmail.com',
     to: email,
     subject: 'Código de Recuperação de Senha',
     text: `Use o código a seguir para redefinir sua senha: ${token}`

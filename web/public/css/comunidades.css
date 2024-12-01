@@ -2,14 +2,100 @@ body{
     margin: 0 !important;
     color: #212529;
 }
+
 /*estrutura da pagina*/
-.container-comunidade{
+.comunidade{
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 60px;
 }
 
-/*post da comunidade*/
+.container-noscroll{
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*usuários da comunidade*/
+.comunidade__usuarios{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 0 0 40px;
+}
+
+.comunidade__usuarios-header{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comunidade__usuarios-header span{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.comunidade__usuarios-header button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FF66C4;
+    color: white;
+    font-weight: 600;
+}
+
+.perfil-comunidade{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil-comunidade figure{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 !important;
+}
+
+.perfil-comunidade figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.perfil-comunidade button{
+    border: none;
+    background: transparent;
+    color: #e141a4;
+    font-weight: 600;
+}
+
+.perfil-comunidade__dados{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil-comunidade__nome{
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-comunidade__dados figure img{
+    cursor: pointer;
+}
+
+.perfil-comunidade__nome span:nth-child(1){
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.perfil-comunidade__nome span:nth-child(2){
+    font-size: 0.8rem;
+    color: #676767df;
+}
+
+
+/*postagens da comunidade*/
 .comunidade__postagens{
     display: flex;
     flex-direction: column;
@@ -17,11 +103,6 @@ body{
     height: 85vh;
     overflow-y: auto;
     padding: 40px 0;
-}
-
-.container-noscroll{
-    height: 100vh;
-    overflow: hidden;
 }
 
 .postagens__categorias{
@@ -57,46 +138,39 @@ body{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    cursor: pointer;
 }
 
-.post__corpo{
+.post-header{
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.post__corpo p{
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 !important;
-}
-
-.post__corpo h2{
-    font-size: 1.6rem;
-    margin: 0 !important;
-}
-
-.post__header img{
+.post-header img{
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.post__header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.post__header button{
+.post-header button{
     border: none;
     background-color: #FF66C4;
     color: #ffffff;
     padding: 5px 20px;
     font-weight: 600;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 1rem;
+}
+
+.perfil-post a{
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    color: #212529;
 }
 
 .perfil-post__nome{
@@ -123,39 +197,13 @@ body{
     color: #676767df;
 }
 
-.perfil-post a{
-    text-decoration: none;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    cursor: pointer;
-    color: #212529;
-}
-
-.post-like, .post-save{
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #e141a4;
-}
-
-.post-save{
-    font-size: 1.4rem;
-}
-
-.post__opcoes{
-    display: flex;
-    gap: 10px;
-}
-
 .perfil-config{
     display: flex;
     align-items: center;
     gap: 10px;
-    
 }
 
-.pontinhos__post{
+.pontinhos-post{
     position: relative;
     cursor: pointer;
     color: #e141a4;
@@ -170,98 +218,48 @@ body{
     box-shadow: 0px 0px 10px 1px #c1c1c1a1;
     border-radius: 8px;
     gap: 8px;
-
     position: absolute;
-    background-color: white;
-    
+    background-color: white; 
 }
 
 .pontinhos-list ul li{
     font-size: 0.8rem;
 }
 
-
-/*usuários da comunidade*/
-.comunidade__usuarios{
+.post-corpo{
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 40px 0 0 40px;
 }
 
-.usuarios__header span{
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.usuarios__header button{
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #FF66C4;
-    color: white;
-    font-weight: 600;
-}
-
-.usuarios__header{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.perfil-comunidade{
-    display: flex;
-    justify-content: space-between;
-}
-
-.perfil-comunidade figure{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.post-corpo p{
+    font-size: 1rem;
+    line-height: 1.6;
     margin: 0 !important;
 }
 
-.perfil-comunidade figure img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+.post-corpo h2{
+    font-size: 1.6rem;
+    margin: 0 !important;
 }
 
-.perfil-comunidade button{
+.post-opcoes{
+    display: flex;
+    gap: 10px;
+}
+
+.post-like, .post-save{
+    background: none;
     border: none;
-    background: transparent;
+    font-size: 1.5rem;
     color: #e141a4;
-    font-weight: 600;
 }
 
-.perfil-comunidade__nome span:nth-child(1){
-    font-weight: 600;
-    font-size: 1rem;
+.post-save{
+    font-size: 1.4rem;
 }
 
-.perfil-comunidade__nome span:nth-child(2){
-    font-size: 0.8rem;
-    color: #676767df;
-}
-
-.perfil-comunidade__nome{
-    display: flex;
-    flex-direction: column;
-}
-
-.perfil-comunidade__dados figure img{
-    cursor: pointer;
-}
-
-.perfil-comunidade__dados{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-
-/*se esta logado ou nao*/
+/*modal*/
 .modal {
     display: none;
     background-color: rgba(0, 0, 0, 0.5);
@@ -363,6 +361,7 @@ body{
     padding: 0 5px;
 }
 
+<<<<<<< HEAD
 
 
 /*Media Queries*/
@@ -374,6 +373,12 @@ body{
     .postagens__categorias span {
         font-size: 0.75rem;
         padding: 0.2rem 0.4rem; /* 3px 6px */
+=======
+/*media queries*/
+@media only screen and (max-width: 1440px) {
+    .container-comunidade {
+        gap: 40px;
+>>>>>>> b6ea969ada9ed44cb9b6c0063b6f6d09c13f7c65
     }
 
     .comunidade__post {
@@ -742,12 +747,21 @@ body{
         gap: 1rem;
     }
 
-    .usuarios__header span {
+    .comunidade__usuarios-header span {
         font-size: 1.2rem;
     }
 
-    .usuarios__header button {
-        padding: 0.625rem 1.25rem;
+    .modal-content {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .comunidade__usuarios-header span {
         font-size: 1rem;
     }
 

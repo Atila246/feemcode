@@ -132,7 +132,7 @@ body{
     gap: 40px;
 }
 
-.post__corpo p{
+.post-corpo p{
     height: 100px;
     width: 100%;
     overflow: hidden;

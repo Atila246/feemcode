@@ -16,16 +16,28 @@
 ::-webkit-scrollbar-thumb {
     background-color: #ff69b4;
     border-radius: 10px;
-    border: 3px solid #f0f0f0; /* borda com a cor de fundo pro efeito de espessura */
+    border: 3px solid #f0f0f0;
 }
 
+/*estilos gerais*/
 .container-main{
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
 }
 
+.container-main hr{
+    background-color: #f36ec0;
+    color: #f36ec0;
+    height: 2px;
+    opacity: 0.4 !important;
+    margin: 30px 0 20px !important;
+}
 
-/*embarque nesse cabaré*/
+.container-main hr.first-line{
+    margin: 20px 0 !important;
+}
+
+/*carrossel*/
 .header__carrossa{ 
     width: 100%;
     position: relative;
@@ -48,7 +60,6 @@
     width: 45%;
     height: 350px;
     flex-shrink: 0;
-    /* opacity: 0.5; */
     filter: blur(4px);
 }
 
@@ -64,7 +75,6 @@
     object-fit: cover;
 }
 
-/*itens do carroças*/
 .current-item{
     transform: scale(1.1);
     transition: all 0.5s;
@@ -73,7 +83,6 @@
     filter: blur(0);
 }
 
-/*setas dos butoes*/
 .arrow-left, .arrow-right{
     position: absolute;
     top: 0;
@@ -91,136 +100,103 @@
     right: 0;
     left: auto;   
 }
- 
-/*estilizar a linha né pae*/
-.container-main hr{
-    background-color: #f36ec0;
-    color: #f36ec0;
-    height: 2px;
-    opacity: 0.4 !important;
-    margin: 30px 0 20px !important;
+
+/*header das seções*/
+.item__header{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.container-main hr.first-line{
-    margin: 20px 0 !important;
+.item__header p{
+    font-size: 1.2rem;
+    color: #212529;
+    margin-bottom: 25px;
 }
 
-/*estilo imagens comunidade (conteúdo)*/
-.comunidades-item figure{
+.header-titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-titulo h2{
+    font-weight: 700;
+    color: #212529;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.header-titulo button{
+    border-radius: 20px;
+    border: none;
+    background-color: #ff66c4;
+    color: white;
+    padding: 6px 20px;
+    font-weight: 500;
+}
+
+/*comunidade*/
+.comunidade__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.comunidade__carrossel{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comunidade__carrossel h4{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #212529;
+    margin: 0;
+}
+
+.comunidade__carrossel figure{
     width: 100%;
     height: 150px;
 }
 
-.comunidades-item{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.comunidades__content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.comunidades-exem{
-    padding: 15px;
-    background: transparent !important;
-}
-
-.comunidades-descricao h2{
-    font-size: 1.2rem;
-}
-
-.comunidades-list{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-}
-
-.comunidades-item figure img{
+.comunidade__carrossel figure img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.comunidades-exem{
+.comunidade-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.comunidade-item{
+    padding: 15px;
+    background: transparent !important;
+}
+
+.comunidade-item{
     border-radius: 10px;
     border: 1px solid #a3a3a39a;
 }
 
-.comunidades__header-titulo{
-    display: flex;
-    justify-content: space-between;
-}
-
-.comunidades__header-titulo h2{
-    margin-bottom: 10px;
-    font-weight: 700 !important;
-}
-
-.comunidades__header{
-    margin-bottom: 30px;
-}
-
-.comunidades__header-titulo button{
-    border-radius: 20px;
-    border: none;
-    background-color: #ff66c4;
-    color: white;
-    padding: 5px 30px;
-    font-weight: 600;
-}
-
-.comunidades__header p{
+.comunidade-descricao h2{
     font-size: 1.2rem;
 }
 
 
-.comunidades-item h4{
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-
-/*estilo evento*/
-.eventos__header-titulo{
-    display: flex;
-    justify-content: space-between;
-}
-
-.eventos__header-titulo h2{
-    margin-bottom: 10px;
-    font-weight: 700 !important;
-}
-
-.eventos__header{
-    margin-bottom: 30px;
-}
-
-.eventos__header-titulo button{
-    border-radius: 20px;
-    border: none;
-    background-color: #FF66C4;
-    color: white;
-    height: 30px;
-    padding: 0 30px;
-    font-weight: 600;
-}
-
-.eventos__header p{
-    font-size: 1.2rem;
-}
-
-.eventos__content{
+/*evento*/
+.evento__content{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.evento-dados{
+.evento-item{
     display: flex;
     gap: 30px;
     padding: 30px;
@@ -228,17 +204,30 @@
     border-radius: 10px;
 }
 
-.evento-dados figure{
+.evento-item figure{
     width: 40%;
     height: 200px;
     margin: 0;
 }
 
-.evento-dados figure img{
+.evento-item figure img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
+}
+
+.evento-desc{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.evento-desc h4{
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 .evento-desc p{
@@ -258,19 +247,6 @@
 
 }
 
-.evento-desc h4{
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.evento-desc{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 200px;
-}
-
 .evento-local{
     display: flex;
     gap: 10px;
@@ -288,259 +264,134 @@
     height: 16px;
 }
 
-/*parte de anais*/
-.canais__header-titulo{
+/*canal*/
+.canal__content{
     display: flex;
     justify-content: space-between;
-}
-
-.canais__header-titulo h2{
-    margin-bottom: 10px;
-    font-weight: 700 !important;
-}
-
-.canais__header{
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
-.canais__header-titulo button{
-    border-radius: 20px;
-    border: none;
-    background-color: #FF66C4;
-    color: white;
-    height: 30px;
-    padding: 0 30px;
-    font-weight: 600;
+.canal-item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    background-color: #f7e9f7;
+    border-radius: 5px;
 }
 
-.canais__header p{
-    font-size: 1.4rem;
-}
-
-.canais-item figure{
-    width: 80px;
-    height: 80px;
+.canal-item figure{
+    width: 60px;
+    height: 60px;
     margin: 0;
 }
 
-.canais-item figure img{
+.canal-item figure img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.canais-item{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 20px;
-    background-color: #f7e9f7;
-    border-radius: 5px;
-}
-
-.perfil-anal{
+.perfil-canal{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    
 }
 
-/*usando o primeiro filho do anal*/
-.perfil-anal span:nth-child(1){
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-.perfil-anal span:nth-child(2){
-    font-size: 0.9rem;
+.perfil-canal span:nth-child(1){
+    font-weight: 600;
+    font-size: 1rem;
+    color: #212529;
 }
 
-.canais__content{
-    display: flex;
-    /* gap: 20px; */
-    justify-content: space-between;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+.perfil-canal span:nth-child(2){
+    font-size: 0.8rem;
+    color: #373c42d9;
 }
 
-.canal-butao button{
+.canal-botao button{
     border: none;
     padding: 5px 10px;
     border-radius: 10px;
     background-color: #FF66C4;
     color: white;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.7rem;
+    font-weight: 500;
     margin-top: 10px;
 }
 
 
 
 
+/* Estilo feedback baitola*/
+  
+  /* Botão com efeito hover */
+  /* .feedback-section button:hover {
+    background-color: #e056a0;
+  } */
+  
+  
 
-
-
-
-/* TABLETS */
-@media (min-width: 48rem) and (max-width:64rem ) { /* 768px */
-/* CARROSSEL  */
-
-
-    /* EVENTOS */
-    .eventos__header-titulo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-
-    .eventos__header-titulo h2 {
-        font-size: 1.8rem;
-    }
-
-    .eventos__header-titulo button {
-        padding: 0 1.2rem;
-        height: 2.2rem;
-        font-size: 1rem;
-    }
-
-    .eventos__content {
-        gap: 1.25rem;
-    }
-
-    .evento-dados {
-        flex-direction: column;
-        gap: 1.25rem;
-        padding: 1.25rem;
-    }
-
-    .evento-dados figure {
-        width: 100%;
-        height: 9.375rem;
-    }
-
-    .evento-desc {
-        width: 100%;
-        height: auto;
-    }
-
-    .evento-desc h4 {
-        font-size: 1.3rem;
-    }
-
-    .evento-desc p {
-        font-size: 1rem;
-    }
-
-    .evento-local span {
-        font-size: 1rem;
-    }
-
-    .evento-local span i {
-        width: 1rem;
-        height: 1rem;
-    }
- 
-
-    /* COMUNIDADES */
-    .comunidades__header-titulo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-
-    .comunidades__header-titulo h2 {
-        font-size: 1.8rem;
-    }
-
-    .comunidades__header-titulo button {
-        padding: 0.5rem 2rem;
-        font-size: 1rem;
-    }
-
-    .comunidades__header p {
-        font-size: 1rem;
-    }
-
-    .comunidades-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
-    }
-
-    .comunidades-item h4 {
-        font-size: 1.2rem;
-    }
-
-    .comunidades-item figure {
-        height: 12rem;
-    }
-
-    .comunidades-exem {
-        padding: 1rem;
-    }
-
-    .comunidades-descricao h2 {
-        font-size: 1.4rem;
-    }
-    .canais__header-titulo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-
-    .canais__header-titulo h2 {
-        font-size: 1.8rem;
-    }
-
-    .canais__header-titulo button {
-        padding: 0.5rem 2rem;
-        font-size: 1rem;
-    }
-
-    .canais__header p {
-        font-size: 1.2rem;
-    }
-
-    .canais-item {
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .canais-item figure {
-        width: 6rem;
-        height: 6rem;
-    }
-
-    .perfil-anal span:nth-child(1) {
-        font-size: 1.2rem;
-    }
-
-    .perfil-anal span:nth-child(2) {
-        font-size: 1rem;
-    }
-
-    .canais__content {
-        flex-direction: column;
-    }
-
-    .canal-butao button {
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
+@media only screen and (max-width:1440px){
+    :root{
+        font-size: 16px; 
     }
 }
 
-/* TABLETS */
-@media (min-width: 48rem) and (max-width: 64rem) { /* 768px a 1024px */
-    /* CARROSSEL */
+@media only screen and (max-width:940px){
+    :root{
+        font-size: 10px; 
+    }
+}
 
-    /* EVENTOS */
-    .eventos__header-titulo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
+/* Responsavidade com MEDIA QUERY*/
+
+/* Ajustes gerais */
+/* @media (max-width: 1024px) {
+    .header__nav {
+        flex-wrap: wrap;
+        padding: 10px;
     }
 
-    .eventos__header-titulo h2 {
-        font-size: 1.8rem;
+    .header__pesquisa {
+        width: 80%;
+    }
+
+    .menu__list {
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carrossa-item {
+        width: 90%;
+        height: 250px;
+    }
+
+    .eventos__content, .comunidades__content {
+        flex-direction: column;
+    }
+
+    .evento-dados figure, .evento-desc {
+        width: 100%;
+        height: auto;
+    }
+
+    .evento-dados {
+        flex-direction: column;
+    }
+
+    .comunidades-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Ajustes gerais */
+@media only screen and (max-width: 1440px) {
+    :root {
+        font-size: 16px;
     }
 
     .eventos__header-titulo button {
@@ -606,66 +457,16 @@
         font-size: 1rem;
     }
 
-    .comunidades-list {
+    .comunidade-list {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
 
-    .comunidades-item h4 {
-        font-size: 1.2rem;
-    }
-
-    .comunidades-item figure {
-        height: 12rem;
-    }
-
-    .comunidades-exem {
-        padding: 1rem;
-    }
-
-    .comunidades-descricao h2 {
-        font-size: 1.4rem;
-    }
-
-    /* CANAIS */
-    .canais__header-titulo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-
-    .canais__header-titulo h2 {
-        font-size: 1.8rem;
-    }
-
-    .canais__header-titulo button {
-        padding: 0.5rem 2rem;
-        font-size: 1rem;
-    }
-
-    .canais__header p {
-        font-size: 1.2rem;
+    .evento-dados figure {
+        width: 50%;
     }
 
     .canais-item {
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .canais-item figure {
-        width: 6rem;
-        height: 6rem;
-    }
-
-    .perfil-anal span:nth-child(1) {
-        font-size: 1.2rem;
-    }
-
-    .perfil-anal span:nth-child(2) {
-        font-size: 1rem;
-    }
-
-    .canais__content {
         flex-direction: column;
     }
 
@@ -693,17 +494,11 @@
         font-size: 1rem;
     }
 
-    .eventos__content {
-        gap: 1rem;
+    .comunidades-list {
+        grid-template-columns: 1fr;
     }
 
-    .evento-dados {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .evento-dados figure {
+    .evento-item figure {
         width: 100%;
         height: 8rem;
     }
@@ -809,7 +604,7 @@
         font-size: 0.9rem;
     }
 
-    .canais__content {
+    .canal__content {
         flex-direction: column;
     }
 

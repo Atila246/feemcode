@@ -1,3 +1,144 @@
+.minimentes{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 60px;
+}
+
+.canal__sidebar{
+    width: 100%;
+    padding: 40px;
+}
+
+/*minimentes postagens*/
 .minimentes__postagens{
-    padding: 30px;
+    margin: 40px 0;
+    border-left: 1px solid #a0a0a09c;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    height: 69vh;
+}
+
+.minimentes__header h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.minimentes-video,
+.minimentes-quiz,
+.minimentes__header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.minimentes-quiz{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.minimentes-quiz span{
+    padding: 15px 20px;
+    border-radius: 20px;
+    background-color: #748fd34b;
+    cursor: pointer;
+}
+
+.minimentes-quiz span:nth-child(3){
+    background-color: #627cbde7;
+    color: white;
+}
+
+.minimentes-quiz h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.minimentes-quiz h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.video-item__desc{
+    display: flex;
+    gap: 10px;
+}
+
+.titulo-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.titulo-desc h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.titulo-desc span{
+    color: #5a5a5a;
+    font-size: 1rem;
+}
+
+.video-item__desc img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.video-item__source{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 15px;
+}
+
+.video-item__source video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+}
+
+.card {
+    background: transparent;
+}
+
+/*categorias*/
+.postagens__categorias{
+    display: flex;
+    gap: 20px;
+}
+
+.comunidade__postagens h2:nth-child(1){
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.postagens__categorias span{
+    padding: 5px 10px;
+    font-size: 1rem;
+
+    border: 2px solid #e141a4;
+    color: #e141a4;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.postagens__categorias span:nth-child(1){
+    background-color: #e141a4;
+    color: white;
 }

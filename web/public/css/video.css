@@ -1,0 +1,94 @@
+/*vídeo*/
+.video{
+    width: 50%;
+    margin: 30px auto;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.video-item__source{
+    width: 100%;
+    height: 400px;
+}
+
+.video-item__source video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-item h3{
+    margin: 0 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.video-item__info{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-item__perfil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+    padding: 0;
+}
+
+.video-item__perfil button{
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.video-item__perfil img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.canal-desc{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.titulo-desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-desc span:nth-child(1){
+    font-weight: 500;
+    color: #212529;
+}
+
+.titulo-desc span{
+    color: #5a5a5a;
+    font-size: 0.8rem;
+}
+
+.video-item__desc{
+    margin: 0 30px;
+}
+
+.video-item__desc span{
+    line-height: 1.6;
+}
+
+.card {
+    background: transparent;
+}
