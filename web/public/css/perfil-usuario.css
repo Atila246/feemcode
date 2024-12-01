@@ -1,5 +1,6 @@
 body{
     color: #212529;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*menu do perfil do usuário*/
@@ -26,7 +27,7 @@ body{
 }
 
 .menu__logo a img{
-    width: 100px;
+    width: 80px;
 }
 
 /*separação de conteudos*/
@@ -147,6 +148,7 @@ body{
     display: flex;
     flex-direction: column;
 }
+
 .editar__form-item{
     background-color: #ecf0f1;
     display: flex;

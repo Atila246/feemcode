@@ -16,14 +16,17 @@ datasource db {
 model Usuario {
   id Int @id @default(autoincrement())
   nome String 
+  nomeUsuario String @unique
   email String @unique
   senha String // adicione ? para não obrigatórios
+  autorComunidade Boolean @default(false)
 
   postagem Postagem[]
-
-  comunidade Comunidade[]
+  comunidades Comunidade[]
 
   moderador Moderador?
+
+  @@map("usuario")
 }
 
 model Conteudo{
@@ -80,14 +83,15 @@ model Evento{
 model Comunidade{
   id Int @id @default(autoincrement())
   foto String
-  nomeComunidade String
+  nomeComunidade String @unique
   bio String?
-
-  usuario Usuario @relation(fields: [usuarioId], references: [id])
-  usuarioId Int @map("usuario_id")
 
   postagens Postagem[]
   eventos Evento[]
+
+  usuarios Usuario[]
+
+  @@map("comunidade")
 }
 
 model Canal{

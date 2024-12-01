@@ -86,7 +86,7 @@ body {
 
     padding: 10px 30px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     align-self: center;
     border: none;
     margin-top: 1rem;
@@ -94,7 +94,7 @@ body {
 }
 .btn-primary {
     background-color: transparent;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     border-radius: 30px;
     transition: background-color .5s;
     margin: 0px;
@@ -115,7 +115,7 @@ body {
     border: none;
     font-size: 0.9rem;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .btn-second:hover {

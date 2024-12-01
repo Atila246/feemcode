@@ -1,7 +1,9 @@
 body{
     background-color: #fff6ff;
+    color: #212529 !important;
 }
 
+/*estilos gerais*/
 .femmcode{
     width: 80%;
     margin: 50px auto;
@@ -13,87 +15,141 @@ body{
 
 .femmcode__header-titulo h2{
     margin-bottom: 10px;
-    font-weight: 700 !important;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #212529;
+}
+
+.femmcode__header p{
+    font-size: 1.2rem;
+    color: #212529; 
 }
 
 .container-femmcode{
     width: 100%;
 }
 
+/*missao visao e valores e equipe*/
 .sobrenos{
     padding: 100px 0;
     background-image: url('../img/rodape.png');
-    box-shadow: inset 0 0 20px 5px #592979;
+    box-shadow: inset 0 0 20px 5px #7934a7;
 }
 
 .sobrenos-item{
-    padding: 40px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    background-color: #fff6ff !important;
-    border-radius: 15px !important;
-    box-shadow: 0 0 20px 2px #592979cb;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff6ff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 2px #602d829e;
     width: 25%;
     text-align: center;
 }
 
-.sobrenos__content, .equipe__content{
+.sobrenos-item h3{
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.sobrenos-item span{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.sobrenos__content{
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
 }
 
+/*sobrenos equipe*/
 .sobrenos-equipe{
     margin-bottom: 15px;  
-    width: 80%;
+    width: 90%;
     margin: 0 auto; 
 }
 
-.sobrenos-equipe figure{
-    width: 80px;
-    height: 80px;
-    margin: 0;
-}
-
-.sobrenos-equipe figure img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.equipe__content-titulo h2{
-    margin-bottom: 30px;
-    font-weight: 700 !important;
+.equipe__content{
+    display: flex;
+    gap: 40px;
 }
 
 .equipe-item{
-    padding: 40px;
+    padding: 40px 20px;
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #fff6ff !important;
-    border-radius: 15px !important;
+    background-color: #fff6ff;
+    border-radius: 15px;
     text-align: center;
-    border: 1px solid #8c8c8ca3 !important;
+    box-shadow: 1px 1px 30px #a3a3bb89;
+    transition: all 500ms ease;
 }
 
-.equipe-item h3, .sobrenos-item h3{
+.equipe-item:hover{
+    transform: translateY(-5px);
+    transition: all 500ms ease;
+}
+
+.equipe-item figure{
+    width: 200px;
+    height: 200px;
+}
+
+.equipe-item figure img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.equipe-item__desc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.equipe-item__desc h3{
+    font-size: 1.2rem;
     margin: 0;
+    font-weight: 600;
 }
 
-.equipe-item h3{
-    font-size: 1.5rem;
+.equipe-item__desc span{
+    font-size: 1rem;
 }
 
-.equipe-item p{
+.equipe-item__desc span:nth-child(2){
+    font-weight: 600;
+    color: #e04ea8;
+}
+
+.desc-talita span{
+    font-weight: 600;
+    color: #e04ea8;
+}
+
+/*steam girls*/
+.steam-girl__image{
+    display: flex;
+}
+.steam-girl__text p{
     margin: 0;
+    display: flex;
+    align-items: center;
+}
+.steam-girl__image img{
+    width: 300px;
+    margin: 20px 20px 20px 0;
+    box-shadow: 1px 1px 20px #444f8f62;
+    border-radius: 5px;
 }
 
-
-@media (min-width: 48rem) {
+@media (min-width: 32000px) {
     body {
         background-color: #fff6ff; /* Mantém o fundo para tablets */
     }

@@ -1,5 +1,6 @@
 body{
     color: #212529;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*menu do perfil*/
@@ -78,6 +79,7 @@ body{
 .perfil__nome-desc img{
     width: 100px;
     height: 100px;
+    border-radius: 50%;
 }
 
 .botao-perfil {
@@ -146,7 +148,6 @@ body{
 
 /*modal publicar*/
 .modal {
-    
     background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
     overflow: hidden;
@@ -241,6 +242,7 @@ body{
     padding: 0 5px;
 }
 
+<<<<<<< HEAD
 /* MODO ESCURO */
 
 body.dark {
@@ -373,6 +375,37 @@ body.dark .icon-modify {
 
 
 
+=======
+/* .form-item-anexo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+
+.form-item-anexo span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #212529;
+} */
+
+.form-item-anexo{
+    border: 1px dotted #212529b4;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-item-anexo span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #212529;
+}
+
+>>>>>>> 223a29d5964f86f12c00ccb30e5b975d8dca8c13
 /*abas de navegacao*/
 /* .navegacao-abas{
     display: flex;

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/menu.css"> 
     <link rel="stylesheet" href="css/canais.css">
     <link rel="stylesheet" href="css/minimentes.css">
-    <script type="text/javascript" src="js/index.js" defer></script>
+    <script type="text/javascript" src="js/minimentes.js" defer></script>
     
     <!--flaticon-->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'>
@@ -144,9 +144,13 @@
                 <div class="minimentes-quiz">
                     <h3>Agora, um quiz sobre o vídeo</h3>
                     <h4>O que é Lógica de Programação?</h4>
-                    <span>Uma forma de pensar logicamente para resolver um problema usando programação</span>
-                    <span>Uma linguagem de programação chamada Java</span>
-                    <span>Um conceito chamado Programação Orientada a Objetos</span>
+                    <div class="minimentes-quiz__opcoes">
+                        <span class="quiz-option padrao" id="certa">Uma forma de pensar logicamente para resolver um problema usando programação</span>
+                        <span class="quiz-option padrao">Uma linguagem de programação chamada Java</span>
+                        <span class="quiz-option padrao">Um conceito chamado Programação Orientada a Objetos</span>
+                        <span id="mensagem" style="display: none;"></span>
+                        <button type="button" id="submit-quiz">Enviar</button>
+                    </div>
                 </div>
            </section>    
        </div>
