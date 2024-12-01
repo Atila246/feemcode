@@ -70,45 +70,44 @@ controls.forEach((control) => {
     });
 });
 
-// Modo calro e escuro 
-//document.addEventListener('DOMContentLoaded', function () {
-   // const themeToggleButton = document.getElementById('theme-toggle');
-   // const body = document.body;
-  //  const header = document.querySelector('header');
+let claroescuro = document.getElementById('claroescuro'); 
 
-    // Verifica se o modo escuro está armazenado no localStorage
-   // if (localStorage.getItem('theme') === 'dark') {
-   //     body.classList.add('dark-mode');
-    //    header.classList.add('dark-mode');
-    //}
+claroescuro.addEventListener('click', () => {
+  // Alterna a classe 'dark' no body para ativar/desativar o modo escuro
+  document.body.classList.toggle('dark');
 
-    // Função para alternar o tema
-    //themeToggleButton.addEventListener('click', function () {
-       // body.classList.toggle('dark-mode');
-      //  header.classList.toggle('dark-mode');
+  // Alterando as classes da barra de rolagem
+  document.querySelectorAll('::-webkit-scrollbar-thumb').forEach(element => {
+    element.classList.toggle('dark');
+  });
 
-        // Salva a preferência no localStorage
-      //  if (body.classList.contains('dark-mode')) {
-//localStorage.setItem('theme', 'dark');
-     //   } else {
-      //      localStorage.setItem('theme', 'light');
-     //   }
-//});
-//});
+  // Estilos gerais
+  document.querySelectorAll('.container-main, .container-main hr, .header__carrossa').forEach(element => {
+    element.classList.toggle('dark');
+  });
 
-//const themeIcon = document.getElementById('theme-icon');
+  // Alterando as classes de carrossel
+  document.querySelectorAll('.carrossa-item, .current-item').forEach(element => {
+    element.classList.toggle('dark');
+  });
 
-//themeToggleButton.addEventListener('click', function () {
-   // body.classList.toggle('dark-mode');
-   // header.classList.toggle('dark-mode');
+  // Alterando as classes de seções
+  document.querySelectorAll('.item__header p, .header-titulo h2').forEach(element => {
+    element.classList.toggle('dark');
+  });
 
-    //if (body.classList.contains('dark-mode')) {
-//themeIcon.classList.remove('fi-rs-sun');
-    //    themeIcon.classList.add('fi-rs-moon');
-  //      localStorage.setItem('theme', 'dark');
-  //  } else {
-   //     themeIcon.classList.remove('fi-rs-moon');
-   //     themeIcon.classList.add('fi-rs-sun');
-   //     localStorage.setItem('theme', 'light');
-  //  }
-//});
+  // Alterando as classes de comunidade
+  document.querySelectorAll('.comunidade__carrossel h4, .comunidade-item').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes de evento
+  document.querySelectorAll('.evento-item, .evento-desc p').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes de canal
+  document.querySelectorAll('.canal-item, .perfil-canal span').forEach(element => {
+    element.classList.toggle('dark');
+  });
+});

@@ -140,33 +140,12 @@ function addHtml(data) {
     comunidade_postagens.innerHTML += postagemHtml
 }
 
-//modo claro e escuro
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("toggle-theme");
-    const body = document.body;
+let claroescuro = document.getElementById('claroescuro');
 
-    // Verificar o tema salvo
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-    }
+claroescuro.addEventListener('click', () => {
 
-    toggleButton.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-
-        // Salvar a preferência no localStorage
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
-        } else {
-            localStorage.setItem("theme", "light");
-            toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
-        }
-    });
+    document.body.classList.toggle('dark');
+  document.querySelectorAll('.comunidade__usuarios-header button, .perfil-comunidade button, .postagens__categorias span, .post-header button, .pontinhos-post, .post-like, .post-save, .modal, .modal-content, .close, .login-btn, .comunidade__form-item, .comunidade__form button, .comunidade__form-item input, .icon-modify').forEach(element => {
+    element.classList.toggle('dark');
+  });
 });
-
-const posts = document.querySelectorAll(".comunidade__post")
-posts.forEach(post => {
-    post.addEventListener('click', () => {
-        window.location.href = "post.html"
-    })
-})

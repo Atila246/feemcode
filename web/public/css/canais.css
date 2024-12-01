@@ -3,6 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 .canais{
@@ -162,6 +163,56 @@ body {
     border-radius: 50%;
 }
 
+
+/* MODO ESCURO */
+body.dark {
+    background-color: #212529;
+    color: white; /* Definindo cor do texto para ser visível */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+/* Títulos na sidebar e vídeos */
+.canal__videos h3.dark {
+    color: white;
+}
+
+.perfil-canal button.dark {
+    border: none;
+    background: transparent;
+    color: #c9308e;
+    font-weight: 600;
+}
+
+/* Nome do canal */
+.perfil-canal__nome span:nth-child(1).dark {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #e7f3ff;
+}
+
+.perfil-canal__nome span:nth-child(2).dark {
+    font-size: 0.8rem;
+    color: #212529;
+}
+
+/* Descrição do vídeo */
+.titulo-desc span.dark {
+    color: #212529;
+    font-size: 1rem;
+}
+
+/* Efeito de transição para os elementos de modo escuro */
+.canal__videos h3, .perfil-canal button {
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* Estilo do botão no modo escuro */
+#claroescuro.dark img {
+    filter: invert(1); /* Torna o ícone da lâmpada mais visível no modo escuro */
+}
+
+
+
 /* Media Queries*/
 @media only screen and (max-width: 1440px) {
     .barraCanais-container {
@@ -229,29 +280,6 @@ body {
 }
 /*Modo claro e escuro */
 /* Estilo padrão (claro) */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007bff;
-}
-
-/* Estilo escuro */
-body.dark-mode {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --primary-color: #bb86fc;
-}
-
-/* Aplicação das variáveis */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
 
 
 

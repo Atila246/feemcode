@@ -63,8 +63,8 @@
                             <i class="fi fi-tr-circle-user" style="display:none;"></i>
                         </span>
                     </a>
-                    <button id="theme-toggle" class="theme-toggle">
-                        <i id="theme-icon" class="fi fi-rs-sun"></i>
+                    <button id="claroescuro">
+                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
                     </button>
                     <a href="login.html">
                         <button id="cadastre-se">Cadastre-se</button>
@@ -151,5 +151,61 @@
            </section>    
        </div>
     </div>
+    <script>
+        let claroescuro = document.getElementById('claroescuro'); // Botão para alternar o modo claro/escuro
+
+claroescuro.addEventListener('click', () => {
+  // Alternar a classe 'dark' no body e no botão
+  document.body.classList.toggle('dark');
+  claroescuro.classList.toggle('dark');
+  
+  // Alternar a classe 'dark' em todos os elementos da página que precisam de mudanças de estilo
+  document.querySelectorAll('.minimentes h3').forEach(h3 => {
+    h3.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.minimentes__postagens').forEach(postagem => {
+    postagem.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.minimentes-quiz span').forEach(quizItem => {
+    quizItem.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.minimentes-quiz h3').forEach(quizTitle => {
+    quizTitle.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.minimentes-quiz h4').forEach(quizSubTitle => {
+    quizSubTitle.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.video-item').forEach(videoItem => {
+    videoItem.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.titulo-desc h3').forEach(title => {
+    title.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.titulo-desc span').forEach(subTitle => {
+    subTitle.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.postagens__categorias').forEach(categoria => {
+    categoria.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.card').forEach(card => {
+    card.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.comunidade__postagens h2').forEach(header => {
+    header.classList.toggle('dark');
+  });
+
+});
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -241,6 +241,138 @@ body{
     padding: 0 5px;
 }
 
+/* MODO ESCURO */
+
+body.dark {
+    background-color: #1e1e1e; 
+    color: #f1f1f1; 
+}
+
+body.dark .menu {
+    background-color: #2a2a2a; 
+    color: #f1f1f1; 
+
+body.dark .menu__nav ul li a {
+    color: #f1f1f1; /* Links claros no menu */
+}
+
+body.dark .menu__logo a img {
+    filter: brightness(0) invert(1); 
+}
+
+body.dark .conteudos-perfil hr {
+    background-color: #f36ec0; 
+    opacity: 0.4; 
+}
+
+body.dark .container__perfil-info {
+    background-color: #2a2a2a; /* Fundo escuro para o perfil */
+}
+
+body.dark .perfil__info {
+    background-color: #3c3c3c; /* Fundo mais escuro para a área de informações */
+    color: #f1f1f1; /* Texto claro */
+}
+
+body.dark .perfil__nome-desc h3, 
+body.dark .perfil__nome-desc p {
+    color: #f1f1f1; /* Texto claro no perfil */
+}
+
+body.dark .botao-perfil {
+    background-color: #3c3c3c; /* Fundo mais escuro para o botão */
+    color: #FF66C4; /* Cor rosa para o texto */
+}
+
+body.dark .perfil__aba-content {
+    background-color: #2a2a2a; /* Fundo escuro para as postagens */
+}
+
+body.dark .postagens__categorias span {
+    background-color: #3c3c3c; /* Fundo escuro para as categorias */
+    color: #e141a4; /* Cor rosa para as categorias */
+    border: 2px solid #e141a4; /* Borda rosa */
+}
+
+body.dark .postagens__categorias span:nth-child(1) {
+    background-color: #e141a4; /* Fundo mais forte para o primeiro item */
+    color: white; /* Texto branco */
+}
+
+body.dark .posts-comunidade h5, 
+body.dark .perfil__aba-content h5 {
+    color: #f1f1f1; /* Texto claro para os títulos */
+}
+
+body.dark .posts-comunidade__tudo {
+    background-color: #333333; /* Fundo escuro para a área de postagens */
+}
+
+body.dark .post-corpo p {
+    color: #f1f1f1; /* Texto claro dentro dos posts */
+    background-color: #3c3c3c; /* Fundo escuro dentro das postagens */
+}
+
+body.dark .modal {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo do modal mais escuro */
+}
+
+body.dark .modal-content {
+    background-color: #333333; /* Fundo escuro para o conteúdo do modal */
+    color: #f1f1f1; /* Texto claro */
+}
+
+body.dark .close {
+    color: #f1f1f1; /* Cor do botão de fechar */
+}
+
+body.dark .close:hover {
+    color: #ff66c4; /* Cor de hover do botão de fechar */
+}
+
+body.dark .form-container h2 {
+    color: #f1f1f1; /* Título claro no formulário */
+}
+
+body.dark .publicacao__form-item {
+    background-color: #3c3c3c; /* Fundo escuro para os campos de formulário */
+    color: #f1f1f1; /* Texto claro dentro dos campos */
+}
+
+body.dark .publicacao__form button {
+    background-color: #FF66C4; 
+    color: white;
+}
+
+body.dark .publicacao__form-item input,
+body.dark .publicacao__form-item textarea {
+    background-color: #3c3c3c; 
+    color: #f1f1f1; 
+    border: none;
+}
+
+body.dark .publicacao__form-item textarea {
+    background-color: #3c3c3c; 
+
+body.dark .icon-modify {
+    color: #7f8c8d; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*abas de navegacao*/
 /* .navegacao-abas{
     display: flex;

@@ -8,7 +8,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 60px;
-}
+}               
 
 .container-noscroll{
     height: 100vh;
@@ -356,29 +356,287 @@ body{
     outline: none;
 }
 
-.icon-modify {
+.icon-modify {  
     color: #7f8c8d;
     padding: 0 5px;
 }
 
-<<<<<<< HEAD
+
+/* MODO ESCURO */
+/* MODO ESCURO */
+/* MODO ESCURO */
+body.dark {
+    margin: 0 !important;
+    color: #ffffff; /* Texto claro */
+    background-color: #3E3E40; /* Fundo cinza escuro */
+}
+
+/* Estrutura da página */
+.comunidade.dark {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 60px;
+}
+
+.container-noscroll.dark {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Usuários da comunidade */
+.comunidade__usuarios.dark {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 0 0 40px;
+}
+
+.comunidade__usuarios-header.dark {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comunidade__usuarios-header span.dark {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff; /* Texto claro */
+}
+
+.comunidade__usuarios-header button.dark {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FF66C4;
+    color: white;
+    font-weight: 600;
+}
+
+.perfil-comunidade.dark {
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil-comunidade figure.dark {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 !important;
+}
+
+.perfil-comunidade figure img.dark {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.perfil-comunidade button.dark {
+    border: none;
+    background: transparent;
+    color: #e141a4;
+    font-weight: 600;
+}
+
+.perfil-comunidade__dados.dark {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil-comunidade__nome.dark {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-comunidade__dados figure img.dark {
+    cursor: pointer;
+}
+
+.perfil-comunidade__nome span:nth-child(1).dark {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff; /* Texto claro */
+}
+
+.perfil-comunidade__nome span:nth-child(2).dark {
+    font-size: 0.8rem;
+    color: #A5A5A5; /* Texto cinza claro */
+}
+
+/* Postagens da comunidade */
+.comunidade__postagens.dark {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 85vh;
+    overflow-y: auto;
+    padding: 40px 0;
+}
+
+.postagens__categorias.dark {
+    display: flex;
+    gap: 20px;
+}
+
+.comunidade__postagens h2:nth-child(1).dark {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 !important;
+    color: #ffffff; /* Texto claro */
+}
+
+.postagens__categorias span.dark {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 2px solid #e141a4;
+    color: #e141a4; /* Texto rosa */
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.postagens__categorias span:nth-child(1).dark {
+    background-color: #e141a4;
+    color: white;
+}
+
+.comunidade__post.dark {
+    padding: 30px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    cursor: pointer;
+    background-color: #3E3E40; /* Fundo cinza escuro */
+}
+
+.post-header.dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-header img.dark {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post-header button.dark {
+    border: none;
+    background-color: #FF66C4;
+    color: #ffffff; /* Texto claro */
+    padding: 5px 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.perfil-post a.dark {
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff; /* Texto claro */
+}
+
+.perfil-post__nome.dark {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-post__nome .temp.dark {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff; /* Texto claro */
+}
+
+.perfil-post__nome div span i.dark {
+    font-size: 0.5rem;
+    color: #ffffff; /* Texto claro */
+}
+
+.perfil-post__nome #comunidade.dark {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff; /* Texto claro */
+}
+
+.perfil-post__nome .user.dark {
+    font-size: 0.8rem;
+    color: #A5A5A5; /* Texto cinza claro */
+}
+
+.perfil-config.dark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pontinhos-post.dark {
+    position: relative;
+    cursor: pointer;
+    color: #e141a4; /* Texto rosa */
+}
+
+.pontinhos-list ul.dark {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    margin: 0 !important;
+    padding: 15px !important;
+    box-shadow: 0px 0px 10px 1px #3b3b3ba1;
+    border-radius: 8px;
+    gap: 8px;
+    position: absolute;
+    background-color: #3E3E40; /* Fundo cinza escuro */
+}
+
+.pontinhos-list ul li.dark {
+    font-size: 0.8rem;
+    color: #ffffff; /* Texto claro */
+}
+
+/* Modal */
+.modal.dark {
+    display: none;
+    background-color: rgba(62, 62, 64, 0.95); /* Fundo semi-transparente */
+    height: 100vh !important;
+    overflow: hidden !important;
+    align-items: center;
+}
+
+.modal-content.dark {
+    background-color: #3E3E40; /* Fundo cinza escuro */
+    padding: 25px 60px;
+    border-radius: 8px;
+    width: 50% !important;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.close.dark {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff; /* Texto claro */
+}
+
+.close:hover.dark {
+    color: #A5A5A5; /* Texto cinza claro */
+}
 
 
-/*Media Queries*/
-@media (max-width: 48rem) { /* 768px */
-    .comunidade__postagens {
-        padding: 1rem 0; /* 15px */
-    }
 
-    .postagens__categorias span {
-        font-size: 0.75rem;
-        padding: 0.2rem 0.4rem; /* 3px 6px */
-=======
+
 /*media queries*/
 @media only screen and (max-width: 1440px) {
     .container-comunidade {
         gap: 40px;
->>>>>>> b6ea969ada9ed44cb9b6c0063b6f6d09c13f7c65
     }
 
     .comunidade__post {

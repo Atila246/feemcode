@@ -125,6 +125,49 @@ body{
 }
 
 
+/* Estilos para o modo escuro */
+body.dark {
+    background-color: #3E3E40;
+    color: white;
+}
+
+body.dark .container-content {
+    background-color: #2d2d2d; /* Fundo mais escuro */
+}
+
+body.dark .header {
+    background: linear-gradient(to left, #2d2d2d, #3E3E40);
+}
+
+body.dark .header__perfil button {
+    background-color: white;
+    color: #3E3E40;
+    border-color: white;
+}
+
+body.dark .header__perfil button:hover {
+    background-color: #3E3E40;
+    color: white;
+}
+
+body.dark .header__pesquisa {
+    background-color: #5a5a5a;
+}
+
+body.dark .header__pesquisa input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark .menu-list li a {
+    color: white;
+}
+
+body.dark .header__perfil span {
+    color: white;
+}
+
+
+
 @media screen and (max-width: 49rem) {
     .header {
         padding: 15px;

@@ -142,3 +142,78 @@
     background-color: #e141a4;
     color: white;
 }
+
+
+/* MODO ESCURO  */
+body.dark {
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: #f1f1f1; /* Texto claro */
+}
+
+/* Alterações específicas para a .canal__sidebar */
+body.dark .canal__sidebar {
+    background-color: #2a2a2a; /* Fundo mais escuro para a sidebar */
+    color: #f1f1f1; /* Texto claro */
+    border-left: 1px solid #3c3c3c; /* Borda sutil para a sidebar */
+}
+
+/* Alterações para a .minimentes e seus elementos */
+body.dark .minimentes {
+    background-color: #2a2a2a; /* Fundo mais escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+body.dark .minimentes__postagens {
+    border-left: 1px solid #3c3c3c; /* Borda mais escura para postagens */
+    background-color: #333333; /* Fundo para postagens */
+}
+
+body.dark .minimentes__header h3,
+body.dark .minimentes-quiz h3,
+body.dark .minimentes-quiz h4 {
+    color: #f1f1f1; /* Texto claro */
+}
+
+body.dark .minimentes-quiz span {
+    background-color: #3c3c3c; /* Fundo escuro para os itens de quiz */
+    color: #ffffff; /* Texto branco para o quiz */
+}
+
+body.dark .minimentes-quiz span:nth-child(3) {
+    background-color: #627cbde7; /* Cor mais suave para o terceiro item */
+    color: #ffffff; /* Texto branco */
+}
+
+body.dark .video-item__desc {
+    color: #f1f1f1; /* Texto claro para as descrições */
+}
+
+body.dark .titulo-desc h3 {
+    color: #ffffff; /* Texto branco para o título */
+}
+
+body.dark .titulo-desc span {
+    color: #aaaaaa; /* Texto mais suave para a descrição */
+}
+
+body.dark .video-item__source {
+    background-color: #2a2a2a; /* Fundo escuro para o vídeo */
+}
+
+/* Alterações para as categorias */
+body.dark .postagens__categorias span {
+    background-color: #3c3c3c; /* Fundo escuro para categorias */
+    color: #e141a4; /* Cor rosa para as categorias */
+    border: 2px solid #e141a4; /* Borda rosa para categorias */
+}
+
+body.dark .postagens__categorias span:nth-child(1) {
+    background-color: #e141a4; /* Cor de fundo mais forte para a primeira categoria */
+    color: white; /* Texto branco */
+}
+
+/* Efeitos de hover */
+body.dark .minimentes__postagens .video-item:hover {
+    background-color: #444444; /* Tom mais claro ao passar o mouse */
+    transition: background-color 0.3s ease;
+}

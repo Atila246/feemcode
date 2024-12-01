@@ -126,3 +126,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+let claroescuro = document.getElementById('claroescuro');
+
+claroescuro.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  claroescuro.classList.toggle('dark');
+  
+  document.querySelectorAll('.evento__categorias span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.evento-descricao h2').forEach(h2 => {
+    h2.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.evento-descricao span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.evento-descricao p').forEach(p => {
+    p.classList.toggle('dark');
+  });
+});

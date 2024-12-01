@@ -47,3 +47,35 @@
     margin: 0;
 }
 
+/* MODO ESCURO*/
+body.dark .evento {
+    background-color: #3E3E40; /* Fundo cinza escuro */
+}
+
+body.dark .evento-item {
+    background-color: #3E3E40; /* Fundo cinza escuro */
+    border-radius: 10px; /* Borda arredondada opcional */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+body.dark .evento-descricao h2 {
+    color: #ffffff; /* Texto branco */
+}
+
+body.dark .evento-descricao span {
+    color: #FF66C4; /* Destaque */
+}
+
+body.dark .evento-descricao span:nth-child(2) {
+    color: #A5A5A5; /* Cinza claro */
+}
+
+body.dark .evento-descricao p {
+    color: #ffffff; /* Texto branco */
+}
+
+/* Efeito de hover para modo escuro */
+body.dark .evento-item:hover {
+    background-color: #505050; /* Tom mais claro ao passar o mouse */
+    transition: background-color 0.3s ease;
+}

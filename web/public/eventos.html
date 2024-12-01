@@ -58,8 +58,8 @@
                             <i class="fi fi-tr-circle-user" style="display:none;"></i>
                         </span>
                     </a>
-                    <button id="theme-toggle" class="theme-toggle">
-                        <i id="theme-icon" class="fi fi-rs-sun"></i>
+                    <button id="claroescuro">
+                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
                     </button>
                     <a href="login.html">
                         <button id="cadastre-se">Cadastre-se</button>
@@ -205,5 +205,19 @@
         </footer>
 
     </div>
+
+    <script>
+        let claroescuro = document.getElementById('claroescuro');
+
+claroescuro.addEventListener('click', () => {
+    // Alterna a classe 'dark' no body
+    document.body.classList.toggle('dark');
+
+    // Seleciona e alterna a classe 'dark' em todos os elementos relacionados ao modo escuro
+    document.querySelectorAll('.evento, .evento__categorias span, .evento__carrossel h2, .carrossel__list, .evento-item, .evento-item figure img, .evento-descricao h2, .evento-descricao span, .evento-descricao p').forEach(element => {
+        element.classList.toggle('dark');
+    });
+});
+    </script>
 </body>
 </html>

@@ -322,6 +322,116 @@
 }
 
 
+/* MODO ESCURO */
+
+/* Barra de rolagem - modo escuro */
+body.dark::-webkit-scrollbar {
+    width: 15px;
+}
+
+body.dark::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    border-radius: 13px;
+}
+  
+body.dark::-webkit-scrollbar-thumb {
+    background-color: #ff69b4;
+    border-radius: 10px;
+    border: 3px solid #2c2c2c;
+}
+
+/* Estilos gerais para modo escuro */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark .container-main {
+    background-color: #1d1d1d;
+}
+
+body.dark .container-main hr {
+    background-color: #f36ec0;
+    opacity: 0.8;
+}
+
+body.dark .header__carrossa {
+    background-color: #222;
+}
+
+/* Carrossel */
+body.dark .carrossa-item {
+    filter: blur(0);
+}
+
+body.dark .carrossa-item img,
+body.dark .carrossa-item video {
+    filter: brightness(0.6);
+}
+
+body.dark .current-item {
+    border: 4px solid #ff69b4;
+    opacity: 1;
+}
+
+/* Header das seções */
+body.dark .item__header p {
+    color: #ddd;
+}
+
+body.dark .header-titulo h2 {
+    color: #e0e0e0;
+}
+
+/* Comunidade */
+body.dark .comunidade__carrossel h4 {
+    color: #fff;
+}
+
+body.dark .comunidade-item {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+body.dark .comunidade-item h2 {
+    color: #fff;
+}
+
+/* Evento */
+body.dark .evento-item {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+body.dark .evento-desc p {
+    color: #ccc;
+}
+
+/* Canal */
+body.dark .canal-item {
+    background-color: #333;
+}
+
+body.dark .perfil-canal span:nth-child(1) {
+    color: #fff;
+}
+
+body.dark .perfil-canal span:nth-child(2) {
+    color: #aaa;
+}
+
+/* Botões */
+body.dark button {
+    background-color: #ff66c4;
+    color: white;
+}
+
+body.dark .canal-botao button {
+    background-color: #ff66c4;
+    color: white;
+}
+
+
 
 
 /* Estilo feedback baitola*/
@@ -345,47 +455,8 @@
     }
 }
 
-/* Responsavidade com MEDIA QUERY*/
+/* Triloo do modo calro e escuro */
 
-/* Ajustes gerais */
-/* @media (max-width: 1024px) {
-    .header__nav {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .header__pesquisa {
-        width: 80%;
-    }
-
-    .menu__list {
-        gap: 50px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .carrossa-item {
-        width: 90%;
-        height: 250px;
-    }
-
-    .eventos__content, .comunidades__content {
-        flex-direction: column;
-    }
-
-    .evento-dados figure, .evento-desc {
-        width: 100%;
-        height: auto;
-    }
-
-    .evento-dados {
-        flex-direction: column;
-    }
-
-    .comunidades-list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
 
 /* Ajustes gerais */

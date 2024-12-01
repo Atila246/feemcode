@@ -64,8 +64,8 @@
                             <i class="fi fi-tr-circle-user" style="display:none;"></i>
                         </span>
                     </a>
-                    <button id="theme-toggle" class="theme-toggle">
-                        <i id="theme-icon" class="fi fi-rs-sun"></i>
+                    <button id="claroescuro">
+                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
                     </button>
                     <a href="login.html">
                         <button id="cadastre-se">Cadastre-se</button>
@@ -120,7 +120,7 @@
                         <figure>
                             <img src="img/Foto_Ana.jpeg" alt="">
                         </figure>
-                        <h3>Ana Clara Fontineles E Costa</h3>
+                        <h3>Ana Clara F. e Costa</h3>
                         <span>Desenvolvedora back-end</span>
                         <p>Integrante do comitê de educação do projeto Meninas Digitais</p>
                         <p>Cursando técnico em Desenvolvimento de Sistemas</p>
@@ -211,5 +211,49 @@
     
         </div>
     </div>
+    <script>
+        let claroescuro = document.getElementById('claroescuro'); 
+
+claroescuro.addEventListener('click', () => {
+  // Alterna a classe 'dark' no body para ativar/desativar o modo escuro
+  document.body.classList.toggle('dark');
+  
+  // Alterando as classes dos elementos do menu
+  document.querySelectorAll('.menu, .menu__nav ul li a').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes dos elementos de perfil
+  document.querySelectorAll('.container__perfil-info, .perfil__info, .perfil__nome-desc, .botao-perfil').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes das abas de perfil e categorias de postagens
+  document.querySelectorAll('.perfil__aba-content, .postagens__categorias span').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes das postagens e conteúdo de postagens
+  document.querySelectorAll('.posts-comunidade h5, .post-corpo p').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes das modais
+  document.querySelectorAll('.modal, .modal-content, .close').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes dos itens do formulário de publicação
+  document.querySelectorAll('.publicacao__form-item, .publicacao__form button').forEach(element => {
+    element.classList.toggle('dark');
+  });
+
+  // Alterando as classes dos ícones de modificação
+  document.querySelectorAll('.icon-modify').forEach(element => {
+    element.classList.toggle('dark');
+  });
+});
+
+    </script>
 </body>
 </html>
