@@ -22,17 +22,27 @@ body{
     font-size: 35px;
 }
 
+.header__perfil{
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+}
+
 .header__perfil button{
     background-color: transparent;
-    border: 2px solid white;
     color: white;
     font-size: 1rem;
+    border: none
+}
+
+.header__perfil button:not(#toggle-theme){
+    border: 2px solid white;
     padding: 8px 10px;
     border-radius: 12px;
     font-weight: 500;
 }
 
-.header__perfil button:hover{
+.header__perfil button:hover:not(#toggle-theme){
     background-color: white;
     color: #f36ec0;
     transition: all 500ms;

@@ -19,6 +19,7 @@ model Usuario {
   nomeUsuario String @unique
   email String @unique
   senha String // adicione ? para não obrigatórios
+  autorComunidade Boolean @default(false)
 
   postagem Postagem[]
   comunidades Comunidade[]

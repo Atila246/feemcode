@@ -1,43 +1,54 @@
-const config_post1 = document.getElementById('config-post1');
-const config_post2 = document.getElementById('config-post2');
-const config_post3 = document.getElementById('config-post3');
+/*recuperando o usuário */
+var isLoggedIn
+let obj = sessionStorage.getItem("Usuario")
+console.log(obj)
 
-const options_post1 = document.getElementById('options-post1');
-const options_post2 = document.getElementById('options-post2');
-const options_post3 = document.getElementById('options-post3');
-let ligado = false;
+window.onload = function(){
+    if(obj){
+        let perfil = document.getElementById("cadastrado")
+        perfil.style.cssText='display: block;'
+        let botao = document.getElementById("cadastre-se")
+        botao.style.cssText='display: none;'
 
+        let link = document.getElementById("link-cadastro")
+        link.href="perfil.html"
+        isLoggedIn = true
+    }
+}
+
+// modal
+var comunidade_btn = document.getElementById('comunidade-btn');
+var login_modal = document.getElementById('login-modal');
+var comunidade_modal = document.getElementById('comunidade-modal');
+var close_btn = document.getElementsByClassName('close');
+
+comunidade_btn.onclick = function () {
+    if (isLoggedIn) {
+        comunidade_modal.style.display = "flex";
+    } else {
+        login_modal.style.display = "flex";
+    }
+}
+
+for (let i = 0; i < close_btn.length; i++) {
+    close_btn[i].onclick = function () {
+        login_modal.style.display = "none";
+        comunidade_modal.style.display = "none";
+    };
+}
+
+window.onclick = function (event) {
+    if (event.target == login_modal) {
+        login_modal.style.display = "none";
+    } else if (event.target == comunidade_modal) {
+        comunidade_modal.style.display = "none";
+    }
+}
+
+/*buscando as postagens */
+const comunidade_usuarios = document.querySelector('.comunidade__usuarios')
 const comunidade_postagens = document.querySelector('.comunidade__postagens')
-
-config_post1.addEventListener("click", () => {
-    if (!ligado) {
-        options_post1.style.display = "flex";
-        ligado = true;
-    } else {
-        options_post1.style.display = "none";
-        ligado = false;
-    }
-});
-
-config_post2.addEventListener("click", () => {
-    if (!ligado) {
-        options_post2.style.display = "flex";
-        ligado = true;
-    } else {
-        options_post2.style.display = "none";
-        ligado = false;
-    }
-});
-
-config_post3.addEventListener("click", () => {
-    if (!ligado) {
-        options_post3.style.display = "flex";
-        ligado = true;
-    } else {
-        options_post3.style.display = "none";
-        ligado = false;
-    }
-})
+const perfil_comunidade = document.querySelectorAll('.perfil-comunidade')
 
 fetch("http://localhost:3000/postagens")
     .then(res => res.json())
@@ -51,12 +62,12 @@ fetch("http://localhost:3000/postagens")
     })
 
 function addHtml(data) {
-    postagemHtml = `
+    let postagemHtml = `
             <div class="comunidade__post card">
                     <div class="post-header">
                         <div class="perfil-post">
                             <a href="perfil-comunidade.html">
-                                <img src="" alt="Foto de perfil">
+                                <img src="${data.comunidade.foto}" alt="Foto de perfil">
                                 <div class="perfil-post__nome">
                                     <div>
                                         <span id="comunidade">${data.comunidade.nomeComunidade}</span>
@@ -103,68 +114,6 @@ function addHtml(data) {
         comunidade_postagens.innerHTML += postagemHtml
 }
 
-const comunidade_usuarios = document.querySelector('.comunidade__usuarios')
-
-fetch("http://localhost:3000/comunidades")
-    .then(res => res.json())
-    .then((data) => {
-        data.forEach(item => {
-            console.log(item)
-            addHtmlComunidade(item)
-        })
-    })
-    .catch(error => {
-        console.log(error)
-    })
-
-function addHtmlComunidade(data) {
-    comunidadeHtml = `
-                <div class="perfil-comunidade"> 
-                    <div class="perfil-comunidade__dados">
-                        <figure class="perfil-comunidade__image">
-                            <img src="${data.foto}" alt="Imagem comunidade">
-                        </figure>
-                        <div class="perfil-comunidade__nome">
-                            <span>${data.nomeComunidade}</span>
-                            <span>@meninasdigitais</span>
-                        </div>
-                    </div>
-                    <button>Entrar</button>
-                </div>
-            `
-            comunidade_usuarios.innerHTML += comunidadeHtml
-            console.log(data.nomeComunidade)
-}
-
-// modal
-var isLoggedIn = true;
-var comunidade_btn = document.getElementById('comunidade-btn');
-var login_modal = document.getElementById('login-modal');
-var comunidade_modal = document.getElementById('comunidade-modal');
-var close_btn = document.getElementsByClassName('close');
-
-comunidade_btn.onclick = function () {
-    if (isLoggedIn) {
-        comunidade_modal.style.display = "flex";
-    } else {
-        login_modal.style.display = "flex";
-    }
-}
-
-for (let i = 0; i < close_btn.length; i++) {
-    close_btn[i].onclick = function () {
-        login_modal.style.display = "none";
-        comunidade_modal.style.display = "none";
-    };
-}
-
-window.onclick = function (event) {
-    if (event.target == login_modal) {
-        login_modal.style.display = "none";
-    } else if (event.target == comunidade_modal) {
-        comunidade_modal.style.display = "none";
-    }
-}
 
 const posts = document.querySelectorAll(".comunidade__post")
 posts.forEach(post => {
@@ -173,20 +122,97 @@ posts.forEach(post => {
     })
 })
 
-let obj = sessionStorage.getItem("Usuario")
-console.log(obj)
+/*buscando comunidades */
+fetch("http://localhost:3000/comunidades")
+    .then(res => res.json())
+    .then((data) => {
+        data.forEach(item => {
+            addHtmlComunidade(item)
+        })
+    })
+    .catch(error => {
+        console.log(error)
+    })
 
-window.onload = function(){
-    if(obj!=null){
-        let perfil = document.getElementById("cadastrado")
-        perfil.style.cssText='display: block;'
-        let botao = document.getElementById("cadastre-se")
-        botao.style.cssText='display: none;'
-
-        let link = document.getElementById("link-cadastro")
-        link.href="perfil.html"
-    }
+function addHtmlComunidade(data) {
+    let comunidadeHtml = `
+                <a href="perfil-comunidade.html" id="item${data.id}" onclick="salvarComunidade('${data.id}')">
+                    <div class="perfil-comunidade"> 
+                        <div class="perfil-comunidade__dados">
+                            <figure class="perfil-comunidade__image">
+                                <img src="${data.foto}" alt="Imagem da comunidade">
+                            </figure>
+                            <div class="perfil-comunidade__nome">
+                                <span>${data.nomeComunidade}</span>
+                                <span>@meninasdigitais</span>
+                            </div>
+                        </div>
+                        <button>Entrar</button>
+                    </div>
+                </a>
+            `
+            comunidade_usuarios.innerHTML += comunidadeHtml 
 }
+
+function salvarComunidade(data){
+    fetch("http://localhost:3000/uma-comunidade", {
+        method: 'POST',
+        body: JSON.stringify({id: parseInt(data)}),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(res => res.json())
+    .then((data) => {
+        sessionStorage.setItem("Comunidade",JSON.stringify(data))
+        console.log(sessionStorage.getItem("Comunidade"))
+        window.onload()
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+
+/*opções da publicação */
+const config_post1 = document.getElementById('config-post1')
+const config_post2 = document.getElementById('config-post2')
+const config_post3 = document.getElementById('config-post3')
+
+const options_post1 = document.getElementById('options-post1')
+const options_post2 = document.getElementById('options-post2')
+const options_post3 = document.getElementById('options-post3')
+
+let ligado = false;
+
+config_post1.addEventListener("click", () => {
+    if (!ligado) {
+        options_post1.style.display = "flex";
+        ligado = true;
+    } else {
+        options_post1.style.display = "none";
+        ligado = false;
+    }
+});
+
+config_post2.addEventListener("click", () => {
+    if (!ligado) {
+        options_post2.style.display = "flex";
+        ligado = true;
+    } else {
+        options_post2.style.display = "none";
+        ligado = false;
+    }
+})
+
+config_post3.addEventListener("click", () => {
+    if (!ligado) {
+        options_post3.style.display = "flex";
+        ligado = true;
+    } else {
+        options_post3.style.display = "none";
+        ligado = false;
+    }
+})
 
 //modo claro e escuro
 // document.addEventListener("DOMContentLoaded", () => {

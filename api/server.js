@@ -193,11 +193,33 @@ app.get('/postagens_pesquisa', async (req,res) => {
 
 app.post('/comunidade', async (req,res) =>{
     try{
+        const usuario = await prisma.usuario.findUnique({
+            where: {
+                nomeUsuario: req.body.nomeUsuario
+            }
+        })
+
+        if(!usuario){
+            return res.status(404).json({ error: "Usuário não encontrado" })
+        }
+
+        await prisma.usuario.update({
+            where: {
+                id: usuario.id
+            },
+            data: {
+                autorComounidade: true
+            }
+        })
+
         const comunidade = await prisma.comunidade.create({
             data:{
                 foto: req.body.foto,
                 nomeComunidade: req.body.nomeComunidade,
-                bio: req.body.bio
+                bio: req.body.bio,
+                usuarios: {
+                    connect: { id: usuario.id }
+                }
             }
         })
         res.status(201).json(comunidade)
@@ -208,23 +230,23 @@ app.post('/comunidade', async (req,res) =>{
 })
 
 app.post('/entrar-comunidade', async (req,res) => {
-    const usuario = await prisma.usuario.findUnique({
-        where: {
-            nomeUsuario: req.body.nomeUsuario
-        }
-    })
-
-    const comunidade = await prisma.comunidade.findUnique({
-        where: {
-            nomeComunidade: req.body.nomeComunidade
-        }
-    })
-
-    if(!usuario || !comunidade){
-        return res.status(404).json({ error: "Usuário ou Comunidade não encotrado" })
-    }
-
     try{
+        const usuario = await prisma.usuario.findUnique({
+            where: {
+                nomeUsuario: req.body.nomeUsuario
+            }
+        })
+    
+        const comunidade = await prisma.comunidade.findUnique({
+            where: {
+                nomeComunidade: req.body.nomeComunidade
+            }
+        })
+    
+        if(!usuario || !comunidade){
+            return res.status(404).json({ error: "Usuário ou Comunidade não encotrado" })
+        }
+
         const update = await prisma.usuario.update({
             where: { id: usuario.id },
             data: {
@@ -248,7 +270,7 @@ app.get('/comunidades', async (req,res) => {
 app.post('/uma-comunidade', async (req,res) => {
     const obj = await prisma.comunidade.findUnique({
         where: {
-            nomeComunidade: req.body.nomeComunidade
+            id: req.body.id
         }
     })
     res.json(obj)

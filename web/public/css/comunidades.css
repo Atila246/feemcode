@@ -43,6 +43,11 @@ body{
     font-weight: 600;
 }
 
+.comunidade__usuarios a{
+    text-decoration: none;
+    color: #212529;
+}
+
 .perfil-comunidade{
     display: flex;
     justify-content: space-between;
