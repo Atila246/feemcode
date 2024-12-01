@@ -149,100 +149,225 @@ body{
     border-radius: 5px;
 }
 
-/* Telas pequenas (até 375px) */
-@media screen and (max-width: 375px) {
+@media (min-width: 32000px) {
+    body {
+        background-color: #fff6ff; /* Mantém o fundo para tablets */
+    }
+
+    .femmcode {
+        width: 70%; /* Reduz a largura para um layout mais compacto */
+        margin: 40px auto; /* Ajusta o espaçamento superior */
+    }
+
     .femmcode__header-titulo {
-        flex-direction: column; /* Ajusta o layout para colunas */
-        align-items: center; /* Centraliza os elementos */
+        display: flex;
+        justify-content: space-between; /* Alinha os elementos com espaçamento entre eles */
+        align-items: center; /* Centraliza verticalmente */
     }
 
-    .sobrenos__content {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        gap: 15px; /* Reduz o espaçamento */
+    .femmcode__header-titulo h2 {
+        margin-bottom: 20px; /* Aumenta o espaço abaixo do título */
+        font-weight: 700 !important;
+        font-size: 2.5rem; /* Aumenta o tamanho do título para tablets */
     }
 
-    .sobrenos figure {
-        width: 60px; /* Diminui o tamanho das imagens */
-        height: 60px;
+    .container-femmcode {
+        width: 90%; /* Reduz a largura do container */
+        margin: 0 auto; /* Centraliza o conteúdo */
+    }
+
+    /* Sobre Nós */
+    .sobrenos {
+        padding: 80px 0; /* Reduz o padding para telas menores */
+        background-image: url('../img/rodape.png');
+        box-shadow: inset 0 0 15px 4px #592979; /* Suaviza o efeito de sombra */
     }
 
     .sobrenos-item {
-        padding: 30px; /* Reduz o padding */
+        padding: 30px; /* Reduz o padding interno */
+        display: flex;
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        gap: 15px; /* Reduz o espaçamento entre os elementos */
+        background-color: #fff6ff !important;
+        border-radius: 10px !important; /* Reduz o arredondamento */
+        box-shadow: 0 0 15px 2px #592979cb; /* Suaviza a sombra */
+        width: 30%; /* Ajusta a largura dos itens */
+        text-align: center;
     }
 
+    .sobrenos__content {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem linha */
+        justify-content: space-between; /* Ajusta o espaçamento entre os itens */
+        margin: 0 auto;
+        gap: 20px; /* Adiciona espaçamento entre as colunas */
+    }
+
+    .sobrenos-equipe {
+        margin-bottom: 30px; /* Aumenta o espaçamento inferior */
+        width: 85%; /* Ajusta a largura */
+        margin: 0 auto;
+    }
+
+    .sobrenos-equipe figure {
+        width: 100px; /* Aumenta o tamanho das imagens */
+        height: 100px;
+        margin: 0 auto; /* Centraliza a figura */
+    }
+
+    .sobrenos-equipe figure img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; /* Mantém a imagem circular */
+        object-fit: cover;
+    }
+
+    .equipe__content {
+        display: flex;
+        flex-wrap: wrap; /* Permite quebra de linha em dispositivos menores */
+        justify-content: center; /* Centraliza os itens */
+        gap: 20px; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .equipe__content-titulo h2 {
+        margin-bottom: 40px; /* Aumenta o espaçamento inferior */
+        font-weight: 700 !important;
+        font-size: 2rem; /* Ajusta o tamanho do título */
+    }
+
+    .equipe-item {
+        padding: 30px; /* Reduz o padding interno */
+        display: flex;
+        flex-direction: column; /* Organiza os elementos verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        gap: 15px; /* Ajusta o espaçamento entre os itens */
+        background-color: #fff6ff !important;
+        border-radius: 10px !important;
+        text-align: center;
+        border: 1px solid #8c8c8ca3 !important;
+        width: 40%; /* Ajusta a largura para tablets */
+    }
+
+    .equipe-item h3,
     .sobrenos-item h3 {
-        font-size: 1.2rem; /* Ajusta o tamanho do texto */
+        margin: 0;
+        font-size: 1.4rem; /* Ajusta o tamanho do título */
     }
 
-    .sobrenos-item span {
+    .equipe-item h3 {
+        font-size: 1.6rem; /* Dá um destaque maior aos títulos da equipe */
+    }
+
+    .equipe-item p {
+        margin: 0;
+        font-size: 1rem; /* Ajusta o tamanho do parágrafo */
+    }
+}
+
+@media (max-width: 48rem) {
+    body {
+        background-color: #fff6ff;
+    }
+
+    .femmcode {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .femmcode__header-titulo {
+        display: flex;
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center;
+        gap: 10px; /* Espaçamento entre o título e os demais elementos */
+    }
+
+    .femmcode__header-titulo h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .container-femmcode {
+        width: 100%; /* Ocupa toda a largura */
+        margin: 0 auto;
+    }
+
+    .sobrenos {
+        padding: 60px 0;
+        background-image: url('../img/rodape.png');
+        box-shadow: inset 0 0 10px 3px #592979;
+    }
+
+    .sobrenos-item {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-color: #fff6ff !important;
+        border-radius: 10px !important;
+        box-shadow: 0 0 10px 2px #592979cb;
+        width: 100%; /* Ocupa toda a largura */
+        text-align: center;
+    }
+
+    .sobrenos__content {
+        display: flex;
+        flex-direction: column; /* Alinha os itens em uma única coluna */
+        gap: 15px;
+        margin: 0 auto;
+    }
+
+    .sobrenos-equipe {
+        margin-bottom: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sobrenos-equipe figure {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .sobrenos-equipe figure img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .equipe__content {
+        display: flex;
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        gap: 15px;
+    }
+
+    .equipe__content-titulo h2 {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .equipe-item {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background-color: #fff6ff !important;
+        border-radius: 10px !important;
+        text-align: center;
+        border: 1px solid #8c8c8ca3 !important;
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    .equipe-item h3,
+    .sobrenos-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .equipe-item p {
         font-size: 0.9rem;
     }
-}
-
-/* Tablets (até 768px) */
-@media screen and (max-width: 768px) {
-    .femmcode__header-titulo h2 {
-        font-size: 1.5rem; /* Ajusta o tamanho do título */
-    }
-
-    .sobrenos__content {
-        flex-wrap: wrap; /* Permite que os itens se reorganizem */
-        gap: 25px;
-    }
-
-    .sobrenos figure {
-        width: 70px;
-        height: 70px;
-    }
-
-    .sobrenos-item {
-        padding: 50px;
-    }
-}
-
-/* Telas muito grandes (a partir de 1600px) */
-@media screen and (min-width: 1600px) {
-    .sobrenos__content {
-        width: 60%; /* Limita a largura do conteúdo */
-        gap: 30px;
-    }
-
-    .sobrenos-item {
-        padding: 100px; /* Aumenta o espaçamento */
-    }
-
-    .sobrenos-item h3 {
-        font-size: 2rem; /* Títulos maiores */
-    }
-
-    .sobrenos figure {
-        width: 100px; /* Imagens maiores */
-        height: 100px;
-    }
-}
-
-/*Modo claro e escuro */
-/* Estilo padrão (claro) */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007bff;
-}
-
-/* Estilo escuro */
-body.dark-mode {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --primary-color: #bb86fc;
-}
-
-/* Aplicação das variáveis */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
 }

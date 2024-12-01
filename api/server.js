@@ -431,7 +431,7 @@ app.post('/reset-password', async (req, res) => {
   return res.status(200).json({ message: 'Senha redefinida com sucesso!' });
 });
 
-// Rota de login (para garantir que o login funciona)
+// Rota de login (para garantir que o login funcione)
 app.post('/login', async (req, res) => {
   const { email, senha } = req.body;
 

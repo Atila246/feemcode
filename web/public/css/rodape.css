@@ -98,3 +98,248 @@ footer::before {
         cursor: pointer;
         font-size: 16px;
     }
+
+    @media (min-width: 32000px) {
+        .footer__links {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens se reorganizem caso necessário */
+            gap: 50px; /* Reduz o espaçamento entre os links */
+            justify-content: space-between; /* Ajusta a distribuição dos links */
+            color: white;
+        }
+    
+        .footer-item {
+            flex-basis: calc(33.333% - 50px); /* Três colunas no layout com espaçamento */
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaçamento interno */
+        }
+    
+        .footer-item h4 {
+            font-size: 1.2rem; /* Reduz o tamanho do título */
+            margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
+        }
+    
+        .footer-item a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        }
+    
+        .footer-item a:hover {
+            text-decoration: underline; /* Adiciona um efeito visual no hover */
+        }
+    
+        .footer-item a span {
+            font-size: 0.9rem; /* Ajusta o tamanho do texto dos links */
+        }
+    
+        .footer__content {
+            margin: 0 auto;
+            width: 90%; /* Ajusta a largura para telas médias */
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Reduz o espaçamento entre as seções */
+        }
+    
+        .footer__content hr {
+            background-color: white;
+            color: white;
+            height: 1px; /* Reduz a espessura da linha */
+            margin: 10px 0; /* Ajusta o espaçamento ao redor */
+            opacity: 0.7; /* Aumenta a visibilidade */
+        }
+
+        footer {
+            width: 100%;
+            padding: 60px; /* Aumenta o padding para mais espaço em telas maiores */
+            background-image: url(../img/rodape.png);
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(10px); /* Mantém o desfoque */
+            position: relative;
+            z-index: 1;
+        }
+    
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(12px); /* Aumenta o desfoque para maior efeito */
+            z-index: -1;
+        }
+    
+        .footer__feedback {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Adiciona espaçamento entre os itens */
+            max-width: 600px; /* Limita a largura do feedback em tablets */
+            margin: 0 auto; /* Centraliza a seção */
+            gap: 20px; /* Espaçamento entre os elementos */
+        }
+    
+        .footer__feedback textarea {
+            width: 70%; /* Expande a largura em tablets */
+            height: 70px; /* Aumenta a altura para mais texto */
+            padding: 15px; /* Ajusta o padding */
+            border-radius: 15px; /* Arredonda mais os cantos */
+            border: 2px solid white;
+            font-size: 1rem; /* Ajusta o tamanho da fonte */
+            resize: none;
+            background-color: transparent;
+            outline: none;
+            caret-color: white;
+            color: white;
+        }
+    
+        .footer__feedback textarea::placeholder {
+            color: white;
+            font-size: 0.9rem; /* Ajusta o tamanho do texto de placeholder */
+        }
+    
+        .footer__feedback button {
+            width: 25%; /* Ajusta a largura proporcional */
+            height: 70px; /* Aumenta a altura para combinar com o textarea */
+            padding: 15px;
+            background-color: white;
+            color: #7b3687;
+            border: none;
+            font-weight: 600;
+            border-radius: 15px; /* Maior arredondamento */
+            cursor: pointer;
+            font-size: 1rem; /* Ajusta o tamanho da fonte */
+        }
+    
+        .footer__feedback button:hover {
+            background-color: #f3f3f3; /* Efeito hover para o botão */
+            color: #5a2460; /* Escurece o texto no hover */
+        }
+    }
+
+    @media (min-width: 48rem) and (max-width: 64rem) {
+        /* Rodapé */
+        footer {
+            width: 100%;
+            padding: 50px; /* Ajusta o padding para telas de tablet */
+            background-image: url(../img/rodape.png);
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(8px); /* Suaviza o desfoque */
+            position: relative;
+            z-index: 1;
+        }
+    
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(10px); /* Ajusta o desfoque no fundo */
+            z-index: -1;
+        }
+    
+        /* Links no Rodapé */
+        .footer__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px; /* Reduz o espaçamento entre os itens */
+            justify-content: center; /* Centraliza os links */
+            color: white;
+        }
+    
+        .footer-item {
+            flex-basis: calc(50% - 30px); /* Duas colunas no layout de tablet */
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Espaçamento interno menor */
+            text-align: center; /* Centraliza o texto */
+        }
+    
+        .footer-item h4 {
+            font-size: 1.1rem; /* Ajusta o tamanho do título */
+            margin-bottom: 8px; /* Ajusta o espaçamento abaixo do título */
+        }
+    
+        .footer-item a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.85rem; /* Ajusta o tamanho da fonte dos links */
+        }
+    
+        .footer-item a:hover {
+            text-decoration: underline; /* Mantém o efeito hover */
+        }
+    
+        .footer-item a span {
+            font-size: 0.85rem; /* Ajusta o tamanho do texto interno */
+        }
+    
+        /* Conteúdo Geral do Rodapé */
+        .footer__content {
+            margin: 0 auto;
+            width: 85%; /* Ajusta a largura para melhor encaixe */
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Reduz o espaçamento entre as seções */
+        }
+    
+        .footer__content hr {
+            background-color: white;
+            color: white;
+            height: 1px; /* Mantém uma linha fina */
+            margin: 10px 0; /* Espaçamento ajustado */
+            opacity: 0.6; /* Suaviza a linha */
+        }
+    
+        /* Área de Feedback */
+        .footer__feedback {
+            display: flex;
+            align-items: center;
+            flex-direction: column; /* Empilha os itens para tablets */
+            gap: 15px; /* Espaçamento entre os elementos */
+            max-width: 500px; /* Reduz a largura do feedback */
+            margin: 0 auto; /* Centraliza a seção */
+        }
+    
+        .footer__feedback textarea {
+            width: 100%; /* Ajusta para preencher o container */
+            height: 60px; /* Tamanho adequado para tablets */
+            padding: 10px; /* Padding menor */
+            border-radius: 12px; /* Suaviza o arredondamento */
+            border: 2px solid white;
+            font-size: 0.9rem; /* Reduz o tamanho da fonte */
+            resize: none;
+            background-color: transparent;
+            outline: none;
+            caret-color: white;
+            color: white;
+        }
+    
+        .footer__feedback textarea::placeholder {
+            color: white;
+            font-size: 0.8rem; /* Ajusta o tamanho do placeholder */
+        }
+    
+        .footer__feedback button {
+            width: 80%; /* Ajusta para tablets */
+            height: 60px; /* Reduz a altura */
+            padding: 10px;
+            background-color: white;
+            color: #7b3687;
+            border: none;
+            font-weight: 600;
+            border-radius: 12px; /* Suaviza o arredondamento */
+            cursor: pointer;
+            font-size: 0.95rem; /* Ajusta o tamanho da fonte */
+        }
+    
+        .footer__feedback button:hover {
+            background-color: #f0f0f0; /* Ajusta o efeito hover */
+            color: #5a2460; /* Escurece o texto no hover */
+        }
+    }

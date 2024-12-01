@@ -2,6 +2,7 @@
 .historia{
     width: 80%;
     margin: 30px auto;
+    color: #212529;
 }
 
 .historia__content {
@@ -44,4 +45,90 @@
     width: inherit;
     padding: 8px 0;
     border-radius: 20px;
+}
+
+#historia{
+    font-weight: 700;
+    border-bottom: 3px solid white;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .historia {
+        width: 95%;
+    }
+
+    .historia__text h2 {
+        font-size: 2.8rem;
+    }
+
+    .historia__content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .historia__header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .historia__text h2 {
+        font-size: 2.5rem;
+    }
+
+    .historia__content p {
+        font-size: 1rem;
+    }
+
+    .historia__content a button {
+        font-size: 1rem;
+        padding: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .historia {
+        width: 100%;
+    }
+
+    .historia__text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .historia__content p {
+        font-size: 0.9rem;
+    }
+
+    .historia__content a button {
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+}
+/*Modo claro e escuro */
+/* Estilo padrão (claro) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #007bff;
+}
+
+/* Estilo escuro */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+}
+
+/* Aplicação das variáveis */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }

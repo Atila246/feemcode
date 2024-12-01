@@ -80,21 +80,7 @@
 }
 
 /*Media Queries*/
-@media only screen and (max-width: 1440px) {
-    .eventos {
-        width: 80%;
-    }
-
-    .carrossel__list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .evento-descricao h2 {
-        font-size: 1.3rem;
-    }
-}
-
-@media only screen and (max-width: 940px) {
+@media (max-width: 48rem) {
     .eventos {
         width: 90%;
     }
@@ -128,36 +114,29 @@
     }
 
     .evento-descricao h2 {
-        font-size: 1.1rem;
+        font-size: 1rem; /* 16px -> rem */
+    }
+
+    .evento-descricao span {
+        font-size: 0.75rem; /* 12px -> rem */
     }
 
     .evento-descricao p {
-        font-size: 0.9rem;
+        font-size: 0.75rem; /* 12px -> rem */
     }
 }
 
-/*Modo claro e escuro */
-/* Estilo padrão (claro) */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007bff;
-}
+/* Para telas maiores que 64rem (1024px) */
+@media (min-width: 64rem) {
+    .eventos {
+        width: 60%;
+    }
 
-/* Estilo escuro */
-body.dark-mode {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --primary-color: #bb86fc;
-}
+    .carrossel__list {
+        gap: 2.5rem; /* 40px -> rem */
+    }
 
-/* Aplicação das variáveis */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    .eventos-item figure {
+        height: 14.0625rem; /* 225px -> rem */
+    }
 }

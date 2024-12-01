@@ -133,3 +133,100 @@ body{
 #cadastrado{
     display: none;
 }
+
+
+@media screen and (max-width: 49rem) {
+    .header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .header__perfil a span {
+        font-size: 30px;
+    }
+
+    .header__perfil button {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+        margin-top: 10px;
+    }
+
+    .header__perfil button:hover {
+        transition: background-color 300ms, color 300ms;
+    }
+
+    .header__logo {
+            width: 3.75rem;  /* 60px */
+            height: 2.5rem;  /* 40px */
+    }
+    
+    .search-and-menu {
+            width: 90%;
+    }
+    
+    .header__pesquisa {
+            width: 80%;
+            padding: 0.5rem 0.75rem;  /* 8px 12px */
+    }
+    
+    .header__pesquisa input::placeholder {
+            font-size: 0.875rem;  /* 14px */
+    }
+
+        /* Menu */
+    .menu-list {
+            flex-direction: column;  /* Altera o menu para coluna em telas menores */
+            gap: 2rem;  /* 32px: Menor espaçamento entre os itens do menu */
+            margin-top: 1rem;  /* Espaço superior */
+    }
+    
+        /* Itens de Menu */
+    .menu-list li a {
+            font-size: 1rem;  /* 16px: Reduz o tamanho da fonte para melhor legibilidade em telas menores */
+            padding-bottom: 0.3125rem;  /* 5px: Menor espaço inferior */
+            text-align: center;  /* Centraliza o texto dos itens de menu */
+    }
+    
+        /* Perfil (Ícone ou nome) */
+    .header__perfil span {
+            font-size: 1.25rem;  /* 20px: Tamanho de fonte reduzido para o perfil */
+            text-align: center;  /* Centraliza o nome/ícone do perfil */
+            margin-top: 0.5rem;  /* Espaço superior */
+    }
+    
+        /* Pesquisa */
+    .header__pesquisa {
+            width: 80%;  /* Aumenta a largura do campo de pesquisa */
+            margin: 0 auto;  /* Centraliza a barra de pesquisa */
+            padding: 12px;  /* Espaçamento maior no campo de pesquisa */
+            gap: 1rem;  /* Aumenta o espaçamento entre o campo de pesquisa e o ícone de pesquisa */
+    }
+    
+    .header__pesquisa input {
+            font-size: 1rem;  /* 16px: Tamanho de fonte para input de pesquisa */
+            padding: 8px;  /* Aumenta o espaço dentro do input */
+            width: 100%;  /* Ocupa toda a largura disponível */
+    }
+    
+    .header__pesquisa input::placeholder {
+            font-size: 0.9rem;  /* 14px: Tamanho menor do texto do placeholder */
+            opacity: 0.8;  /* Menos opacidade */
+    }
+    
+        /* Logo */
+    .header__logo {
+            width: 60px;  /* Reduz a largura da logo para telas menores */
+            height: 40px;  /* Reduz a altura da logo */
+    }
+    
+    .header__logo img {
+            object-fit: contain;  /* Garante que a imagem não distorça ao ajustar o tamanho */
+    }
+    
+        /* Container de Conteúdo */
+    .container-content {
+            padding: 1rem;  /* Adiciona espaço interno ao container */
+    }
+    }

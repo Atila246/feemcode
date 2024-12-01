@@ -252,3 +252,167 @@ button {
     background-color: var(--primary-color);
     color: var(--text-color);
 }
+
+
+
+/* Responsividade para tablets (máx. 768px) */
+@media (max-width: 48rem) { /* 768px */
+    .canais__header-titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .canais__header-titulo h2 {
+        font-size: 1.8rem; /* Reduz tamanho do título */
+    }
+
+    .canais__header-titulo button {
+        padding: 0.5rem 2rem; /* Ajusta botão */
+        font-size: 1rem;
+    }
+
+    .canais__header p {
+        font-size: 1.2rem; /* Reduz texto */
+    }
+
+    .canais-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .canais-item figure {
+        width: 6rem; /* Reduz imagem */
+        height: 6rem;
+    }
+
+    .perfil-anal span:nth-child(1) {
+        font-size: 1.2rem; /* Ajusta nome */
+    }
+
+    .perfil-anal span:nth-child(2) {
+        font-size: 1rem; /* Ajusta descrição */
+    }
+
+    .canais__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* Espaço entre elementos */
+    }
+
+    .canal-butao button {
+        padding: 0.5rem 1.5rem; /* Ajusta botão */
+        font-size: 1rem;
+    }
+
+    .canais__videos {
+        width: 100%; 
+        padding: 0 15px; /* Reduz padding lateral */
+        margin: 20px 0;
+        border-left: none; /* Remove borda */
+    }
+
+    .canais__videos h3 {
+        font-size: 1.2rem; /* Reduz título da seção */
+        margin-bottom: 15px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta grid */
+        gap: 15px; /* Reduz espaçamento */
+    }
+
+    .video-item__source {
+        height: 180px; /* Ajusta altura do vídeo */
+    }
+
+    .video-item__desc img {
+        width: 35px; /* Ajusta tamanho da miniatura */
+        height: 35px;
+    }
+
+    .titulo-desc h3 {
+        font-size: 1.1rem; /* Reduz título dos vídeos */
+    }
+
+    .titulo-desc span {
+        font-size: 0.9rem; /* Reduz subtítulo */
+    }
+}
+
+/* Responsividade para celulares (máx. 480px) */
+@media (max-width: 30rem) { /* 480px */
+    .canais__header-titulo {
+        gap: 1rem; /* Espaçamento menor */
+    }
+
+    .canais__header-titulo h2 {
+        font-size: 1.5rem; /* Reduz título */
+    }
+
+    .canais__header-titulo button {
+        padding: 0.5rem 1.5rem; /* Botão menor */
+        font-size: 0.9rem;
+    }
+
+    .canais__header p {
+        font-size: 1rem; /* Texto menor */
+    }
+
+    .canais-item {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .canais-item figure {
+        width: 5rem; /* Ajusta tamanho da imagem */
+        height: 5rem;
+    }
+
+    .perfil-anal span:nth-child(1) {
+        font-size: 1rem; /* Nome menor */
+    }
+
+    .perfil-anal span:nth-child(2) {
+        font-size: 0.9rem; /* Descrição menor */
+    }
+
+    .canais__content {
+        gap: 1rem; /* Espaçamento reduzido */
+    }
+
+    .canal-butao button {
+        padding: 0.5rem 1rem; /* Botão menor */
+        font-size: 0.9rem;
+    }
+
+    .canais__videos {
+        padding: 0 10px; /* Reduz padding */
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas mais compactas */
+        gap: 10px; /* Reduz espaçamento */
+    }
+
+    .video-item__source {
+        height: 150px; /* Altura menor para os vídeos */
+    }
+
+    .video-item__desc img {
+        width: 30px; /* Miniaturas menores */
+        height: 30px;
+    }
+
+    .titulo-desc h3 {
+        font-size: 1rem; /* Título ajustado */
+    }
+
+    .titulo-desc span {
+        font-size: 0.8rem; /* Subtítulo ajustado */
+    }
+}

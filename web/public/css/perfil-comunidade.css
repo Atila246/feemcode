@@ -412,4 +412,337 @@ body{
     }
 }
 
+@media screen and (max-width: 32rem) {
+    /* Menu do Perfil */
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
 
+    .menu__nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .menu__nav ul li a {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .menu__logo a img {
+        width: 80px;
+    }
+
+    /* Separação de Conteúdos */
+    .conteudos-perfil hr {
+        margin: 20px 0;
+    }
+
+    /* Perfil do Usuário da Comunidade */
+    .container__perfil-info {
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .perfil__info {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .perfil__nome-desc {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .perfil__nome-desc h3 {
+        font-size: 1.2rem;
+    }
+
+    .perfil__nome-desc p {
+        font-size: 0.9rem;
+    }
+
+    .perfil__nome-desc img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .botao-perfil {
+        font-size: 1rem;
+        padding: 8px 30px;
+    }
+
+    /* Vídeos e Posts Postados na Comunidade */
+    .postagens__categorias {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .posts-comunidade__tudo {
+        flex-wrap: wrap;
+    }
+
+    /* Modal Publicar */
+    .modal-content {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/* Media Query para telas de até 48rem (768px) */
+@media screen and (max-width: 48rem) {
+    /* Reutiliza o mesmo estilo de 32rem */
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu__nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .menu__nav ul li a {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .menu__logo a img {
+        width: 80px;
+    }
+
+    /* Separação de Conteúdos */
+    .conteudos-perfil hr {
+        margin: 20px 0;
+    }
+
+    /* Perfil do Usuário da Comunidade */
+    .container__perfil-info {
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .perfil__info {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .perfil__nome-desc {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .perfil__nome-desc h3 {
+        font-size: 1.2rem;
+    }
+
+    .perfil__nome-desc p {
+        font-size: 0.9rem;
+    }
+
+    .perfil__nome-desc img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .botao-perfil {
+        font-size: 1rem;
+        padding: 8px 30px;
+    }
+
+    /* Vídeos e Posts Postados na Comunidade */
+    .postagens__categorias {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .posts-comunidade__tudo {
+        flex-wrap: wrap;
+    }
+
+    /* Modal Publicar */
+    .modal-content {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/* Media Query para telas de até 64rem (1024px) */
+@media screen and (max-width: 64rem) {
+    /* Reutiliza o mesmo estilo de 32rem */
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu__nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .menu__nav ul li a {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .menu__logo a img {
+        width: 80px;
+    }
+
+    /* Separação de Conteúdos */
+    .conteudos-perfil hr {
+        margin: 20px 0;
+    }
+
+    /* Perfil do Usuário da Comunidade */
+    .container__perfil-info {
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .perfil__info {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .perfil__nome-desc {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .perfil__nome-desc h3 {
+        font-size: 1.2rem;
+    }
+
+    .perfil__nome-desc p {
+        font-size: 0.9rem;
+    }
+
+    .perfil__nome-desc img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .botao-perfil {
+        font-size: 1rem;
+        padding: 8px 30px;
+    }
+
+    /* Vídeos e Posts Postados na Comunidade */
+    .postagens__categorias {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .posts-comunidade__tudo {
+        flex-wrap: wrap;
+    }
+
+    /* Modal Publicar */
+    .modal-content {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/* Media Query para telas de até 75rem (1200px) */
+@media screen and (max-width: 75rem) {
+    /* Reutiliza o mesmo estilo de 32rem */
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu__nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .menu__nav ul li a {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .menu__logo a img {
+        width: 80px;
+    }
+
+    /* Separação de Conteúdos */
+    .conteudos-perfil hr {
+        margin: 20px 0;
+    }
+
+    /* Perfil do Usuário da Comunidade */
+    .container__perfil-info {
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .perfil__info {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .perfil__nome-desc {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .perfil__nome-desc h3 {
+        font-size: 1.2rem;
+    }
+
+    .perfil__nome-desc p {
+        font-size: 0.9rem;
+    }
+
+    .perfil__nome-desc img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .botao-perfil {
+        font-size: 1rem;
+        padding: 8px 30px;
+    }
+
+    /* Vídeos e Posts Postados na Comunidade */
+    .postagens__categorias {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .posts-comunidade__tudo {
+        flex-wrap: wrap;
+    }
+
+    /* Modal Publicar */
+    .modal-content {
+        width: 90%;
+        max-width: 500px;
+    }
+}
