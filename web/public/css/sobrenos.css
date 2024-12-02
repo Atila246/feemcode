@@ -371,3 +371,179 @@ body{
         font-size: 0.9rem;
     }
 }
+
+
+/* MODO ESCURO */
+
+body {
+    background-color: #fff6ff;
+}
+
+.femmcode {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.femmcode__header-titulo {
+    display: flex;
+}
+
+.femmcode__header-titulo h2 {
+    margin-bottom: 10px;
+    font-weight: 700 !important;
+    font-size: 2rem;
+}
+
+.container-femmcode {
+    width: 100%;
+}
+
+.sobrenos {
+    padding: 100px 0;
+    background-image: url('../img/rodape.png');
+    box-shadow: inset 0 0 20px 5px #592979;
+}
+
+.sobrenos-item {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff6ff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 20px 2px #592979cb;
+    width: 25%;
+    text-align: center;
+}
+
+.sobrenos__content, .equipe__content {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.sobrenos-equipe {
+    margin-bottom: 15px;  
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.sobrenos-equipe figure {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.sobrenos-equipe figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.equipe__content-titulo h2 {
+    margin-bottom: 30px;
+    font-weight: 700 !important;
+}
+
+.equipe-item {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff6ff !important;
+    border-radius: 15px !important;
+    text-align: center;
+    border: 1px solid #8c8c8ca3 !important;
+}
+
+.equipe-item h3, .sobrenos-item h3 {
+    margin: 0;
+}
+
+.equipe-item h3 {
+    font-size: 1.5rem;
+}
+
+.equipe-item p {
+    margin: 0;
+}
+
+/* Modo Escuro */
+body.dark {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+}
+
+/* Modificando o rodapé para modo escuro */
+body.dark .sobrenos {
+    background-color: #222; /* Fundo do rodapé escuro */
+    box-shadow: inset 0 0 20px 5px #8c4c8f; /* Cor de sombra mais suave */
+}
+
+/* Modificando itens de "Sobre Nós" para o modo escuro */
+body.dark .sobrenos-item {
+    background-color: #444; /* Fundo mais escuro */
+    box-shadow: 0 0 20px 2px #8c4c8f; /* Sombra mais suave */
+    color: #ccc; /* Texto mais claro */
+}
+
+/* Ajustando a cor do conteúdo */
+body.dark .sobrenos__content, body.dark .equipe__content {
+    color: #ccc;
+}
+
+body.dark .sobrenos-equipe figure img {
+    border: 2px solid #fff; /* Contorno da imagem para destaque */
+}
+
+body.dark .equipe-item {
+    background-color: #444; /* Fundo mais escuro para os itens de equipe */
+    border: 1px solid #666; /* Borda suave */
+    color: #ccc; /* Texto claro */
+}
+
+/* Modificando o título da equipe */
+body.dark .equipe__content-titulo h2 {
+    color: #fff;
+}
+
+/* Modificando o cabeçalho e textos para o modo escuro */
+body.dark .femmcode__header-titulo h2 {
+    color: #fff;
+}
+
+body.dark .femmcode {
+    background-color: #333; /* Fundo escuro para a área de conteúdo */
+}
+
+body.dark .femmcode__header-titulo {
+    color: #fff;
+}
+
+/* Modificando o botão e os campos de input */
+body.dark .footer__feedback textarea {
+    background-color: #333;
+    color: #ccc;
+    border: 2px solid #555;
+}
+
+body.dark .footer__feedback button {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Modificando as cores de texto e ícones */
+body.dark .sobrenos-item h3, body.dark .equipe-item h3 {
+    color: #fff;
+}
+
+/* Modificando os links para o modo escuro */
+body.dark .femmcode__header-titulo a {
+    color: #ddd; /* Links mais claros */
+}
+
+/* Modificando as cores de texto de subtítulos e parágrafos */
+body.dark .sobrenos-item p, body.dark .equipe-item p {
+    color: #ccc;
+}

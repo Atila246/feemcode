@@ -79,6 +79,59 @@
     margin: 0;
 }
 
+/* MODO ESCURO */
+
+body.dark .evento {
+    background-color: #3E3E40; /* Fundo cinza escuro */
+}
+
+body.dark .evento__categorias span {
+    background-color: transparent;
+    color: #FF66C4; /* Destaque */
+    border-color: #FF66C4; /* Borda no destaque */
+}
+
+body.dark .evento__categorias span:nth-child(1) {
+    background-color: #FF66C4; /* Fundo do destaque */
+    color: #3E3E40; /* Contraste no texto */
+}
+
+body.dark .evento__carrossel h2 {
+    color: #FFFFFF; /* Texto branco */
+}
+
+body.dark .carrossel__list {
+    background-color: #3E3E40; /* Fundo cinza escuro */
+}
+
+body.dark .evento-item {
+    background-color: #3E3E40; /* Fundo cinza escuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+body.dark .evento-item:hover {
+    background-color: #505050; /* Fundo mais claro ao passar o mouse */
+    transition: background-color 0.3s ease;
+}
+
+body.dark .evento-item figure img {
+    opacity: 0.9; /* Imagem levemente escurecida */
+}
+
+body.dark .evento-descricao h2 {
+    color: #FFFFFF; /* Título em branco */
+}
+
+body.dark .evento-descricao span {
+    color: #FF66C4; /* Destaque */
+}
+
+body.dark .evento-descricao p {
+    color: #FFFFFF; /* Texto em branco */
+}
+
+
 /*Media Queries*/
 @media (max-width: 48rem) {
     .eventos {

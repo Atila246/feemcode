@@ -380,47 +380,8 @@
     }
 }
 
-/* Responsavidade com MEDIA QUERY*/
+/* Triloo do modo calro e escuro */
 
-/* Ajustes gerais */
-/* @media (max-width: 1024px) {
-    .header__nav {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .header__pesquisa {
-        width: 80%;
-    }
-
-    .menu__list {
-        gap: 50px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .carrossa-item {
-        width: 90%;
-        height: 250px;
-    }
-
-    .eventos__content, .comunidades__content {
-        flex-direction: column;
-    }
-
-    .evento-dados figure, .evento-desc {
-        width: 100%;
-        height: auto;
-    }
-
-    .evento-dados {
-        flex-direction: column;
-    }
-
-    .comunidades-list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
 
 /* Ajustes gerais */
