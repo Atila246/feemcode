@@ -11,6 +11,7 @@ const mensagem = document.getElementById("mensagem")
 const email_cadastro = document.getElementById("email_cadastro")
 const senha_cadastro = document.getElementById("senha_cadastro")
 const nome_cadastro = document.getElementById("nome_cadastro")
+const nome_usuario = document.getElementById("nome_usuario")
 const btn_cadastro = document.getElementById("btn-cadastro")
 
 const sheet = document.styleSheets[0]
@@ -58,7 +59,7 @@ btn_login.addEventListener('click', () => {
 btn_cadastro.addEventListener('click', () => {
     fetch('http://localhost:3000/usuario', {
       method: "POST",
-      body: JSON.stringify({nome: nome_cadastro.value, email: email_cadastro.value, senha: senha_cadastro.value}),
+      body: JSON.stringify({nome: nome_cadastro.value, email: email_cadastro.value, senha: senha_cadastro.value, nomeUsuario: nome_usuario.value}),
       headers: {
           "Content-Type": "application/json; charset=UTF-8"
         }

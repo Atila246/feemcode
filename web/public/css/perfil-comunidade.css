@@ -242,7 +242,41 @@ body{
     padding: 0 5px;
 }
 
-<<<<<<< HEAD
+/* .form-item-anexo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+
+.form-item-anexo span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #212529;
+} */
+
+.form-item-anexo{
+    border: 1px dotted #212529b4;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-item-anexo span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #212529;
+}
+
+#claroescuro{
+    background-color: transparent;
+    border: none;
+}
+
+
 /* MODO ESCURO */
 
 body.dark {
@@ -253,6 +287,7 @@ body.dark {
 body.dark .menu {
     background-color: #2a2a2a; 
     color: #f1f1f1; 
+}
 
 body.dark .menu__nav ul li a {
     color: #f1f1f1; /* Links claros no menu */
@@ -355,529 +390,10 @@ body.dark .publicacao__form-item textarea {
 
 body.dark .publicacao__form-item textarea {
     background-color: #3c3c3c; 
+}
 
 body.dark .icon-modify {
     color: #7f8c8d; 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-/* .form-item-anexo{
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px 20px;
 }
 
-.form-item-anexo span i{
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #212529;
-} */
-
-.form-item-anexo{
-    border: 1px dotted #212529b4;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-}
-
-.form-item-anexo span i{
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #212529;
-}
-
->>>>>>> 223a29d5964f86f12c00ccb30e5b975d8dca8c13
-/*abas de navegacao*/
-/* .navegacao-abas{
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
-    padding: 0;
-    margin: 0 auto;
-    width: 80%;
-}
-
-.navegacao-abas .aba-item{
-    font-size: 1.3rem;
-    cursor: pointer;
-    display: flex;
-    
-    flex-direction: column;
-    gap: 10px;
-}
-
-.navegacao-abas .ativo{
-    font-weight: 600;
-}
-
-.aba-item .aba-link{
-    text-decoration: none;
-    color: white;
-}
-
-.underline{
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    transition: width 0.3s ease;
-}
-
-.underline.animatein{
-    animation: slidein 0.3s ease forwards;
-}
-
-.underline.animateout{
-    animation: slideout 0.3s ease forwards;
-}
-
-
-@keyframes slidein {
-    from {
-        transform: translateX(0px);
-    }
-    to {
-        transform: translateX(calc(var(--tamanho-aba-1) + 20px));
-    }
-}
-
-@keyframes slideout {
-    from {
-        transform: translateX(var(--tamanho-aba-2));
-    }
-    to {
-        transform: translateX(0px);
-    }
-} */
-
-/*gerenciar comunidade*/
-/* .gerenciar-perfil{
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.editar-perfil__images{
-    display: flex;
-    gap: 30px;
-    width: 100%;
-}
-
-.editar-perfil__imagem h5{
-    display: block;
-    margin: 0;
-}
-
-.editar-perfil__imagem figure{
-    margin: 0;
-    width: 100%;
-}
-
-.editar-perfil__imagem figure img{
-    margin: 0;
-    width: 100%;
-    object-fit: cover;
-}
-
-.editar-perfil__imagem.card{
-    padding: 20px;
-    gap: 10px;
-}
-
-.editar-perfil{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.editar-perfil__form{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-label{
-    background-color: #ecf0f1;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-.form-label input{
-    margin: 0;
-}
-
-.form-label input{
-    outline: none;
-    border: none;
-    background-color: transparent;
-    width: 100%;
-}*/
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .comunidades-perfil {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .comunidades-criadas, .comunidades__post {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 32rem) {
-    /* Menu do Perfil */
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .menu__nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .menu__nav ul li a {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .menu__logo a img {
-        width: 80px;
-    }
-
-    /* Separação de Conteúdos */
-    .conteudos-perfil hr {
-        margin: 20px 0;
-    }
-
-    /* Perfil do Usuário da Comunidade */
-    .container__perfil-info {
-        gap: 40px;
-        padding-bottom: 40px;
-    }
-
-    .perfil__info {
-        flex-direction: column;
-        gap: 20px;
-        width: 90%;
-    }
-
-    .perfil__nome-desc {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .perfil__nome-desc h3 {
-        font-size: 1.2rem;
-    }
-
-    .perfil__nome-desc p {
-        font-size: 0.9rem;
-    }
-
-    .perfil__nome-desc img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .botao-perfil {
-        font-size: 1rem;
-        padding: 8px 30px;
-    }
-
-    /* Vídeos e Posts Postados na Comunidade */
-    .postagens__categorias {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .posts-comunidade__tudo {
-        flex-wrap: wrap;
-    }
-
-    /* Modal Publicar */
-    .modal-content {
-        width: 90%;
-        max-width: 500px;
-    }
-}
-
-/* Media Query para telas de até 48rem (768px) */
-@media screen and (max-width: 48rem) {
-    /* Reutiliza o mesmo estilo de 32rem */
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .menu__nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .menu__nav ul li a {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .menu__logo a img {
-        width: 80px;
-    }
-
-    /* Separação de Conteúdos */
-    .conteudos-perfil hr {
-        margin: 20px 0;
-    }
-
-    /* Perfil do Usuário da Comunidade */
-    .container__perfil-info {
-        gap: 40px;
-        padding-bottom: 40px;
-    }
-
-    .perfil__info {
-        flex-direction: column;
-        gap: 20px;
-        width: 90%;
-    }
-
-    .perfil__nome-desc {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .perfil__nome-desc h3 {
-        font-size: 1.2rem;
-    }
-
-    .perfil__nome-desc p {
-        font-size: 0.9rem;
-    }
-
-    .perfil__nome-desc img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .botao-perfil {
-        font-size: 1rem;
-        padding: 8px 30px;
-    }
-
-    /* Vídeos e Posts Postados na Comunidade */
-    .postagens__categorias {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .posts-comunidade__tudo {
-        flex-wrap: wrap;
-    }
-
-    /* Modal Publicar */
-    .modal-content {
-        width: 90%;
-        max-width: 500px;
-    }
-}
-
-/* Media Query para telas de até 64rem (1024px) */
-@media screen and (max-width: 64rem) {
-    /* Reutiliza o mesmo estilo de 32rem */
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .menu__nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .menu__nav ul li a {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .menu__logo a img {
-        width: 80px;
-    }
-
-    /* Separação de Conteúdos */
-    .conteudos-perfil hr {
-        margin: 20px 0;
-    }
-
-    /* Perfil do Usuário da Comunidade */
-    .container__perfil-info {
-        gap: 40px;
-        padding-bottom: 40px;
-    }
-
-    .perfil__info {
-        flex-direction: column;
-        gap: 20px;
-        width: 90%;
-    }
-
-    .perfil__nome-desc {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .perfil__nome-desc h3 {
-        font-size: 1.2rem;
-    }
-
-    .perfil__nome-desc p {
-        font-size: 0.9rem;
-    }
-
-    .perfil__nome-desc img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .botao-perfil {
-        font-size: 1rem;
-        padding: 8px 30px;
-    }
-
-    /* Vídeos e Posts Postados na Comunidade */
-    .postagens__categorias {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .posts-comunidade__tudo {
-        flex-wrap: wrap;
-    }
-
-    /* Modal Publicar */
-    .modal-content {
-        width: 90%;
-        max-width: 500px;
-    }
-}
-
-/* Media Query para telas de até 75rem (1200px) */
-@media screen and (max-width: 75rem) {
-    /* Reutiliza o mesmo estilo de 32rem */
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .menu__nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .menu__nav ul li a {
-        font-size: 1rem;
-        text-align: center;
-    }
-
-    .menu__logo a img {
-        width: 80px;
-    }
-
-    /* Separação de Conteúdos */
-    .conteudos-perfil hr {
-        margin: 20px 0;
-    }
-
-    /* Perfil do Usuário da Comunidade */
-    .container__perfil-info {
-        gap: 40px;
-        padding-bottom: 40px;
-    }
-
-    .perfil__info {
-        flex-direction: column;
-        gap: 20px;
-        width: 90%;
-    }
-
-    .perfil__nome-desc {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .perfil__nome-desc h3 {
-        font-size: 1.2rem;
-    }
-
-    .perfil__nome-desc p {
-        font-size: 0.9rem;
-    }
-
-    .perfil__nome-desc img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .botao-perfil {
-        font-size: 1rem;
-        padding: 8px 30px;
-    }
-
-    /* Vídeos e Posts Postados na Comunidade */
-    .postagens__categorias {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .posts-comunidade__tudo {
-        flex-wrap: wrap;
-    }
-
-    /* Modal Publicar */
-    .modal-content {
-        width: 90%;
-        max-width: 500px;
-    }
-}

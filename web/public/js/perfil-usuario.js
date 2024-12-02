@@ -122,10 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("theme", "light");
             toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
         }
-    });
-});
-
-
+    })
+})
 
 let claroescuro = document.getElementById('claroescuro');
 
