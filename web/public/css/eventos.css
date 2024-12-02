@@ -82,7 +82,7 @@
 /* MODO ESCURO */
 
 body.dark .evento {
-    background-color: #3E3E40; /* Fundo cinza escuro */
+    background-color: #2d2d2d; /* Fundo cinza escuro */
 }
 
 body.dark .evento__categorias span {
