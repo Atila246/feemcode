@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha - Etapa 3</title>
+    <link rel="stylesheet" href="css/recupera.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Redefinir Senha</h2>
+        <form id="resetForm">
+            <label for="emailReset">Digite seu e-mail:</label>
+            <input type="email" id="emailReset" name="emailReset" required disabled>
+            <label for="nova_senha">Digite a nova senha:</label>
+            <input type="password" id="nova_senha" name="nova_senha" required>
+            <label for="confirma_senha">Confirme a nova senha:</label>
+            <input type="password" id="confirma_senha" name="confirma_senha" required>
+            <button type="submit">Redefinir senha</button>
+        </form>
+        <div class="message" id="resetMessage"></div>
+    </div>
+
+    <script>
+        // Captura o email da Etapa 2 via URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        document.getElementById('emailReset').value = email;
+
+        // Função para validar e redefinir a senha
+        document.getElementById('resetForm').onsubmit = function(event) {
+            event.preventDefault();
+
+            const novaSenha = document.getElementById('nova_senha').value;
+            const confirmaSenha = document.getElementById('confirma_senha').value;
+            const resetMessage = document.getElementById('resetMessage');
+
+            // Verifica se as senhas coincidem
+            if (novaSenha !== confirmaSenha) {
+                resetMessage.textContent = 'As senhas não coincidem.';
+                resetMessage.style.color = 'red';
+                return false; // Impede o envio do formulário
+            }
+
+            // Verifica se a senha é forte
+            const strongPasswordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+            if (!strongPasswordPattern.test(novaSenha)) {
+                resetMessage.textContent = 'A senha deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos.';
+                resetMessage.style.color = 'red';
+                return false; // Impede o envio do formulário
+            }
+
+            // Enviar a nova senha para o servidor
+            fetch('/reset-password', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, novaSenha })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Senha redefinida com sucesso!');
+                    window.location.href = 'step1.html'; // Redireciona de volta para a Etapa 1
+                } else {
+                    resetMessage.textContent = data.message || 'Erro ao redefinir a senha';
+                    resetMessage.style.color = 'red';
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao redefinir a senha:', error);
+                alert('Erro ao conectar com o servidor.');
+            });
+        };
+    </script>
+</body>
+</html>

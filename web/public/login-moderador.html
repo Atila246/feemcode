@@ -1,0 +1,112 @@
+<html lang="pt-br"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FemmCode - Login</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="images/apple-touch-icon - Copia.jpg">
+    
+    <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/login.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <figure class="logo-login">
+                    <img src="img/femmcodelogo.png" alt="">
+                </figure>
+                <h2 class="title title-primary">Prazer em conhecê-lo!</h2>
+                <p class="description description-primary meio">Crie seu perfil para participar de comunidades conosco</p>
+                <div class="botao-texto">
+                    <p class="description description-primary">Já tem uma conta?</p>
+                    <button id="signin" class="btn btn-primary">Entrar</button>
+                </div>
+            </div>   
+            <div class="second-column">
+                <h2 class="title title-second">Crie sua conta</h2>
+                <form class="form">
+                    <label class="form-label">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Digite seu nome" id="nome_cadastro">
+                    </label>
+                    
+                    <label class="form-label">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Digite seu Email" id="email_cadastro">
+                    </label>
+                    <label class="form-label">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Digite sua senha" id="senha_cadastro">
+                    </label>
+    
+                    <div class="terms-container">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">
+                          Li e aceito os <a href="termos.html" target="_blank">termos de Uso</a>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-second" id="btn-cadastro">Cadastrar-se</button>        
+                </form>
+                
+                <!-- <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div> -->
+                
+            </div>
+        </div>
+        
+        <div class="content second-content">
+            <div class="first-column">
+                <figure class="logo-login">
+                    <img src="img/femmcodelogo.png" alt="">
+                </figure>
+                <h2 class="title title-primary">Bem-vindo de volta!</h2>
+                <p class="description description-primary meio">Faça seu login para se manter conectado conosco</p>
+                <div class="botao-texto">
+                    <p class="description description-primary">Ainda não tem uma conta?</p>
+                    <button id="signup" class="btn btn-primary">Cadastrar-se</button>
+                </div>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Faça seu login</h2>
+                
+                <form class="form">
+                    <p id="mensagem"></p>
+                    <label class="form-label">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="email" placeholder="Email" id="email_login">
+                    </label>
+                
+                    <label class="form-label">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Digite sua senha" id="senha_login">
+                    </label>
+                    <a class="password" href="recupera.html">Esqueceu sua senha?</a>
+                   <button type="button" id="btn-login" class="btn btn-second">Entrar</button>
+                </form>
+                
+                
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+    
+</body>
+</html>

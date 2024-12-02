@@ -52,11 +52,11 @@ botao_quiz.addEventListener('click',()=>{
 function addMessage(boolean){
     let mensagem = document.getElementById('mensagem')
     if(boolean){
-        mensagem.innerHTML = "Muito bem! resposta correta"
+        mensagem.innerHTML = "A resposta está certa! Meus parabéns!"
         mensagem.style.display = "block"
         mensagem.style.color = "green"
     }else{
-        mensagem.innerHTML = "Reposta incorreta. Tente novamente"
+        mensagem.innerHTML = "Ops! Você acabou errando, mas pode tentar novamente!"
         mensagem.style.display = "block"
         mensagem.style.color = "red"
     }

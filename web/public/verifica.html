@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha - Etapa 2</title>
+    <link rel="stylesheet" href="css/recupera.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Verificar Código</h2>
+        <form id="verifyForm">
+            <label for="emailVerify">Digite seu e-mail:</label>
+            <input type="email" id="emailVerify" name="emailVerify" required disabled>
+            <label for="codigo">Digite o código enviado por e-mail:</label>
+            <input type="text" id="codigo" name="codigo" required>
+            <button type="button" onclick="verifyCode()">Verificar código</button>
+        </form>
+        <div id="error-message" style="color: red; display: none;">Código inválido. Tente novamente.</div>
+    </div>
+
+    <script>
+        // Captura o email da Etapa 1 via URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        document.getElementById('emailVerify').value = email;
+
+        // Função para verificar o código de recuperação
+        function verifyCode() {
+            const codigo = document.getElementById('codigo').value;
+
+            fetch('/verify-code', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, codigo })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'step3.html?email=' + encodeURIComponent(email); // Navega para a Etapa 3
+                } else {
+                    document.getElementById('error-message').style.display = 'block'; // Exibe mensagem de erro
+                    document.getElementById('error-message').textContent = data.message || 'Código inválido ou expirado';
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao verificar o código:', error);
+                alert('Erro ao conectar com o servidor.');
+            });
+        }
+    </script>
+</body>
+</html>
