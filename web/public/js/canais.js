@@ -104,7 +104,6 @@ if (modoEscuroAtivado) {
 }
 
 claroescuro.addEventListener('click', () => {
-<<<<<<< HEAD
   // Alternar a classe 'dark' no body e no botão
   document.body.classList.toggle('dark')
   claroescuro.classList.toggle('dark')
@@ -119,15 +118,6 @@ claroescuro.addEventListener('click', () => {
     button.classList.toggle('dark');
   })
 })
-=======
-  document.body.classList.toggle('dark');
-  claroescuro.classList.toggle('dark');
-  
-  const modoEscuroAtivado = document.body.classList.contains('dark');
-  localStorage.setItem('modoEscuro', modoEscuroAtivado);
-  
-  aplicarModoEscuro();
-});
 
 function aplicarModoEscuro() {
   document.querySelectorAll('.canal__sidebar').forEach(item => {
@@ -202,4 +192,3 @@ function aplicarModoEscuro() {
     item.classList.toggle('dark');
   });
 }
->>>>>>> e7fd4feb60802f9ebba040a5044a990f02db7daf
