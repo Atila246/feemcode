@@ -253,6 +253,14 @@
         </div>
     </div>
     <script>
+
+const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
+
+if (modoEscuroAtivado) {
+  document.body.classList.add('dark');
+  document.getElementById('claroescuro').classList.add('dark');
+}
+
         let claroescuro = document.getElementById('claroescuro'); 
 
 claroescuro.addEventListener('click', () => {

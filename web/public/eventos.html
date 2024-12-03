@@ -206,18 +206,5 @@
 
     </div>
 
-    <script>
-        let claroescuro = document.getElementById('claroescuro');
-
-claroescuro.addEventListener('click', () => {
-    // Alterna a classe 'dark' no body
-    document.body.classList.toggle('dark');
-
-    // Seleciona e alterna a classe 'dark' em todos os elementos relacionados ao modo escuro
-    document.querySelectorAll('.evento, .evento__categorias span, .evento__carrossel h2, .carrossel__list, .evento-item, .evento-item figure img, .evento-descricao h2, .evento-descricao span, .evento-descricao p').forEach(element => {
-        element.classList.toggle('dark');
-    });
-});
-    </script>
-</body>
+   </body>
 </html>

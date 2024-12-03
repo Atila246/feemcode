@@ -53,82 +53,38 @@
 }
 
 
-@media only screen and (max-width: 1440px) {
-    .historia {
-        width: 95%;
-    }
 
-    .historia__text h2 {
-        font-size: 2.8rem;
-    }
-
-    .historia__content p {
-        font-size: 1.1rem;
-    }
+/* MODO ESCURO */
+body.dark {
+    background-color: #2d2d2d;
+    color: #f0f0f0 !important;
 }
 
-@media only screen and (max-width: 940px) {
-    .historia__header {
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .historia__text h2 {
-        font-size: 2.5rem;
-    }
-
-    .historia__content p {
-        font-size: 1rem;
-    }
-
-    .historia__content a button {
-        font-size: 1rem;
-        padding: 6px 0;
-    }
+body.dark .historia {
+    color: #f0f0f0;
 }
 
-@media only screen and (max-width: 600px) {
-    .historia {
-        width: 100%;
-    }
-
-    .historia__text h2 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .historia__content p {
-        font-size: 0.9rem;
-    }
-
-    .historia__content a button {
-        font-size: 0.9rem;
-        padding: 5px 0;
-    }
-}
-/*Modo claro e escuro */
-/* Estilo padrão (claro) */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #007bff;
+body.dark .historia__content {
+    justify-content: start;
 }
 
-/* Estilo escuro */
-body.dark-mode {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --primary-color: #bb86fc;
+body.dark .historia-text h2 {
+    color: white;
 }
 
-/* Aplicação das variáveis */
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+body.dark .historia-text p {
+    color: white;
 }
 
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+body.dark .historia-text a button {
+    background-color: #ff69b4;
+}
+
+body.dark #historia {
+    border-bottom: 3px solid #ff69b4;
+}
+
+body.dark .historia-text a button {
+    background-color: #ff69b4;
+    color: white;
 }

@@ -278,122 +278,222 @@ body{
 
 
 /* MODO ESCURO */
-
 body.dark {
     background-color: #1e1e1e; 
     color: #f1f1f1; 
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Menu */
 body.dark .menu {
     background-color: #2a2a2a; 
     color: #f1f1f1; 
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+body.dark .menu__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 body.dark .menu__nav ul li a {
-    color: #f1f1f1; /* Links claros no menu */
+    color: #f1f1f1; 
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
 body.dark .menu__logo a img {
+    width: 100px;
     filter: brightness(0) invert(1); 
 }
 
+/* Separação de Conteúdos */
 body.dark .conteudos-perfil hr {
     background-color: #f36ec0; 
     opacity: 0.4; 
+    margin: 30px 0 20px;
 }
 
+/* Perfil do Usuário */
 body.dark .container__perfil-info {
-    background-color: #2a2a2a; /* Fundo escuro para o perfil */
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    background-color: #2a2a2a;
 }
 
 body.dark .perfil__info {
-    background-color: #3c3c3c; /* Fundo mais escuro para a área de informações */
-    color: #f1f1f1; /* Texto claro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+body.dark .perfil__nome-desc {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 70%;
 }
 
 body.dark .perfil__nome-desc h3, 
 body.dark .perfil__nome-desc p {
-    color: #f1f1f1; /* Texto claro no perfil */
+    color: #f1f1f1; 
+}
+
+body.dark .perfil__nome-desc img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 body.dark .botao-perfil {
-    background-color: #3c3c3c; /* Fundo mais escuro para o botão */
-    color: #FF66C4; /* Cor rosa para o texto */
+    background-color: #3c3c3c; 
+    color: #FF66C4; 
+    border: none;
+    border-radius: 20px;    
+    cursor: pointer;
+    padding: 10px 40px;
+    font-weight: 700;
 }
 
+/* Posts e Categorias */
 body.dark .perfil__aba-content {
-    background-color: #2a2a2a; /* Fundo escuro para as postagens */
+    width: 80%;
+    margin: 30px auto;
+    background-color: #2a2a2a;
 }
 
 body.dark .postagens__categorias span {
-    background-color: #3c3c3c; /* Fundo escuro para as categorias */
-    color: #e141a4; /* Cor rosa para as categorias */
-    border: 2px solid #e141a4; /* Borda rosa */
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #3c3c3c; 
+    color: #e141a4; 
+    border: 2px solid #e141a4; 
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 body.dark .postagens__categorias span:nth-child(1) {
-    background-color: #e141a4; /* Fundo mais forte para o primeiro item */
-    color: white; /* Texto branco */
+    background-color: #e141a4; 
+    color: white; 
 }
 
 body.dark .posts-comunidade h5, 
 body.dark .perfil__aba-content h5 {
-    color: #f1f1f1; /* Texto claro para os títulos */
+    font-size: 1.3rem;
+    color: #f1f1f1; 
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 body.dark .posts-comunidade__tudo {
-    background-color: #333333; /* Fundo escuro para a área de postagens */
+    display: flex;
+    gap: 40px;
+    background-color: #333333; 
 }
 
 body.dark .post-corpo p {
-    color: #f1f1f1; /* Texto claro dentro dos posts */
-    background-color: #3c3c3c; /* Fundo escuro dentro das postagens */
+    color: #f1f1f1; 
+    background-color: #3c3c3c; 
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
+/* Modal */
 body.dark .modal {
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo do modal mais escuro */
+    background-color: rgba(0, 0, 0, 0.8); 
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
 }
 
 body.dark .modal-content {
-    background-color: #333333; /* Fundo escuro para o conteúdo do modal */
-    color: #f1f1f1; /* Texto claro */
+    background-color: #333333; 
+    color: #f1f1f1; 
+    padding: 25px 40px;
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    gap: 10px;
 }
 
 body.dark .close {
-    color: #f1f1f1; /* Cor do botão de fechar */
+    font-size: 24px;
+    cursor: pointer;
+    color: #f1f1f1; 
+    display: flex;
+    justify-content: end;
 }
 
 body.dark .close:hover {
-    color: #ff66c4; /* Cor de hover do botão de fechar */
+    color: #ff66c4; 
 }
 
+/* Formulários */
 body.dark .form-container h2 {
-    color: #f1f1f1; /* Título claro no formulário */
+    font-size: 1.5rem;
+    color: #f1f1f1; 
+    font-weight: 600;
+    margin: 0;
 }
 
 body.dark .publicacao__form-item {
-    background-color: #3c3c3c; /* Fundo escuro para os campos de formulário */
-    color: #f1f1f1; /* Texto claro dentro dos campos */
+    background-color: #3c3c3c; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    margin: 10px;
+    border-radius: 15px;
+    color: #f1f1f1; 
+}
+
+body.dark .publicacao__form-item input, 
+body.dark .publicacao__form-item textarea {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #3c3c3c; 
+    color: #f1f1f1; 
+    outline: none;
+    padding: 10px;
+}
+
+body.dark .publicacao__form-item textarea {
+    height: 150px;
 }
 
 body.dark .publicacao__form button {
     background-color: #FF66C4; 
     color: white;
-}
-
-body.dark .publicacao__form-item input,
-body.dark .publicacao__form-item textarea {
-    background-color: #3c3c3c; 
-    color: #f1f1f1; 
+    font-size: 1rem;
     border: none;
-}
-
-body.dark .publicacao__form-item textarea {
-    background-color: #3c3c3c; 
+    border-radius: 30px;
+    padding: 10px;
+    width: 20%;
+    font-weight: 600;
+    margin: 25px auto;
+    cursor: pointer;
 }
 
 body.dark .icon-modify {
     color: #7f8c8d; 
-
+    padding: 0 5px;
 }
-

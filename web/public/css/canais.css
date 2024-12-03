@@ -164,283 +164,93 @@ body {
 }
 
 
-/* MODO ESCURO */
+
+/* MODO DARK*/
 body.dark {
-    background-color: #212529;
-    color: white; /* Definindo cor do texto para ser visível */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+    background-color: #121212; 
+    color: #ffffff; 
+
+/* Menu Lateral */
+.canal__sidebar.dark {
+    background-color: #2d2d2d; 
 }
 
-/* Títulos na sidebar e vídeos */
-.canal__videos h3.dark {
-    color: white;
+.canal__sidebar h3.dark {
+    color: #ffffff; 
+}
+
+.canal-list .canal-item.dark {
+    background-color: #3e3e3e; 
+    color: #ffffff; 
+    border-radius: 10px;
 }
 
 .perfil-canal button.dark {
-    border: none;
-    background: transparent;
-    color: #c9308e;
-    font-weight: 600;
+    color: #ff66c4; 
 }
 
-/* Nome do canal */
+.perfil-canal__dados figure img.dark {
+    border: 2px solid #ffffff;
+}
+
+
+
+.canal__videos.dark {
+    background-color: #2e2e2e;
+    border-left: 1px solid #333333; 
+}
+
+.canal__videos h3.dark {
+    color: #ffffff; 
+}
+
+.video-grid.dark .video-item {
+    background-color: #2d2d2d; 
+}
+
+.video-item__source video.dark {
+    border-radius: 10px; 
+.titulo-desc h3.dark {
+    color: #ffffff; 
+}
+
+.titulo-desc span.dark {
+    color: #bbbbbb; 
+}
+
+.video-item__desc img.dark {
+    border: 2px solid #ffffff; 
+}
+
+.evento__categorias span.dark {
+    color: #ffffff;
+}
+
+.evento-descricao h2.dark {
+    color: #ffffff; 
+}
+
+.evento-descricao span.dark,
+.evento-descricao p.dark {
+    color: #bbbbbb; 
+}
+
+.canal__sidebar h3.dark{
+    margin-bottom: 20px;
+    justify-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
 .perfil-canal__nome span:nth-child(1).dark {
     font-weight: 600;
     font-size: 1rem;
-    color: #e7f3ff;
+    color: #ffffff;
 }
 
 .perfil-canal__nome span:nth-child(2).dark {
     font-size: 0.8rem;
-    color: #212529;
+    color: #ffffffdf;
 }
 
-/* Descrição do vídeo */
-.titulo-desc span.dark {
-    color: #212529;
-    font-size: 1rem;
-}
-
-/* Efeito de transição para os elementos de modo escuro */
-.canal__videos h3, .perfil-canal button {
-    transition: color 0.3s ease, background 0.3s ease;
-}
-
-/* Estilo do botão no modo escuro */
-#claroescuro.dark img {
-    filter: invert(1); /* Torna o ícone da lâmpada mais visível no modo escuro */
-}
-
-
-
-/* Media Queries*/
-@media only screen and (max-width: 1440px) {
-    .barraCanais-container {
-        width: 30%;
-    }
-
-    .canal__videos {
-        width: 65%;
-    }
-
-    .video-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Ajusta para telas menores */
-    }
-
-    .video-item p {
-        font-size: 1rem;
-    }
-}
-
-@media only screen and (max-width: 940px) {
-    .canais {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .barraCanais-container {
-        width: 100%;
-    }
-
-    .canal__videos {
-        width: 100%;
-    }
-
-    .canal__sidebar {
-        padding: 20px;
-    }
-
-    .video-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Mais compacto */
-    }
-
-    .video-item p {
-        font-size: 0.9rem;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .video-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Para telas muito pequenas */
-    }
-
-    .video-item p {
-        font-size: 0.8rem;
-    }
-
-    .canal__sidebar h3,
-    .canal__videos h3 {
-        font-size: 1.2rem;
-    }
-
-    .canal-avatar {
-        width: 40px;
-        height: 40px;
-    }
-}
-/*Modo claro e escuro */
-/* Estilo padrão (claro) */
-
-
-
-/* Responsividade para tablets (máx. 768px) */
-@media (max-width: 48rem) { /* 768px */
-    .canais__header-titulo {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-
-    .canais__header-titulo h2 {
-        font-size: 1.8rem; /* Reduz tamanho do título */
-    }
-
-    .canais__header-titulo button {
-        padding: 0.5rem 2rem; /* Ajusta botão */
-        font-size: 1rem;
-    }
-
-    .canais__header p {
-        font-size: 1.2rem; /* Reduz texto */
-    }
-
-    .canais-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .canais-item figure {
-        width: 6rem; /* Reduz imagem */
-        height: 6rem;
-    }
-
-    .perfil-anal span:nth-child(1) {
-        font-size: 1.2rem; /* Ajusta nome */
-    }
-
-    .perfil-anal span:nth-child(2) {
-        font-size: 1rem; /* Ajusta descrição */
-    }
-
-    .canais__content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem; /* Espaço entre elementos */
-    }
-
-    .canal-butao button {
-        padding: 0.5rem 1.5rem; /* Ajusta botão */
-        font-size: 1rem;
-    }
-
-    .canais__videos {
-        width: 100%; 
-        padding: 0 15px; /* Reduz padding lateral */
-        margin: 20px 0;
-        border-left: none; /* Remove borda */
-    }
-
-    .canais__videos h3 {
-        font-size: 1.2rem; /* Reduz título da seção */
-        margin-bottom: 15px;
-    }
-
-    .video-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta grid */
-        gap: 15px; /* Reduz espaçamento */
-    }
-
-    .video-item__source {
-        height: 180px; /* Ajusta altura do vídeo */
-    }
-
-    .video-item__desc img {
-        width: 35px; /* Ajusta tamanho da miniatura */
-        height: 35px;
-    }
-
-    .titulo-desc h3 {
-        font-size: 1.1rem; /* Reduz título dos vídeos */
-    }
-
-    .titulo-desc span {
-        font-size: 0.9rem; /* Reduz subtítulo */
-    }
-}
-
-/* Responsividade para celulares (máx. 480px) */
-@media (max-width: 30rem) { /* 480px */
-    .canais__header-titulo {
-        gap: 1rem; /* Espaçamento menor */
-    }
-
-    .canais__header-titulo h2 {
-        font-size: 1.5rem; /* Reduz título */
-    }
-
-    .canais__header-titulo button {
-        padding: 0.5rem 1.5rem; /* Botão menor */
-        font-size: 0.9rem;
-    }
-
-    .canais__header p {
-        font-size: 1rem; /* Texto menor */
-    }
-
-    .canais-item {
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .canais-item figure {
-        width: 5rem; /* Ajusta tamanho da imagem */
-        height: 5rem;
-    }
-
-    .perfil-anal span:nth-child(1) {
-        font-size: 1rem; /* Nome menor */
-    }
-
-    .perfil-anal span:nth-child(2) {
-        font-size: 0.9rem; /* Descrição menor */
-    }
-
-    .canais__content {
-        gap: 1rem; /* Espaçamento reduzido */
-    }
-
-    .canal-butao button {
-        padding: 0.5rem 1rem; /* Botão menor */
-        font-size: 0.9rem;
-    }
-
-    .canais__videos {
-        padding: 0 10px; /* Reduz padding */
-    }
-
-    .video-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas mais compactas */
-        gap: 10px; /* Reduz espaçamento */
-    }
-
-    .video-item__source {
-        height: 150px; /* Altura menor para os vídeos */
-    }
-
-    .video-item__desc img {
-        width: 30px; /* Miniaturas menores */
-        height: 30px;
-    }
-
-    .titulo-desc h3 {
-        font-size: 1rem; /* Título ajustado */
-    }
-
-    .titulo-desc span {
-        font-size: 0.8rem; /* Subtítulo ajustado */
-    }
-}

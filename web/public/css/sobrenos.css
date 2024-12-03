@@ -19,7 +19,10 @@ body{
     font-size: 1.8rem;
     color: #212529;
 }
-
+.sobrenos-item span {
+    margin: 0;
+    font-size: 1rem;
+}
 .femmcode__header p{
     font-size: 1.2rem;
     color: #212529; 
@@ -149,401 +152,53 @@ body{
     border-radius: 5px;
 }
 
-@media (min-width: 32000px) {
-    body {
-        background-color: #fff6ff; /* Mantém o fundo para tablets */
-    }
 
-    .femmcode {
-        width: 70%; /* Reduz a largura para um layout mais compacto */
-        margin: 40px auto; /* Ajusta o espaçamento superior */
-    }
 
-    .femmcode__header-titulo {
-        display: flex;
-        justify-content: space-between; /* Alinha os elementos com espaçamento entre eles */
-        align-items: center; /* Centraliza verticalmente */
-    }
-
-    .femmcode__header-titulo h2 {
-        margin-bottom: 20px; /* Aumenta o espaço abaixo do título */
-        font-weight: 700 !important;
-        font-size: 2.5rem; /* Aumenta o tamanho do título para tablets */
-    }
-
-    .container-femmcode {
-        width: 90%; /* Reduz a largura do container */
-        margin: 0 auto; /* Centraliza o conteúdo */
-    }
-
-    /* Sobre Nós */
-    .sobrenos {
-        padding: 80px 0; /* Reduz o padding para telas menores */
-        background-image: url('../img/rodape.png');
-        box-shadow: inset 0 0 15px 4px #592979; /* Suaviza o efeito de sombra */
-    }
-
-    .sobrenos-item {
-        padding: 30px; /* Reduz o padding interno */
-        display: flex;
-        flex-direction: column; /* Alinha os itens verticalmente */
-        align-items: center; /* Centraliza os itens */
-        gap: 15px; /* Reduz o espaçamento entre os elementos */
-        background-color: #fff6ff !important;
-        border-radius: 10px !important; /* Reduz o arredondamento */
-        box-shadow: 0 0 15px 2px #592979cb; /* Suaviza a sombra */
-        width: 30%; /* Ajusta a largura dos itens */
-        text-align: center;
-    }
-
-    .sobrenos__content {
-        display: flex;
-        flex-wrap: wrap; /* Permite que os itens quebrem linha */
-        justify-content: space-between; /* Ajusta o espaçamento entre os itens */
-        margin: 0 auto;
-        gap: 20px; /* Adiciona espaçamento entre as colunas */
-    }
-
-    .sobrenos-equipe {
-        margin-bottom: 30px; /* Aumenta o espaçamento inferior */
-        width: 85%; /* Ajusta a largura */
-        margin: 0 auto;
-    }
-
-    .sobrenos-equipe figure {
-        width: 100px; /* Aumenta o tamanho das imagens */
-        height: 100px;
-        margin: 0 auto; /* Centraliza a figura */
-    }
-
-    .sobrenos-equipe figure img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%; /* Mantém a imagem circular */
-        object-fit: cover;
-    }
-
-    .equipe__content {
-        display: flex;
-        flex-wrap: wrap; /* Permite quebra de linha em dispositivos menores */
-        justify-content: center; /* Centraliza os itens */
-        gap: 20px; /* Adiciona espaçamento entre os elementos */
-    }
-
-    .equipe__content-titulo h2 {
-        margin-bottom: 40px; /* Aumenta o espaçamento inferior */
-        font-weight: 700 !important;
-        font-size: 2rem; /* Ajusta o tamanho do título */
-    }
-
-    .equipe-item {
-        padding: 30px; /* Reduz o padding interno */
-        display: flex;
-        flex-direction: column; /* Organiza os elementos verticalmente */
-        align-items: center; /* Centraliza o conteúdo */
-        gap: 15px; /* Ajusta o espaçamento entre os itens */
-        background-color: #fff6ff !important;
-        border-radius: 10px !important;
-        text-align: center;
-        border: 1px solid #8c8c8ca3 !important;
-        width: 40%; /* Ajusta a largura para tablets */
-    }
-
-    .equipe-item h3,
-    .sobrenos-item h3 {
-        margin: 0;
-        font-size: 1.4rem; /* Ajusta o tamanho do título */
-    }
-
-    .equipe-item h3 {
-        font-size: 1.6rem; /* Dá um destaque maior aos títulos da equipe */
-    }
-
-    .equipe-item p {
-        margin: 0;
-        font-size: 1rem; /* Ajusta o tamanho do parágrafo */
-    }
+/* Modo Escuro */
+body.dark {
+    background-color: #2d2d2d; 
+    color: #f0f0f0 !important;  
 }
 
-@media (max-width: 48rem) {
-    body {
-        background-color: #fff6ff;
-    }
-
-    .femmcode {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .femmcode__header-titulo {
-        display: flex;
-        flex-direction: column; /* Alinha os itens verticalmente */
-        align-items: center;
-        gap: 10px; /* Espaçamento entre o título e os demais elementos */
-    }
-
-    .femmcode__header-titulo h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-        text-align: center; /* Centraliza o texto */
-    }
-
-    .container-femmcode {
-        width: 100%; /* Ocupa toda a largura */
-        margin: 0 auto;
-    }
-
-    .sobrenos {
-        padding: 60px 0;
-        background-image: url('../img/rodape.png');
-        box-shadow: inset 0 0 10px 3px #592979;
-    }
-
-    .sobrenos-item {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        background-color: #fff6ff !important;
-        border-radius: 10px !important;
-        box-shadow: 0 0 10px 2px #592979cb;
-        width: 100%; /* Ocupa toda a largura */
-        text-align: center;
-    }
-
-    .sobrenos__content {
-        display: flex;
-        flex-direction: column; /* Alinha os itens em uma única coluna */
-        gap: 15px;
-        margin: 0 auto;
-    }
-
-    .sobrenos-equipe {
-        margin-bottom: 20px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .sobrenos-equipe figure {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-    }
-
-    .sobrenos-equipe figure img {
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .equipe__content {
-        display: flex;
-        flex-direction: column; /* Alinha os itens verticalmente */
-        align-items: center; /* Centraliza o conteúdo */
-        gap: 15px;
-    }
-
-    .equipe__content-titulo h2 {
-        margin-bottom: 30px;
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .equipe-item {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        background-color: #fff6ff !important;
-        border-radius: 10px !important;
-        text-align: center;
-        border: 1px solid #8c8c8ca3 !important;
-        width: 100%; /* Ocupa toda a largura */
-    }
-
-    .equipe-item h3,
-    .sobrenos-item h3 {
-        font-size: 1.2rem;
-    }
-
-    .equipe-item p {
-        font-size: 0.9rem;
-    }
+.sobrenos-item.dark {
+    padding: 20px 40px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #212529;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 2px #602d829e;
+    width: 25%;
+    text-align: center;
+}
+.sobrenos-item span.dark {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
 }
 
-
-/* MODO ESCURO */
-
-body {
-    background-color: #fff6ff;
+.femmcode__header p.dark {
+    font-size: 1.2rem;
+    color: #ffffff;
 }
 
-.femmcode {
-    width: 80%;
-    margin: 50px auto;
+.femmcode__header-titulo h2.dark {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.equipe-item__desc h3.dark {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+    color:white;
 }
 
 .femmcode__header-titulo {
     display: flex;
-}
-
-.femmcode__header-titulo h2 {
-    margin-bottom: 10px;
-    font-weight: 700 !important;
-    font-size: 2rem;
-}
-
-.container-femmcode {
-    width: 100%;
-}
-
-.sobrenos {
-    padding: 100px 0;
-    background-image: url('../img/rodape.png');
-    box-shadow: inset 0 0 20px 5px #592979;
-}
-
-.sobrenos-item {
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #fff6ff !important;
-    border-radius: 15px !important;
-    box-shadow: 0 0 20px 2px #592979cb;
-    width: 25%;
-    text-align: center;
-}
-
-.sobrenos__content, .equipe__content {
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-around;
-}
-
-.sobrenos-equipe {
-    margin-bottom: 15px;  
-    width: 80%;
-    margin: 0 auto; 
-}
-
-.sobrenos-equipe figure {
-    width: 80px;
-    height: 80px;
-    margin: 0;
-}
-
-.sobrenos-equipe figure img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.equipe__content-titulo h2 {
-    margin-bottom: 30px;
-    font-weight: 700 !important;
-}
-
-.equipe-item {
-    padding: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #fff6ff !important;
-    border-radius: 15px !important;
-    text-align: center;
-    border: 1px solid #8c8c8ca3 !important;
-}
-
-.equipe-item h3, .sobrenos-item h3 {
-    margin: 0;
-}
-
-.equipe-item h3 {
-    font-size: 1.5rem;
-}
-
-.equipe-item p {
-    margin: 0;
-}
-
-/* Modo Escuro */
-body.dark {
-    background-color: #333; /* Fundo escuro */
-    color: #fff; /* Texto claro */
-}
-
-/* Modificando o rodapé para modo escuro */
-body.dark .sobrenos {
-    background-color: #222; /* Fundo do rodapé escuro */
-    box-shadow: inset 0 0 20px 5px #8c4c8f; /* Cor de sombra mais suave */
-}
-
-/* Modificando itens de "Sobre Nós" para o modo escuro */
-body.dark .sobrenos-item {
-    background-color: #444; /* Fundo mais escuro */
-    box-shadow: 0 0 20px 2px #8c4c8f; /* Sombra mais suave */
-    color: #ccc; /* Texto mais claro */
-}
-
-/* Ajustando a cor do conteúdo */
-body.dark .sobrenos__content, body.dark .equipe__content {
-    color: #ccc;
-}
-
-body.dark .sobrenos-equipe figure img {
-    border: 2px solid #fff; /* Contorno da imagem para destaque */
-}
-
-body.dark .equipe-item {
-    background-color: #444; /* Fundo mais escuro para os itens de equipe */
-    border: 1px solid #666; /* Borda suave */
-    color: #ccc; /* Texto claro */
-}
-
-/* Modificando o título da equipe */
-body.dark .equipe__content-titulo h2 {
-    color: #fff;
-}
-
-/* Modificando o cabeçalho e textos para o modo escuro */
-body.dark .femmcode__header-titulo h2 {
-    color: #fff;
-}
-
-body.dark .femmcode {
-    background-color: #333; /* Fundo escuro para a área de conteúdo */
-}
-
-body.dark .femmcode__header-titulo {
-    color: #fff;
-}
-
-/* Modificando o botão e os campos de input */
-body.dark .footer__feedback textarea {
-    background-color: #333;
-    color: #ccc;
-    border: 2px solid #555;
-}
-
-body.dark .footer__feedback button {
-    background-color: #444;
-    color: #fff;
-}
-
-/* Modificando as cores de texto e ícones */
-body.dark .sobrenos-item h3, body.dark .equipe-item h3 {
-    color: #fff;
-}
-
-/* Modificando os links para o modo escuro */
-body.dark .femmcode__header-titulo a {
-    color: #ddd; /* Links mais claros */
-}
-
-/* Modificando as cores de texto de subtítulos e parágrafos */
-body.dark .sobrenos-item p, body.dark .equipe-item p {
-    color: #ccc;
+    color: white;
 }

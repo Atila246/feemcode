@@ -92,3 +92,38 @@
 .card {
     background: transparent;
 }
+
+/* MODO DARK */
+
+
+.video-item.dark {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 20px;
+    padding-bottom: 30px;
+    background-color:#3E3E40;
+
+}
+
+.video-item h3.dark {
+    margin: 0 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    color:white;
+}
+
+.video-item__desc span.dark {
+    line-height: 1.6;
+    color:white;
+}
+
+.titulo-desc span:nth-child(1).dark {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.titulo-desc span.dark{
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8rem;
+}

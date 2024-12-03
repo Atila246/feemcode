@@ -53,39 +53,39 @@ perfil_nome.innerHTML = comunidade.nomeComunidade
 perfil_bio.innerHTML = comunidade.bio
 
 
+const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
 
-let claroescuro = document.getElementById('claroescuro'); 
+if (modoEscuroAtivado) {
+  document.body.classList.add('dark');
+  document.getElementById('claroescuro').classList.add('dark');
+}
+
+
+let claroescuro = document.getElementById('claroescuro');
+
 claroescuro.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-  
-  document.querySelectorAll('.menu, .menu__nav ul li a').forEach(element => {
+
+  document.querySelectorAll('.postagens__categorias span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.perfil__nome-desc h3, .perfil__nome-desc p').forEach(element => {
     element.classList.toggle('dark');
   });
 
-  document.querySelectorAll('.container__perfil-info, .perfil__info, .perfil__nome-desc, .botao-perfil').forEach(element => {
+  document.querySelectorAll('.post-corpo h2, .post-corpo p').forEach(element => {
     element.classList.toggle('dark');
   });
 
-  document.querySelectorAll('.perfil__aba-content, .postagens__categorias span').forEach(element => {
-    element.classList.toggle('dark');
+  document.querySelectorAll('.perfil__aba-content h5').forEach(h5 => {
+    h5.classList.toggle('dark');
   });
 
-  document.querySelectorAll('.posts-comunidade h5, .post-corpo p').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  document.querySelectorAll('.modal, .modal-content, .close').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  document.querySelectorAll('.publicacao__form-item, .publicacao__form button').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  document.querySelectorAll('.icon-modify').forEach(element => {
-    element.classList.toggle('dark');
-  });
+  let img = claroescuro.querySelector('img');
+  if (document.body.classList.contains('dark')) {
+    img.src = 'img/lampada-apagada.png'; 
+  } else {
+    img.src = 'img/lampada-brilhante.png'; 
+  }
 });
-
-
-

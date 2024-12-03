@@ -101,5 +101,42 @@
             </div>
         </div>
     </div>
+    <script>
+    
+
+    const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
+
+if (modoEscuroAtivado) {
+  document.body.classList.add('dark');
+  document.getElementById('claroescuro').classList.add('dark');
+}
+
+
+    let claroescuro = document.getElementById('claroescuro');
+
+claroescuro.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  document.querySelectorAll('.video-item').forEach(video => {
+    video.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.video-item h3').forEach(h3 => {
+    h3.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.video-item__desc span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.titulo-desc span:nth-child(1)').forEach(span => {
+    span.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.titulo-desc span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+});
+    </script>
 </body>
 </html>

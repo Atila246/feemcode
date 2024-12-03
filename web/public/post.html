@@ -61,9 +61,9 @@
                             <i class="fi fi-tr-circle-user" style="display:none;"></i>
                         </span>
                     </a>
-                    <!-- <button id="theme-toggle" class="theme-toggle">
-                        <i id="theme-icon" class="fi fi-rs-sun"></i>
-                    </button> -->
+                    <button id="claroescuro">
+                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
+                    </button>
                     <a href="login.html">
                         <button id="cadastre-se">Cadastre-se</button>
                     </a>
@@ -121,5 +121,74 @@
             </div>
         </section>
     </div>
+   
+    <script>
+        let claroescuro = document.getElementById('claroescuro');
+
+claroescuro.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    
+    document.querySelectorAll('.container-post').forEach(container => {
+        container.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.post').forEach(post => {
+        post.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.post__header button').forEach(button => {
+        button.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.perfil-post a img').forEach(img => {
+        img.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.perfil-post__nome').forEach(nome => {
+        nome.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.perfil-post__nome .temp').forEach(temp => {
+        temp.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.perfil-post__nome #comunidade').forEach(comunidade => {
+        comunidade.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.perfil-post__nome .user').forEach(user => {
+        user.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.perfil-post a').forEach(link => {
+        link.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.post-like, .post-save').forEach(icon => {
+        icon.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.pontinhos__post').forEach(pontinhos => {
+        pontinhos.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.pontinhos-list ul').forEach(list => {
+        list.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.pontinhos-list ul li').forEach(item => {
+        item.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.post__corpo').forEach(corpo => {
+        corpo.classList.toggle('dark');
+    });
+
+    document.querySelectorAll('.post__corpo p, .post__corpo h2').forEach(text => {
+        text.classList.toggle('dark');
+    });
+});
+    </script>
+
 </body>
 </html>

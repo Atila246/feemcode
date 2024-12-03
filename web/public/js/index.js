@@ -71,44 +71,107 @@ controls.forEach((control) => {
     });
 });
 
-let claroescuro = document.getElementById('claroescuro'); 
+let claroescuro = document.getElementById('claroescuro');
+
+// Verificar o estado do modo escuro no localStorage ao carregar a página
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('modoEscuro') === 'true') {
+    document.body.classList.add('dark');
+    toggleDarkModeElements();
+  }
+});
 
 claroescuro.addEventListener('click', () => {
-  // Alterna a classe 'dark' no body para ativar/desativar o modo escuro
+  // Alternar a classe 'dark' no body
   document.body.classList.toggle('dark');
+  
+  // Alternar a classe 'dark' nos elementos especificados
+  toggleDarkModeElements();
 
-  // Alterando as classes da barra de rolagem
-  document.querySelectorAll('::-webkit-scrollbar-thumb').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  // Estilos gerais
-  document.querySelectorAll('.container-main, .container-main hr, .header__carrossa').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  // Alterando as classes de carrossel
-  document.querySelectorAll('.carrossa-item, .current-item').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  // Alterando as classes de seções
-  document.querySelectorAll('.item__header p, .header-titulo h2').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  // Alterando as classes de comunidade
-  document.querySelectorAll('.comunidade__carrossel h4, .comunidade-item').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  // Alterando as classes de evento
-  document.querySelectorAll('.evento-item, .evento-desc p').forEach(element => {
-    element.classList.toggle('dark');
-  });
-
-  // Alterando as classes de canal
-  document.querySelectorAll('.canal-item, .perfil-canal span').forEach(element => {
-    element.classList.toggle('dark');
-  });
+  // Salvar o estado do modo escuro no localStorage
+  const modoEscuroAtivado = document.body.classList.contains('dark');
+  localStorage.setItem('modoEscuro', modoEscuroAtivado);
 });
+
+// Função para alternar a classe 'dark' nos elementos específicos
+function toggleDarkModeElements() {
+  document.querySelectorAll('.container-main').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.carrossa-item').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.header-titulo h2').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.item__header p').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.header-titulo button').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.comunidade-item').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.evento-item').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.canal-item').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.comunidade-item h4').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.evento-desc p').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.perfil-canal span').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.comunidade__carrossel h4').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.equipe-item h4').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.equipe-item').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.equipe-item__desc').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.historia-text h2').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.historia-text p').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.titulo-desc span').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.evento-local span').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.evento-local span i').forEach(item => {
+    item.classList.toggle('dark');
+  });
+}
