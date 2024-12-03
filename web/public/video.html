@@ -26,6 +26,19 @@
     </style>
 </head>
 <body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+      
     <div class="container-video">
         <header class="container-header"> 
             <section class="header"> 
@@ -102,5 +115,42 @@
             </div>
         </div>
     </div>
+    <script>
+    
+
+    const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
+
+if (modoEscuroAtivado) {
+  document.body.classList.add('dark');
+  document.getElementById('claroescuro').classList.add('dark');
+}
+
+
+    let claroescuro = document.getElementById('claroescuro');
+
+claroescuro.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  document.querySelectorAll('.video-item').forEach(video => {
+    video.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.video-item h3').forEach(h3 => {
+    h3.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.video-item__desc span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.titulo-desc span:nth-child(1)').forEach(span => {
+    span.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.titulo-desc span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+});
+    </script>
 </body>
 </html>

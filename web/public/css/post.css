@@ -133,3 +133,63 @@
     font-weight: 600;
     margin: 0;
 }
+
+/* MODO ESCURO */
+.container-post.dark {
+    background-color: #2d2d2d;
+}
+
+.post.dark {
+    background-color: #3E3E40;
+    color: white;
+}
+
+.post__header.dark button {
+    background-color: #ff66c4;
+    color: #ffffff;
+}
+
+.perfil-post a.dark img {
+    border: 2px solid white;
+}
+
+.perfil-post__nome.dark {
+    color: white;
+}
+
+.perfil-post__nome .temp.dark {
+    color: #e5e5e5;
+}
+
+.perfil-post__nome #comunidade.dark {
+    color: white;
+}
+
+.perfil-post__nome .user.dark {
+    color: #ffffffdf;
+}
+
+.perfil-post a.dark {
+    color: white;
+}
+
+.post-like.dark, .post-save.dark {
+    color: #ff66c4;
+}
+
+.pontinhos__post.dark {
+    color: #ff66c4;
+}
+
+.pontinhos-list ul.dark {
+    background-color: #3E3E40;
+    box-shadow: 0px 0px 10px 1px #000000a1;
+}
+
+.pontinhos-list ul li.dark {
+    color: white;
+}
+
+.post__corpo.dark p, .post__corpo.dark h2 {
+    color: white;
+}

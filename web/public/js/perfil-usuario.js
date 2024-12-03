@@ -133,3 +133,85 @@ function salvarPerfil() {
 //         }
 //     })
 // })
+//         if (body.classList.contains("dark-mode")) {
+//             localStorage.setItem("theme", "dark");
+//             toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
+//         } else {
+//             localStorage.setItem("theme", "light");
+//             toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
+//         }
+//     })
+// })  
+
+
+const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
+
+if (modoEscuroAtivado) {
+  document.body.classList.add('dark');
+  document.getElementById('claroescuro').classList.add('dark');
+}
+
+
+let claroescuro = document.getElementById('claroescuro');
+
+claroescuro.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  document.querySelector('.container__perfil-info').classList.toggle('dark');
+  
+  document.querySelectorAll('.menu__nav ul li a').forEach(link => {
+    link.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('h5').forEach(h5 => {
+    h5.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.comunidade__post').forEach(post => {
+    post.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.titulo-desc span').forEach(span => {
+    span.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.video-item__desc').forEach(desc => {
+    desc.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.video-item').forEach(video => {
+    video.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.post-corpo').forEach(postBody => {
+    postBody.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.perfil-post__nome #comunidade').forEach(nome => {
+    nome.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.perfil-post__nome .temp').forEach(temp => {
+    temp.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('i[class^="fi-sr-"], i[class*=" fi-sr-"], span[class^="fi-sr-"], span[class*="fi-sr-"]').forEach(icon => {
+    icon.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.perfil-post__nome .user').forEach(user => {
+    user.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.modal-content').forEach(modal => {
+    modal.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.editar__form button').forEach(button => {
+    button.classList.toggle('dark');
+  });
+  
+  document.querySelectorAll('.form-container h2').forEach(h2 => {
+    h2.classList.toggle('dark');
+  });
+});
+

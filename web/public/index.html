@@ -34,8 +34,24 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
 </head>
+    
 <body>
-    <!--container principal-->
+
+      
+    <div vw class="enabled">
+   <div vw-access-button class="active"></div>
+   <div vw-plugin-wrapper>
+       <div class="vw-plugin-top-wrapper"></div>
+   </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    });
+</script>
+    
+   <!--container principal-->
     <div class="container-content"> 
         <!--header-->
         <header class="container-header"> 
@@ -118,6 +134,18 @@
             </section>
         </header>
 
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+    
+    
         <main class="container-main"> 
             <hr class="first-line">
 
@@ -419,7 +447,7 @@
                         <a href="manualusuario.html">
                             <span>Manual do usuário</span>
                         </a>
-                        <a href="termos.html">
+                        <a href="termos.html"> 
                             <span>Termos de uso</span>
                         </a>
                     </div>

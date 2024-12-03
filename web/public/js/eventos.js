@@ -83,29 +83,41 @@ btn_salvar_evento.addEventListener('click', () => {
     window.location.href="eventos.html"
 })
 
+const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
+
+if (modoEscuroAtivado) {
+  document.body.classList.add('dark');
+  document.getElementById('claroescuro').classList.add('dark');
+}
+
+
+let claroescuro = document.getElementById('claroescuro');
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('modoEscuro') === 'true') {
+    document.body.classList.add('dark');
+    claroescuro.classList.add('dark'); 
+    toggleDarkModeElements(); 
+  }
+});
 
 claroescuro.addEventListener('click', () => {
-  // Alternar a classe 'dark' no body e no botão
   document.body.classList.toggle('dark');
   claroescuro.classList.toggle('dark');
-  
-  // Alternar a classe 'dark' em todos os spans dentro de .evento__categorias
-  document.querySelectorAll('.evento__categorias span').forEach(span => {
-    span.classList.toggle('dark');
+
+  const modoEscuroAtivado = document.body.classList.contains('dark');
+  localStorage.setItem('modoEscuro', modoEscuroAtivado);
+
+  toggleDarkModeElements();
+});
+
+function toggleDarkModeElements() {
+  document.querySelectorAll('.canal__videos h3').forEach(h3 => {
+    h3.classList.toggle('dark');
   });
 
-  // Alternar a classe 'dark' em todos os h2 dentro de .evento-descricao
-  document.querySelectorAll('.evento-descricao h2').forEach(h2 => {
-    h2.classList.toggle('dark');
+  document.querySelectorAll('.perfil-canal button').forEach(button => {
+    button.classList.toggle('dark');
   });
-  
-  // Alternar a classe 'dark' em todos os spans dentro de .evento-descricao
-  document.querySelectorAll('.evento-descricao span').forEach(span => {
-    span.classList.toggle('dark');
-  });
-  
-  // Alternar a classe 'dark' em todos os parágrafos dentro de .evento-descricao
-  document.querySelectorAll('.evento-descricao p').forEach(p => {
-    p.classList.toggle('dark');
-  });
-});
+
+}

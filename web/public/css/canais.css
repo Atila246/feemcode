@@ -174,30 +174,89 @@ body {
 }
 
 
-/* MODO ESCURO */
+
+/* MODO DARK*/
 body.dark {
-    background-color: #212529;
-    color: white; /* Definindo cor do texto para ser visível */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+    background-color: #121212; 
+    color: #ffffff; 
+
+/* Menu Lateral */
+.canal__sidebar.dark {
+    background-color: #2d2d2d; 
 }
 
-/* Títulos na sidebar e vídeos */
-.canal__videos h3.dark {
-    color: white;
+.canal__sidebar h3.dark {
+    color: #ffffff; 
+}
+
+.canal-list .canal-item.dark {
+    background-color: #3e3e3e; 
+    color: #ffffff; 
+    border-radius: 10px;
 }
 
 .perfil-canal button.dark {
-    border: none;
-    background: transparent;
-    color: #c9308e;
-    font-weight: 600;
+    color: #ff66c4; 
 }
 
-/* Nome do canal */
+.perfil-canal__dados figure img.dark {
+    border: 2px solid #ffffff;
+}
+
+
+
+.canal__videos.dark {
+    background-color: #2e2e2e;
+    border-left: 1px solid #333333; 
+}
+
+.canal__videos h3.dark {
+    color: #ffffff; 
+}
+
+.video-grid.dark .video-item {
+    background-color: #2d2d2d; 
+}
+
+.video-item__source video.dark {
+    border-radius: 10px; 
+.titulo-desc h3.dark {
+    color: #ffffff; 
+}
+
+.titulo-desc span.dark {
+    color: #bbbbbb; 
+}
+
+.video-item__desc img.dark {
+    border: 2px solid #ffffff; 
+}
+
+.evento__categorias span.dark {
+    color: #ffffff;
+}
+
+.evento-descricao h2.dark {
+    color: #ffffff; 
+}
+
+.evento-descricao span.dark,
+.evento-descricao p.dark {
+    color: #bbbbbb; 
+}
+
+.canal__sidebar h3.dark{
+    margin-bottom: 20px;
+    justify-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
 .perfil-canal__nome span:nth-child(1).dark {
     font-weight: 600;
     font-size: 1rem;
-    color: #e7f3ff;
+    color: #ffffff;
 }
 
 .perfil-canal__nome span:nth-child(2).dark {

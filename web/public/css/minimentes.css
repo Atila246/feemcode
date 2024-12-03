@@ -175,12 +175,12 @@
 
 
 /* MODO ESCURO  */
+
 body.dark {
     background-color: #1e1e1e; /* Cor de fundo escura */
     color: #f1f1f1; /* Texto claro */
 }
 
-/* Alterações específicas para a .canal__sidebar */
 body.dark .canal__sidebar {
     background-color: #2a2a2a; /* Fundo mais escuro para a sidebar */
     color: #f1f1f1; /* Texto claro */
@@ -232,18 +232,40 @@ body.dark .video-item__source {
 
 /* Alterações para as categorias */
 body.dark .postagens__categorias span {
-    background-color: #3c3c3c; /* Fundo escuro para categorias */
-    color: #e141a4; /* Cor rosa para as categorias */
-    border: 2px solid #e141a4; /* Borda rosa para categorias */
-}
+    background-color: #3c3c3c;
+    color: #e141a4;
+    border: 2px solid #e141a4; 
 
-body.dark .postagens__categorias span:nth-child(1) {
-    background-color: #e141a4; /* Cor de fundo mais forte para a primeira categoria */
-    color: white; /* Texto branco */
+.postagens__categorias span:nth-child(1).dark {
+    background-color: #e141a4; 
+    color: white; 
 }
 
 /* Efeitos de hover */
 body.dark .minimentes__postagens .video-item:hover {
     background-color: #444444; /* Tom mais claro ao passar o mouse */
     transition: background-color 0.3s ease;
+}
+
+.canal__sidebar h3.dark {
+    margin-bottom: 20px;
+    justify-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.perfil-canal__nome span:nth-child(1).dark {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.perfil-canal__nome span:nth-child(2).dark {
+    font-size: 0.8rem;
+    color: #ffffffdf;
+}_
+
+.postagens.dark {
+    border-left: 1px solid #e141a4;
 }

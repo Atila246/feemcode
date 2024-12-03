@@ -23,6 +23,19 @@
     </style>
 </head>
 <body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+      
     <div class="container-content">
         <header class="container-header"> 
             <section class="header"> 
@@ -146,5 +159,50 @@
             </div>           
         </footer>
     </div>
+
+    <script>
+
+const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
+
+if (modoEscuroAtivado) {
+  document.body.classList.add('dark');
+  document.getElementById('claroescuro').classList.add('dark');
+}
+
+        let claroescuro = document.getElementById('claroescuro');
+
+claroescuro.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  document.querySelectorAll('.historia').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.historia__content').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.historia-text').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.historia-text h2').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.historia-text p').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('.historia-text a button').forEach(item => {
+    item.classList.toggle('dark');
+  });
+
+  document.querySelectorAll('#historia').forEach(item => {
+    item.classList.toggle('dark');
+  });
+});
+
+    </script>
 </body>
 </html>
