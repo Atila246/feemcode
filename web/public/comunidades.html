@@ -12,12 +12,17 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/comunidades.css">
     <script type="text/javascript" src="js/comunidades.js" defer></script>
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="js/carrega-usuario.js" defer></script>
 
     <!--flaticon-->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
     <!--fontawsome-->
     <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
@@ -60,24 +65,23 @@
 
                 <!--perfil-->
                 <div class="header__perfil"> <!-- div perfil -->
-                    <a id="link-cadastro" href="perfil.html">
-                        <span id="cadastrado"  style="display:none;">
+                    <button id="claroescuro">
+                        <i class="fi fi-tr-lightbulb-on"></i>
+                    </button>
+                    <a id="link-cadastro" href="perfil-usuario.html">
+                        <span id="cadastrado" style="display:none;">
                             <i class="fi fi-tr-circle-user"></i>
                         </span>
                     </a>
-                    <button id="claroescuro">
-                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
-                    </button>
-                    <a href="login.html">
+                    <a href="login-usuario.html">
                         <button id="cadastre-se">Cadastre-se</button>
-                    </a>
+                    </a> 
                 </div>
             </section>
         </header>
 
         <div class="comunidade"> <!-- div da rolagem de postagens de mentirinha -->
             <section class="comunidade__usuarios">
-
                 <div class="comunidade__usuarios-header">
                     <span>Comunidades</span>
                     <button id="comunidade-btn">+ Criar comunidade</button>
@@ -93,24 +97,34 @@
 
                 <div class="modal" id="comunidade-modal">
                     <div class="form-container modal-content">
+                        <span class="close">&times;</span>
                         <h2>Criar comunidade</h2>
-                        <form class="comunidade__form">
+                        <form class="section__form" enctype="multipart/form-data" method="POST">
                             <p>Preencha os campos para criar sua comunidade</p>
-                            <figure>
-                                <!-- <img src="img/adicionar_perfil.webp" alt=""> -->
-                                <i class="fi fi-sr-camera"></i>
-                            </figure>
-                            <div class="comunidade__form-item">
+                            <!-- <div class="camera">
+                                <i class="fi fi-rr-camera icon-modify"></i>
+                            </div> -->
+                            <!-- <div class="file-comunidade camera">
+                                <label for="photo">
+                                    <i class="fi fi-rr-user-pen"></i>
+                                </label>
+                                <input type="file" name="photo" id="photo" accept="image/*" style="display: none;">
+                            </div> -->
+                            <div class="section__form-item">
                                 <i class="fa-solid fa-users icon-modify"></i>
-                                <input type="text" placeholder="Digite o nome da comunidade">
+                                <input type="text" placeholder="Digite o nome da comunidade" id="nome-comunidade">
                             </div>
-                            <div class="comunidade__form-item">
+                            <div class="section__form-item">
                                 <i class="fa-solid fa-quote-left icon-modify"></i>
-                                <input type="text" placeholder="Digite a descrição da comunidade">
+                                <input type="text" placeholder="Digite a descrição da comunidade" id="bio-comunidade">
                             </div>
-                            <button type="button" id="comunidade-btn">Criar</button>
+                            <a href="#"><button type="button" id="btn-salvar-comunidade">Criar</button></a>
                         </form>
                     </div>
+                </div>
+
+                <div class="todas-comunidades">
+
                 </div>
             </section>
 
@@ -148,8 +162,8 @@
                                 <i class="fi fi-br-menu-dots-vertical"></i>
                                 <div class="pontinhos-list">
                                     <ul id="options-post1">
-                                        <li>Salvos</li>
-                                        <li>Salvos</li>
+                                        <li>Apagar</li>
+                                        <li>Reportar</li>
                                     </ul>
                                 </div>
                             </div>

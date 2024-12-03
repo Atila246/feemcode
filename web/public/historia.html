@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/historia.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/menu.css">
+    <script src="js/carrega-usuario.js" defer></script>
+
+    <!-- flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     
     <!--google fonts-->
     <style>
@@ -51,19 +55,17 @@
 
                 <!--perfil-->
                 <div class="header__perfil"> <!-- div perfil -->
-                    <a id="link-cadastro" href="perfil.html">
-                        <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
+                    <button id="claroescuro">
+                        <i class="fi fi-tr-lightbulb-on"></i>
+                    </button>
+                    <a id="link-cadastro" href="perfil-usuario.html">
+                        <span id="cadastrado" style="display:none;">
+                            <i class="fi fi-tr-circle-user"></i>
                         </span>
                     </a>
-                    <button id="claroescuro">
-                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
-                    <button id="toggle-theme">
-                        <i class="fi fi-rs-moon"></i> 
-                    </button>
-                    <a href="login.html">
+                    <a href="login-usuario.html">
                         <button id="cadastre-se">Cadastre-se</button>
-                    </a>
+                    </a> 
                 </div>
             </section>
         </header>
@@ -82,6 +84,21 @@
                 </figure>
             </div>
         </section> 
+
+        <section class="mulheres-ti">
+            <div class="ada-lovelace">
+                <h2>Ada Lovelace</h2>
+                <p>Ada Lovelace (1815–1852) é frequentemente reconhecida como a primeira programadora da história. Filha do poeta Lord Byron, ela foi educada em matemática e ciências, o que era incomum para mulheres de sua época. Trabalhando com Charles Babbage no projeto da Máquina Analítica, um precursor dos computadores modernos, Ada escreveu algoritmos projetados para serem processados pela máquina, algo revolucionário para a época. Mais do que isso, ela foi visionária ao perceber que as máquinas poderiam manipular símbolos e criar música ou arte, antecipando o conceito de computação moderna. Seu trabalho lançou as bases para a programação como a conhecemos hoje.</p>
+            </div>
+            <div class="grace-hopper">
+                <h2>Grace Hopper</h2>
+                <p>Grace Hopper (1906–1992) foi uma pioneira da computação e oficial da Marinha dos EUA. Ela desenvolveu o primeiro compilador, uma ferramenta que traduz linguagens humanas em códigos de máquina, tornando a programação mais simples e acessível. Hopper também liderou a criação da linguagem de programação COBOL, que se tornou uma das mais usadas no mundo corporativo por décadas. Além de sua contribuição técnica, Grace era conhecida por sua abordagem inovadora e senso de humor, como quando popularizou o termo “bug” para problemas de software. Seu impacto moldou tanto a tecnologia quanto a maneira como as pessoas a utilizam.</p>
+            </div>
+            <div class="katherine-johnson">
+                <h2>Katherine Johnson</h2>
+                <P>Katherine Johnson (1918–2020) foi uma brilhante matemática que desempenhou um papel essencial na história da exploração espacial. Trabalhando na NASA durante uma época de segregação racial, ela superou preconceitos para realizar cálculos que garantiram o sucesso de importantes missões, incluindo o voo orbital de John Glenn e a missão Apollo 11 que levou o homem à Lua. Johnson tinha uma habilidade impressionante para matemática e física, contribuindo significativamente para a segurança e precisão das trajetórias espaciais. Sua vida e trabalho abriram portas para mulheres e afro-americanos no campo das ciências.</P>
+            </div>
+        </section>
 
         <footer class="footer">
             <div class="footer__content">

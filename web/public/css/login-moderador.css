@@ -1,0 +1,32 @@
+.content::before{
+    background: #af5fe4;
+}
+
+.btn-primary:hover {
+    color: #af5fe4;
+}
+
+.title-second{
+    color: #af5fe4;
+}
+
+.btn-second{
+    background-color: #af5fe4;
+}
+
+.btn-second:hover{
+    color: #af5fe4;
+    border: 2px solid #af5fe4;
+}
+
+.logo-login img{
+    width: 80%;
+}
+
+.form .link-user{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: #34495e;
+    font-size: 1rem;
+}

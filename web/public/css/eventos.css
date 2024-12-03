@@ -6,6 +6,16 @@
     gap: 30px;
 }
 
+.evento__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.evento__criar-evento button, .evento__categorias{
+    align-self: flex-start;
+}
+
 .evento__categorias{
     display: flex;
     gap: 20px;
@@ -15,15 +25,15 @@
     padding: 5px 10px;
     font-size: 1rem;
 
-    border: 2px solid #e141a4;
-    color: #e141a4;
+    border: 2px solid #FF66C4;
+    color: #FF66C4;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 500;
 }
 
 .evento__categorias span:nth-child(1){
-    background-color: #e141a4;
+    background-color: #FF66C4;
     color: white;
 }
 
@@ -79,7 +89,21 @@
     margin: 0;
 }
 
-/* MODO ESCURO */
+.evento__criar-evento button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #FF66C4;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+}
+
+.evento__criar-evento{
+    width: 20%;
+}
+
+/* modo escuro */
 
 body.dark .evento {
     background-color: #2d2d2d; /* Fundo cinza escuro */

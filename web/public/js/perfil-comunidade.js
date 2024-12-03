@@ -45,12 +45,12 @@ window.onclick = function (event) {
 }
 
 /*trazer dados da comunidade */
-const perfil_imagem = document.getElementById('perfil-imagem')
-const perfil_nome = document.getElementById('perfil-nome')
-const perfil_bio = document.getElementById('perfil-descricao')
-perfil_imagem.src = comunidade.foto
-perfil_nome.innerHTML = comunidade.nomeComunidade
-perfil_bio.innerHTML = comunidade.bio
+// const perfil_imagem = document.getElementById('perfil-imagem')
+// const perfil_nome = document.getElementById('perfil-nome')
+// const perfil_bio = document.getElementById('perfil-descricao')
+// perfil_imagem.src = comunidade.foto
+// perfil_nome.innerHTML = comunidade.nomeComunidade
+// perfil_bio.innerHTML = comunidade.bio
 
 
 

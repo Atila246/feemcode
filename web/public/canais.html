@@ -12,8 +12,17 @@
     <!--estilos e scripts-->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/canais.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script src="js/canais.js" defer></script>
+    <script src="js/carrega-usuario.js" defer></script>
+
+    <!-- flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
    
+    <!--fontawsome-->
+    <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
+
     <!--google fonts-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -51,25 +60,57 @@
                 </div>
 
                 <!--perfil-->
-                <div class="header__perfil"> 
-                    <a id="link-cadastro" href="perfil.html">
-                        <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
+                <div class="header__perfil"> <!-- div perfil -->
+                    <button id="claroescuro">
+                        <i class="fi fi-tr-lightbulb-on"></i>
+                    </button>
+                    <a id="link-cadastro" href="perfil-usuario.html">
+                        <span id="cadastrado" style="display:none;">
+                            <i class="fi fi-tr-circle-user"></i>
                         </span>
                     </a>
-                    <button id="claroescuro">
-                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
-                    </button>
-                    <a href="login.html">
+                    <a href="login-usuario.html">
                         <button id="cadastre-se">Cadastre-se</button>
-                    </a>
+                    </a> 
                 </div>
             </section>
         </header>
 
         <section class="canais"> <!--todos os canais-->
             <div class="canal__sidebar">
-                <h3>Canais Inscritos</h3>
+                <div class="canal__header">
+                    <h3>Canais Inscritos</h3>
+                    <button id="canal-btn" style="display: none;">+ Criar canal</button>
+                </div>
+
+                <div class="modal" id="canal-modal">
+                    <div class="form-container modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Criar canal</h2>
+                        <form class="section__form" enctype="multipart/form-data" method="POST">
+                            <p>Preencha os campos para criar seu canal</p>
+                            <!-- <div class="camera">
+                                <i class="fi fi-rr-camera icon-modify"></i>
+                            </div> -->
+                            <!-- <div class="file-canal camera">
+                                <label for="photo">
+                                    <i class="fi fi-rr-user-pen"></i>
+                                </label>
+                                <input type="file" name="photo" id="photo" accept="image/*" style="display: none;">
+                            </div> -->
+                            <div class="section__form-item">
+                                <i class="fa-solid fa-users icon-modify"></i>
+                                <input type="text" placeholder="Digite o nome do canal" id="nome-canal">
+                            </div>
+                            <div class="section__form-item">
+                                <i class="fa-solid fa-quote-left icon-modify"></i>
+                                <input type="text" placeholder="Digite a descrição do canal" id="desc-canal">
+                            </div>
+                            <a href="#"><button type="button" id="btn-salvar-canal">Criar</button></a>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="canal-list">
                     <div class="perfil-canal">
                         <div class="perfil-canal__dados">

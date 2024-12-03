@@ -7,7 +7,7 @@
     <title>FemmCode - Login</title>
 
     <link rel="stylesheet" href="css/login-usuario.css">
-    <link rel="stylesheet" href="css/login-moderador.css">
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +15,19 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
-
     <link rel="shortcut icon" href="images/apple-touch-icon - Copia.jpg">
     
     <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/dinamica-login.js" defer></script>
     <script type="text/javascript" src="js/login.js" defer></script>
-    <script type="text/javascript" src="js/cadastra-moderador.js" defer></script>
+    <script type="text/javascript" src="js/cadastra-usuario.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="content first-content">
             <div class="first-column">
                 <figure class="logo-login">
-                    <img src="img/LogoFMBranco.png" alt="">
+                    <img src="img/femmcodelogo.png" alt="">
                 </figure>
                 <h2 class="title title-primary">Prazer em conhecê-lo!</h2>
                 <p class="description description-primary meio">Crie seu perfil para participar de comunidades conosco</p>
@@ -43,7 +41,7 @@
                 <form class="form">
                     <label class="form-label">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Digite seu nome" id="nome_cadastro">
+                        <input type="text" placeholder="Digite seu nome completo" id="nome_cadastro">
                     </label>
 
                     <label class="form-label">
@@ -59,35 +57,25 @@
                         <i class="fas fa-lock icon-modify"></i>
                         <input type="password" placeholder="Digite sua senha" id="senha_cadastro">
                     </label>
+                    
                     <div class="terms-container">
                         <input type="checkbox" id="terms" name="terms">
                         <label for="terms">
                           Li e aceito os <a href="termos.html" target="_blank">Termos de Uso</a>
                         </label>
                     </div>
-                    <button type="button" class="btn btn-second" id="btn-cadastro">Cadastrar-se</button>
+                    <button type="button" class="btn btn-second" id="btn-cadastro">Cadastrar-se</button>  
                     <div class="link-user">
-                        <a href="login-usuario.html">Sou usuário comum</a>
-                    </div>        
+                        <a href="login-moderador.html">Sou moderador</a>
+                    </div>      
                 </form>
-                
-                <!-- <div class="social-media">
-                    <ul class="list-social-media">
-                        <a class="link-social-media" href="#">
-                            <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
-                            </li>
-                        </a>
-                    </ul>
-                </div> -->
-                
             </div>
         </div>
         
         <div class="content second-content">
             <div class="first-column">
                 <figure class="logo-login">
-                    <img src="img/LogoFMBranco.png" alt="">
+                    <img src="img/femmcodelogo.png" alt="">
                 </figure>
                 <h2 class="title title-primary">Bem-vindo de volta!</h2>
                 <p class="description description-primary meio">Faça seu login para se manter conectado conosco</p>

@@ -1,24 +1,35 @@
-fetch('http://localhost:3000/usuarios')
+const perfil_nome = document.getElementById("perfil-nome")
+const perfil_nome_usuario = document.getElementById("perfil-nome-usuario")
+
+const user = JSON.parse(sessionStorage.getItem("Usuario"))
+console.log(user.nomeUsuario)
+
+fetch('http://localhost:3000/um-usuario', {
+        method: 'POST',
+        body: JSON.stringify({nomeUsuario: user.nomeUsuario}),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
     .then(res => res.json())
     .then((data) => {
-        data.forEach((item) => {
-            perfil_nome.innerHTML = item.nome
-        })
+        perfil_nome.innerHTML = data.nome
+        perfil_nome_usuario.innerHTML += data.nomeUsuario
+        console.log(data.moderador)
     })
     .catch((err) => {
         console.log("Erro"+err)
     })
 
-const perfil_nome = document.getElementById("perfil-nome")
+/*navegação abas */
 const underline = document.querySelector('.underline')
 const aba1 = document.getElementById("aba1")
 const aba2 = document.getElementById("aba2")
-
+const aba3 = document.getElementById("aba3")
+const aba4 = document.getElementById("aba4")
 const conteudos_perfil = document.querySelector(".conteudos-perfil")
 const comunidades_perfil = document.querySelector(".comunidades-perfil")
-
 const gerenciar_perfil = document.querySelector(".gerenciar-perfil")
-
 
 aba1.addEventListener('click', () => {
     aba1.classList.add('ativo')
@@ -81,8 +92,6 @@ window.onclick = function (event) {
     }      
 }
 
-
-
 //Editar perfil
 function toggleEditProfile() {
     const editSection = document.getElementById('editProfileSection');
@@ -104,46 +113,23 @@ function salvarPerfil() {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("toggle-theme");
-    const body = document.body;
+// document.addEventListener("DOMContentLoaded", () => {
+//     const toggleButton = document.getElementById("toggle-theme");
+//     const body = document.body;
 
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-    }
+//     if (localStorage.getItem("theme") === "dark") {
+//         body.classList.add("dark-mode");
+//     }
 
-    toggleButton.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+//     toggleButton.addEventListener("click", () => {
+//         body.classList.toggle("dark-mode");
 
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
-        } else {
-            localStorage.setItem("theme", "light");
-            toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
-        }
-    })
-})
-
-let claroescuro = document.getElementById('claroescuro');
-
-claroescuro.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  claroescuro.classList.toggle('dark');
-  
-  document.querySelectorAll('.evento__categorias span').forEach(span => {
-    span.classList.toggle('dark');
-  });
-
-  document.querySelectorAll('.evento-descricao h2').forEach(h2 => {
-    h2.classList.toggle('dark');
-  });
-  
-  document.querySelectorAll('.evento-descricao span').forEach(span => {
-    span.classList.toggle('dark');
-  });
-  
-  document.querySelectorAll('.evento-descricao p').forEach(p => {
-    p.classList.toggle('dark');
-  });
-});
+//         if (body.classList.contains("dark-mode")) {
+//             localStorage.setItem("theme", "dark");
+//             toggleButton.innerHTML = '<i class="fi fi-sr-sun"></i>';
+//         } else {
+//             localStorage.setItem("theme", "light");
+//             toggleButton.innerHTML = '<i class="fi fi-sr-moon"></i>';
+//         }
+//     })
+// })

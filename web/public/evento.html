@@ -13,12 +13,14 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.5.1/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
     <!--estilos e scripts-->
     <link rel="stylesheet" href="css/evento.css">
     <link rel="stylesheet" href="css/menu.css">
+    <script src="js/carrega-usuario.js" defer></script>
 
     <!--google fonts-->
     <style>
@@ -57,23 +59,18 @@
                 </div>
 
                 <!--perfil-->
-                <div class="header__perfil"> 
-                    <a id="link-cadastro" href="perfil.html">
-                        <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
+                <div class="header__perfil"> <!-- div perfil -->
+                    <button id="claroescuro">
+                        <i class="fi fi-tr-lightbulb-on"></i>
+                    </button>
+                    <a id="link-cadastro" href="perfil-usuario.html">
+                        <span id="cadastrado" style="display:none;">
+                            <i class="fi fi-tr-circle-user"></i>
                         </span>
                     </a>
-<<<<<<< HEAD
-                    <button id="claroescuro">
-                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
-=======
-                    <button id="toggle-theme">
-                        <i class="fi fi-rs-moon"></i> 
->>>>>>> 223a29d5964f86f12c00ccb30e5b975d8dca8c13
-                    </button>
-                    <a href="login.html">
+                    <a href="login-usuario.html">
                         <button id="cadastre-se">Cadastre-se</button>
-                    </a>
+                    </a> 
                 </div>
             </section>
         </header>

@@ -1,22 +1,8 @@
-/*recuperando o usuário */
-var isLoggedIn
-let obj = sessionStorage.getItem("Usuario")
-console.log(obj)
 
-window.onload = function(){
-    if(obj){
-        let perfil = document.getElementById("cadastrado")
-        perfil.style.cssText='display: block;'
-        let botao = document.getElementById("cadastre-se")
-        botao.style.cssText='display: none;'
-
-        let link = document.getElementById("link-cadastro")
-        link.href="perfil.html"
-        isLoggedIn = true
-    }
-}
 
 // modal
+isLoggedIn = true
+
 var comunidade_btn = document.getElementById('comunidade-btn');
 var login_modal = document.getElementById('login-modal');
 var comunidade_modal = document.getElementById('comunidade-modal');
@@ -46,7 +32,7 @@ window.onclick = function (event) {
 }
 
 /*buscando as postagens */
-const comunidade_usuarios = document.querySelector('.comunidade__usuarios')
+const todas_comunidades = document.querySelector('.todas-comunidades')
 const comunidade_postagens = document.querySelector('.comunidade__postagens')
 const perfil_comunidade = document.querySelectorAll('.perfil-comunidade')
 
@@ -136,7 +122,7 @@ fetch("http://localhost:3000/comunidades")
 
 function addHtmlComunidade(data) {
     let comunidadeHtml = `
-                <a href="perfil-comunidade.html" id="item${data.id}" onclick="salvarComunidade('${data.id}')">
+                <a href="perfil-comunidade.html" id="item${data.id}">
                     <div class="perfil-comunidade"> 
                         <div class="perfil-comunidade__dados">
                             <figure class="perfil-comunidade__image">
@@ -144,20 +130,49 @@ function addHtmlComunidade(data) {
                             </figure>
                             <div class="perfil-comunidade__nome">
                                 <span>${data.nomeComunidade}</span>
-                                <span>@meninasdigitais</span>
+                                <span>@${data.criador.nomeUsuario}</span>
                             </div>
                         </div>
                         <button>Entrar</button>
                     </div>
                 </a>
             `
-            comunidade_usuarios.innerHTML += comunidadeHtml 
+            todas_comunidades.innerHTML += comunidadeHtml 
+            console.log(data)
 }
 
-function salvarComunidade(data){
-    fetch("http://localhost:3000/uma-comunidade", {
+// function salvarComunidade(data){
+//     fetch("http://localhost:3000/uma-comunidade", {
+//         method: 'POST',
+//         body: JSON.stringify({id: parseInt(data)}),
+//         headers: {
+//             "Content-Type": "application/json; charset=UTF-8"
+//         }
+//     })
+//     .then(res => res.json())
+//     .then((data) => {
+//         sessionStorage.setItem("Comunidade",JSON.stringify(data))
+//         console.log(sessionStorage.getItem("Comunidade"))
+//         window.onload()
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
+// }
+
+/*salvar comunidade */
+const nome_comunidade = document.getElementById('nome-comunidade')
+const bio_comunidade = document.getElementById('bio-comunidade')
+const foto = document.getElementById('photo')
+const user = JSON.parse(sessionStorage.getItem("Usuario"))
+console.log(user.nomeUsuario)
+
+const btn_salvar_comunidade = document.getElementById('btn-salvar-comunidade')
+
+btn_salvar_comunidade.addEventListener('click', () => {
+    fetch("http://localhost:3000/comunidade", {
         method: 'POST',
-        body: JSON.stringify({id: parseInt(data)}),
+        body: JSON.stringify({ foto: "img/perfil-sem-foto.jpg", nomeUsuario: user.nomeUsuario, nomeComunidade: nome_comunidade.value, bio: bio_comunidade.value }),
         headers: {
             "Content-Type": "application/json; charset=UTF-8"
         }
@@ -166,12 +181,14 @@ function salvarComunidade(data){
     .then((data) => {
         sessionStorage.setItem("Comunidade",JSON.stringify(data))
         console.log(sessionStorage.getItem("Comunidade"))
-        window.onload()
     })
     .catch(err => {
         console.log(err)
     })
-}
+
+    window.location.href="comunidades.html"
+})
+
 
 /*opções da publicação */
 const config_post1 = document.getElementById('config-post1')

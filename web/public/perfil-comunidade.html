@@ -14,12 +14,15 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
     <!--estilos e scripts-->
     <link rel="stylesheet" href="css/comunidades.css">
     <link rel="stylesheet" href="css/canais.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/perfil-comunidade.css">
     <script type="text/javascript" src="js/perfil-comunidade.js" defer></script>
+    <script src="js/carrega-usuario.js" defer></script>
     
     <!--fontawsome-->
     <script src="https://kit.fontawesome.com/e2a2c1e4a6.js" crossorigin="anonymous"></script>
@@ -36,7 +39,7 @@
                 <div class="menu">
                     <div class="menu__logo">
                         <a href="index.html">
-                            <img src="img/LogoFM.png" alt="Logo">
+                            <img src="img/LogoFMBranco.png" alt="Logo">
                         </a>
                     </div>
                     <nav class="menu__nav">
@@ -59,8 +62,8 @@
                     <div class="perfil__nome-desc">
                         <img src="img/usuario.png" alt="Usuário" id="perfil-imagem">
                         <div>
-                            <h3 id="perfil-nome">Nome do Usuário</h3>
-                            <p id="perfil-descricao">Aqui vai uma breve descrição do perfil do usuário. Pode incluir informações como interesses, profissão ou algo sobre sua personalidade.</p>
+                            <h3 id="perfil-nome">FemmCode</h3>
+                            <p id="perfil-descricao">Empoderando!</p>
                         </div>
                     </div>
                     <button type="button" class="botao-perfil" id="publicar-btn">Publicar</button>
@@ -70,22 +73,15 @@
                     <div class="form-container modal-content">
                         <span class="close">&times;</span>
                         <h2>Postagem</h2>
-                        <form class="publicacao__form">
+                        <form class="section__form">
                             <p>Escreva o que está pensando</p>
-                            <div class="publicacao__form-item">
+                            <div class="section__form-item">
                                 <input type="text" placeholder="Digite o título da postagem" id="titulo">
                             </div>
-                            <div class="publicacao__form-item">
+                            <div class="section__form-item">
                                 <textarea type="text" placeholder="Digite o corpo do postagem" id="descricao"></textarea>
                             </div>
                             <div class="form-item-anexo">
-                                <!-- <label for="anexo">
-                                    <span>
-                                        <i class="fi fi-tr-add-image"></i>
-                                    </span>
-                                </label>
-                                <input type="file" id="anexo" style="display: none;"> -->
-                                
                                 <label for="anexo">
                                     <span>
                                         <i class="fi fi-tr-add-image"></i>
@@ -122,7 +118,6 @@
                 </div>
                 <div class="conteudos-perfil">
                     <h5>Postagens da comunidade</h5>
-
                     <div class="comunidade__post card">
                         <div class="post-header">
                             <div class="perfil-post">
@@ -278,7 +273,7 @@
                 </div>
     
                 <!-- Comunidades -->
-               <!-- <div class="gerenciar-perfil">
+                <div class="gerenciar-perfil">
                     <div class="editar-perfil">
                         <div class="editar-perfil__descricao">
                             <h5>Editar informações</h5>
@@ -315,7 +310,7 @@
                             </div>
                         </form>
                     </div>
-               </div> -->
+               </div>
             </div>
         </div>
     </div>

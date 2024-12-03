@@ -22,10 +22,16 @@ body{
     font-size: 35px;
 }
 
+.header__perfil button i{
+    font-size: 25px;
+    color: white;
+}
+
 .header__perfil{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 20px;
+    height: 35px;
 }
 
 .header__perfil #cadastre-se{

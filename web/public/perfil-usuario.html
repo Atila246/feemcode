@@ -20,10 +20,12 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-chubby/css/uicons-thin-chubby.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     
     <!-- <script type="text/javascript" src="js/index.js" defer></script> -->
     <link rel="stylesheet" href="css/comunidades.css">
     <link rel="stylesheet" href="css/canais.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/perfil-usuario.css">
     <script type="text/javascript" src="js/perfil-usuario.js" defer></script>
 
@@ -58,9 +60,12 @@
                 </div>
                 <div class="perfil__info">
                     <div class="perfil__nome-desc">
-                        <img src="img/usuario.png" alt="Usuário">
-                        <div>
-                            <h3 id="perfil-nome">Nome do Usuário</h3>
+                        <img src="img/perfil-sem-foto.jpg" alt="Usuário">
+                        <div class="nome-desc">
+                            <div class="arroba-nome">
+                                <h3 id="perfil-nome">Nome do Usuário</h3>
+                                <p id="perfil-nome-usuario">@</p>
+                            </div>
                             <p id="perfil-descricao">Aqui vai uma breve descrição do perfil do usuário. Pode incluir informações como interesses, profissão ou algo sobre sua personalidade.</p>
                         </div>
                     </div>
@@ -70,20 +75,20 @@
                 <div class="modal" id="editar-usuario-modal">
                     <div class="form-container modal-content">
                         <span class="close">&times;</span>
-                        <h2>Editar informações</h2>
-                        <form class="editar__form">
-                            <p>Edite os dados que você cadastrou</p>
-                            <div class="editar__form-item">
+                        <h2>Editar do perfil</h2>
+                        <form class="section__form">
+                            <p>Edite os dados do seu perfil como preferir</p>
+                            <div class="section__form-item">
                                 <i class="far fa-user icon-modify"></i>
-                                <input type="text" placeholder="Digite o seu nome">
+                                <input type="text" placeholder="Seu nome">
                             </div>
-                            <div class="editar__form-item">
-                                <i class="far fa-envelope icon-modify"></i>
-                                <input type="text" placeholder="Digite o seu Email">
+                            <div class="section__form-item">
+                                <i class="fa-solid fa-at icon-modify"></i>
+                                <input type="text" placeholder="Nome de usuário">
                             </div>
-                            <div class="editar__form-item">
-                                <i class="fas fa-lock icon-modify"></i>
-                                <input type="text" placeholder="Digite a sua senha">
+                            <div class="section__form-item">
+                                <i class="fa-solid fa-quote-left icon-modify"></i>
+                                <input type="text" placeholder="Descrição">
                             </div>
                             <button type="button">Editar</button>
                         </form>

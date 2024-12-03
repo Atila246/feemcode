@@ -13,10 +13,12 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
 
     <!--estilos e scripts-->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/post.css">
+    <script src="js/carrega-usuario.js" defer></script>
 
     <!--google fonts-->
     <style>
@@ -55,18 +57,18 @@
                 </div>
 
                 <!--perfil-->
-                <div class="header__perfil"> 
-                    <a id="link-cadastro" href="perfil.html">
-                        <span id="cadastrado">
-                            <i class="fi fi-tr-circle-user" style="display:none;"></i>
+                <div class="header__perfil"> <!-- div perfil -->
+                    <button id="claroescuro">
+                        <i class="fi fi-tr-lightbulb-on"></i>
+                    </button>
+                    <a id="link-cadastro" href="perfil-usuario.html">
+                        <span id="cadastrado" style="display:none;">
+                            <i class="fi fi-tr-circle-user"></i>
                         </span>
                     </a>
-                    <!-- <button id="theme-toggle" class="theme-toggle">
-                        <i id="theme-icon" class="fi fi-rs-sun"></i>
-                    </button> -->
-                    <a href="login.html">
+                    <a href="login-usuario.html">
                         <button id="cadastre-se">Cadastre-se</button>
-                    </a>
+                    </a> 
                 </div>
             </section>
         </header>
