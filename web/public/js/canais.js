@@ -72,7 +72,7 @@ function addHtml(data){
       <div class="perfil-canal">
           <div class="perfil-canal__dados">
                 <figure class="perfil-canal__image">
-                    <img src="img/perfil-sem-foto.jpg" alt="Perfil">
+                    <img src="${data.foto}" alt="Perfil">
                 </figure>
                 <div class="perfil-canal__nome">
                   <span>${data.nomeCanal}</span>

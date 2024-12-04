@@ -21,6 +21,7 @@ create_post.addEventListener('click', () => {
     .then(res => res.json())
     .then((data) => {
         console.log(data)
+        window.location.href = "perfil-comunidade.html"
     })
     .catch(err => {
         console.log(err)
@@ -45,12 +46,12 @@ window.onclick = function (event) {
 }
 
 /*trazer dados da comunidade */
-// const perfil_imagem = document.getElementById('perfil-imagem')
-// const perfil_nome = document.getElementById('perfil-nome')
-// const perfil_bio = document.getElementById('perfil-descricao')
-// perfil_imagem.src = comunidade.foto
-// perfil_nome.innerHTML = comunidade.nomeComunidade
-// perfil_bio.innerHTML = comunidade.bio
+const perfil_imagem = document.getElementById('perfil-imagem')
+const perfil_nome = document.getElementById('perfil-nome')
+const perfil_bio = document.getElementById('perfil-descricao')
+perfil_imagem.src = comunidade.foto
+perfil_nome.innerHTML = comunidade.nomeComunidade
+perfil_bio.innerHTML = comunidade.bio
 
 
 const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';

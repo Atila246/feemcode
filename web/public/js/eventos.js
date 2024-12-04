@@ -41,7 +41,7 @@ window.onclick = function (event) {
     } 
 }
 
-/*salvando canal*/
+/*salvando evento*/
 const imagem_evento = document.getElementById('imagem-evento')
 const titulo_evento = document.getElementById('titulo-evento')
 const desc_evento = document.getElementById('desc-evento')
@@ -82,6 +82,38 @@ btn_salvar_evento.addEventListener('click', () => {
 
     window.location.href="eventos.html"
 })
+
+/*buscando eventos */
+const evento_carrossel = document.querySelector('.carrossel__list')
+
+fetch("http://localhost:3000/eventos")
+    .then(res => res.json())
+    .then((data) => {
+        data.forEach(item => {
+            addHtmlEvento(item)
+        })
+    })
+    .catch(error => {
+        console.log(error)
+    })
+
+function addHtmlEvento(data) {
+    let eventoHtml = `
+          <div class="evento-item card">
+              <figure>
+                  <img src="${data.imagem}" alt="Evento">
+              </figure>
+              <div class="evento-descricao">
+                  <h2>${data.conteudo.titulo}</h2>
+                  <span>${data.data} - ${data.horario}</span>
+                  <p>${data.conteudo.descricao}</p>
+              </div>
+          </div>    
+    `
+    evento_carrossel.innerHTML += eventoHtml
+}
+
+/**modo escuro */
 
 const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';
 

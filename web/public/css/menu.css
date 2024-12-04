@@ -59,6 +59,10 @@ body{
     border: none;
 }
 
+#claroescuro i{
+    display: flex;
+}
+
 .container-content{
     width: 100%;
 }

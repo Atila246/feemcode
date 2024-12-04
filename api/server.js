@@ -141,15 +141,15 @@ app.post('/login', async(req,res) => {
 
 //método para fazer uma postagem
 app.post('/postagem', async (req,res) =>{
-    try{
-        const conteudo = await prisma.conteudo.create({
-            data: {
-                titulo: req.body.titulo,
-                descricao: req.body.descricao,
-                qtdLikes: 0
-            }
-        })
-    
+    const conteudo = await prisma.conteudo.create({
+        data: {
+            titulo: req.body.titulo,
+            descricao: req.body.descricao,
+            qtdLikes: 0
+        }
+    })
+
+    try{    
         const comunidade = await prisma.comunidade.findUnique({
             where: {
                 nomeComunidade: req.body.nomeComunidade
@@ -166,9 +166,11 @@ app.post('/postagem', async (req,res) =>{
             return res.status(404).json({ error: "Comunidade ou Usuário não encontrado" })
         }
 
-        const participante = await prisma.participante.findUnique({
-            where: {
-                usuarioId: usuario.id
+        const participante = await prisma.participante.create({
+            data: {
+                usuario: {
+                    connect: { id: usuario.id }
+                }
             }
         })
 
@@ -176,7 +178,7 @@ app.post('/postagem', async (req,res) =>{
             return res.status(404).json({ error: "Participante não existe" })
         }
 
-        const usuarioInComunidade = await prisma.usuario.findUnique({
+        const participanteInComunidade = await prisma.participante.findUnique({
             where: { id: participante.id },
             include: {
                 comunidades: {
@@ -185,7 +187,7 @@ app.post('/postagem', async (req,res) =>{
             }
         })
 
-        if(!usuarioInComunidade){
+        if(!participanteInComunidade){
             return res.status(404).json({ message: 'Usuário não encontrado' })
         }
 
@@ -207,6 +209,7 @@ app.post('/postagem', async (req,res) =>{
 
     }catch(error){
         res.status(500).json({ message: 'Erro ao tentar postar na comunidade', error })
+        console.log(error)
 
         await prisma.conteudo.delete({
             where: {
@@ -355,6 +358,55 @@ app.post('/comunidade', upload.single('photo'), async (req,res) =>{
     }
 })
 
+app.get('/usuario-in-comunidade', async (req,res) => {
+    try{
+        const comunidade = await prisma.comunidade.findUnique({
+            where: {
+                nomeComunidade: req.body.nomeComunidade
+            }
+        })
+    
+        const usuario = await prisma.usuario.findUnique({
+            where: {
+                nomeUsuario: req.body.nomeUsuario
+            }
+        })
+    
+        if(!usuario || !comunidade){
+            return res.status(404).json({ error: "Comunidade ou Usuário não encontrado" })
+        }
+
+        const participante = await prisma.participante.create({
+            data: {
+                usuario: {
+                    connect: { id: usuario.id }
+                }
+            }
+        })
+
+        if(!participante){
+            return res.status(404).json({ error: "Participante não existe" })
+        }
+
+        const participanteInComunidade = await prisma.participante.findUnique({
+            where: { id: participante.id },
+            include: {
+                comunidades: {
+                    where: { id: comunidade.id }
+                }
+            }
+        })
+
+        if(!participanteInComunidade){
+            return res.status(404).json({ message: 'Usuário não encontrado' })
+        }
+        res.send(true)
+    }catch(error){
+        res.status(500).json({ error: "Erro verificar se usuário está na comunidade" + error })
+        console.log(error)  
+    }
+})
+
 app.post('/entrar-comunidade', async (req,res) => {
     try{
         const usuario = await prisma.usuario.findUnique({
@@ -385,16 +437,16 @@ app.post('/entrar-comunidade', async (req,res) => {
             where: { id: participante.id },
             data: {
                 comunidades: {
-                    connect: { id: comunidade.id }
+                      connect: { id: comunidade.id }
                 }
             }
         })
-        res.status(201).json(update)
+        res.status(201).json(comunidade)
     }catch(error){
-        res.status(500).json({ error: "Erro ao criar comunidade" })
+        res.status(500).json({ error: "Erro ao entrar na comunidade" })
+        console.log(error)
     }
 })
-
 
 app.get('/comunidades', async (req,res) => {
     try{
@@ -415,6 +467,7 @@ app.get('/comunidades', async (req,res) => {
             })
 
             let comunidade = {
+                id: item.id,
                 foto: item.foto,
                 nomeComunidade: item.nomeComunidade,
                 bio: item.bio,
@@ -434,14 +487,14 @@ app.get('/comunidades', async (req,res) => {
     }
 })
 
-// app.post('/uma-comunidade', async (req,res) => {
-//     const obj = await prisma.comunidade.findUnique({
-//         where: {
-//             id: req.body.id
-//         }
-//     })
-//     res.json(obj)
-// })
+app.post('/uma-comunidade', async (req,res) => {
+    const obj = await prisma.comunidade.findUnique({
+        where: {
+            id: req.body.id
+        }
+    })
+    res.json(obj)
+})
 
 app.get('/canais', async (req,res) => {
     try{
@@ -569,6 +622,55 @@ app.post('/evento', async (req,res) => {
 
     }catch(error){
         res.status(500).json({ error: "Erro ao criar evento" })
+        console.log(error)
+    }
+})
+
+app.get('/eventos', async (req,res) => {
+    try{
+        const eventos = await prisma.evento.findMany()
+        let list_item = []
+
+        for(const item of eventos) {
+            let moderador = await prisma.moderador.findUnique({
+                where: {
+                    id: item.moderadorId
+                }
+            })
+
+            let usuario = await prisma.usuario.findUnique({
+                where: {
+                    id: moderador.usuarioId
+                }
+            })
+
+            let conteudo = await prisma.conteudo.findUnique({
+                where: {
+                    id: item.conteudoId
+                }
+            })
+
+            let evento = {
+                imagem: item.imagem,
+                conteudo: {
+                    titulo: conteudo.titulo,
+                    descricao: conteudo.descricao
+                },
+                data: item.data,
+                horario: item.horario,
+                local: item.local,
+                moderador: {
+                    nome: usuario.nome,
+                    nomeUsuario: usuario.nomeUsuario,
+                    email: usuario.email
+                }
+            }
+
+            list_item.push(evento)
+        }
+        res.status(200).json(list_item)
+    }catch(error){
+        res.status(500).json({ error: "Não foi possível encontrar os canais "})
         console.log(error)
     }
 })

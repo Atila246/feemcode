@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/comunidades.css">
     <link rel="stylesheet" href="css/canais.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/eventos.css">
     <link rel="stylesheet" href="css/perfil-usuario.css">
     <script type="text/javascript" src="js/perfil-usuario.js" defer></script>
 
@@ -50,30 +51,36 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
 
-
-
         <div class="perfil">
             <div class="container__perfil-info">
                 <div class="menu">
-                    <div class="menu__logo">
-                        <a href="index.html">
-                            <img src="img/LogoFMBranco.png" alt="Logo">
-                        </a>
+                    <div class="menu-left">
+                        <div class="menu__logo">
+                            <a href="index.html">
+                                <img src="img/LogoFMBranco.png" alt="Logo">
+                            </a>
+                        </div>
+                        <nav class="menu__nav">
+                            <ul>
+                                <li><a href="index.html">Início</a></li>
+                                <li><a href="sobrenos.html">Sobre nós</a></li>
+                                <li><a href="historia.html">História</a></li>
+                                <li><a href="comunidades.html">Comunidades</a></li>
+                                <li><a href="eventos.html">Eventos</a></li>
+                                <li><a href="canais.html">Canais</a></li>
+                                <li><a href="minimentes.html">Mini Mentes</a></li>
+                            </ul>
+                        </nav>
+                        <button id="claroescuro">
+                            <i class="fi fi-tr-lightbulb-on"></i>
+                        </button>
                     </div>
-                    <nav class="menu__nav">
-                        <ul>
-                            <li><a href="index.html">Início</a></li>
-                            <li><a href="sobrenos.html">Sobre nós</a></li>
-                            <li><a href="historia.html">História</a></li>
-                            <li><a href="comunidades.html">Comunidades</a></li>
-                            <li><a href="eventos.html">Eventos</a></li>
-                            <li><a href="canais.html">Canais</a></li>
-                            <li><a href="minimentes.html">Mini Mentes</a></li>
-                        </ul>
-                    </nav>
-                    <button id="claroescuro">
-                        <img src="img/lampada-brilhante.png" alt="Modo Claro/Escuro">
-                    </button>
+
+                    <div class="menu-right">
+                        <button type="button" id="sair">
+                            Sair
+                        </button>
+                    </div>
                 </div>
                 <div class="perfil__info">
                     <div class="perfil__nome-desc">
@@ -112,13 +119,30 @@
                     </div>
                 </div>
 
+                <!-- <div class="perfil__abas">
+                    <ul class="navegacao-abas">
+                        <li class="aba-item ativo" id="aba1" style="display: none;"> 
+                            <a class="aba-link">Conteúdo postado</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="aba-item" id="aba2">
+                            <a class="aba-link">Conteúdo salvo</a>
+                        </li>
+                        <li class="aba-item" id="aba3">
+                            <a class="aba-link">Comunidades</a>
+                        </li>
+                    </ul>
+                </div> -->
+
                 <div class="perfil__abas">
                     <ul class="navegacao-abas">
                         <li class="aba-item ativo" id="aba1"> 
                             <a class="aba-link">Conteúdo salvo</a>
-                            <div class="underline"></div>
                         </li>
-                        <li class="aba-item" id="aba2">
+                        <li class="aba-item" id="aba2" style="display: none;">
+                            <a class="aba-link">Conteúdo postado</a>
+                        </li>
+                        <li class="aba-item" id="aba3">
                             <a class="aba-link">Comunidades</a>
                         </li>
                     </ul>
@@ -284,9 +308,88 @@
                     </div>
                     
                 </div>
-                
-            </div>
+
+                <div class="postados-perfil" style="display: none;">
+                    <h5>Vídeos publicados</h5>
+                    <div class="videos-postados">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="video-item card">
+                                    <div class="video-item__source">
+                                        <video poster="img/minha-historia-thumb.png" class="card-img-top">
+                                            <source src="img/minha-historia.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="video-item__desc card-body">
+                                        <img src="img/Adalovelace.png" alt="Adalovelace">
+                                        <div class="titulo-desc">
+                                            <h3>Minha história na TI</h3>
+                                            <span>Adalovelace</span>
+                                            <span>9 mil visualizações</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
     
+                            <div class="col-md-4">
+                                <div class="video-item card">
+                                    <div class="video-item__source">
+                                        <video poster="img/minha-historia-thumb.png" class="card-img-top">
+                                            <source src="img/minha-historia.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                    <div class="video-item__desc card-body">
+                                        <img src="img/Adalovelace.png" alt="Adalovelace">
+                                        <div class="titulo-desc">
+                                            <h3>Minha história na TI</h3>
+                                            <span>Adalovelace</span>
+                                            <span>9 mil visualizações</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+
+                    <div class="eventos-postados">
+                        <h5>Eventos publicados</h5>
+                        <div class="carrossel__list">
+                            <div class="evento-item card">
+                                <figure>
+                                    <img src="img/meninasdigitaisreuniao.jpeg" alt="">
+                                </figure>
+                                <div class="evento-descricao">
+                                    <h2>Reunião meninas digitais</h2>
+                                    <span>26/06 ás 18:30h</span>
+                                    <p>Reunião para trocar ideias e conhecimentos sobre o projeto buscando o aprimoramento.</p>
+                                </div>
+                            </div>
+                            <div class="evento-item card">
+                                <figure>
+                                    <img src="img/meninas digitais congresso.jpeg" alt="">
+                                </figure>
+                                <div class="evento-descricao">
+                                    <h2>Congresso da Sociedade Brasileira de Computação</h2>
+                                    <span>24/07 ás 16:00h</span>
+                                    <p>Evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática.</p>
+                                </div>
+                            </div>
+                            <div class="evento-item card">
+                                <figure>
+                                    <img src="img/molieresnati.jpeg" alt="">
+                                </figure>
+                                <div class="evento-descricao">
+                                    <h2>Palestra Mulheres na Tecnologia</h2>
+                                    <span>16/07 17:30h</span>
+                                    <p>Encontro dinâmico que reúne mulheres para explorar novas tecnologias.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         

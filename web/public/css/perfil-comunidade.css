@@ -192,6 +192,7 @@ body{
     font-size: 1.5rem;
     cursor: pointer;
     color: #212529;
+    display: flex;
 }
 
 #claroescuro{

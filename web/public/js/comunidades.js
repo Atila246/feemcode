@@ -102,10 +102,12 @@ function addHtml(data) {
 
 
 const posts = document.querySelectorAll(".comunidade__post")
-posts.forEach(post => {
-    post.addEventListener('click', () => {
+
+comunidade_postagens.addEventListener('click', (event) => {
+    const post = event.target.closest('.comunidade__post') // Verifica se o clique ocorreu em um post
+    if (post) {
         window.location.href = "post.html"
-    })
+    }
 })
 
 /*buscando comunidades */
@@ -121,9 +123,10 @@ fetch("http://localhost:3000/comunidades")
     })
 
 function addHtmlComunidade(data) {
-    let comunidadeHtml = `
-                <a href="perfil-comunidade.html" id="item${data.id}">
-                    <div class="perfil-comunidade"> 
+    const comunidadeHtml = document.createElement('div')
+    comunidadeHtml.classList.add('perfil-comunidade')
+    comunidadeHtml.innerHTML = `
+                <a href="perfil-comunidade.html" id="item${data.id}" onclick="salvarComunidade(${data.id})">
                         <div class="perfil-comunidade__dados">
                             <figure class="perfil-comunidade__image">
                                 <img src="${data.foto}" alt="Imagem da comunidade">
@@ -133,32 +136,59 @@ function addHtmlComunidade(data) {
                                 <span>@${data.criador.nomeUsuario}</span>
                             </div>
                         </div>
-                        <button>Entrar</button>
-                    </div>
                 </a>
+                <button type="button" id="entrar-comunidade${data.id}" onclick="entrarComunidade('${data.nomeComunidade}')">Entrar</button>
             `
-            todas_comunidades.innerHTML += comunidadeHtml 
-            console.log(data)
+
+            if(todas_comunidades){
+                todas_comunidades.appendChild(comunidadeHtml)
+            }else{
+                console.error("O container 'todas_comunidades' não está definido.")
+            }
 }
 
-// function salvarComunidade(data){
-//     fetch("http://localhost:3000/uma-comunidade", {
-//         method: 'POST',
-//         body: JSON.stringify({id: parseInt(data)}),
-//         headers: {
-//             "Content-Type": "application/json; charset=UTF-8"
-//         }
-//     })
-//     .then(res => res.json())
-//     .then((data) => {
-//         sessionStorage.setItem("Comunidade",JSON.stringify(data))
-//         console.log(sessionStorage.getItem("Comunidade"))
-//         window.onload()
-//     })
-//     .catch(err => {
-//         console.log(err)
-//     })
-// }
+function salvarComunidade(data){
+    fetch("http://localhost:3000/uma-comunidade", {
+        method: 'POST',
+        body: JSON.stringify({id: parseInt(data)}),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(res => res.json())
+    .then((data) => {
+        sessionStorage.setItem("Comunidade",JSON.stringify(data))
+        console.log(sessionStorage.getItem("Comunidade"))
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+
+/*entrar-comunidade*/
+
+function entrarComunidade(data){
+    fetch("http://localhost:3000/entrar-comunidade", {
+        method: 'POST',
+        body: JSON.stringify({ nomeUsuario: user.nomeUsuario, nomeComunidade: data}),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(res => res.json())
+    .then((data) => {
+        sessionStorage.setItem("Comunidade",JSON.stringify(data))
+        console.log(sessionStorage.getItem("Comunidade"))
+
+        // const botao = document.getElementById(`entrar-comunidade${data}`);
+        // botao.innerText = "Membro"
+    })
+    .catch(err => {
+        console.log(err)
+    })
+}
+
+
 
 /*salvar comunidade */
 const nome_comunidade = document.getElementById('nome-comunidade')
@@ -201,35 +231,35 @@ const options_post3 = document.getElementById('options-post3')
 
 let ligado = false;
 
-config_post1.addEventListener("click", () => {
-    if (!ligado) {
-        options_post1.style.display = "flex";
-        ligado = true;
-    } else {
-        options_post1.style.display = "none";
-        ligado = false;
-    }
-});
+// config_post1.addEventListener("click", () => {
+//     if (!ligado) {
+//         options_post1.style.display = "flex";
+//         ligado = true;
+//     } else {
+//         options_post1.style.display = "none";
+//         ligado = false;
+//     }
+// })
 
-config_post2.addEventListener("click", () => {
-    if (!ligado) {
-        options_post2.style.display = "flex";
-        ligado = true;
-    } else {
-        options_post2.style.display = "none";
-        ligado = false;
-    }
-})
+// config_post2.addEventListener("click", () => {
+//     if (!ligado) {
+//         options_post2.style.display = "flex";
+//         ligado = true;
+//     } else {
+//         options_post2.style.display = "none";
+//         ligado = false;
+//     }
+// })
 
-config_post3.addEventListener("click", () => {
-    if (!ligado) {
-        options_post3.style.display = "flex";
-        ligado = true;
-    } else {
-        options_post3.style.display = "none";
-        ligado = false;
-    }
-})
+// config_post3.addEventListener("click", () => {
+//     if (!ligado) {
+//         options_post3.style.display = "flex";
+//         ligado = true;
+//     } else {
+//         options_post3.style.display = "none";
+//         ligado = false;
+//     }
+// })
 
 
 const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';

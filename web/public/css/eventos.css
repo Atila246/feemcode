@@ -103,6 +103,24 @@
     width: 20%;
 }
 
+.form-item-anexo{
+    border: 1px dotted #212529b4;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-item-anexo span i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #212529;
+    display: flex;
+}
+
 /* modo escuro */
 
 body.dark .evento {

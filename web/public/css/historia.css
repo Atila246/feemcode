@@ -52,6 +52,40 @@
     border-bottom: 3px solid white;
 }
 
+.mulheres-ti{
+    margin: 0 auto;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.mulheres-ti p{
+    margin: 0;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.mulheres-ti h2{
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.mulheres-ti__item{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.mulheres-ti__item img{
+    width: 400px;
+    height: 400px;
+}
+
 
 
 /* MODO ESCURO */

@@ -21,53 +21,132 @@ fetch('http://localhost:3000/um-usuario', {
         console.log("Erro"+err)
     })
 
+/*sair*/
+const sair = document.getElementById('sair')
+sair.addEventListener('click', () => {
+  sessionStorage.clear()
+  window.location.href = "index.html"
+})
+
 /*navegação abas */
 const underline = document.querySelector('.underline')
 const aba1 = document.getElementById("aba1")
 const aba2 = document.getElementById("aba2")
-const aba3 = document.getElementById("aba3")
-const aba4 = document.getElementById("aba4")
+
 const conteudos_perfil = document.querySelector(".conteudos-perfil")
 const comunidades_perfil = document.querySelector(".comunidades-perfil")
 const gerenciar_perfil = document.querySelector(".gerenciar-perfil")
+const postados_perfil = document.querySelector(".postados-perfil")
 
-aba1.addEventListener('click', () => {
-    aba1.classList.add('ativo')
-    aba2.classList.remove('ativo')
+// aba1.addEventListener('click', () => {
+//     aba1.classList.add('ativo')
+//     aba2.classList.remove('ativo')
     
-    underline.classList.remove('animatein')
-    underline.classList.remove('animateout')
+//     underline.classList.remove('animatein')
+//     underline.classList.remove('animateout')
 
-    let tamanhoAba2 = underline.style.width = `${aba2.offsetWidth}px`
-    let tamanhoAba1 = underline.style.width = `${aba1.offsetWidth}px`
-    underline.style.width = tamanhoAba1
-  
-    document.documentElement.style.setProperty('--tamanho-aba-2',tamanhoAba2)
+//     let tamanhoAba2 = `${aba2.offsetWidth}px`
+//     let tamanhoAba1 = `${aba1.offsetWidth}px`
+//     underline.style.width = tamanhoAba1
+//     document.documentElement.style.setProperty('--tamanho-aba-2',tamanhoAba2)
     
-    underline.classList.add('animateout')
+//     underline.classList.add('animateout')
 
-    conteudos_perfil.style.display = "block"
-    comunidades_perfil.style.display = "none"
-})
+//     conteudos_perfil.style.display = "block"
+//     comunidades_perfil.style.display = "none"
+// })
+
+// aba2.addEventListener('click', () => {
+//     aba2.classList.add('ativo')
+//     aba1.classList.remove('ativo')
+    
+//     underline.classList.remove('animateout')
+//     underline.classList.remove('animatein')
+    
+//     let tamanhoAba1 = `${aba1.offsetWidth}px`
+//     let tamanhoAba2 = `${aba2.offsetWidth}px`
+//     underline.style.width = tamanhoAba2
+//     document.documentElement.style.setProperty('--tamanho-aba-1',tamanhoAba1)
+
+//     underline.classList.add('animatein')
+
+//     conteudos_perfil.style.display = "none"
+//     comunidades_perfil.style.display = "flex"
+    
+// })
+
+// aba3.addEventListener('click', () => {
+//    aba3.classList.add('ativo')
+//    aba1.classList.remove('ativo')
+
+//    underline.classList.remove('animateout')
+//    underline.classList.remove('animatein')
+   
+//    let tamanhoAba1 = `${aba1.offsetWidth}px`
+//    let tamanhoAba3 = `${aba3.offsetWidth}px`
+//    underline.style.width = tamanhoAba3
+//    document.documentElement.style.setProperty('--tamanho-aba-1',tamanhoAba1)
+//    underline.classList.add('animatein')
+   
+
+//    conteudos_perfil.style.display = "none"
+//    comunidades_perfil.style.display = "flex"
+// })
 
 aba2.addEventListener('click', () => {
+    aba2.classList.remove('ativo')
     aba2.classList.add('ativo')
-    aba1.classList.remove('ativo')
-    
-    underline.classList.remove('animateout')
-    underline.classList.remove('animatein')
-    
-    let tamanhoAba1 = underline.style.width = `${aba1.offsetWidth}px`
-    let tamanhoAba2 = underline.style.width = `${aba2.offsetWidth}px`
-    underline.style.width = tamanhoAba2
-    document.documentElement.style.setProperty('--tamanho-aba-1',tamanhoAba1)
 
-    underline.classList.add('animatein')
+    aba1.classList.remove('ativo')
 
     conteudos_perfil.style.display = "none"
-    comunidades_perfil.style.display = "flex"
-    
+    postados_perfil.style.display = "block"
+
+    aba2.style.cssText = 'border-radius: 0 10px 0 0 !important;'
+    aba1.style.cssText = 'border-radius: 10px 0 0 0 !important;'
 })
+
+aba1.addEventListener('click', () => {
+  aba1.classList.remove('ativo')
+  aba1.classList.add('ativo')
+
+  if(user.moderador){
+    postados_perfil.style.display = "none"
+  }else{
+    comunidades_perfil.style.display = "none"
+  }
+
+  if(user.moderador){
+    aba2.style.cssText = 'border-radius: 0 10px 0 0 !important;'
+    aba2.classList.remove('ativo')
+  }else{
+    aba3.style.cssText = 'border-radius: 0 10px 0 0 !important;'
+    aba3.classList.remove('ativo')
+  }
+
+  aba1.style.cssText = 'border-radius: 10px 0 0 0 !important;'
+  conteudos_perfil.style.display = "block"
+})
+
+aba3.addEventListener('click', () => {
+  aba3.classList.remove('ativo')
+  aba3.classList.add('ativo')
+
+  aba1.classList.remove('ativo')
+
+  comunidades_perfil.style.display = "flex"
+  conteudos_perfil.style.display = "none"
+
+  aba1.style.cssText = 'border-radius: 10px 0 0 0 !important;'
+  aba3.style.cssText = 'border-radius: 0 10px 0 0 !important;'
+})
+
+if(user.moderador){
+    aba2.style.display = "flex"
+    aba3.style.display = "none"
+
+    comunidades_perfil.style.display = "none"
+}
 
 /*modal*/
 var perfil_btn = document.getElementById('botao-perfil')

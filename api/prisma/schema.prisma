@@ -23,7 +23,7 @@ model Usuario {
   postagem Postagem[]
 
   moderador    Moderador?
-  participante Participante?
+  participantes Participante[]
   criadores      Criador[]
 }
 
@@ -31,7 +31,7 @@ model Participante {
   id Int @id @default(autoincrement())
 
   usuario   Usuario @relation(fields: [usuarioId], references: [id])
-  usuarioId Int     @unique @map("usuario_id")
+  usuarioId Int     @map("usuario_id")
 
   comunidades Comunidade[]
 

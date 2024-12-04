@@ -79,7 +79,7 @@
                     </button>
                     <a id="link-cadastro" href="perfil-usuario.html">
                         <span id="cadastrado" style="display:none;">
-                            <i class="fi fi-tr-circle-user"></i>
+                            <i class="fi fi-tr-circle-user" id="icon-cadastrado"></i>
                         </span>
                     </a>
                     <a href="login-usuario.html">
@@ -119,9 +119,6 @@
                                 <input type="file" name="photo" id="photo" accept="image/*" style="display: none;">
                             </div> -->
                             <div class="section__form-item">
-                                <input type="file" id="imagem-evento">
-                            </div>
-                            <div class="section__form-item">
                                 <i class="fa-solid fa-pen icon-modify"></i>
                                 <input type="text" placeholder="Digite o titulo do evento" id="titulo-evento">
                             </div>
@@ -141,6 +138,14 @@
                                 <i class="fa-solid fa-location-dot icon-modify"></i>
                                 <input type="text" placeholder="Digite o local do evento" id="local-evento">
                             </div>
+                            <div class="form-item-anexo">
+                                <label for="imagem-evento">
+                                    <span>
+                                        <i class="fi fi-tr-add-image"></i>
+                                    </span>
+                                </label>
+                                <input type="file" id="imagem-evento" name="imagem-evento" style="display: none;">
+                            </div>
                             <a href="#"><button type="button" id="btn-salvar-evento">Criar</button></a>
                         </form>
                     </div>
@@ -153,37 +158,7 @@
                 </div>
 
                 <div class="carrossel__list">
-                    <div class="evento-item card">
-                        <figure>
-                            <img src="img/meninasdigitaisreuniao.jpeg" alt="">
-                        </figure>
-                        <div class="evento-descricao">
-                            <h2>Reunião meninas digitais</h2>
-                            <span>26/06 ás 18:30h</span>
-                            <p>Reunião para trocar ideias e conhecimentos sobre o projeto buscando o aprimoramento.</p>
-                        </div>
-                    </div>
-
-                    <div class="evento-item card">
-                        <figure>
-                            <img src="img/meninas digitais congresso.jpeg" alt="">
-                        </figure>
-                        <div class="evento-descricao">
-                            <h2>Congresso da Sociedade Brasileira de Computação</h2>
-                            <span>24/07 ás 16:00h</span>
-                            <p>Evento que tem como objetivo fomentar o acesso à informação e cultura por meio da informática.</p>
-                        </div>
-                    </div>
-                    <div class="evento-item card">
-                        <figure>
-                            <img src="img/molieresnati.jpeg" alt="">
-                        </figure>
-                        <div class="evento-descricao">
-                            <h2>Palestra Mulheres na Tecnologia</h2>
-                            <span>16/07 17:30h</span>
-                            <p>Encontro dinâmico que reúne mulheres para explorar novas tecnologias.</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
