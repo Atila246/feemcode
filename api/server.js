@@ -409,6 +409,7 @@ app.get('/usuario-in-comunidade', async (req,res) => {
 
 app.post('/entrar-comunidade', async (req,res) => {
     try{
+
         const usuario = await prisma.usuario.findUnique({
             where: {
                 nomeUsuario: req.body.nomeUsuario
@@ -423,6 +424,16 @@ app.post('/entrar-comunidade', async (req,res) => {
     
         if(!usuario || !comunidade){
             return res.status(404).json({ error: "Usuário ou Comunidade não encotrado" })
+        }
+
+        const isParticipante = await prisma.participante.findUnique({
+            where: {
+                usuarioId: usuario.id
+            }
+        })
+
+        if(isParticipante){
+            res.status(200).send("Usuário já está na comunidade")
         }
 
         const participante = await prisma.participante.create({
@@ -711,13 +722,13 @@ app.post('/request-recovery', async (req, res) => {
   const { email } = req.body;
   const user = await prisma.usuario.findUnique({
     where: { email }
-  });
+  })
 
   if (!user) {
     return res.status(404).json({ message: 'Usuário não encontrado.' });
   }
 
-  const token = jwt.sign({ email }, 'secreta', { expiresIn: '10m' });
+  const token = gerarCodigo(6)
 
   try {
     await sendRecoveryEmail(email, token);
@@ -725,7 +736,17 @@ app.post('/request-recovery', async (req, res) => {
   } catch (err) {
     return res.status(500).json({ message: 'Erro ao enviar o código.'+err });
   }
-});
+})
+
+function gerarCodigo(tamanho) {
+    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    let codigo = ''
+    for (let i = 0; i < tamanho; i++) {
+        const randomIndex = Math.floor(Math.random() * caracteres.length)
+        codigo += caracteres[randomIndex]
+    }
+    return codigo
+}
 
 // Rota para verificar o código de recuperação
 app.post('/verify-code', async (req, res) => {

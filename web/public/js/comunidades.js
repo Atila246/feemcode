@@ -188,8 +188,6 @@ function entrarComunidade(data){
     })
 }
 
-
-
 /*salvar comunidade */
 const nome_comunidade = document.getElementById('nome-comunidade')
 const bio_comunidade = document.getElementById('bio-comunidade')
@@ -260,6 +258,19 @@ let ligado = false;
 //         ligado = false;
 //     }
 // })
+
+const preenchido = document.getElementById('preenchido')
+const vazado = document.getElementById('vazado')
+
+preenchido.addEventListener('click', () =>{
+    preenchido.style.display = "block"
+    vazado.style.display = "none"
+})
+
+vazado.addEventListener('click', () =>{
+    vazado.style.display = "block"
+    preenchido.style.display = "none"
+})
 
 
 const modoEscuroAtivado = localStorage.getItem('modoEscuro') === 'true';

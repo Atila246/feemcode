@@ -28,7 +28,7 @@
             <form id="requestForm">
                 <label for="email">Digite seu e-mail cadastrado:</label>
                 <input type="email" id="email" name="email" required>
-                <button type="button" onclick="sendRecoveryEmail()">Enviar código</button>
+                <button type="button" onclick="showStep(2)">Enviar código</button>
             </form>
         </div>
 
@@ -86,7 +86,7 @@
             .then(data => {
                 if (data.success) {
                     verificationCode = data.codigo; // Armazena o código de recuperação enviado
-                    showStep(2); // Avança para a Etapa 2 (verificar código)
+                    showStep(2) // Avança para a Etapa 2 (verificar código)
                     alert('Código enviado para o seu e-mail!');
                 } else {
                     alert(data.message || 'Erro ao enviar o código.');
@@ -95,7 +95,7 @@
             .catch(error => {
                 console.error('Erro ao enviar o código:', error);
                 alert('Erro ao conectar com o servidor.');
-            });
+            })
         }
 
         // Função para verificar o código inserido pelo usuário
